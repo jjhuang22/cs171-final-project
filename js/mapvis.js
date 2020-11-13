@@ -93,7 +93,12 @@ class MapVis {
             .attr("class", "states")
             .attr("transform", "translate(0, " + vis.height/20 + ")");
 
-        vis.path = d3.geoPath();
+        vis.projection = d3.geoMercator()
+            .scale(1000)
+            .center([-106, 37.5]);
+
+        vis.path = d3.geoPath()
+
 
         vis.country = topojson.feature(vis.geoData, vis.geoData.objects.states).features;
 
@@ -107,19 +112,22 @@ class MapVis {
             .attr("transform", "scale(" + vis.zoom + ", " + vis.zoom +")")
             // .attr('stroke-width', '1px')
             // .attr("stroke", "black")
-            .attr("fill", "blue");
+            .attr("fill", "grey");
 
         vis.svg.selectAll("circle")
             .data(vis.companies)
             .enter()
             .append("circle")
             .attr("r", "8")
-            .attr("fill", "white")
+            .attr("fill", "black")
             .attr("cx", function(d) {
-                console.log(d);
+                // return vis.projection(d.lat);
                 return 5;
             })
-            .attr("cy", 5);
+            .attr("cy", function(d) {
+                // return vis.projection(d.lng);
+                return 5;
+            });
 
         // wrangleData
         // vis.wrangleData();
@@ -129,8 +137,6 @@ class MapVis {
 
     wrangleData(){
         let vis = this;
-
-        // check out the data
 
         // first, filter according to selectedTimeRange, init empty array
         let filteredData = [];
