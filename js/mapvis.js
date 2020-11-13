@@ -93,41 +93,33 @@ class MapVis {
             .attr("class", "states")
             .attr("transform", "translate(0, " + vis.height/20 + ")");
 
-        vis.mapProjection = d3.geoMercator()
-            .translate([1000, 450])
-            .scale([445]);
-
-        vis.path = d3.geoPath()
-            .projection(vis.mapProjection);
-
-        // vis.mapPath = d3.geoPath()
-        //     .projection(vis.mapProjection);
+        vis.path = d3.geoPath();
 
         vis.country = topojson.feature(vis.geoData, vis.geoData.objects.states).features;
 
-        // vis.svg.selectAll("circle")
-        //     .data(vis.companies)
-        //     .enter()
-        //     .append("circle")
-        //     .attr("r", "8")
-        //     .attr("fill", "red")
-        //     .attr("cx", function(d) {
-        //         console.log(d);
-        //     })
-        //     .attr("cy", )
-
-
         // // draw states
-        // vis.states = vis.mapGroup.selectAll(".state")
-        //     .data(vis.country)
-        //     .enter()
-        //     .append("path")
-        //     .attr("class", d => "state path " + d.properties.name.replace(" ", ""))
-        //     .attr("d", vis.path)
-        //     .attr("transform", "scale(" + vis.zoom + ", " + vis.zoom +")")
-        //     .attr('stroke-width', '1px')
-        //     .attr("stroke", "black")
-        //     .attr("fill", "white");
+        vis.states = vis.mapGroup.selectAll(".state")
+            .data(vis.country)
+            .enter()
+            .append("path")
+            .attr("class", d => "state path " + d.properties.name.replace(" ", ""))
+            .attr("d", vis.path)
+            .attr("transform", "scale(" + vis.zoom + ", " + vis.zoom +")")
+            // .attr('stroke-width', '1px')
+            // .attr("stroke", "black")
+            .attr("fill", "blue");
+
+        vis.svg.selectAll("circle")
+            .data(vis.companies)
+            .enter()
+            .append("circle")
+            .attr("r", "8")
+            .attr("fill", "white")
+            .attr("cx", function(d) {
+                console.log(d);
+                return 5;
+            })
+            .attr("cy", 5);
 
         // wrangleData
         // vis.wrangleData();

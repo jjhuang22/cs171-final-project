@@ -26,7 +26,7 @@ Promise.all(promises)
     .then( function(data){
 
         data[1].forEach(function(d) {
-            console.log(d);
+            // console.log(d);
             d.first_funding_at = parseDate(d.first_funding_at);
             d.founded_at = parseDate(d.founded_at);
             d.founded_year = +d.founded_year; // change to int, maybe keep as string?
@@ -44,7 +44,7 @@ Promise.all(promises)
 // initMainPage
 function initMainPage(dataArray) {
 
-    console.log(dataArray[1]);
+    // console.log(dataArray[1]);
     // init map
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
 }
