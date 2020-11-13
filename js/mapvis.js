@@ -66,7 +66,7 @@ class MapVis {
         // set projection parameters
         vis.projection
             .scale(1000)
-            .center([-106, 37.5])
+            .center([-110, 40.5])
 
         // add states from topojson
         vis.svg.selectAll("path")
