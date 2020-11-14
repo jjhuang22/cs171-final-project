@@ -1,14 +1,13 @@
 /* * * * * * * * * * * * * *
-*          MapVis          *
+*          BubbleChartVis          *
 * * * * * * * * * * * * * */
 
-class MapVis {
+class BubbleVis {
 
     // constructor method to initialize MapVis object
     constructor(parentElement, geoData, companies) {
         this.parentElement = parentElement;
-        this.geoData = geoData;
-        this.companies = companies;
+
 
         this.initVis()
     }
@@ -142,8 +141,7 @@ class MapVis {
             )
         })
 
-        vis.topTenData = vis.cityInfo.slice(0, 100); // change this as needed
-        // vis.topTenData = vis.cityInfo;
+        vis.topTenData = vis.cityInfo.slice(0, 20); // change this as needed
 
         vis.updateVis();
     }
@@ -172,12 +170,12 @@ class MapVis {
             .attr("cx", d => vis.projection([d.lng, d.lat])[0])
             .attr("cy", d => vis.projection([d.lng, d.lat])[1])
             .attr("r", function(d) {
-                return Math.sqrt(d.numCompanies + 10);
+                return Math.sqrt(d.numCompanies);
             })
             .attr("fill", "salmon")
-            .style("opacity", 1)
-            .attr("stroke", "black")
-            .attr("stroke-width", "0.5px");
+            .style("opacity", 1);
+        // .attr("stroke", "black")
+        // .attr("stroke-width", "1px");
 
         // mouseover
         vis.svg.selectAll("circle").on("mouseover", function(event, d){
@@ -201,7 +199,7 @@ class MapVis {
         })
             .on('mouseout', function(event, d){
                 d3.select(this)
-                    .attr('stroke-width', '0.5px')
+                    .attr('stroke-width', '0px')
                     .attr('stroke', 'black')
                     .style("fill", "salmon")
                     .style("opacity", 1);

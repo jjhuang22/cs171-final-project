@@ -3,7 +3,8 @@
 * * * * * * * * * * * * * */
 
 // init global variables & switches
-let myMapVis;
+let myMapVis,
+    myBubbleVis;
 
 let selectedTimeRange = [];
 let selectedCategory = $('#categorySelector').val();
@@ -14,7 +15,8 @@ let formatDate = d3.timeFormat("%Y-%m-%d");
 // load data using promises
 let promises = [
     d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),
-    d3.csv("data/companiesCities.csv")
+    d3.csv("data/companies_final.csv"),
+    d3.csv("data/acquisitions_final.csv")
 ];
 
 Promise.all(promises)
@@ -31,6 +33,13 @@ Promise.all(promises)
             d.lng = +d.lng;
         })
 
+        console.log(data[2]);
+        data[2].forEach(function(d) {
+            d.acquired_at = parseDate(d.acquired_at);
+            d.acquired_year = +d.acquired_year; // may not need
+            d.price_amount = +d.price_amount;
+        })
+
         initMainPage(data)
     })
     .catch( function (err){console.log(err)} );
@@ -39,6 +48,8 @@ Promise.all(promises)
 function initMainPage(dataArray) {
     // init map
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
+
+    myBubbleVis = new BubbleVis('bubbleDiv', dataArray[2]);
 }
 
 function categoryChange() {
