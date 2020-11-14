@@ -30,13 +30,13 @@ class ChooseVis {
 
         let randomX = d3.randomUniform(vis.margin.left * 3, vis.width - vis.margin.right * 3);
         let randomY = d3.randomUniform(vis.margin.top * 3, vis.height - vis.margin.bottom * 3);
-        let randomSize = d3.randomNormal(2, 15);
+        let randomSize = d3.randomNormal(4, 17);
         let randomOpacity = d3.randomUniform(.4, .9);
         let randomTime= d3.randomUniform(0, 2000);
         let randomBinary = d3.randomInt(2);
 
         let circles = [];
-        for (let i = 0; i < 500; i++) {
+        for (let i = 0; i < 70; i++) {
             circles.push([randomX(), randomY(), Math.abs(randomSize()),randomOpacity(), randomBinary()]);
         }
 
