@@ -2,10 +2,6 @@
 *           MAIN           *
 * * * * * * * * * * * * * */
 
-// init global variables & switches
-let myMapVis,
-    myBubbleVis;
-
 let selectedTimeRange = [];
 let selectedCategory = $('#categorySelector').val();
 
@@ -43,12 +39,20 @@ Promise.all(promises)
     })
     .catch( function (err){console.log(err)} );
 
+
+
+// init global variables & switches
+let myMapVis,
+    myBubbleVis,
+    myChooseVis;
+
+
 // initMainPage
 function initMainPage(dataArray) {
     // init map
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
-
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[2]);
+    myChooseVis = new ChooseVis('chooseDiv')
 }
 
 function categoryChange() {

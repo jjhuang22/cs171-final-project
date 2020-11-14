@@ -4,6 +4,13 @@
 	<meta charset="utf-8">
 	<title>Startups</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!--	Chris: load font-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
+
+
+
+
 	<link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -87,6 +94,36 @@
 		</div>
 	</div>
 
+	<br>
+	<div class="col-md-8 offset-2" style="margin-top: 70vh"></div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8 offset-2" style="margin-top: 5vh; margin-bottom: 5vh; border: thin solid grey; border-radius: 5px; background: rgba(221,221,221,0.45)">
+
+				<!-- header -->
+				<div class="row justify-content-center" style="height: 15vh">
+					<div class="align-self-center">
+						<h1>UK Household Expenditure</h1>
+						<h2>Detailed annual statistics on family food and drink purchases</h2>
+					</div>
+				</div>
+				<br>
+				<!-- graph -->
+				<div class="row justify-content-center" style="height: 60vh">
+					<div class="align-self-center" id="chooseDiv" style="height: 100%; width: 100%"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
 
 	<!-- - - - - - - - - - - - >
 	<    Load JS libraries     >
@@ -107,6 +144,8 @@
 	<!-- OWN JS -->
 	<script src="js/mapvis.js"></script>
 	<script src="js/bubbleChart.js"></script>
+	<script src="js/choosevis.js"></script>
+
 	<script src="js/main.js"></script>
 </body>
 </html>
