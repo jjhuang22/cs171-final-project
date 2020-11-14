@@ -5,7 +5,6 @@
 // init global variables & switches
 let myMapVis;
 
-
 let selectedTimeRange = [];
 let selectedCategory = $('#categorySelector').val();
 
@@ -14,8 +13,7 @@ let formatDate = d3.timeFormat("%Y-%m-%d");
 
 // load data using promises
 let promises = [
-    d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),  // not projected -> you need to do it
-    // d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-albers-10m.json"), // already projected -> you can just scale it to ft your browser window
+    d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),
     d3.csv("data/companiesCities.csv")
 ];
 
@@ -40,7 +38,7 @@ Promise.all(promises)
 // initMainPage
 function initMainPage(dataArray) {
     // init map
-    myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1].slice(1, 3));
+    myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
 }
 
 function categoryChange() {
