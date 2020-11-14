@@ -33,7 +33,6 @@ Promise.all(promises)
             d.lng = +d.lng;
         })
 
-        console.log(data[2]);
         data[2].forEach(function(d) {
             d.acquired_at = parseDate(d.acquired_at);
             d.acquired_year = +d.acquired_year; // may not need

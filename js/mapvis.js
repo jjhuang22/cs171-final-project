@@ -39,30 +39,26 @@ class MapVis {
             .attr("class", "tooltip")
             .attr("id", "mapTooltip");
 
-
         // map
-        vis.viewpoint = {'width': 975, 'height': 610};
-        vis.zoom = vis.width / vis.viewpoint.width;
+        // vis.viewpoint = {'width': 975, 'height': 610};
+        // vis.zoom = vis.width / vis.viewpoint.width;
 
-        vis.mapGroup = vis.svg.append("g")
-            .attr("class", "states")
-            .attr("transform", "translate(0, " + vis.height/20 + ")");
+        // vis.mapGroup = vis.svg.append("g")
+        //     .attr("class", "states")
+        //     .attr("transform", "translate(0, " + vis.height/20 + ")");
 
 
         // 11-13: circles on map
         // set projection
-        vis.projection = d3.geoMercator();
+        vis.projection = d3.geoMercator()
+            .scale(1000)
+            .center([-110, 40.5]);
 
         // create path variable
         vis.path = d3.geoPath()
             .projection(vis.projection);
 
         vis.states = topojson.feature(vis.geoData, vis.geoData.objects.states).features;
-
-        // set projection parameters
-        vis.projection
-            .scale(1000)
-            .center([-110, 40.5])
 
         // add states from topojson
         vis.svg.selectAll("path")
@@ -76,22 +72,9 @@ class MapVis {
             .attr("stroke-width", '1px')
             .attr("stroke", "black");
 
-        // vis.svg.selectAll("circle")
-        //     .data(vis.companies)
-        //     .enter()
-        //     .append("circle")
-        //     .attr("cx", function(d) {
-        //         console.log(d);
-        //         return vis.projection([d.lng, d.lat])[0]
-        //     })
-        //     .attr("cy", d => vis.projection([d.lng, d.lat])[1])
-        //     .attr("r", "8px")
-        //     .attr("fill", "salmon");
-
         // wrangleData
         vis.wrangleData();
 
-        // vis.updateVis();
     }
 
     wrangleData(){
@@ -111,8 +94,6 @@ class MapVis {
                 }
             })
         }
-
-        // console.log(filteredData);
 
         // group companies by city
         let companiesByCity = Array.from(d3.group(filteredData, d => d.city), ([key, value]) => ({key, value}));
@@ -142,8 +123,11 @@ class MapVis {
             )
         })
 
-        vis.topTenData = vis.cityInfo.slice(0, 100); // change this as needed
-        // vis.topTenData = vis.cityInfo;
+        vis.cityInfo.sort((a, b) => {
+            return b.numCompanies - a.numCompanies;
+        })
+
+        vis.displayData = vis.cityInfo.slice(0, 20); // change this as needed
 
         vis.updateVis();
     }
@@ -153,7 +137,7 @@ class MapVis {
 
         // vis.legendScale.domain([0, vis.domainMax]);
         // vis.colorScale.domain([0, vis.domainMax]);
-        //
+
         // vis.legendAxis.scale(vis.legendScale)
         //     .tickValues([0, vis.domainMax]);
         //
@@ -161,7 +145,7 @@ class MapVis {
 
         // add circles to svg
         let circle = vis.svg.selectAll("circle")
-            .data(vis.topTenData);
+            .data(vis.displayData);
 
         circle.enter().append("circle")
             .merge(circle)
