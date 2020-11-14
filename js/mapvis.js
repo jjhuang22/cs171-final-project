@@ -39,20 +39,14 @@ class MapVis {
             .attr("class", "tooltip")
             .attr("id", "mapTooltip");
 
-        // map
-        // vis.viewpoint = {'width': 975, 'height': 610};
-        // vis.zoom = vis.width / vis.viewpoint.width;
-
         // vis.mapGroup = vis.svg.append("g")
         //     .attr("class", "states")
         //     .attr("transform", "translate(0, " + vis.height/20 + ")");
 
-
-        // 11-13: circles on map
         // set projection
         vis.projection = d3.geoMercator()
-            .scale(1000)
-            .center([-110, 40.5]);
+            .scale(vis.width / 1.1)
+            .center([-100, 40.5]);
 
         // create path variable
         vis.path = d3.geoPath()
@@ -74,7 +68,6 @@ class MapVis {
 
         // wrangleData
         vis.wrangleData();
-
     }
 
     wrangleData(){
@@ -88,7 +81,6 @@ class MapVis {
         }
         else {
             vis.companies.forEach( row => {
-                // console.log(row);
                 if (selectedCategory == row.market) {
                     filteredData.push(row);
                 }
@@ -115,10 +107,11 @@ class MapVis {
             vis.cityInfo.push(
                 {
                     name: cityName,
+                    state: city.value[0].state_code,
                     lat: city.value[0].lat,
                     lng: city.value[0].lng,
                     numCompanies: numCompanies,
-                    totalFunding: (totalFunding / 1000000).toFixed(2) + " mil"// in millions
+                    totalFunding: (totalFunding / 1000000).toFixed(2)// in millions
                 }
             )
         })
@@ -158,14 +151,18 @@ class MapVis {
             .attr("r", function(d) {
                 return Math.sqrt(d.numCompanies + 10);
             })
-            .attr("fill", "salmon")
+            .attr("fill", function(d) {
+                if (selectedCategory == "All") return "salmon";
+                else {
+                    return d3.schemeCategory10[$("#categorySelector option:selected").index() - 1];
+                }
+            })
             .style("opacity", 1)
             .attr("stroke", "black")
             .attr("stroke-width", "0.5px");
 
         // mouseover
         vis.svg.selectAll("circle").on("mouseover", function(event, d){
-            console.log(d);
             d3.select(this)
                 .attr('stroke-width', '1px')
                 .attr('stroke', 'black')
@@ -178,9 +175,9 @@ class MapVis {
                 .style("top", event.pageY + "px")
                 .html(`
                          <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
-                             <h3>${d.name}<h3>
-                             <h4> Number of Companies: ${d.numCompanies}</h4>
-                             <h4> Total Funding: ${d.totalFunding}</h4>
+                             <h3>${d.name}, ${d.state}<h3>
+                             <h4> Number of Companies: ${Number(d.numCompanies).toLocaleString()}</h4>
+                             <h4> Total Funding (mil): ${parseFloat(d.totalFunding).toLocaleString('en')}</h4>
                          </div>`);
         })
             .on('mouseout', function(event, d){
