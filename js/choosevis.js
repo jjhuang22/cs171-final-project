@@ -52,7 +52,13 @@ class ChooseVis {
         let instructions = vis.svg.append('text')
             .attr("text-anchor", "middle")
             .attr('x', vis.width / 2)
-            .attr('y', vis.margin.top * 2);
+            .attr('y', vis.margin.top * 2)
+            .attr('fill', 'white')
+            .text('Click on a company!')
+            .transition()
+            .delay(7000)
+            .duration(1000)
+            .attr('fill', '#282828');
 
 
         let circleEnter = vis.svg.selectAll('circle')
@@ -76,7 +82,7 @@ class ChooseVis {
                     .enter()
                     .merge(ok)
                     .transition()
-                    .duration(3000)
+                    .duration(2000)
                     .attr("fill", function(d, i) {
                         if (d[4] == 0) {
                             return '#282828';
@@ -93,12 +99,6 @@ class ChooseVis {
                             return (d[1][0]);
                         }
                     })
-
-                instructions
-                    .transition()
-                    .delay()
-                    .duration()
-                    .text('Click on a company!');
 
             })
 
