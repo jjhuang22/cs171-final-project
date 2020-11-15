@@ -52,7 +52,7 @@ function initMainPage(dataArray) {
     // init map
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[2]);
-    myChooseVis = new ChooseVis('chooseDiv')
+    myChooseVis = new ChooseVis('chooseDiv', dataArray[1].slice(0,70))
 }
 
 function categoryChange() {
