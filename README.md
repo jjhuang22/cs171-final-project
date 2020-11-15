@@ -19,3 +19,26 @@ Directories:
 - js:  
 
 for city data: https://simplemaps.com/data/world-cities
+
+## mapvis.js tasks
+- initVis()
+    - project map DONE
+    - add borders DONE
+    - add tooltip (city name, # companies, ranking)
+- wrangleData()
+    - filter by industry
+    - aggregate # of companies by region
+    - subset to top 10 "most innovative" regions in US
+- updateVis()
+    - append circles to map
+
+
+## bubblevis.js tasks
+- initVis()
+    - append circles for top 25 acquirers
+        - size corresponds to 
+        - color corresponds to  
+- wrangleData()
+    - filter by 
+
+## 
