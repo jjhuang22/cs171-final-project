@@ -2,11 +2,14 @@
 /*    fill: #96AB96;*/
 /*}*/
 
-
+body {
+    background-color: #282828;
+}
 
 h1 {
     font-weight: 100;
     margin-top: 50px;
+    font-size: 65px;
 }
 
 h2 {
