@@ -17,70 +17,131 @@
 <body>
 
 	<!-- WRAPPER -->
-	<div class="container-fluid" style="height: 100vh; padding-top: 1vh">
+<!--	<div class="container-fluid" style="height: 100vh; padding-top: 1vh">-->
 		<div class="row" id="title-slide">
-			<h1>It’s Crunch Time: A Story of Startups from 2007-2014</h1>
+			<div class="col-md-10 offset-1 text-center">
+				<h1 style="color: white; ">It’s Crunch Time: <br> A Story of Startups from 2007-2014</h1>
+			</div>
 		</div>
 
+<!--		<div class="row">-->
+<!--			<div class="col-10 offset-1" style="border: thin solid grey; border-radius: 5px;">-->
+
+<!--				&lt;!&ndash; HEADING &ndash;&gt;-->
+<!--				<div class="row d-flex justify-content-center" style="height: 10vh; padding: 0; background: #bcd4e6; border-bottom: thin solid grey">-->
+<!--					<div class="align-self-center">-->
+<!--						<h1>Startups </h1>-->
+<!--					</div>-->
+<!--				</div>-->
+
+<!--				&lt;!&ndash; Visualizations &ndash;&gt;-->
+<!--				&lt;!&ndash; MapVis &ndash;&gt;-->
+<!--				<div class="row" style="height: 73vh; padding-top: 0; padding-left: 1vh; padding-right: 1vh; padding-bottom: 1vh">-->
+<!--					<div class="col-2">-->
+<!--						<div class="row justify-content-center" style="height: 100%">-->
+<!--&lt;!&ndash;							<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="All" selected>All</option>&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="Software">Software</option>&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="Biotechnology">Biotechnology</option>&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="Health">Health</option>&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="Mobile">Mobile</option>&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="Curated Web">Curated Web</option>&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="E-Commerce">E-Commerce</option>&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="Advertising">Advertising</option>&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="Clean Technology">Clean Technology</option>&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="Games">Games</option>&ndash;&gt;-->
+<!--&lt;!&ndash;								<option value="Education">Education</option>&ndash;&gt;-->
+<!--&lt;!&ndash;							</select>&ndash;&gt;-->
+<!--						</div>-->
+<!--					</div>-->
+<!--&lt;!&ndash;					<div class="col-10">&ndash;&gt;-->
+<!--&lt;!&ndash;						<div class="row" style="border: thin solid rgba(211,211,211,0.73); border-radius: 5px; background: rgba(214,226,233,0.42)">&ndash;&gt;-->
+<!--&lt;!&ndash;							<div class="col">&ndash;&gt;-->
+<!--&lt;!&ndash;								<div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;									<div id="mapDiv" style="height: 71vh; width: 100%;"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;								</div>&ndash;&gt;-->
+<!--&lt;!&ndash;							</div>&ndash;&gt;-->
+<!--&lt;!&ndash;						</div>&ndash;&gt;-->
+<!--&lt;!&ndash;					</div>&ndash;&gt;-->
+<!--				</div>-->
+
+<!--				&lt;!&ndash; BubbleChartVis &ndash;&gt;-->
+<!--&lt;!&ndash;				<div class="row" style="height: 73vh; padding-top: 0; padding-left: 1vh; padding-right: 1vh; padding-bottom: 1vh">&ndash;&gt;-->
+<!--&lt;!&ndash;					<div class="col">&ndash;&gt;-->
+<!--&lt;!&ndash;						<div class="row" style="border: thin solid rgba(211,211,211,0.73); border-radius: 5px; background: rgba(214,226,233,0.42)">&ndash;&gt;-->
+<!--&lt;!&ndash;							<div class="col">&ndash;&gt;-->
+<!--&lt;!&ndash;								<div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;									<div id="bubbleDiv" style="height: 71vh; width: 100%;"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;								</div>&ndash;&gt;-->
+<!--&lt;!&ndash;							</div>&ndash;&gt;-->
+<!--&lt;!&ndash;						</div>&ndash;&gt;-->
+<!--&lt;!&ndash;					</div>&ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+
+
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-10 offset-1" style="border: thin solid grey; border-radius: 5px;">
+			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid dodgerblue; border-radius: 30px; background: white">
 
-				<!-- HEADING -->
-				<div class="row d-flex justify-content-center" style="height: 10vh; padding: 0; background: #bcd4e6; border-bottom: thin solid grey">
-					<div class="align-self-center">
-						<h1>Startups </h1>
+				<!-- header -->
+				<div class="row justify-content-center" style="height: 15vh">
+					<div class="col-6 text-center">
+						<h1>Map Vis</h1>
+						<h2></h2>
+					</div>
+					<div class="col-6 align-self-start" style="margin-top: 70px;">
+						<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">
+							<option value="All" selected>All</option>
+							<option value="Software">Software</option>
+							<option value="Biotechnology">Biotechnology</option>
+							<option value="Health">Health</option>
+							<option value="Mobile">Mobile</option>
+							<option value="Curated Web">Curated Web</option>
+							<option value="E-Commerce">E-Commerce</option>
+							<option value="Advertising">Advertising</option>
+							<option value="Clean Technology">Clean Technology</option>
+							<option value="Games">Games</option>
+							<option value="Education">Education</option>
+						</select>
 					</div>
 				</div>
-
-				<!-- Visualizations -->
-				<!-- MapVis -->
-				<div class="row" style="height: 73vh; padding-top: 0; padding-left: 1vh; padding-right: 1vh; padding-bottom: 1vh">
-					<div class="col-2">
-						<div class="row justify-content-center" style="height: 100%">
-							<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">
-								<option value="All" selected>All</option>
-								<option value="Software">Software</option>
-								<option value="Biotechnology">Biotechnology</option>
-								<option value="Health">Health</option>
-								<option value="Mobile">Mobile</option>
-								<option value="Curated Web">Curated Web</option>
-								<option value="E-Commerce">E-Commerce</option>
-								<option value="Advertising">Advertising</option>
-								<option value="Clean Technology">Clean Technology</option>
-								<option value="Games">Games</option>
-								<option value="Education">Education</option>
-							</select>
-						</div>
-					</div>
-					<div class="col-10">
-						<div class="row" style="border: thin solid rgba(211,211,211,0.73); border-radius: 5px; background: rgba(214,226,233,0.42)">
-							<div class="col">
-								<div class="row">
-									<div id="mapDiv" style="height: 71vh; width: 100%;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- BubbleChartVis -->
-				<div class="row" style="height: 73vh; padding-top: 0; padding-left: 1vh; padding-right: 1vh; padding-bottom: 1vh">
-					<div class="col">
-						<div class="row" style="border: thin solid rgba(211,211,211,0.73); border-radius: 5px; background: rgba(214,226,233,0.42)">
-							<div class="col">
-								<div class="row">
-									<div id="bubbleDiv" style="height: 71vh; width: 100%;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
+				<br>
+				<!-- graph -->
+				<div class="row justify-content-center" style="height: 70vh">
+					<div class="align-self-center" id="mapDiv" style="height: 100%; width: 100%"></div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<br>
-	<div class="col-md-8 offset-2" style="margin-top: 170vh"></div>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid dodgerblue; border-radius: 30px; background: white">
+
+				<!-- header -->
+				<div class="row justify-content-center" style="height: 15vh">
+					<div class="align-self-center">
+						<h1>Bubble Vis</h1>
+						<h2></h2>
+					</div>
+				</div>
+				<br>
+				<!-- graph -->
+				<div class="row justify-content-center" style="height: 70vh">
+					<div class="align-self-center" id="bubbleDiv" style="height: 100%; width: 100%"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!--	<br>-->
+<!--	<div class="col-md-8 offset-2" style="margin-top: 170vh"></div>-->
 
 	<div class="container-fluid">
 		<div class="row">
@@ -104,7 +165,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid dodgerblue; border-radius: 30px; background: white">
+			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid salmon; border-radius: 30px; background: white">
 
 				<!-- header -->
 				<div class="row justify-content-center" style="height: 15vh">
@@ -124,7 +185,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid dodgerblue; border-radius: 30px; background: white">
+			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid orange; border-radius: 30px; background: white">
 
 				<!-- header -->
 				<div class="row justify-content-center" style="height: 15vh">
