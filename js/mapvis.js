@@ -88,28 +88,30 @@ class MapVis {
         }
 
         // group companies by city
-        let companiesByCity = Array.from(d3.group(filteredData, d => d.city), ([key, value]) => ({key, value}));
+        let companiesByCity = Array.from(d3.group(filteredData, d => d.cityState), ([key, value]) => ({key, value}));
 
         vis.cityInfo = [];
 
-        companiesByCity.forEach( city => {
-            let cityName = city.key;
+        companiesByCity.forEach( cityState => {
+            let cityStatename = cityState.key;
 
             // init counters
             let numCompanies = 0;
             let totalFunding = 0;
 
-            city.value.forEach(entry => {
+            cityState.value.forEach(entry => {
                 numCompanies += 1;
                 totalFunding += entry['funding_total_usd'];
             })
 
             vis.cityInfo.push(
                 {
-                    name: cityName,
-                    state: city.value[0].state_code,
-                    lat: city.value[0].lat,
-                    lng: city.value[0].lng,
+                    cityname: cityState.value[0].city,
+                    state: cityState.value[0].state,
+                    stateCode: cityState.value[0].state_code,
+                    lat: cityState.value[0].lat,
+                    lng: cityState.value[0].lng,
+                    marketMode: cityState.value[0].marketMode,
                     numCompanies: numCompanies,
                     totalFunding: (totalFunding / 1000000).toFixed(2)// in millions
                 }
@@ -120,7 +122,14 @@ class MapVis {
             return b.numCompanies - a.numCompanies;
         })
 
+        // add rank of city based on chosen industry
+        for (let i = 0; i < vis.cityInfo.length; i++) {
+            vis.cityInfo[i].rank = i + 1;
+        }
+
         vis.displayData = vis.cityInfo.slice(0, 20); // change this as needed
+
+        console.log(vis.displayData);
 
         vis.updateVis();
     }
@@ -141,8 +150,9 @@ class MapVis {
             .data(vis.displayData);
 
         circle.enter().append("circle")
-            .merge(circle)
             .attr("class", "cities")
+            .merge(circle)
+
             .style("opacity", 0)
             .transition()
             .duration(1000)
@@ -163,6 +173,7 @@ class MapVis {
 
         // mouseover
         vis.svg.selectAll("circle").on("mouseover", function(event, d){
+            console.log(d.key);
             d3.select(this)
                 .attr('stroke-width', '1px')
                 .attr('stroke', 'black')
@@ -175,16 +186,18 @@ class MapVis {
                 .style("top", event.pageY + "px")
                 .html(`
                          <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
-                             <h3>${d.name}, ${d.state}<h3>
+                             <h3>${d.cityname}, ${d.stateCode}<h3>
+                             <h4> Rank: ${d.rank}</h4>
+                             <h4> Most popular industry: ${d.marketMode}</h4>
                              <h4> Number of Companies: ${Number(d.numCompanies).toLocaleString()}</h4>
                              <h4> Total Funding (mil): ${parseFloat(d.totalFunding).toLocaleString('en')}</h4>
                          </div>`);
         })
-            .on('mouseout', function(event, d){
+            .on('mouseout', function(event,   d){
                 d3.select(this)
                     .attr('stroke-width', '0.5px')
                     .attr('stroke', 'black')
-                    .style("fill", "salmon")
+                    .style("fill", d3.schemeCategory10[$("#categorySelector option:selected").index() - 1])
                     .style("opacity", 1);
 
                 vis.tooltip
