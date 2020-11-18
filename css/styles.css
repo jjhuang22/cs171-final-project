@@ -2,9 +2,75 @@
 /*    fill: #96AB96;*/
 /*}*/
 
-body {
-    background-color: #282828;
+#test-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
 }
+
+body {
+    background-color: #080314;
+}
+
+#title-slide {
+    margin-top: 84px;
+    margin-bottom: 72px;
+}
+
+.main-title {
+    font: 280px/240px 'Big Shoulders Inline Text', cursive;
+    background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: right;
+}
+
+.subtitle {
+    font: 48px 'IBM Plex Mono', monospace;
+    color: #fffccd;
+    text-align: right;
+    margin-top: 24px;
+}
+
+.vis-border {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border: thick solid dodgerblue;
+    /*border-radius: 30px;*/
+    /*background: white*/
+}
+
+p {
+    color: white;
+    font: 16px 'IBM Plex Mono', monospace;
+}
+
+hr {
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+}
+
+.test-button {
+    margin: 10px;
+    font: 20px 'Roboto', sans-serif;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    background-size: 200% auto;
+    border: 2px solid #FFFFFF;
+    color: #FFF;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    display: inline-block;
+    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
+}
+.test-button:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-position: right center;
+}
+/*.test-button-1 {background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)}*/
+/*.test-button-1:hover { background-position: right center; }*/
 
 h1 {
     font-weight: 100;

@@ -2,15 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Crunch Time</title>
+	<title>Crunch Time | CS 171 Final Project</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-<!--	Chris: load font-->
+	<!-- Chris: load font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@600&family=IBM+Plex+Mono:wght@300&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
-
-
-
-
 	<link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -18,12 +17,84 @@
 
 	<!-- WRAPPER -->
 <!--	<div class="container-fluid" style="height: 100vh; padding-top: 1vh">-->
-		<div class="row" id="title-slide">
-			<div class="col-md-10 offset-1 text-center">
-				<h1 style="color: white; font-weight: 500">It’s Crunch Time: </h1>
-				<h2 style="color: white; font-size: 25px"> A Story of Startups from 2007-2014</h2>
+	<div class="container-fluid">
+
+		<!-- title slide -->
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row" id="title-slide">
+			<div class="col-md-10 offset-1">
+				<p class="main-title">crunch time</p>
+				<p class="subtitle">a story of startups, c. 2007 - 2014</p>
 			</div>
 		</div>
+
+		<hr>
+
+		<!--financial crisis-->
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
+			<div class="col-md-10 vis-border">
+				<div class="row justify-content-center" style="height: 60vh">
+					<div class="align-self-center">
+						<p>Blah blah blah, insert animation here about the FINANCIAL CRASH</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<!--select a startup-->
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
+			<div class="col-md-6 text-center">
+				<p>All three of these companies were founded around the time of the 2008 financial crisis. Choose one, and let's follow its trajectory.</p>
+				<a href="#" class="test-button test-button-1">Uber</a>
+				<a href="#" class="test-button test-button-1">AirBnB</a>
+				<a href="#" class="test-button test-button-1">Alibaba</a>
+			</div>
+		</div>
+
+		<hr>
+
+		<!--startup simulator-->
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
+			<div class="col-md-6 offset-1 vis-border">
+
+				<!-- header -->
+				<div class="row justify-content-center" style="height: 15vh">
+					<div class="align-self-center">
+						<h1>Startup Simulator</h1>
+						<h2></h2>
+					</div>
+				</div>
+				<br>
+				<!-- graph -->
+				<div class="row justify-content-center" style="height: 70vh">
+					<div class="align-self-center" id="chooseDiv" style="height: 100%; width: 100%"></div>
+				</div>
+			</div>
+
+			<div class="col-md-3 offset-1 vis-border"></div>
+		</div>
+
+		<!--bubble-->
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
+			<div class="col-md-10 offset-1 vis-border" id="test-sticky">
+
+				<!-- header -->
+				<div class="row justify-content-center" style="height: 8vh">
+					<div class="align-self-center">
+						<h1>Bubble Vis</h1>
+						<h2></h2>
+					</div>
+				</div>
+				<br>
+				<!-- graph -->
+				<div class="row justify-content-center" style="height: 50vh">
+					<div class="align-self-center" id="bubbleDiv" style="height: 100%; width: 100%"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 <!--		<div class="row">-->
 <!--			<div class="col-10 offset-1" style="border: thin solid grey; border-radius: 5px;">-->
@@ -81,29 +152,29 @@
 <!--			</div>-->
 <!--		</div>-->
 <!--	</div>-->
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid dodgerblue; border-radius: 30px; background: white">
+<!--	<div class="container-fluid">-->
+<!--		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">-->
+<!--			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid dodgerblue; border-radius: 30px; background: white">-->
 
-				<!-- header -->
-				<div class="row justify-content-center" style="height: 15vh">
-					<div class="align-self-center">
-						<h1>Startup Simulator</h1>
-						<h2></h2>
-					</div>
-				</div>
-				<br>
-				<!-- graph -->
-				<div class="row justify-content-center" style="height: 70vh">
-					<div class="align-self-center" id="chooseDiv" style="height: 100%; width: 100%"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+<!--				&lt;!&ndash; header &ndash;&gt;-->
+<!--				<div class="row justify-content-center" style="height: 15vh">-->
+<!--					<div class="align-self-center">-->
+<!--						<h1>Startup Simulator</h1>-->
+<!--						<h2></h2>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<br>-->
+<!--				&lt;!&ndash; graph &ndash;&gt;-->
+<!--				<div class="row justify-content-center" style="height: 70vh">-->
+<!--					<div class="align-self-center" id="chooseDiv" style="height: 100%; width: 100%"></div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
 
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid gold; border-radius: 30px; background: white">
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
+			<div class="col-md-10 offset-1 vis-border">
 
 				<!-- header -->
 				<div class="row justify-content-center" style="height: 15vh">
@@ -138,25 +209,25 @@
 
 
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid lightgreen; border-radius: 30px; background: white">
+<!--	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="container-fluid">-->
+<!--		<div class="row">-->
+<!--			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid lightgreen; border-radius: 30px; background: white">-->
 
-				<!-- header -->
-				<div class="row justify-content-center" style="height: 15vh">
-					<div class="align-self-center">
-						<h1>Bubble Vis</h1>
-						<h2></h2>
-					</div>
-				</div>
-				<br>
-				<!-- graph -->
-				<div class="row justify-content-center" style="height: 70vh">
-					<div class="align-self-center" id="bubbleDiv" style="height: 100%; width: 100%"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+<!--				&lt;!&ndash; header &ndash;&gt;-->
+<!--				<div class="row justify-content-center" style="height: 15vh">-->
+<!--					<div class="align-self-center">-->
+<!--						<h1>Bubble Vis</h1>-->
+<!--						<h2></h2>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<br>-->
+<!--				&lt;!&ndash; graph &ndash;&gt;-->
+<!--				<div class="row justify-content-center" style="height: 70vh">-->
+<!--					<div class="align-self-center" id="bubbleDiv" style="height: 100%; width: 100%"></div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
 
 
 <!--	<br>-->
@@ -164,7 +235,7 @@
 
 
 
-	<div class="container-fluid">
+	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="container-fluid">
 		<div class="row">
 			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid salmon; border-radius: 30px; background: white">
 
@@ -184,7 +255,7 @@
 		</div>
 	</div>
 
-	<div class="container-fluid">
+	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="container-fluid">
 		<div class="row">
 			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid orange; border-radius: 30px; background: white">
 
@@ -233,5 +304,11 @@
 	<script src="js/choosevis.js"></script>
 
 	<script src="js/main.js"></script>
+
+	<!-- AOS -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 </html>
