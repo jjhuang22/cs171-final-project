@@ -129,8 +129,6 @@ class MapVis {
 
         vis.displayData = vis.cityInfo.slice(0, 20); // change this as needed
 
-        console.log(vis.displayData);
-
         vis.updateVis();
     }
 
@@ -150,9 +148,8 @@ class MapVis {
             .data(vis.displayData);
 
         circle.enter().append("circle")
-            .attr("class", "cities")
             .merge(circle)
-
+            .attr("class", "cities")
             .style("opacity", 0)
             .transition()
             .duration(1000)
@@ -162,7 +159,9 @@ class MapVis {
                 return Math.sqrt(d.numCompanies + 10);
             })
             .attr("fill", function(d) {
-                if (selectedCategory == "All") return "salmon";
+                if (selectedCategory == "All") {
+                    return "salmon";
+                }
                 else {
                     return d3.schemeCategory10[$("#categorySelector option:selected").index() - 1];
                 }
@@ -173,7 +172,6 @@ class MapVis {
 
         // mouseover
         vis.svg.selectAll("circle").on("mouseover", function(event, d){
-            console.log(d.key);
             d3.select(this)
                 .attr('stroke-width', '1px')
                 .attr('stroke', 'black')
@@ -197,7 +195,14 @@ class MapVis {
                 d3.select(this)
                     .attr('stroke-width', '0.5px')
                     .attr('stroke', 'black')
-                    .style("fill", d3.schemeCategory10[$("#categorySelector option:selected").index() - 1])
+                    .style("fill", function(d) {
+                        if (selectedCategory == "All") {
+                            return "salmon";
+                        }
+                        else {
+                            return d3.schemeCategory10[$("#categorySelector option:selected").index() - 1];
+                        }
+                    })
                     .style("opacity", 1);
 
                 vis.tooltip
