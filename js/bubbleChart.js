@@ -72,7 +72,9 @@ class BubbleVis {
             return b.numCompanies - a.numCompanies;
         })
 
-        vis.displayData = vis.acquirerInfo.slice(0, 10);
+        vis.displayData = { "children": vis.acquirerInfo.slice(0, 10) };
+
+        console.log(vis.displayData);
 
         vis.updateVis();
     }
@@ -80,6 +82,67 @@ class BubbleVis {
     updateVis(){
         let vis = this;
 
+        vis.color = d3.scaleOrdinal(d3.schemeCategory10);
 
+        vis.bubble = d3.pack(vis.displayData)
+            .size([600, 600])
+            .padding(1.5);
+
+        vis.nodes = d3.hierarchy(vis.displayData)
+            .sum(function(d) { return d.numCompanies; });
+
+        vis.node = vis.svg.selectAll(".node")
+            .data(vis.bubble(vis.nodes).descendants())
+            .enter()
+            .filter(function(d){
+                return  !d.children
+            })
+            .append("g")
+            .attr("class", "node")
+            .attr("transform", function(d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            });
+
+        vis.node.append("circle")
+            .attr("r", function(d) {
+                return d.r;
+            })
+            .style("fill", function(d,i) {
+                return vis.color(i);
+            });
+
+        vis.node.append("title")
+            .text(function(d) {
+                return d.name + ": " + d.numCompanies;
+            });
+
+        vis.node.append("text")
+            .attr("dy", ".2em")
+            .style("text-anchor", "middle")
+            .text(function(d) {
+                console.log(d);
+                return d.data.name;
+
+            })
+            .attr("font-family", "sans-serif")
+            .attr("font-size", function(d){
+                return d.r/5;
+            })
+            .attr("fill", "white");
+
+        vis.node.append("text")
+            .attr("dy", "1.3em")
+            .style("text-anchor", "middle")
+            .text(function(d) {
+                return d.data.numCompanies;
+            })
+            .attr("font-family",  "Gill Sans", "Gill Sans MT")
+            .attr("font-size", function(d){
+                return d.r/5;
+            })
+            .attr("fill", "white");
+
+        d3.select(self.frameElement)
+            .style("height", 600 + "px");
     }
 }
