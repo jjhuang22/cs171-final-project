@@ -99,9 +99,10 @@ BrushVis.prototype.initVis = function() {
 BrushVis.prototype.wrangleDataStatic = function() {
     let vis = this;
 
-    // rearrange data structure and group by state
-    let dataByDate = Array.from(d3.group(vis.data, d =>d.submission_date), ([key, value]) => ({key, value}))
+    console.log(vis.companies);
 
+    // rearrange data structure and group by state
+    let dataByDate = Array.from(d3.group(vis.companies, d =>d.founded_at), ([key, value]) => ({key, value}))
 
     vis.preProcessedData = [];
 

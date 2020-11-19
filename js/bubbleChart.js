@@ -5,8 +5,9 @@
 class BubbleVis {
 
     // constructor method to initialize MapVis object
-    constructor(parentElement, acquisitions) {
+    constructor(parentElement, companies, acquisitions) {
         this.parentElement = parentElement;
+        this.companies = companies;
         this.acquisitions = acquisitions;
 
         this.initVis();
@@ -34,6 +35,7 @@ class BubbleVis {
         vis.wrangleData();
     }
 
+    // wrangle Data for acquirers
     wrangleData(){
         let vis = this;
 
@@ -48,22 +50,23 @@ class BubbleVis {
             // init counters
             let numCompanies = 0;
             let totalPrice = 0;
+            let acquiredCompanies = [];
 
             company.value.forEach(entry => {
                 numCompanies += 1;
                 totalPrice += entry['price_amount'];
+                acquiredCompanies.push(entry['company_name']);
             })
 
             vis.acquirerInfo.push(
                 {
                     name: companyName,
                     numCompanies: numCompanies,
-                    totalPrice: (totalPrice / 1000000).toFixed(2) + " mil"// in millions
+                    totalPrice: (totalPrice / 1000000).toFixed(2) + " mil", // in millions
+                    acquiredCompanies: acquiredCompanies
                 }
             )
         })
-
-        console.log(acquirers);
 
         vis.acquirerInfo.sort((a, b) => {
             return b.numCompanies - a.numCompanies;
@@ -71,7 +74,6 @@ class BubbleVis {
 
         vis.displayData = vis.acquirerInfo.slice(0, 10);
 
-        // console.log(vis.displayData);
         vis.updateVis();
     }
 
