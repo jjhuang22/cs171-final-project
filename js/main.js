@@ -44,7 +44,8 @@ Promise.all(promises)
 // init global variables & switches
 let myMapVis,
     myBubbleVis,
-    myChooseVis;
+    myChooseVis,
+    myBrushVis;
 
 
 // initMainPage
@@ -53,6 +54,9 @@ function initMainPage(dataArray) {
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[2]);
     myChooseVis = new ChooseVis('chooseDiv', dataArray[1].slice(0,70))
+
+    // init brush
+    // myBrushVis = new BrushVis('brushDiv', dataArray[0], dataArray[1]);
 }
 
 function categoryChange() {
