@@ -6,9 +6,12 @@
 /*    white-space:normal;*/
 /*}*/
 
+
+/*WORKS BUT IS BROKEN WITH PARALLAX*/
 .module-border-wrap {
     padding: 1rem;
-    background: linear-gradient(to right, red, purple);
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     padding: 3px;
 }
 
@@ -28,6 +31,7 @@
 
 body {
     background-color: #080314;
+    background-color: #282828;
 }
 
 #title-slide {
