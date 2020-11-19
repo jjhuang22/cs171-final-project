@@ -139,7 +139,7 @@ class MapVis {
         let domain_vals = [];
         Object.keys(vis.cityInfo).forEach( key => domain_vals.push(vis.cityInfo[key].numCompanies));
         vis.colorScale.domain([0, d3.max(domain_vals)]);
-        console.log(domain_vals);
+        // console.log(domain_vals);
 
         // add circles to svg
         let circle = vis.svg.selectAll("circle")
@@ -157,8 +157,8 @@ class MapVis {
                 return Math.sqrt(d.numCompanies + 10);
             })
             .attr("fill", function(d) {
-                let color = vis.colorScale(d.numCompanies);
-                return color;
+                return vis.colorScale(d.numCompanies);
+                // return color;
                 // if (selectedCategory == "All") {
                 //     // return "salmon";
                 //     let color = vis.colorScale(d.numCompanies);

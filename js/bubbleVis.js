@@ -29,7 +29,7 @@ class BubbleVis {
         // tooltip
         vis.tooltip = d3.select("body").append("div")
             .attr("class", "tooltip")
-            .attr("id", "mapTooltip");
+            .attr("id", "bubbleTooltip");
 
         // wrangleData
         vis.wrangleData();
@@ -38,6 +38,8 @@ class BubbleVis {
     // wrangle Data for acquirers
     wrangleData(){
         let vis = this;
+
+        vis.companies = d3.group(vis.companies, d => d.name), ([key, value]) => ({key, value});
 
         // group companies by acquirer
         let acquirers = Array.from(d3.group(vis.acquisitions, d => d.acquirer_name), ([key, value]) => ({key, value}));
@@ -61,6 +63,9 @@ class BubbleVis {
             vis.acquirerInfo.push(
                 {
                     name: companyName,
+                    city: company.value[0].acquirer_city,
+                    stateCode: company.value[0].acquirer_state_code,
+                    market: company.value[0].acquirer_market,
                     numCompanies: numCompanies,
                     totalPrice: (totalPrice / 1000000).toFixed(2) + " mil", // in millions
                     acquiredCompanies: acquiredCompanies
@@ -74,13 +79,13 @@ class BubbleVis {
 
         vis.displayData = { "children": vis.acquirerInfo.slice(0, 10) };
 
-        console.log(vis.displayData);
-
         vis.updateVis();
     }
 
     updateVis(){
         let vis = this;
+
+        // console.log(vis.companies.get("Oracle Corporation"))
 
         vis.color = d3.scaleOrdinal(d3.schemeCategory10);
 
@@ -120,7 +125,6 @@ class BubbleVis {
             .attr("dy", ".2em")
             .style("text-anchor", "middle")
             .text(function(d) {
-                console.log(d);
                 return d.data.name;
 
             })
@@ -144,5 +148,33 @@ class BubbleVis {
 
         d3.select(self.frameElement)
             .style("height", 600 + "px");
+
+        vis.svg.selectAll("circle").on("mouseover", function(event, d){
+            d3.select(this)
+                .attr('stroke-width', '3px')
+                .attr('stroke', 'white');
+
+            vis.tooltip
+                .style("opacity", 1)
+                .style("left", event.pageX + 20 + "px")
+                .style("top", event.pageY + "px")
+                .html(`
+                         <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+                             <h3> ${d.data.name}<h3>
+                             <h6> ${d.data.city}, ${d.data.stateCode}</h6>
+                             <h6> ${d.data.market}</h6>
+                         </div>`);
+        })
+            .on('mouseout', function(event,   d){
+                d3.select(this)
+                    .attr('stroke-width', '0px')
+                    .attr('stroke', 'black');
+
+                vis.tooltip
+                    .style("opacity", 0)
+                    .style("left", 0)
+                    .style("top", 0)
+                    .html(``);
+            });
     }
 }

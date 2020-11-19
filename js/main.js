@@ -51,12 +51,11 @@ let myMapVis,
 function initMainPage(dataArray) {
     // init map
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
-    myBubbleVis = new BubbleVis('bubbleDiv', dataArray[2]);
+    myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
 
     var waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),
         handler: function() {
-            console.log('ahaaaaah');
             myChooseVis = new ChooseVis('chooseDiv', dataArray[1].slice(0,70), 'chooseDivText');
 
             this.destroy();
