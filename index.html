@@ -56,14 +56,19 @@
 
 		<!--startup simulator-->
 		<div class="row" id="chooseDivWaypoint">
+			<img class="thumbnail"
+				 data-aos="fade-right" data-aos-duration="800"
+				 style="z-index: 1; position: absolute; transform: translate3d(10vh,-5vh,0); height: 85vh; width: 85vh;"
+				 src="https://uploads-ssl.webflow.com/5eccfe972c6a906c6bb49a3e/5ed3e15da90a9cd2fb1f8cd0_hero-bg-rectangle.svg">
+
 			<div data-aos="fade-right" data-aos-delay="50" data-aos-duration="800"
 				 class="col-md-6 offset-1 vis-border"
-				 style="background-color: white; border-color: salmon; border-radius: 10px;">
+				 style="background-color: white; border-color: salmon; border-radius: 10px; z-index: 2	">
 
 				<!-- header -->
 				<div class="row justify-content-center" style="height: 15vh;">
 					<div class="align-self-center">
-						<h1>Startup Simulator</h1>
+						<h1 style="color: #282828">Startup Simulator</h1>
 						<h2></h2>
 					</div>
 				</div>
@@ -73,8 +78,7 @@
 					<div class="align-self-center" id="chooseDiv" style="height: 100%; width: 100%"></div>
 				</div>
 			</div>
-<!--						<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800"-->
-<!--							 class="col-md-3 offset-1 vis-border"></div>-->
+
 			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800"
 				 class="col-md-3 offset-1 vis-border"
 				 style="background-color: white; border-color: salmon; border-radius: 10px;">
@@ -313,6 +317,7 @@
 	<script src="https://d3js.org/d3-geo.v1.min.js"></script>
 
 	<script src="js/noframework.waypoints.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 
 	<!-- OWN JS -->
 	<script src="js/mapVis.js"></script>
