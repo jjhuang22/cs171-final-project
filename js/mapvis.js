@@ -10,6 +10,8 @@ class MapVis {
         this.geoData = geoData;
         this.companies = companies;
 
+        this.parseDate = d3.timeParse("%m/%d/%Y");
+
         this.initVis()
     }
 
@@ -62,17 +64,33 @@ class MapVis {
         let vis = this;
 
         // filter data according to market
-        let filteredData = [];
+        let filteredData0 = [];
 
         if (selectedCategory == 'All') {
-            filteredData = vis.companies;
+            filteredData0 = vis.companies;
         }
         else {
             vis.companies.forEach( row => {
                 if (selectedCategory == row.market) {
-                    filteredData.push(row);
+                    filteredData0.push(row);
                 }
             })
+        }
+
+        let filteredData = [];
+
+        // if there is a region selected
+        if (selectedTimeRange.length !== 0) {
+
+            // iterate over all rows
+            filteredData0.forEach(row => {
+                // and push rows with proper dates into filteredData
+                if (selectedTimeRange[0].getTime() <= vis.parseDate(row.founded_at).getTime() && vis.parseDate(row.founded_at).getTime() <= selectedTimeRange[1].getTime()) {
+                    filteredData.push(row);
+                }
+            });
+        } else {
+            filteredData = filteredData0;
         }
 
         // group companies by city
