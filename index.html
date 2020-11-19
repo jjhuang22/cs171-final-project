@@ -55,11 +55,13 @@
 		<hr>
 
 		<!--startup simulator-->
-		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
-			<div class="col-md-6 offset-1 vis-border">
+		<div class="row" id="chooseDivWaypoint">
+			<div data-aos="fade-right" data-aos-delay="50" data-aos-duration="800"
+				 class="col-md-6 offset-1 vis-border"
+				 style="background-color: white; border-color: salmon; border-radius: 10px;">
 
 				<!-- header -->
-				<div class="row justify-content-center" style="height: 15vh">
+				<div class="row justify-content-center" style="height: 15vh;">
 					<div class="align-self-center">
 						<h1>Startup Simulator</h1>
 						<h2></h2>
@@ -71,8 +73,17 @@
 					<div class="align-self-center" id="chooseDiv" style="height: 100%; width: 100%"></div>
 				</div>
 			</div>
-
-			<div class="col-md-3 offset-1 vis-border"></div>
+<!--						<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800"-->
+<!--							 class="col-md-3 offset-1 vis-border"></div>-->
+			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800"
+				 class="col-md-3 offset-1 vis-border"
+				 style="background-color: white; border-color: salmon; border-radius: 10px;">
+				<div class="container d-flex h-100">
+					<div class="row justify-content-center align-self-center">
+						<h2 class="align-text-bottom" style="word-wrap: break-word;" id="chooseDivText"></h2>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!--bubble-->
@@ -300,6 +311,8 @@
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="https://d3js.org/topojson.v2.min.js"></script>
 	<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+
+	<script src="js/noframework.waypoints.js"></script>
 
 	<!-- OWN JS -->
 	<script src="js/mapvis.js"></script>

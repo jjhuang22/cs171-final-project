@@ -2,6 +2,10 @@
 /*    fill: #96AB96;*/
 /*}*/
 
+#chooseDivText {
+    white-space:normal;
+}
+
 #test-sticky {
     position: -webkit-sticky;
     position: sticky;

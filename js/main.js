@@ -10,7 +10,6 @@ let formatDate = d3.timeFormat("%Y-%m-%d");
 
 // load data using promises
 let promises = [
-    // d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-albers-10m.json"),
     d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),
     d3.csv("data/companies_final.csv"),
     d3.csv("data/acquisitions_final.csv")
@@ -45,25 +44,31 @@ Promise.all(promises)
 // init global variables & switches
 let myMapVis,
     myBubbleVis,
-    myChooseVis,
-    myBrushVis;
+    myChooseVis;
 
 
 // initMainPage
 function initMainPage(dataArray) {
     // init map
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
-    myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
-    myChooseVis = new ChooseVis('chooseDiv', dataArray[1].slice(0,70))
+    myBubbleVis = new BubbleVis('bubbleDiv', dataArray[2]);
 
-    // init brush
-    myBrushVis = new BrushVis('brushDiv', dataArray[0], dataArray[1]);
+    var waypoint = new Waypoint({
+        element: document.getElementById('chooseDivWaypoint'),
+        handler: function() {
+            console.log('ahaaaaah');
+            myChooseVis = new ChooseVis('chooseDiv', dataArray[1].slice(0,70), 'chooseDivText');
+
+            this.destroy();
+        },
+        offset: 40
+    })
+
 }
 
 function categoryChange() {
     selectedCategory = $('#categorySelector').val();
     myMapVis.wrangleData();
-    myBrushVis.wrangleData();
 }
 
 
