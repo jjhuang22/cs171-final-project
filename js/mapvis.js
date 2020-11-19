@@ -26,23 +26,11 @@ class MapVis {
             .attr("height", vis.height)
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
-        // // add title
-        // vis.svg.append("g")
-        //     .attr("class", "title map-title")
-        //     .append("text")
-        //     .text("Map")
-        //     .attr("transform", "translate(" + vis.width / 2 + ", 20)")
-        //     .attr("text-anchor", "middle");
-
         // tooltip
         vis.tooltip = d3.select("body").append("div")
             .attr("class", "tooltip")
             .attr("id", "mapTooltip");
-
-        // vis.mapGroup = vis.svg.append("g")
-        //     .attr("class", "states")
-        //     .attr("transform", "translate(0, " + vis.height/20 + ")");
-
+        
         // set projection
         vis.projection = d3.geoMercator()
             .scale(vis.width / 1.5)
