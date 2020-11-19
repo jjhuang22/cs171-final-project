@@ -48,11 +48,11 @@ class MapVis {
             .enter()
             .append("path")
             .attr("class", "feature")
-            .style("fill", "dodgerblue")
+            .style("fill", "#3b3933")
             .attr("opacity", 0.8)
             .attr("d", vis.path)
-            .attr("stroke-width", '1px')
-            .attr("stroke", "black");
+            .attr("stroke-width", '1.5px')
+            .attr("stroke", "white");
 
         // wrangleData
         vis.wrangleData();
@@ -131,6 +131,16 @@ class MapVis {
         //
         // vis.legend.call(vis.legendAxis);
 
+        // create color scale
+        vis.colorScale = d3.scaleLinear()
+            .range(["#fbc4ff", "#f029ff"]);
+
+        // get correct range
+        let domain_vals = [];
+        Object.keys(vis.cityInfo).forEach( key => domain_vals.push(vis.cityInfo[key].numCompanies));
+        vis.colorScale.domain([0, d3.max(domain_vals)]);
+        console.log(domain_vals);
+
         // add circles to svg
         let circle = vis.svg.selectAll("circle")
             .data(vis.displayData);
@@ -147,12 +157,16 @@ class MapVis {
                 return Math.sqrt(d.numCompanies + 10);
             })
             .attr("fill", function(d) {
-                if (selectedCategory == "All") {
-                    return "salmon";
-                }
-                else {
-                    return d3.schemeCategory10[$("#categorySelector option:selected").index() - 1];
-                }
+                let color = vis.colorScale(d.numCompanies);
+                return color;
+                // if (selectedCategory == "All") {
+                //     // return "salmon";
+                //     let color = vis.colorScale(d.numCompanies);
+                //     return color;
+                // }
+                // else {
+                //     return d3.schemeCategory10[$("#categorySelector option:selected").index() - 1];
+                // }
             })
             .style("opacity", 1)
             .attr("stroke", "black")
@@ -171,12 +185,12 @@ class MapVis {
                 .style("left", event.pageX + 20 + "px")
                 .style("top", event.pageY + "px")
                 .html(`
-                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
+                         <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
                              <h3>${d.cityname}, ${d.stateCode}<h3>
-                             <h4> Rank: ${d.rank}</h4>
-                             <h4> Most popular industry: ${d.marketMode}</h4>
-                             <h4> Number of Companies: ${Number(d.numCompanies).toLocaleString()}</h4>
-                             <h4> Total Funding (mil): ${parseFloat(d.totalFunding).toLocaleString('en')}</h4>
+                             <h6> Rank: ${d.rank}</h6>
+                             <h6> Most popular industry: ${d.marketMode}</h6>
+                             <h6> Number of Companies: ${Number(d.numCompanies).toLocaleString()}</h6>
+                             <h6> Total Funding (mil): ${parseFloat(d.totalFunding).toLocaleString('en')}</h6>
                          </div>`);
         })
             .on('mouseout', function(event,   d){
@@ -184,12 +198,15 @@ class MapVis {
                     .attr('stroke-width', '0.5px')
                     .attr('stroke', 'black')
                     .style("fill", function(d) {
-                        if (selectedCategory == "All") {
-                            return "salmon";
-                        }
-                        else {
-                            return d3.schemeCategory10[$("#categorySelector option:selected").index() - 1];
-                        }
+                        let color = vis.colorScale(d.numCompanies);
+                        return color;
+                        // if (selectedCategory == "All") {
+                        //     let color = vis.colorScale(d.numCompanies);
+                        //     return color;
+                        // }
+                        // else {
+                        //     return d3.schemeCategory10[$("#categorySelector option:selected").index() - 1];
+                        // }
                     })
                     .style("opacity", 1);
 

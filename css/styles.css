@@ -76,12 +76,22 @@ h1 {
     font-weight: 100;
     margin-top: 50px;
     font-size: 65px;
+    color: white;
 }
 
 h2 {
     font-weight: 300;
     font-size: 18px;
     margin-bottom: 40px;
+}
+
+h3, h4, h6 {
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+h6 {
+   font-weight: 50;
 }
 
 .container-fluid {
