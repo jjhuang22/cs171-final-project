@@ -5,9 +5,10 @@
 class ChooseVis {
 
     // constructor method to initialize MapVis object
-    constructor(parentElement, companies) {
+    constructor(parentElement, companies, secondElement) {
         this.parentElement = parentElement;
         this.companies = companies;
+        this.secondElement = secondElement;
 
         this.initVis()
     }
@@ -60,6 +61,27 @@ class ChooseVis {
             .duration(1000)
             .attr('fill', '#282828');
 
+        let instructions2 = d3.select("#" + vis.secondElement)
+            .style('color', 'white')
+            .text('okokokok')
+            .transition()
+            .delay(800)
+            .duration(1000)
+            .style('color', '#282828')
+
+            .transition()
+            .delay(800)
+            .duration(1000)
+            .style('color', 'white')
+
+            .transition()
+            .text('break-all: Will break the string at the very end, breaking at the last word word-break: ' +
+                'is more of pretty brake, will break nicely for example at ? point normal: same as word-break')
+
+            .transition()
+            .delay(800)
+            .duration(1000)
+            .style('color', 'black');
 
         let circleEnter = vis.svg.selectAll('circle')
             .data(circles);
@@ -75,8 +97,16 @@ class ChooseVis {
             // .attr("fill", (d, i) => colors[i%3][i%3])
             .on("click", function(event, d){
 
+                d3.select("#" + vis.secondElement)
+                    .style('color', 'white')
+                    .text('okokokok')
+                    .transition()
+                    .delay(800)
+                    .duration(1000)
+                    .style('color', '#282828')
+
                 let ok = vis.svg.selectAll('circle')
-                    .data(circles)
+                    .data(circles);
 
                 ok
                     .enter()
@@ -98,7 +128,7 @@ class ChooseVis {
                         else {
                             return (d[1][0]);
                         }
-                    })
+                    });
 
             })
 
