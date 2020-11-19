@@ -2,9 +2,23 @@
 /*    fill: #96AB96;*/
 /*}*/
 
-#chooseDivText {
-    white-space:normal;
+/*#chooseDivText {*/
+/*    white-space:normal;*/
+/*}*/
+
+.module-border-wrap {
+    padding: 1rem;
+    background: linear-gradient(to right, red, purple);
+    padding: 3px;
 }
+
+.module {
+    background: black;
+    color: white;
+    padding: 2rem;
+    height: 100%
+}
+
 
 #test-sticky {
     position: -webkit-sticky;
