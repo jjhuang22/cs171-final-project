@@ -31,7 +31,6 @@
 
 body {
     background-color: #080314;
-    background-color: #282828;
 }
 
 #title-slide {
@@ -96,7 +95,7 @@ hr {
 
 h1 {
     font-weight: 100;
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 65px;
     color: white;
 }
@@ -105,6 +104,7 @@ h2 {
     font-weight: 300;
     font-size: 18px;
     margin-bottom: 40px;
+    color: white;
 }
 
 h3, h4, h6 {
