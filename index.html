@@ -56,41 +56,66 @@
 
 		<div class="section-divider"></div>
 
-		<!--startup simulator-->
-		<div class="row" id="chooseDivWaypoint">
-			<img class="thumbnail"
-				 style="z-index: 1; position: absolute; left: 10vh; height: 85vh; width: 85vh;"
-				 src="https://uploads-ssl.webflow.com/5eccfe972c6a906c6bb49a3e/5ed3e15da90a9cd2fb1f8cd0_hero-bg-rectangle.svg">
-
-<!--			<div class="thumbnail module-border-wrap"-->
-<!--				 style="z-index: 1; position: absolute; left: 10vh; height: 85vh; width: 85vh;"><div class="module">-->
-<!--			</div></div>-->
-
-			<div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000"
-				 class="col-md-6 offset-1 vis-border"
-				 style="background-color: white; border-color: salmon; z-index: 2">
+		<!--usa map-->
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
+			<div class="col-md-6 offset-1 vis-border">
 
 				<!-- header -->
-				<div class="row justify-content-center" style="height: 15vh;">
+				<div class="row justify-content-center" style="height: 15vh">
+					<div class="col-md-6 text-center">
+						<h1>Map Vis</h1>
+						<h2>Where are startups born? Where do you go to found a startup in X industry? </h2>
+					</div>
+					<div class="col-md-6 align-self-start" style="margin-top: 70px;">
+						<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">
+							<option value="All" selected>All</option>
+							<option value="Software">Software</option>
+							<option value="Biotechnology">Biotechnology</option>
+							<option value="Health">Health</option>
+							<option value="Mobile">Mobile</option>
+							<option value="Curated Web">Curated Web</option>
+							<option value="E-Commerce">E-Commerce</option>
+							<option value="Advertising">Advertising</option>
+							<option value="Clean Technology">Clean Technology</option>
+							<option value="Games">Games</option>
+							<option value="Education">Education</option>
+						</select>
+					</div>
+				</div>
+				<br>
+				<!-- graph -->
+				<div class="row justify-content-center" style="height: 70vh">
+					<div class="align-self-center" id="mapDiv" style="height: 100%; width: 100%"></div>
+				</div>
+<!--				<div class="row justify-content-center" style="height: 30vh; background-color: white;">-->
+<!--					<div class="align-self-center" id="brushDiv" style="height: 100%; width: 100%"></div>-->
+<!--				</div>-->
+			</div>
+
+			<div class="col-md-3 offset-1 vis-border" style="height: 88vh">
+				<div class="align-self-center" id="barDiv">
+					<p>Bar chart will go here</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-divider"></div>
+
+		<!--innovative visualization-->
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
+			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid salmon">
+
+				<!-- header -->
+				<div class="row justify-content-center" style="height: 15vh">
 					<div class="align-self-center">
-						<h1 style="color: #282828">Startup Simulator</h1>
+						<h1>Innovative Visualization</h1>
 						<h2></h2>
 					</div>
 				</div>
 				<br>
 				<!-- graph -->
 				<div class="row justify-content-center" style="height: 70vh">
-					<div class="align-self-center" id="chooseDiv" style="height: 100%; width: 100%"></div>
-				</div>
-			</div>
-
-			<div data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000"
-				 class="col-md-3 offset-1 vis-border"
-				 style="background-color: white; border-color: salmon">
-				<div class="container d-flex h-100">
-					<div class="row justify-content-center align-self-center">
-						<h2 class="align-text-bottom" style="word-wrap: break-word;" id="chooseDivText"></h2>
-					</div>
+					<div class="align-self-center" id="otherDiv" style="height: 100%; width: 100%"></div>
 				</div>
 			</div>
 		</div>
@@ -136,60 +161,41 @@
 
 		<div class="section-divider"></div>
 
-		<!--usa map-->
-		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
-			<div class="col-md-10 offset-1 vis-border">
+		<!--startup simulator-->
+		<div class="row" id="chooseDivWaypoint">
+			<img class="thumbnail"
+				 style="z-index: 1; position: absolute; left: 10vh; height: 85vh; width: 85vh;"
+				 src="https://uploads-ssl.webflow.com/5eccfe972c6a906c6bb49a3e/5ed3e15da90a9cd2fb1f8cd0_hero-bg-rectangle.svg">
+
+			<!--			<div class="thumbnail module-border-wrap"-->
+			<!--				 style="z-index: 1; position: absolute; left: 10vh; height: 85vh; width: 85vh;"><div class="module">-->
+			<!--			</div></div>-->
+
+			<div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000"
+				 class="col-md-6 offset-1 vis-border"
+				 style="background-color: white; border-color: salmon; z-index: 2">
 
 				<!-- header -->
-				<div class="row justify-content-center" style="height: 15vh">
-					<div class="col-6 text-center">
-						<h1>Map Vis</h1>
-						<h2>Where are startups born? Where do you go to found a startup in X industry? </h2>
-					</div>
-					<div class="col-6 align-self-start" style="margin-top: 70px;">
-						<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">
-							<option value="All" selected>All</option>
-							<option value="Software">Software</option>
-							<option value="Biotechnology">Biotechnology</option>
-							<option value="Health">Health</option>
-							<option value="Mobile">Mobile</option>
-							<option value="Curated Web">Curated Web</option>
-							<option value="E-Commerce">E-Commerce</option>
-							<option value="Advertising">Advertising</option>
-							<option value="Clean Technology">Clean Technology</option>
-							<option value="Games">Games</option>
-							<option value="Education">Education</option>
-						</select>
-					</div>
-				</div>
-				<br>
-				<!-- graph -->
-				<div class="row justify-content-center" style="height: 70vh">
-					<div class="align-self-center" id="mapDiv" style="height: 100%; width: 100%"></div>
-				</div>
-<!--				<div class="row justify-content-center" style="height: 30vh; background-color: white;">-->
-<!--					<div class="align-self-center" id="brushDiv" style="height: 100%; width: 100%"></div>-->
-<!--				</div>-->
-			</div>
-		</div>
-
-		<div class="section-divider"></div>
-
-		<!--innovative visualization-->
-		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
-			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid salmon">
-
-				<!-- header -->
-				<div class="row justify-content-center" style="height: 15vh">
+				<div class="row justify-content-center" style="height: 15vh;">
 					<div class="align-self-center">
-						<h1>Innovative Visualization</h1>
+						<h1 style="color: #282828">Startup Simulator</h1>
 						<h2></h2>
 					</div>
 				</div>
 				<br>
 				<!-- graph -->
 				<div class="row justify-content-center" style="height: 70vh">
-					<div class="align-self-center" id="otherDiv" style="height: 100%; width: 100%"></div>
+					<div class="align-self-center" id="chooseDiv" style="height: 100%; width: 100%"></div>
+				</div>
+			</div>
+
+			<div data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000"
+				 class="col-md-3 offset-1 vis-border"
+				 style="background-color: white; border-color: salmon">
+				<div class="container d-flex h-100">
+					<div class="row justify-content-center align-self-center">
+						<h2 class="align-text-bottom" style="word-wrap: break-word;" id="chooseDivText"></h2>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -216,147 +222,6 @@
 		</div>
 	</div>
 
-
-<!--		<div class="row">-->
-<!--			<div class="col-10 offset-1" style="border: thin solid grey; border-radius: 5px;">-->
-
-<!--				&lt;!&ndash; HEADING &ndash;&gt;-->
-<!--				<div class="row d-flex justify-content-center" style="height: 10vh; padding: 0; background: #bcd4e6; border-bottom: thin solid grey">-->
-<!--					<div class="align-self-center">-->
-<!--						<h1>Startups </h1>-->
-<!--					</div>-->
-<!--				</div>-->
-
-<!--				&lt;!&ndash; Visualizations &ndash;&gt;-->
-<!--				&lt;!&ndash; MapVis &ndash;&gt;-->
-<!--				<div class="row" style="height: 73vh; padding-top: 0; padding-left: 1vh; padding-right: 1vh; padding-bottom: 1vh">-->
-<!--					<div class="col-2">-->
-<!--						<div class="row justify-content-center" style="height: 100%">-->
-<!--&lt;!&ndash;							<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="All" selected>All</option>&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="Software">Software</option>&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="Biotechnology">Biotechnology</option>&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="Health">Health</option>&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="Mobile">Mobile</option>&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="Curated Web">Curated Web</option>&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="E-Commerce">E-Commerce</option>&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="Advertising">Advertising</option>&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="Clean Technology">Clean Technology</option>&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="Games">Games</option>&ndash;&gt;-->
-<!--&lt;!&ndash;								<option value="Education">Education</option>&ndash;&gt;-->
-<!--&lt;!&ndash;							</select>&ndash;&gt;-->
-<!--						</div>-->
-<!--					</div>-->
-<!--&lt;!&ndash;					<div class="col-10">&ndash;&gt;-->
-<!--&lt;!&ndash;						<div class="row" style="border: thin solid rgba(211,211,211,0.73); border-radius: 5px; background: rgba(214,226,233,0.42)">&ndash;&gt;-->
-<!--&lt;!&ndash;							<div class="col">&ndash;&gt;-->
-<!--&lt;!&ndash;								<div class="row">&ndash;&gt;-->
-<!--&lt;!&ndash;									<div id="mapDiv" style="height: 71vh; width: 100%;"></div>&ndash;&gt;-->
-<!--&lt;!&ndash;								</div>&ndash;&gt;-->
-<!--&lt;!&ndash;							</div>&ndash;&gt;-->
-<!--&lt;!&ndash;						</div>&ndash;&gt;-->
-<!--&lt;!&ndash;					</div>&ndash;&gt;-->
-<!--				</div>-->
-
-<!--				&lt;!&ndash; BubbleChartVis &ndash;&gt;-->
-<!--&lt;!&ndash;				<div class="row" style="height: 73vh; padding-top: 0; padding-left: 1vh; padding-right: 1vh; padding-bottom: 1vh">&ndash;&gt;-->
-<!--&lt;!&ndash;					<div class="col">&ndash;&gt;-->
-<!--&lt;!&ndash;						<div class="row" style="border: thin solid rgba(211,211,211,0.73); border-radius: 5px; background: rgba(214,226,233,0.42)">&ndash;&gt;-->
-<!--&lt;!&ndash;							<div class="col">&ndash;&gt;-->
-<!--&lt;!&ndash;								<div class="row">&ndash;&gt;-->
-<!--&lt;!&ndash;									<div id="bubbleDiv" style="height: 71vh; width: 100%;"></div>&ndash;&gt;-->
-<!--&lt;!&ndash;								</div>&ndash;&gt;-->
-<!--&lt;!&ndash;							</div>&ndash;&gt;-->
-<!--&lt;!&ndash;						</div>&ndash;&gt;-->
-<!--&lt;!&ndash;					</div>&ndash;&gt;-->
-<!--&lt;!&ndash;				</div>&ndash;&gt;-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<div class="container-fluid">-->
-<!--		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">-->
-<!--			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid dodgerblue; border-radius: 30px; background: white">-->
-
-<!--				&lt;!&ndash; header &ndash;&gt;-->
-<!--				<div class="row justify-content-center" style="height: 15vh">-->
-<!--					<div class="align-self-center">-->
-<!--						<h1>Startup Simulator</h1>-->
-<!--						<h2></h2>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<br>-->
-<!--				&lt;!&ndash; graph &ndash;&gt;-->
-<!--				<div class="row justify-content-center" style="height: 70vh">-->
-<!--					<div class="align-self-center" id="chooseDiv" style="height: 100%; width: 100%"></div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</div>-->
-
-<!--	<div class="container-fluid">-->
-<!--		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">-->
-<!--			<div class="col-md-10 offset-1 vis-border">-->
-
-<!--				&lt;!&ndash; header &ndash;&gt;-->
-<!--				<div class="row justify-content-center" style="height: 15vh">-->
-<!--					<div class="col-6 text-center">-->
-<!--						<h1>Map Vis</h1>-->
-<!--						<h2></h2>-->
-<!--					</div>-->
-<!--					<div class="col-6 align-self-start" style="margin-top: 70px;">-->
-<!--						<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">-->
-<!--							<option value="All" selected>All</option>-->
-<!--							<option value="Software">Software</option>-->
-<!--							<option value="Biotechnology">Biotechnology</option>-->
-<!--							<option value="Health">Health</option>-->
-<!--							<option value="Mobile">Mobile</option>-->
-<!--							<option value="Curated Web">Curated Web</option>-->
-<!--							<option value="E-Commerce">E-Commerce</option>-->
-<!--							<option value="Advertising">Advertising</option>-->
-<!--							<option value="Clean Technology">Clean Technology</option>-->
-<!--							<option value="Games">Games</option>-->
-<!--							<option value="Education">Education</option>-->
-<!--						</select>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<br>-->
-<!--				&lt;!&ndash; graph &ndash;&gt;-->
-<!--				<div class="row justify-content-center" style="height: 70vh">-->
-<!--					<div class="align-self-center" id="mapDiv" style="height: 100%; width: 100%"></div>-->
-<!--				</div>-->
-<!--				<div class="row justify-content-center" style="height: 30vh; background-color: white;">-->
-<!--					<div class="align-self-center" id="brushDiv" style="height: 100%; width: 100%"></div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</div>-->
-
-
-
-<!--	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="container-fluid">-->
-<!--		<div class="row">-->
-<!--			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid lightgreen; border-radius: 30px; background: white">-->
-
-<!--				&lt;!&ndash; header &ndash;&gt;-->
-<!--				<div class="row justify-content-center" style="height: 15vh">-->
-<!--					<div class="align-self-center">-->
-<!--						<h1>Bubble Vis</h1>-->
-<!--						<h2></h2>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<br>-->
-<!--				&lt;!&ndash; graph &ndash;&gt;-->
-<!--				<div class="row justify-content-center" style="height: 70vh">-->
-<!--					<div class="align-self-center" id="bubbleDiv" style="height: 100%; width: 100%"></div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</div>-->
-
-
-<!--	<br>-->
-<!--	<div class="col-md-8 offset-2" style="margin-top: 170vh"></div>-->
-
 	<!-- - - - - - - - - - - - >
 	<    Load JS libraries     >
 	<- - - - - - - - - - - - -->
@@ -378,6 +243,7 @@
 
 	<!-- OWN JS -->
 	<script src="js/mapVis.js"></script>
+	<script src="js/barVis.js"></script>
 	<script src="js/brushVis.js"></script>
 	<script src="js/bubbleVis.js"></script>
 	<script src="js/choosevis.js"></script>
