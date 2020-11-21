@@ -53,7 +53,7 @@ function initMainPage(dataArray) {
     // init map
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
-    myBrushVis = new BrushVis('brushDiv', dataArray[1]);
+    // myBrushVis = new BrushVis('brushDiv', dataArray[1]);
 
     var waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),
