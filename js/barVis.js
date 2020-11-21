@@ -144,17 +144,33 @@ class BarVis {
     updateVis() {
         let vis = this;
 
+        // create color scale
+        vis.colorScale = d3.scaleLinear()
+            .range(["#fbc4ff", "#f029ff"]);
+
+        // get correct range
+        let domain_vals = [];
+        Object.keys(vis.cityInfo).forEach( key => domain_vals.push(vis.cityInfo[key].numCompanies));
+        vis.colorScale.domain([0, d3.max(domain_vals)]);
+        // console.log(domain_vals);
+
         vis.x.domain(vis.displayData.map(d => d.cityname));
         vis.y.domain([0, d3.max(vis.displayData, d => d.numCompanies)]);
         // vis.colorScale.domain([0, d3.max(vis.stateInfo, d => d[selectedCategory])]);
 
         vis.xAxisGroup.transition()
             .duration(1000)
-            .call(vis.xAxis);
+            .call(vis.xAxis)
+            .style("stroke", "white")
+            .attr("stroke-width", 0.5)
+            .attr("color", "white");
 
         vis.yAxisGroup.transition()
             .duration(1000)
-            .call(vis.yAxis);
+            .call(vis.yAxis)
+            .style("stroke", "white")
+            .attr("stroke-width", 0.5)
+            .attr("color", "white");
 
         let rect = vis.svg.selectAll("rect")
             .data(vis.displayData);
@@ -169,7 +185,9 @@ class BarVis {
             .attr("width", vis.x.bandwidth())
             .attr("height", d => vis.height - vis.y(d.numCompanies))
             // .style("fill", d => vis.colorScale(d.numCompanies))
-            .style("fill", "blue")
+            .style("fill", function(d) {
+                return vis.colorScale(d.numCompanies);
+            })
             .style("opacity", 1);
 
         // vis.svg.selectAll("rect").on("mouseover", function(event, d){
