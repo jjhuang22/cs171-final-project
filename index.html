@@ -56,14 +56,22 @@
 
 		<!--startup simulator-->
 		<div class="row" id="chooseDivWaypoint">
-			<div data-aos="fade-right" data-aos-delay="50" data-aos-duration="800"
+			<img class="thumbnail"
+				 style="z-index: 1; position: absolute; left: 10vh; height: 85vh; width: 85vh;"
+				 src="https://uploads-ssl.webflow.com/5eccfe972c6a906c6bb49a3e/5ed3e15da90a9cd2fb1f8cd0_hero-bg-rectangle.svg">
+
+<!--			<div class="thumbnail module-border-wrap"-->
+<!--				 style="z-index: 1; position: absolute; left: 10vh; height: 85vh; width: 85vh;"><div class="module">-->
+<!--			</div></div>-->
+
+			<div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000"
 				 class="col-md-6 offset-1 vis-border"
-				 style="background-color: white; border-color: salmon; border-radius: 10px;">
+				 style="background-color: white; border-color: salmon; z-index: 2	">
 
 				<!-- header -->
 				<div class="row justify-content-center" style="height: 15vh;">
 					<div class="align-self-center">
-						<h1>Startup Simulator</h1>
+						<h1 style="color: #282828">Startup Simulator</h1>
 						<h2></h2>
 					</div>
 				</div>
@@ -73,11 +81,10 @@
 					<div class="align-self-center" id="chooseDiv" style="height: 100%; width: 100%"></div>
 				</div>
 			</div>
-<!--						<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800"-->
-<!--							 class="col-md-3 offset-1 vis-border"></div>-->
-			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800"
+
+			<div data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000"
 				 class="col-md-3 offset-1 vis-border"
-				 style="background-color: white; border-color: salmon; border-radius: 10px;">
+				 style="background-color: white; border-color: salmon">
 				<div class="container d-flex h-100">
 					<div class="row justify-content-center align-self-center">
 						<h2 class="align-text-bottom" style="word-wrap: break-word;" id="chooseDivText"></h2>
@@ -88,19 +95,37 @@
 
 		<!--bubble-->
 		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
-			<div class="col-md-10 offset-1 vis-border" id="test-sticky">
+			<div class="col-md-6 offset-1 vis-border" id="test-sticky">
 
 				<!-- header -->
 				<div class="row justify-content-center" style="height: 8vh">
 					<div class="align-self-center">
 						<h1>Bubble Vis</h1>
-						<h2></h2>
+						<h2>Question to answer: Who are the big players? What markets are they gobbling up, and what is still relatively untouched?</h2>
 					</div>
 				</div>
 				<br>
 				<!-- graph -->
 				<div class="row justify-content-center" style="height: 80vh">
-					<div class="align-self-center" id="bubbleDiv" style="height: 100%; width: 70%"></div>
+					<div class="align-self-center" id="bubbleDiv" style="height: 100%; width: 100%"></div>
+				</div>
+			</div>
+
+			<div class="col-md-3 offset-1 vis-border" style="height: 88vh">
+				<div class="align-self-center">
+					<p>View 1 (condensed): You've heard of "Big Tech," perhaps as a nebulous futuristic oligopoly
+						running the world from the shadows (or from the comfort of colorful couches and espresso machines)
+						But who exactly are these big players? You might be surprised: though Google does nab the top spot
+						for most companies acquired between 2007 and 2014, some older names you might have forgotten,
+						like Yahoo!, Cisco, and AOL take the 2nd, 3rd, and 4th spots respectively.</p>
+					<br>
+					<p>View 2 (exploded, color by market, cluster by company):
+						What markets are the big players acquiring? Interaction: toggle between clustering by
+						acquirer, clustering by acquiree market, and clustering by acquirer market.</p>
+					<p>Maybe we also want to toggle between sizing circles by # companies acquired and total valuation
+						of acquired companies.</p>
+					<p>Extra tidbits: Compare the founding years of the acquirers vs the founding years of the acquired
+						companies in a simple overlaid histogram? on the side panel.</p>
 				</div>
 			</div>
 		</div>
@@ -313,6 +338,7 @@
 	<script src="https://d3js.org/d3-geo.v1.min.js"></script>
 
 	<script src="js/noframework.waypoints.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 
 	<!-- OWN JS -->
 	<script src="js/mapVis.js"></script>

@@ -2,9 +2,26 @@
 /*    fill: #96AB96;*/
 /*}*/
 
-#chooseDivText {
-    white-space:normal;
+/*#chooseDivText {*/
+/*    white-space:normal;*/
+/*}*/
+
+
+/*WORKS BUT IS BROKEN WITH PARALLAX*/
+.module-border-wrap {
+    padding: 1rem;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    padding: 3px;
 }
+
+.module {
+    background: black;
+    color: white;
+    padding: 2rem;
+    height: 100%
+}
+
 
 #test-sticky {
     position: -webkit-sticky;
@@ -78,7 +95,7 @@ hr {
 
 h1 {
     font-weight: 100;
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 65px;
     color: white;
 }
@@ -87,6 +104,7 @@ h2 {
     font-weight: 300;
     font-size: 18px;
     margin-bottom: 40px;
+    color: white;
 }
 
 h3, h4, h6 {
