@@ -6,31 +6,19 @@
 /*    white-space:normal;*/
 /*}*/
 
-
-/*WORKS BUT IS BROKEN WITH PARALLAX*/
-.module-border-wrap {
-    padding: 1rem;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    padding: 3px;
-}
-
-.module {
-    background: black;
-    color: white;
-    padding: 2rem;
-    height: 100%
-}
-
-
-#test-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-}
+/*GENERAL WEBSITE STYLING AND AESTHETICS*/
 
 body {
     background-color: #080314;
+}
+
+.section-divider {
+    height: 4px;
+    margin-right: 45%;
+    margin-left: 45%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    background-image: linear-gradient(90deg, #ec90fa 8%, #ffb1e9 29%, #ffd74c 56%, #f1d1f2 80%, #dbd6ff 98%, #fff)
 }
 
 #title-slide {
@@ -48,7 +36,7 @@ body {
 
 .subtitle {
     font: 48px 'IBM Plex Mono', monospace;
-    color: #fffccd;
+    color: #ffd74c;
     text-align: right;
     margin-top: 24px;
 }
@@ -66,9 +54,37 @@ p {
     font: 16px 'IBM Plex Mono', monospace;
 }
 
-hr {
-    padding-top: 30vh;
-    padding-bottom: 30vh;
+/*hr {*/
+/*    padding-top: 30vh;*/
+/*    padding-bottom: 30vh;*/
+/*}*/
+
+
+
+
+
+
+
+
+/*WORKS BUT IS BROKEN WITH PARALLAX*/
+.module-border-wrap {
+    padding: 1rem;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    padding: 3px;
+}
+
+.module {
+    background: black;
+    color: white;
+    padding: 2rem;
+    height: 100%
+}
+
+#test-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
 }
 
 .test-button {

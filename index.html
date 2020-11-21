@@ -16,7 +16,6 @@
 <body>
 
 	<!-- WRAPPER -->
-<!--	<div class="container-fluid" style="height: 100vh; padding-top: 1vh">-->
 	<div class="container-fluid">
 
 		<!-- title slide -->
@@ -27,20 +26,23 @@
 			</div>
 		</div>
 
-		<hr>
+		<div class="section-divider"></div>
 
 		<!--financial crisis-->
 		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
 			<div class="col-md-10 vis-border">
 				<div class="row justify-content-center" style="height: 60vh">
 					<div class="align-self-center">
-						<p>Blah blah blah, insert animation here about the FINANCIAL CRASH</p>
+						<p>INTRODUCTION: Fuckkkk idk how to start out the narrative <i>Venmo. Uber. Slack. Square.</i> What do these companies have in common?
+						All were founded in the wake of the 2008 global recession. While Wall Street was wallowing,
+						a new generation of entrepreneurs was...
+						Visual components: silhouettes floating around slowly / parallax-ing</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<hr>
+		<div class="section-divider"></div>
 
 		<!--select a startup-->
 		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
@@ -52,7 +54,7 @@
 			</div>
 		</div>
 
-		<hr>
+		<div class="section-divider"></div>
 
 		<!--startup simulator-->
 		<div class="row" id="chooseDivWaypoint">
@@ -66,7 +68,7 @@
 
 			<div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000"
 				 class="col-md-6 offset-1 vis-border"
-				 style="background-color: white; border-color: salmon; z-index: 2	">
+				 style="background-color: white; border-color: salmon; z-index: 2">
 
 				<!-- header -->
 				<div class="row justify-content-center" style="height: 15vh;">
@@ -92,6 +94,8 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="section-divider"></div>
 
 		<!--bubble-->
 		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
@@ -126,6 +130,87 @@
 						of acquired companies.</p>
 					<p>Extra tidbits: Compare the founding years of the acquirers vs the founding years of the acquired
 						companies in a simple overlaid histogram? on the side panel.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-divider"></div>
+
+		<!--usa map-->
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
+			<div class="col-md-10 offset-1 vis-border">
+
+				<!-- header -->
+				<div class="row justify-content-center" style="height: 15vh">
+					<div class="col-6 text-center">
+						<h1>Map Vis</h1>
+						<h2></h2>
+					</div>
+					<div class="col-6 align-self-start" style="margin-top: 70px;">
+						<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">
+							<option value="All" selected>All</option>
+							<option value="Software">Software</option>
+							<option value="Biotechnology">Biotechnology</option>
+							<option value="Health">Health</option>
+							<option value="Mobile">Mobile</option>
+							<option value="Curated Web">Curated Web</option>
+							<option value="E-Commerce">E-Commerce</option>
+							<option value="Advertising">Advertising</option>
+							<option value="Clean Technology">Clean Technology</option>
+							<option value="Games">Games</option>
+							<option value="Education">Education</option>
+						</select>
+					</div>
+				</div>
+				<br>
+				<!-- graph -->
+				<div class="row justify-content-center" style="height: 70vh">
+					<div class="align-self-center" id="mapDiv" style="height: 100%; width: 100%"></div>
+				</div>
+				<div class="row justify-content-center" style="height: 30vh; background-color: white;">
+					<div class="align-self-center" id="brushDiv" style="height: 100%; width: 100%"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-divider"></div>
+
+		<!--innovative visualization-->
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
+			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid salmon">
+
+				<!-- header -->
+				<div class="row justify-content-center" style="height: 15vh">
+					<div class="align-self-center">
+						<h1>Innovative Visualization</h1>
+						<h2></h2>
+					</div>
+				</div>
+				<br>
+				<!-- graph -->
+				<div class="row justify-content-center" style="height: 70vh">
+					<div class="align-self-center" id="otherDiv" style="height: 100%; width: 100%"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-divider"></div>
+
+		<!--last visualization-->
+		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
+			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid orange">
+
+				<!-- header -->
+				<div class="row justify-content-center" style="height: 15vh">
+					<div class="align-self-center">
+						<h1>Other Vis</h1>
+						<h2></h2>
+					</div>
+				</div>
+				<br>
+				<!-- graph -->
+				<div class="row justify-content-center" style="height: 70vh">
+					<div class="align-self-center" id="otherDiv2" style="height: 100%; width: 100%"></div>
 				</div>
 			</div>
 		</div>
@@ -208,43 +293,43 @@
 <!--		</div>-->
 <!--	</div>-->
 
-	<div class="container-fluid">
-		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
-			<div class="col-md-10 offset-1 vis-border">
+<!--	<div class="container-fluid">-->
+<!--		<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">-->
+<!--			<div class="col-md-10 offset-1 vis-border">-->
 
-				<!-- header -->
-				<div class="row justify-content-center" style="height: 15vh">
-					<div class="col-6 text-center">
-						<h1>Map Vis</h1>
-						<h2></h2>
-					</div>
-					<div class="col-6 align-self-start" style="margin-top: 70px;">
-						<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">
-							<option value="All" selected>All</option>
-							<option value="Software">Software</option>
-							<option value="Biotechnology">Biotechnology</option>
-							<option value="Health">Health</option>
-							<option value="Mobile">Mobile</option>
-							<option value="Curated Web">Curated Web</option>
-							<option value="E-Commerce">E-Commerce</option>
-							<option value="Advertising">Advertising</option>
-							<option value="Clean Technology">Clean Technology</option>
-							<option value="Games">Games</option>
-							<option value="Education">Education</option>
-						</select>
-					</div>
-				</div>
-				<br>
-				<!-- graph -->
-				<div class="row justify-content-center" style="height: 70vh">
-					<div class="align-self-center" id="mapDiv" style="height: 100%; width: 100%"></div>
-				</div>
-				<div class="row justify-content-center" style="height: 30vh; background-color: white;">
-					<div class="align-self-center" id="brushDiv" style="height: 100%; width: 100%"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+<!--				&lt;!&ndash; header &ndash;&gt;-->
+<!--				<div class="row justify-content-center" style="height: 15vh">-->
+<!--					<div class="col-6 text-center">-->
+<!--						<h1>Map Vis</h1>-->
+<!--						<h2></h2>-->
+<!--					</div>-->
+<!--					<div class="col-6 align-self-start" style="margin-top: 70px;">-->
+<!--						<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">-->
+<!--							<option value="All" selected>All</option>-->
+<!--							<option value="Software">Software</option>-->
+<!--							<option value="Biotechnology">Biotechnology</option>-->
+<!--							<option value="Health">Health</option>-->
+<!--							<option value="Mobile">Mobile</option>-->
+<!--							<option value="Curated Web">Curated Web</option>-->
+<!--							<option value="E-Commerce">E-Commerce</option>-->
+<!--							<option value="Advertising">Advertising</option>-->
+<!--							<option value="Clean Technology">Clean Technology</option>-->
+<!--							<option value="Games">Games</option>-->
+<!--							<option value="Education">Education</option>-->
+<!--						</select>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<br>-->
+<!--				&lt;!&ndash; graph &ndash;&gt;-->
+<!--				<div class="row justify-content-center" style="height: 70vh">-->
+<!--					<div class="align-self-center" id="mapDiv" style="height: 100%; width: 100%"></div>-->
+<!--				</div>-->
+<!--				<div class="row justify-content-center" style="height: 30vh; background-color: white;">-->
+<!--					<div class="align-self-center" id="brushDiv" style="height: 100%; width: 100%"></div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
 
 
 
@@ -271,55 +356,6 @@
 
 <!--	<br>-->
 <!--	<div class="col-md-8 offset-2" style="margin-top: 170vh"></div>-->
-
-
-
-	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="container-fluid">
-		<div class="row">
-			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid salmon; border-radius: 30px; background: white">
-
-				<!-- header -->
-				<div class="row justify-content-center" style="height: 15vh">
-					<div class="align-self-center">
-						<h1>Other Vis</h1>
-						<h2></h2>
-					</div>
-				</div>
-				<br>
-				<!-- graph -->
-				<div class="row justify-content-center" style="height: 70vh">
-					<div class="align-self-center" id="otherDiv" style="height: 100%; width: 100%"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="container-fluid">
-		<div class="row">
-			<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid orange; border-radius: 30px; background: white">
-
-				<!-- header -->
-				<div class="row justify-content-center" style="height: 15vh">
-					<div class="align-self-center">
-						<h1>Other Vis 2</h1>
-						<h2></h2>
-					</div>
-				</div>
-				<br>
-				<!-- graph -->
-				<div class="row justify-content-center" style="height: 70vh">
-					<div class="align-self-center" id="otherDiv2" style="height: 100%; width: 100%"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
-
-
-
 
 	<!-- - - - - - - - - - - - >
 	<    Load JS libraries     >

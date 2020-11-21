@@ -64,7 +64,6 @@ function initMainPage(dataArray) {
         },
         offset: 40
     })
-
 }
 
 function categoryChange() {
