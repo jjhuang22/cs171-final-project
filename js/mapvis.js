@@ -35,8 +35,8 @@ class MapVis {
         
         // set projection
         vis.projection = d3.geoMercator()
-            .scale(vis.width / 1.5)
-            .center([-100, 40.5]);
+            .scale(vis.width / 1.25)
+            .center([-82, 40.5]);
 
         // create path variable
         vis.path = d3.geoPath()

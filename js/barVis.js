@@ -133,7 +133,9 @@ class BarVis {
             vis.cityInfo[i].rank = i + 1;
         }
 
-        vis.displayData = vis.cityInfo.slice(0, 12); // change this as needed
+        vis.displayData = vis.cityInfo.slice(0, 12);
+
+        console.log(vis.displayData[0].numCompanies);
 
         vis.updateVis();
     }
@@ -155,64 +157,65 @@ class BarVis {
             .call(vis.yAxis);
 
         let rect = vis.svg.selectAll("rect")
-            .data(vis.topTenData);
+            .data(vis.displayData);
 
         rect.enter().append("rect")
             .merge(rect)
-            .attr("class", d => "state bar " + d.name.replace(" ", ""))
+            // .attr("class", d => "state bar " + d.name.replace(" ", ""))
             .transition()
             .duration(1000)
-            .attr("x", d => vis.x(d.name))
-            .attr("y", d => vis.y(d[selectedCategory]))
+            .attr("x", d => vis.x(d.cityname))
+            .attr("y", d => vis.y(d.numCompanies))
             .attr("width", vis.x.bandwidth())
-            .attr("height", d => vis.height - vis.y(d[selectedCategory]))
-            .style("fill", d => vis.colorScale(d[selectedCategory]))
+            .attr("height", d => vis.height - vis.y(d.numCompanies))
+            // .style("fill", d => vis.colorScale(d.numCompanies))
+            .style("fill", "blue")
             .style("opacity", 1);
 
-        vis.svg.selectAll("rect").on("mouseover", function(event, d){
-            d3.select(this)
-                .attr('stroke-width', '2px')
-                .attr('stroke', 'black')
-                .style("fill", "red")
-                .style("opacity", 0.8);
-
-            d3.selectAll("." + d.name.replace(" ", ""))
-                .attr('stroke-width', '2px')
-                .attr('stroke', 'black')
-                .style("fill", "red")
-                .style("opacity", 0.8);
-
-            vis.tooltip
-                .style("opacity", 1)
-                .style("left", event.pageX + 20 + "px")
-                .style("top", event.pageY + "px")
-                .html(`
-                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
-                             <h3> ${d.name}<h3>
-                             <h4> Population: ${d.population}</h4>
-                             <h4> Cases (absolute): ${d.absCases}</h4>
-                             <h4> Deaths (absolute): ${d.absDeaths}</h4>
-                             <h4> Cases (relative): ${d.relCases.toFixed(2) + "%"}</h4>
-                             <h4> Deaths (relative): ${d.relDeaths.toFixed(2) + "%"}</h4>
-                         </div>`);
-        })
-            .on('mouseout', function(event, d){
-                d3.selectAll("." + d.name.replace(" ", ""))
-                    .attr('stroke-width', '1px')
-                    .style("fill", vis.colorScale(d[selectedCategory]))
-                    .style("opacity", 1);
-
-                d3.select(this)
-                    .attr('stroke-width', '0px')
-                    .style("fill", d => vis.colorScale(d[selectedCategory]))
-                    .style("opacity", 1);
-
-                vis.tooltip
-                    .style("opacity", 0)
-                    .style("left", 0)
-                    .style("top", 0)
-                    .html(``);
-            });
+        // vis.svg.selectAll("rect").on("mouseover", function(event, d){
+        //     d3.select(this)
+        //         .attr('stroke-width', '2px')
+        //         .attr('stroke', 'black')
+        //         .style("fill", "red")
+        //         .style("opacity", 0.8);
+        //
+        //     d3.selectAll("." + d.name.replace(" ", ""))
+        //         .attr('stroke-width', '2px')
+        //         .attr('stroke', 'black')
+        //         .style("fill", "red")
+        //         .style("opacity", 0.8);
+        //
+        //     vis.tooltip
+        //         .style("opacity", 1)
+        //         .style("left", event.pageX + 20 + "px")
+        //         .style("top", event.pageY + "px")
+        //         .html(`
+        //                  <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
+        //                      <h3> ${d.name}<h3>
+        //                      <h4> Population: ${d.population}</h4>
+        //                      <h4> Cases (absolute): ${d.absCases}</h4>
+        //                      <h4> Deaths (absolute): ${d.absDeaths}</h4>
+        //                      <h4> Cases (relative): ${d.relCases.toFixed(2) + "%"}</h4>
+        //                      <h4> Deaths (relative): ${d.relDeaths.toFixed(2) + "%"}</h4>
+        //                  </div>`);
+        // })
+        //     .on('mouseout', function(event, d){
+        //         d3.selectAll("." + d.name.replace(" ", ""))
+        //             .attr('stroke-width', '1px')
+        //             .style("fill", vis.colorScale(d[selectedCategory]))
+        //             .style("opacity", 1);
+        //
+        //         d3.select(this)
+        //             .attr('stroke-width', '0px')
+        //             .style("fill", d => vis.colorScale(d[selectedCategory]))
+        //             .style("opacity", 1);
+        //
+        //         vis.tooltip
+        //             .style("opacity", 0)
+        //             .style("left", 0)
+        //             .style("top", 0)
+        //             .html(``);
+        //     });
 
         rect.exit().remove();
     }

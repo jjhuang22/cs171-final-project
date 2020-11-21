@@ -10,7 +10,7 @@ let formatDate = d3.timeFormat("%Y-%m-%d");
 
 // load data using promises
 let promises = [
-    d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),
+    d3.json("data/states.json"),
     d3.csv("data/companies_final.csv"),
     d3.csv("data/acquisitions_final.csv")
 ];
