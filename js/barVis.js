@@ -2,6 +2,9 @@
 *      class BarVis        *
 * * * * * * * * * * * * * */
 
+// TODO
+// link barVis and mapVis so that hovering over a city on map highlights city in bar?
+// divide by population for barchart?
 
 class BarVis {
 
@@ -184,24 +187,22 @@ class BarVis {
             .attr("y", d => vis.y(d.numCompanies))
             .attr("width", vis.x.bandwidth())
             .attr("height", d => vis.height - vis.y(d.numCompanies))
-            // .style("fill", d => vis.colorScale(d.numCompanies))
-            .style("fill", function(d) {
-                return vis.colorScale(d.numCompanies);
-            })
+            .style("fill", d => vis.colorScale(d.numCompanies))
+            // .style("fill", function(d) {
+            //     return vis.colorScale(d.numCompanies);
+            // })
             .style("opacity", 1);
 
-        // vis.svg.selectAll("rect").on("mouseover", function(event, d){
-        //     d3.select(this)
-        //         .attr('stroke-width', '2px')
-        //         .attr('stroke', 'black')
-        //         .style("fill", "red")
-        //         .style("opacity", 0.8);
-        //
-        //     d3.selectAll("." + d.name.replace(" ", ""))
-        //         .attr('stroke-width', '2px')
-        //         .attr('stroke', 'black')
-        //         .style("fill", "red")
-        //         .style("opacity", 0.8);
+        vis.svg.selectAll("rect").on("mouseover", function(event, d){
+            d3.select(this)
+                .attr('stroke-width', '2px')
+                .attr('stroke', 'black')
+                .style("fill", "red");
+
+            d3.selectAll("." + d.cityname)
+                .attr('stroke-width', '2px')
+                .attr('stroke', 'black')
+                .style("fill", "red");
         //
         //     vis.tooltip
         //         .style("opacity", 1)
@@ -233,7 +234,18 @@ class BarVis {
         //             .style("left", 0)
         //             .style("top", 0)
         //             .html(``);
-        //     });
+            })
+            .on("mouseout", function(event, d){
+                d3.select(this)
+                    .attr('stroke-width', '2px')
+                    .attr('stroke', 'black')
+                    .style("fill", d => vis.colorScale(d.numCompanies));
+
+                d3.selectAll("." + d.cityname)
+                    .attr('stroke-width', '2px')
+                    .attr('stroke', 'black')
+                    .style("fill", d => vis.colorScale(d.numCompanies));
+            });
 
         rect.exit().remove();
     }
