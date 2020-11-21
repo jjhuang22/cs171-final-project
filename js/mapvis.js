@@ -133,7 +133,7 @@ class MapVis {
             vis.cityInfo[i].rank = i + 1;
         }
 
-        vis.displayData = vis.cityInfo.slice(0, 20); // change this as needed
+        vis.displayData = vis.cityInfo.slice(0, 12); // change this as needed
 
         vis.updateVis();
     }
@@ -171,9 +171,7 @@ class MapVis {
             .duration(1000)
             .attr("cx", d => vis.projection([d.lng, d.lat])[0])
             .attr("cy", d => vis.projection([d.lng, d.lat])[1])
-            .attr("r", function(d) {
-                return Math.sqrt(d.numCompanies + 10);
-            })
+            .attr("r", 15)
             .attr("fill", function(d) {
                 return vis.colorScale(d.numCompanies);
                 // return color;

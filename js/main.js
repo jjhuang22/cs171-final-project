@@ -44,7 +44,8 @@ Promise.all(promises)
 // init global variables & switches
 let myMapVis,
     myBubbleVis,
-    myBrushVis,
+    myBarVis,
+    // myBrushVis,
     myChooseVis;
 
 
@@ -54,6 +55,7 @@ function initMainPage(dataArray) {
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
     // myBrushVis = new BrushVis('brushDiv', dataArray[1]);
+    myBarVis = new BarVis('barDiv', dataArray[1]);
 
     var waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),
@@ -69,6 +71,7 @@ function initMainPage(dataArray) {
 function categoryChange() {
     selectedCategory = $('#categorySelector').val();
     myMapVis.wrangleData();
+    myBarVis.wrangleData();
 }
 
 
