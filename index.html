@@ -80,18 +80,23 @@
 		</div>
 	</div>
 
+	<br>
+
 	<!--usa map-->
 	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
-		<div class="col-md-6 offset-1 vis-border">
+		<div class="col-md-10 offset-1">
 
 			<!-- header -->
-			<div class="row justify-content-center" style="height: 15vh">
-				<div class="col-md-6 text-center">
-					<h1>Map Vis</h1>
-					<h2>Where are startups born? Where do you go to found a startup in X industry? </h2>
+			<div class="row justify-content-center">
+					<h3>Where should you found a startup?</h3>
+			</div>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-3 offset-1">
+					<p>Pick an industry:</p>
 				</div>
-				<div class="col-md-6 align-self-start" style="margin-top: 70px;">
-					<select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">
+				<div class="col-md-3">
+					<select id='categorySelector' class="custom-select" style="width: 80%" onchange="categoryChange()">
 						<option value="All" selected>All</option>
 						<option value="Software">Software</option>
 						<option value="Biotechnology">Biotechnology</option>
@@ -105,20 +110,21 @@
 						<option value="Education">Education</option>
 					</select>
 				</div>
+				<div class="col-md-4" id="most-popular-city">
+					<p></p>
+				</div>
 			</div>
-			<br>
 			<!-- graph -->
 			<div class="row justify-content-center" style="height: 70vh">
-				<div class="align-self-center" id="mapDiv" style="height: 100%; width: 100%"></div>
-			</div>
-			<!--				<div class="row justify-content-center" style="height: 30vh; background-color: white;">-->
-			<!--					<div class="align-self-center" id="brushDiv" style="height: 100%; width: 100%"></div>-->
-			<!--				</div>-->
-		</div>
 
-		<div class="col-md-3 offset-1 vis-border" style="height: 90vh">
-			<div class="align-self-center" id="barDiv" style="height: 100%;">
-				<p>Bar chart will go here</p>
+				<!--map-->
+				<div class="col-md-7" style="height: 100%; width: 100%">
+					<div class="align-self-center" id="mapDiv" style="height: 100%;"></div>
+				</div>
+				<!--bar chart-->
+				<div class="col-md-3" style="height: 100%">
+					<div class="align-self-center" id="barDiv" style="height: 100%;"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -337,7 +343,7 @@
 			<br>
 			<!-- graph -->
 			<div class="row justify-content-center" style="height: 70vh">
-				<div class="align-self-center" id="innovativeDiv" style="height: 100%; width: 100%"></div>
+				<div class="align-self-center" id="otherDiv1" style="height: 100%; width: 100%"></div>
 			</div>
 		</div>
 	</div>
@@ -345,7 +351,7 @@
 
 	<!--last visualization-->
 	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
-		<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid orange">
+		<div class="col-md-10 offset-1 vis-border">
 
 			<!-- header -->
 			<div class="row justify-content-center" style="height: 15vh">
@@ -356,8 +362,8 @@
 			</div>
 			<br>
 			<!-- graph -->
-			<div class="row justify-content-center" style="height: 70vh">
-				<div class="align-self-center" id="otherDiv2" style="height: 100%; width: 100%"></div>
+			<div class="row justify-content-center" style="height: 85vh">
+				<div class="align-self-center" id="otherDiv2" style="height: 100%; width: 50%"></div>
 			</div>
 		</div>
 	</div>
@@ -387,8 +393,8 @@
 <script src="js/barVis.js"></script>
 <script src="js/brushVis.js"></script>
 <script src="js/bubbleVis.js"></script>
-<script src="js/choosevis.js"></script>
-<script src="js/innovativevis.js"></script>
+<script src="js/chooseVis.js"></script>
+<script src="js/innovativeVis.js"></script>
 <script src="js/chartPacking.js"></script>
 
 <script src="js/main.js"></script>
