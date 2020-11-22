@@ -101,6 +101,8 @@ class MapVis {
 
         vis.cityInfo = [];
 
+
+
         companiesByCity.forEach( cityState => {
             let cityStatename = cityState.key;
 
@@ -122,7 +124,7 @@ class MapVis {
                     lng: cityState.value[0].lng,
                     marketMode: cityState.value[0].marketMode,
                     numCompanies: numCompanies,
-                    totalFunding: (totalFunding / 1000000).toFixed(2)// in millions
+                    totalFunding: displayFunding(totalFunding)
                 }
             )
         })
@@ -136,11 +138,13 @@ class MapVis {
             vis.cityInfo[i].rank = i + 1;
         }
 
-        vis.displayData = vis.cityInfo.slice(0, 12); // change this as needed
+        vis.displayData = vis.cityInfo.slice(0, 10); // change this as needed
 
         vis.displayData.sort((a, b) => {
             return a.numCompanies - b.numCompanies;
         })
+
+        console.log(vis.displayData);
 
         vis.updateVis();
     }
@@ -182,15 +186,6 @@ class MapVis {
             .attr("r", 15)
             .attr("fill", function(d) {
                 return vis.colorScale(d.numCompanies);
-                // return color;
-                // if (selectedCategory == "All") {
-                //     // return "salmon";
-                //     let color = vis.colorScale(d.numCompanies);
-                //     return color;
-                // }
-                // else {
-                //     return d3.schemeCategory10[$("#categorySelector option:selected").index() - 1];
-                // }
             })
             .style("opacity", 1)
             .attr("stroke", "black")
@@ -203,6 +198,9 @@ class MapVis {
                 .attr('stroke', 'black')
                 .style("fill", "red")
                 .style("opacity", 1);
+
+            d3.selectAll("circle")
+                .style("opacity", 0.3);
 
             d3.selectAll("." + d.cityname.replace(" ", ""))
                 .attr('stroke-width', '1px')
@@ -220,7 +218,7 @@ class MapVis {
                              <h6> Rank: ${d.rank}</h6>
                              <h6> Most popular industry: ${d.marketMode}</h6>
                              <h6> Number of Companies: ${Number(d.numCompanies).toLocaleString()}</h6>
-                             <h6> Total Funding (mil): ${parseFloat(d.totalFunding).toLocaleString('en')}</h6>
+                             <h6> Total Funding: ${d.totalFunding}</h6>
                          </div>`);
         })
             .on('mouseout', function(event,   d){
@@ -240,6 +238,9 @@ class MapVis {
                     })
                     .style("opacity", 1);
 
+                d3.selectAll("circle")
+                    .style("opacity", 1);
+
                 d3.selectAll("." + d.cityname.replace(" ", ""))
                     .style("fill", function(d) {
                         let color = vis.colorScale(d.numCompanies);
@@ -255,5 +256,14 @@ class MapVis {
             });
 
         circle.exit().remove();
+    }
+}
+
+function displayFunding(funding){
+    if (funding >= 1000000000) {
+        return (funding / 1000000000).toFixed(2) + " billion";
+    }
+    else if (funding >= 1000000) {
+        return (funding / 1000000).toFixed(2) + " million";
     }
 }

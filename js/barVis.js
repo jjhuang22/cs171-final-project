@@ -3,7 +3,6 @@
 * * * * * * * * * * * * * */
 
 // TODO
-// link barVis and mapVis so that hovering over a city on map highlights city in bar?
 // divide by population for barchart?
 
 class BarVis {
@@ -136,9 +135,7 @@ class BarVis {
             vis.cityInfo[i].rank = i + 1;
         }
 
-        vis.displayData = vis.cityInfo.slice(0, 12);
-
-        console.log(vis.displayData[0].numCompanies);
+        vis.displayData = vis.cityInfo.slice(0, 10);
 
         vis.updateVis();
     }
@@ -196,47 +193,25 @@ class BarVis {
                 .attr('stroke', 'black')
                 .style("fill", "red");
 
+            d3.selectAll("circle")
+                .style("opacity", 0.3);
+
             d3.selectAll("." + d.cityname.replace(" ", ""))
                 .attr('stroke-width', '2px')
                 .attr('stroke', 'black')
-                .style("fill", "red");
-        //
-        //     vis.tooltip
-        //         .style("opacity", 1)
-        //         .style("left", event.pageX + 20 + "px")
-        //         .style("top", event.pageY + "px")
-        //         .html(`
-        //                  <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
-        //                      <h3> ${d.name}<h3>
-        //                      <h4> Population: ${d.population}</h4>
-        //                      <h4> Cases (absolute): ${d.absCases}</h4>
-        //                      <h4> Deaths (absolute): ${d.absDeaths}</h4>
-        //                      <h4> Cases (relative): ${d.relCases.toFixed(2) + "%"}</h4>
-        //                      <h4> Deaths (relative): ${d.relDeaths.toFixed(2) + "%"}</h4>
-        //                  </div>`);
-        // })
-        //     .on('mouseout', function(event, d){
-        //         d3.selectAll("." + d.name.replace(" ", ""))
-        //             .attr('stroke-width', '1px')
-        //             .style("fill", vis.colorScale(d[selectedCategory]))
-        //             .style("opacity", 1);
-        //
-        //         d3.select(this)
-        //             .attr('stroke-width', '0px')
-        //             .style("fill", d => vis.colorScale(d[selectedCategory]))
-        //             .style("opacity", 1);
-        //
-        //         vis.tooltip
-        //             .style("opacity", 0)
-        //             .style("left", 0)
-        //             .style("top", 0)
-        //             .html(``);
+                .style("fill", "red")
+                .style("opacity", 1);
             })
             .on("mouseout", function(event, d){
                 d3.select(this)
-                    .attr('stroke-width', '2px')
+                    .attr('stroke-width', '0.5px')
                     .attr('stroke', 'black')
                     .style("fill", d => vis.colorScale(d.numCompanies));
+
+                d3.selectAll("circle")
+                    .style("opacity", 1)
+                    .attr('stroke-width', '0.5px')
+                    .attr('stroke', 'black');
 
                 d3.selectAll("." + d.cityname.replace(" ", ""))
                     .style("fill", d => vis.colorScale(d.numCompanies));
