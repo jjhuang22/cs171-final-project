@@ -19,7 +19,7 @@ class BarVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 20, right: 20, bottom: 20, left: 20};
+        vis.margin = {top: 60, right: 20, bottom: 120, left: 20};
         vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right;
         vis.height = $("#" + vis.parentElement).height() - vis.margin.top - vis.margin.bottom;
 
@@ -31,7 +31,7 @@ class BarVis {
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
         vis.x = d3.scaleBand()
-            .rangeRound([30, vis.width + vis.margin.right - 5])
+            .rangeRound([25, vis.width + vis.margin.right - 5])
             .paddingInner(0.15);
 
         vis.y = d3.scaleLinear()
@@ -49,7 +49,7 @@ class BarVis {
 
         vis.yAxisGroup = vis.svg.append("g")
             .attr("class", "y-axis axis")
-            .attr("transform", "translate(30, 0)");
+            .attr("transform", "translate(25, 0)");
 
         vis.colorScale = d3.scaleLinear()
             .range(["white", "darkcyan"]);
@@ -163,7 +163,12 @@ class BarVis {
             .call(vis.xAxis)
             .style("stroke", "white")
             .attr("stroke-width", 0.5)
-            .attr("color", "white");
+            .attr("color", "white")
+            .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", "rotate(-45)")
 
         vis.yAxisGroup.transition()
             .duration(1000)
@@ -196,6 +201,11 @@ class BarVis {
             d3.selectAll("circle")
                 .style("opacity", 0.3);
 
+            // if (d.cityname == 'Mountain View') {
+            //     d3.selectAll("." + d.cityname.replace(" ", ""))
+            //         .raise();
+            // }
+
             d3.selectAll("." + d.cityname.replace(" ", ""))
                 .attr('stroke-width', '2px')
                 .attr('stroke', 'black')
@@ -212,6 +222,11 @@ class BarVis {
                     .style("opacity", 1)
                     .attr('stroke-width', '0.5px')
                     .attr('stroke', 'black');
+                //
+                // if (d.cityname == 'Mountain View') {
+                //     d3.selectAll("." + d.cityname.replace(" ", ""))
+                //         .lower();
+                // }
 
                 d3.selectAll("." + d.cityname.replace(" ", ""))
                     .style("fill", d => vis.colorScale(d.numCompanies));
