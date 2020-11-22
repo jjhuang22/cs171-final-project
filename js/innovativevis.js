@@ -27,8 +27,9 @@ class InnovativeVis {
             .style("background-color", 'white')
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
-        let ok = d3.group(vis.companies).rollup(d => d.market);
-
+        let ok = d3.group(vis.companies, d => d.market);
+        // ok = d3.rollup(vis.companies, v => v.length, d => d.market);
+        ok = d3.rollup(vis.companies, v => d3.sum(v, d=> d.funding_total_usd), d => d.market);
         console.log(ok);
 
     }

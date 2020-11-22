@@ -59,7 +59,7 @@ function initMainPage(dataArray) {
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
     // myBrushVis = new BrushVis('brushDiv', dataArray[1]);
     myBarVis = new BarVis('barDiv', dataArray[1]);
-    myChartPackingVis = new ChartPackingVis('otherDiv2');
+    // myChartPackingVis = new ChartPackingVis('otherDiv2');
 
     var waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),
