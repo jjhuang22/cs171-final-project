@@ -8,11 +8,16 @@ let selectedCategory = $('#categorySelector').val();
 let parseDate = d3.timeParse("%Y-%m-%d");
 let formatDate = d3.timeFormat("%Y-%m-%d");
 
+
+// d.funded_at = parseDate(d.funded_at);
+// d.raised_amount_usd  = +d.raised_amount_usd;
+
 // load data using promises
 let promises = [
     d3.json("data/states.json"),
     d3.csv("data/companies_final.csv"),
-    d3.csv("data/acquisitions_final.csv")
+    d3.csv("data/acquisitions_final.csv"),
+    d3.csv("data/rounds_final.csv")
     // d3.json("data/chartPacking.json")
 ];
 
@@ -34,6 +39,11 @@ Promise.all(promises)
             d.acquired_at = parseDate(d.acquired_at);
             d.acquired_year = +d.acquired_year; // may not need
             d.price_amount = +d.price_amount;
+        })
+
+        data[3].forEach(function(d) {
+            d.funded_at = parseDate(d.funded_at);
+            d.raised_amount_usd  = +d.raised_amount_usd;
         })
 
         initMainPage(data)
@@ -71,7 +81,7 @@ function initMainPage(dataArray) {
         offset: 40
     })
 
-    myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[1].slice(0,70));
+    myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3].slice(0,70));
 }
 
 function categoryChange() {
