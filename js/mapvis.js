@@ -2,6 +2,9 @@
 *          MapVis          *
 * * * * * * * * * * * * * */
 
+// TODO
+// fix transition so that circles fade in from their location
+
 class MapVis {
 
     // constructor method to initialize MapVis object
@@ -112,7 +115,7 @@ class MapVis {
 
             vis.cityInfo.push(
                 {
-                    cityname: cityState.value[0].city,
+                    cityname: cityState.value[0].cityMap,
                     state: cityState.value[0].state,
                     stateCode: cityState.value[0].state_code,
                     lat: cityState.value[0].lat,
@@ -134,6 +137,10 @@ class MapVis {
         }
 
         vis.displayData = vis.cityInfo.slice(0, 12); // change this as needed
+
+        vis.displayData.sort((a, b) => {
+            return a.numCompanies - b.numCompanies;
+        })
 
         vis.updateVis();
     }
@@ -165,7 +172,8 @@ class MapVis {
 
         circle.enter().append("circle")
             .merge(circle)
-            .attr("class", "cities")
+            // .attr("class", "cities")
+            .attr("class", d => { return "cities " + d.cityname.replace(" ", "")} )
             .style("opacity", 0)
             .transition()
             .duration(1000)
@@ -191,6 +199,12 @@ class MapVis {
         // mouseover
         vis.svg.selectAll("circle").on("mouseover", function(event, d){
             d3.select(this)
+                .attr('stroke-width', '1px')
+                .attr('stroke', 'black')
+                .style("fill", "red")
+                .style("opacity", 1);
+
+            d3.selectAll("." + d.cityname.replace(" ", ""))
                 .attr('stroke-width', '1px')
                 .attr('stroke', 'black')
                 .style("fill", "red")
@@ -223,6 +237,13 @@ class MapVis {
                         // else {
                         //     return d3.schemeCategory10[$("#categorySelector option:selected").index() - 1];
                         // }
+                    })
+                    .style("opacity", 1);
+
+                d3.selectAll("." + d.cityname.replace(" ", ""))
+                    .style("fill", function(d) {
+                        let color = vis.colorScale(d.numCompanies);
+                        return color;
                     })
                     .style("opacity", 1);
 

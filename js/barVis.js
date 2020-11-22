@@ -115,7 +115,7 @@ class BarVis {
 
             vis.cityInfo.push(
                 {
-                    cityname: cityState.value[0].city,
+                    cityname: cityState.value[0].cityMap,
                     state: cityState.value[0].state,
                     stateCode: cityState.value[0].state_code,
                     lat: cityState.value[0].lat,
@@ -180,7 +180,7 @@ class BarVis {
 
         rect.enter().append("rect")
             .merge(rect)
-            // .attr("class", d => "state bar " + d.name.replace(" ", ""))
+            .attr("class", d => "state bar " + d.cityname.replace(" ", ""))
             .transition()
             .duration(1000)
             .attr("x", d => vis.x(d.cityname))
@@ -188,9 +188,6 @@ class BarVis {
             .attr("width", vis.x.bandwidth())
             .attr("height", d => vis.height - vis.y(d.numCompanies))
             .style("fill", d => vis.colorScale(d.numCompanies))
-            // .style("fill", function(d) {
-            //     return vis.colorScale(d.numCompanies);
-            // })
             .style("opacity", 1);
 
         vis.svg.selectAll("rect").on("mouseover", function(event, d){
@@ -199,7 +196,7 @@ class BarVis {
                 .attr('stroke', 'black')
                 .style("fill", "red");
 
-            d3.selectAll("." + d.cityname)
+            d3.selectAll("." + d.cityname.replace(" ", ""))
                 .attr('stroke-width', '2px')
                 .attr('stroke', 'black')
                 .style("fill", "red");
@@ -241,9 +238,7 @@ class BarVis {
                     .attr('stroke', 'black')
                     .style("fill", d => vis.colorScale(d.numCompanies));
 
-                d3.selectAll("." + d.cityname)
-                    .attr('stroke-width', '2px')
-                    .attr('stroke', 'black')
+                d3.selectAll("." + d.cityname.replace(" ", ""))
                     .style("fill", d => vis.colorScale(d.numCompanies));
             });
 
