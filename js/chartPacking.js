@@ -2,7 +2,7 @@
 *          chartPackingVis *
 * * * * * * * * * * * * * */
 
-class chartPackingVis {
+class ChartPackingVis {
 
     // constructor method to initialize MapVis object
     constructor(parentElement, companies, acquisitions) {
@@ -44,8 +44,6 @@ class chartPackingVis {
             "name": "test",
             "children": []
         }
-
-
 
         vis.companies = d3.group(vis.companies, d => d.name), ([key, value]) => ({key, value});
 
