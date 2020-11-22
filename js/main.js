@@ -46,7 +46,8 @@ let myMapVis,
     myBubbleVis,
     myBarVis,
     // myBrushVis,
-    myChooseVis;
+    myChooseVis,
+    myInnovativeVis;
 
 
 // initMainPage
@@ -66,6 +67,8 @@ function initMainPage(dataArray) {
         },
         offset: 40
     })
+
+    myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[1].slice(0,70));
 }
 
 function categoryChange() {

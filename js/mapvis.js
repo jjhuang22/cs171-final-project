@@ -183,7 +183,7 @@ class MapVis {
             .duration(1000)
             .attr("cx", d => vis.projection([d.lng, d.lat])[0])
             .attr("cy", d => vis.projection([d.lng, d.lat])[1])
-            .attr("r", 15)
+            .attr("r", 10)
             .attr("fill", function(d) {
                 return vis.colorScale(d.numCompanies);
             })
