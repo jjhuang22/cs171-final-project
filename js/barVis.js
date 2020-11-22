@@ -19,7 +19,7 @@ class BarVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 60, right: 20, bottom: 120, left: 20};
+        vis.margin = {top: 20, right: 20, bottom: 80, left: 20};
         vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right;
         vis.height = $("#" + vis.parentElement).height() - vis.margin.top - vis.margin.bottom;
 
@@ -145,6 +145,11 @@ class BarVis {
     updateVis() {
         let vis = this;
 
+        vis.displayData[0].cityname + ", " + vis.displayData[0].stateCode;
+
+        d3.select("#most-popular-city p").text("Most popular city: " + vis.displayData[0].cityname + ", " +
+            vis.displayData[0].stateCode);
+
         // create color scale
         vis.colorScale = d3.scaleLinear()
             .range(["#fbc4ff", "#f029ff"]);
@@ -195,8 +200,6 @@ class BarVis {
 
         vis.svg.selectAll("rect").on("mouseover", function(event, d){
             d3.select(this)
-                .attr('stroke-width', '2px')
-                .attr('stroke', 'black')
                 .style("fill", "red");
 
             d3.selectAll("circle")
@@ -208,21 +211,15 @@ class BarVis {
             // }
 
             d3.selectAll("." + d.cityname.replace(" ", ""))
-                .attr('stroke-width', '2px')
-                .attr('stroke', 'black')
                 .style("fill", "red")
                 .style("opacity", 1);
             })
             .on("mouseout", function(event, d){
                 d3.select(this)
-                    .attr('stroke-width', '0.5px')
-                    .attr('stroke', 'black')
                     .style("fill", d => vis.colorScale(d.numCompanies));
 
                 d3.selectAll("circle")
                     .style("opacity", 1)
-                    .attr('stroke-width', '0.5px')
-                    .attr('stroke', 'black');
                 //
                 // if (d.cityname == 'Mountain View') {
                 //     d3.selectAll("." + d.cityname.replace(" ", ""))

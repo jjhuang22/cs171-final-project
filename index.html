@@ -81,7 +81,7 @@
 	</div>
 
 	<br>
-	
+
 	<!--usa map-->
 	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row">
 		<div class="col-md-10 offset-1">
@@ -92,19 +92,27 @@
 			</div>
 			<br>
 			<div class="row justify-content-center">
-				<select id='categorySelector' class="custom-select" style="width: 20%" onchange="categoryChange()">
-					<option value="All" selected>All</option>
-					<option value="Software">Software</option>
-					<option value="Biotechnology">Biotechnology</option>
-					<option value="Health">Health</option>
-					<option value="Mobile">Mobile</option>
-					<option value="Curated Web">Curated Web</option>
-					<option value="E-Commerce">E-Commerce</option>
-					<option value="Advertising">Advertising</option>
-					<option value="Clean Technology">Clean Technology</option>
-					<option value="Games">Games</option>
-					<option value="Education">Education</option>
-				</select>
+				<div class="col-md-3 offset-1">
+					<p>Pick an industry:</p>
+				</div>
+				<div class="col-md-3">
+					<select id='categorySelector' class="custom-select" style="width: 80%" onchange="categoryChange()">
+						<option value="All" selected>All</option>
+						<option value="Software">Software</option>
+						<option value="Biotechnology">Biotechnology</option>
+						<option value="Health">Health</option>
+						<option value="Mobile">Mobile</option>
+						<option value="Curated Web">Curated Web</option>
+						<option value="E-Commerce">E-Commerce</option>
+						<option value="Advertising">Advertising</option>
+						<option value="Clean Technology">Clean Technology</option>
+						<option value="Games">Games</option>
+						<option value="Education">Education</option>
+					</select>
+				</div>
+				<div class="col-md-4" id="most-popular-city">
+					<p></p>
+				</div>
 			</div>
 			<!-- graph -->
 			<div class="row justify-content-center" style="height: 70vh">
@@ -115,9 +123,7 @@
 				</div>
 				<!--bar chart-->
 				<div class="col-md-3" style="height: 100%">
-					<div class="align-self-center" id="barDiv" style="height: 100%;">
-						<p>Most popular city:</p>
-					</div>
+					<div class="align-self-center" id="barDiv" style="height: 100%;"></div>
 				</div>
 			</div>
 		</div>
