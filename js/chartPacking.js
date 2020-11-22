@@ -5,10 +5,9 @@
 class ChartPackingVis {
 
     // constructor method to initialize MapVis object
-    constructor(parentElement, companies, acquisitions) {
+    constructor(parentElement, nestedAcquisitions) {
         this.parentElement = parentElement;
-        this.companies = companies;
-        this.acquisitions = acquisitions;
+        this.acquisitions = nestedAcquisitions;
 
         this.initVis();
     }
@@ -32,153 +31,207 @@ class ChartPackingVis {
             .attr("id", "bubbleTooltip");
 
         // wrangleData
-        vis.wrangleData();
-    }
-
-    // wrangle Data for acquirers
-    wrangleData(){
-        let vis = this;
-
-        // markets: service provider, social media, enterprise software, software, hardware + software
-        vis.displayData = {
-            "name": "test",
-            "children": []
-        }
-
-        vis.companies = d3.group(vis.companies, d => d.name), ([key, value]) => ({key, value});
-
-        // group companies by acquirer
-        let acquirers = Array.from(d3.group(vis.acquisitions, d => d.acquirer_name), ([key, value]) => ({key, value}));
-
-        vis.acquirerInfo = [];
-
-        acquirers.forEach( company => {
-            let companyName = company.key;
-
-            // init counters
-            let numCompanies = 0;
-            let totalPrice = 0;
-            let acquiredCompanies = [];
-
-            company.value.forEach(entry => {
-                numCompanies += 1;
-                totalPrice += entry['price_amount'];
-                acquiredCompanies.push(entry['company_name']);
-            })
-
-            vis.acquirerInfo.push(
-                {
-                    name: companyName,
-                    city: company.value[0].acquirer_city,
-                    stateCode: company.value[0].acquirer_state_code,
-                    market: company.value[0].acquirer_market,
-                    numCompanies: numCompanies,
-                    totalPrice: (totalPrice / 1000000).toFixed(2) + " mil", // in millions
-                    acquiredCompanies: acquiredCompanies
-                }
-            )
-        })
-
-        vis.acquirerInfo.sort((a, b) => {
-            return b.numCompanies - a.numCompanies;
-        })
-
-        // vis.displayData = { "children": vis.acquirerInfo.slice(0, 10) };
-
         vis.updateVis();
     }
 
-    updateVis(){
+    // // wrangle Data for acquirers
+    // wrangleData(){
+    //     let vis = this;
+    //
+    //     // markets: service provider, social media, enterprise software, software, hardware + software
+    //     vis.displayData = {
+    //         "name": "test",
+    //         "children": []
+    //     }
+    //
+    //     vis.companies = d3.group(vis.companies, d => d.name), ([key, value]) => ({key, value});
+    //
+    //     // group companies by acquirer
+    //     let acquirers = Array.from(d3.group(vis.acquisitions, d => d.acquirer_name), ([key, value]) => ({key, value}));
+    //
+    //     vis.acquirerInfo = [];
+    //
+    //     acquirers.forEach( company => {
+    //         let companyName = company.key;
+    //
+    //         // init counters
+    //         let numCompanies = 0;
+    //         let totalPrice = 0;
+    //         let acquiredCompanies = [];
+    //
+    //         company.value.forEach(entry => {
+    //             numCompanies += 1;
+    //             totalPrice += entry['price_amount'];
+    //             acquiredCompanies.push(entry['company_name']);
+    //         })
+    //
+    //         vis.acquirerInfo.push(
+    //             {
+    //                 name: companyName,
+    //                 city: company.value[0].acquirer_city,
+    //                 stateCode: company.value[0].acquirer_state_code,
+    //                 market: company.value[0].acquirer_market,
+    //                 numCompanies: numCompanies,
+    //                 totalPrice: (totalPrice / 1000000).toFixed(2) + " mil", // in millions
+    //                 acquiredCompanies: acquiredCompanies
+    //             }
+    //         )
+    //     })
+    //
+    //     vis.acquirerInfo.sort((a, b) => {
+    //         return b.numCompanies - a.numCompanies;
+    //     })
+    //
+    //     // vis.displayData = { "children": vis.acquirerInfo.slice(0, 10) };
+    //
+    //     vis.updateVis();
+    // }
+
+    updateVis() {
         let vis = this;
 
-        vis.color = d3.scaleOrdinal(d3.schemeCategory10);
+        let bold = true;
+        let black = false;
+        let shadow = true;
+        let multicolor = true;
+        let hexcolor = "#0099cc";
 
-        vis.bubble = d3.pack(vis.displayData)
-            .size([600, 600])
-            .padding(1.5);
+        const format = d3.format(",d")
 
-        vis.nodes = d3.hierarchy(vis.displayData)
-            .sum(function(d) { return d.numCompanies; });
+        const pack = data => d3.pack()
+            .size([vis.width/2, vis.height/2])
+            .padding(3)
+            (d3.hierarchy(vis.acquisitions)
+                .sum(d => d.size)
+                .sort((a, b) => b.value - a.value))
 
-        vis.node = vis.svg.selectAll(".node")
-            .data(vis.bubble(vis.nodes).descendants())
-            .enter()
-            .filter(function(d){
-                return  !d.children
+        const root = pack(vis.acquisitions);
+        let focus = root;
+        let view;
+
+        let fontsize = d3.scaleOrdinal()
+            .domain([1,3])
+            .range([24,16])
+
+        function setColorScheme(multi){
+            if (multi) {
+                let color = d3.scaleOrdinal()
+                    .range(d3.schemeCategory10)
+                return color;
+            }
+        }
+
+        let color = setColorScheme(multicolor);
+
+        function setCircleColor(obj) {
+            let depth = obj.depth;
+            while (obj.depth > 1) {
+                obj = obj.parent;
+            }
+            let newcolor = multicolor ? d3.hsl(color(obj.data.name)) : d3.hsl(hexcolor);
+            newcolor.l += depth == 1 ? 0 : depth * .1;
+            return newcolor;
+        }
+
+        function setStrokeColor(obj) {
+            let depth = obj.depth;
+            while (obj.depth > 1) {
+                obj = obj.parent;
+            }
+            let strokecolor = multicolor ? d3.hsl(color(obj.data.name)) : d3.hsl(hexcolor);
+            return strokecolor;
+        }
+
+        // const svg = d3.select(DOM.svg(vis.width, vis.height))
+        //     .attr("viewBox", `-${vis.width / 2} -${vis.height / 2} ${vis.width} ${vis.height}`)
+        //     .style("display", "block")
+        //     .style("margin", "0 -14px")
+        //     .style("width", "calc(100% + 28px)")
+        //     .style("height", "auto")
+        //     .style("background", "white")
+        //     .style("cursor", "pointer")
+        //     .on("click", () => zoom(root));
+
+        function zoomTo(v) {
+            const k = vis.width / v[2];
+
+            view = v;
+
+            label.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k + fontsize(d.depth)/4})`);
+            node.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
+            node.attr("r", d => d.r * k);
+        }
+
+        function zoom(d) {
+            const focus0 = focus;
+
+            focus = d;
+
+            const transition = vis.svg.transition()
+                // .duration((d, event) => {event.altKey ? 7500 : 750} )
+                .duration(750)
+                .tween("zoom", d => {
+                    const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
+                    return t => zoomTo(i(t));
+                });
+
+            label
+                .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+                .transition(transition)
+                .style("fill-opacity", d => d.parent === focus ? 1 : 0)
+                .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+                .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+        }
+
+        vis.svg
+            .attr("viewBox", `-${vis.width / 2} -${vis.height / 2} ${vis.width} ${vis.height}`)
+            .style("display", "block")
+            .style("margin", "0 -14px")
+            .style("width", "calc(100% + 28px)")
+            .style("height", "auto")
+            .style("background", "#080314")
+            .style("cursor", "pointer")
+            .on("click", () => zoom(root));
+
+
+        const node = vis.svg.append("g")
+            .selectAll("circle")
+            .data(root.descendants().slice(1))
+            .enter().append("circle")
+            .attr("fill", setCircleColor)
+            .attr("stroke", setStrokeColor)
+            .attr("pointer-events", d => !d.children ? "none" : null)
+            .on("mouseover", function() { d3.select(this).attr("stroke", d => d.depth == 1 ? "black" : "white"); })
+            .on("mouseout", function() { d3.select(this).attr("stroke", setStrokeColor); })
+            .on("click", (event, d) => focus !== d && (zoom(d), event.stopPropagation()));
+
+        const label = vis.svg.append("g")
+            .style("fill", function() {
+                return black ? "black" : "white";
             })
-            .append("g")
-            .attr("class", "node")
-            .attr("transform", function(d) {
-                return "translate(" + d.x + "," + d.y + ")";
-            });
-
-        vis.node.append("circle")
-            .attr("r", function(d) {
-                return d.r;
+            .style("text-shadow", function(){
+                if (shadow) {
+                    return black ? "2px 2px 0px white" : "2px 2px 0px black";
+                } else {
+                    return "none";
+                }
             })
-            .style("fill", function(d,i) {
-                return vis.color(i);
-            });
-
-        vis.node.append("title")
-            .text(function(d) {
-                return d.name + ": " + d.numCompanies;
-            });
-
-        vis.node.append("text")
-            .attr("dy", ".2em")
-            .style("text-anchor", "middle")
-            .text(function(d) {
-                return d.data.name;
-
+            .attr("pointer-events", "none")
+            .attr("text-anchor", "middle")
+            .selectAll("text")
+            .data(root.descendants())
+            .enter().append("text")
+            .style("fill-opacity", d => d.parent === root ? 1 : 0)
+            .style("display", d => d.parent === root ? "inline" : "none")
+            .style("font", d => fontsize(d.depth) + "px sans-serif")
+            .style("font-weight", function() {
+                return bold ? "bold" : "normal";
             })
-            .attr("font-family", "sans-serif")
-            .attr("font-size", function(d){
-                return d.r/5;
-            })
-            .attr("fill", "white");
+            .text(d => d.data.name);
 
-        vis.node.append("text")
-            .attr("dy", "1.3em")
-            .style("text-anchor", "middle")
-            .text(function(d) {
-                return d.data.numCompanies;
-            })
-            .attr("font-family",  "Gill Sans", "Gill Sans MT")
-            .attr("font-size", function(d){
-                return d.r/5;
-            })
-            .attr("fill", "white");
+        zoomTo([root.x, root.y, root.r * 2]);
 
-        d3.select(self.frameElement)
-            .style("height", 600 + "px");
+        return vis.svg.node();
 
-        vis.svg.selectAll("circle").on("mouseover", function(event, d){
-            d3.select(this)
-                .attr('stroke-width', '3px')
-                .attr('stroke', 'white');
-
-            vis.tooltip
-                .style("opacity", 1)
-                .style("left", event.pageX + 20 + "px")
-                .style("top", event.pageY + "px")
-                .html(`
-                         <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
-                             <h3> ${d.data.name}<h3>
-                             <h6> ${d.data.city}, ${d.data.stateCode}</h6>
-                             <h6> ${d.data.market}</h6>
-                         </div>`);
-        })
-            .on('mouseout', function(event,   d){
-                d3.select(this)
-                    .attr('stroke-width', '0px')
-                    .attr('stroke', 'black');
-
-                vis.tooltip
-                    .style("opacity", 0)
-                    .style("left", 0)
-                    .style("top", 0)
-                    .html(``);
-            });
     }
 }

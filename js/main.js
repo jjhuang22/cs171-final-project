@@ -12,8 +12,8 @@ let formatDate = d3.timeFormat("%Y-%m-%d");
 let promises = [
     d3.json("data/states.json"),
     d3.csv("data/companies_final.csv"),
-    d3.csv("data/acquisitions_final.csv")
-    // d3.json("data/chartPacking.json")
+    d3.csv("data/acquisitions_final.csv"),
+    d3.json("data/chartPacking.json")
 ];
 
 Promise.all(promises)
@@ -48,8 +48,8 @@ let myMapVis,
     myBarVis,
     // myBrushVis,
     myChooseVis,
-    myInnovativeVis;
-    // myChartPackingVis;
+    myInnovativeVis,
+    myChartPackingVis;
 
 
 // initMainPage
@@ -59,7 +59,7 @@ function initMainPage(dataArray) {
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
     // myBrushVis = new BrushVis('brushDiv', dataArray[1]);
     myBarVis = new BarVis('barDiv', dataArray[1]);
-    // myChartPackingVis = new ChartPackingVis('otherDiv2');
+    myChartPackingVis = new ChartPackingVis('otherDiv2', dataArray[3]);
 
     var waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),

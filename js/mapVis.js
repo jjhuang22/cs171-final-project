@@ -144,7 +144,7 @@ class MapVis {
             return a.numCompanies - b.numCompanies;
         })
 
-        console.log(vis.displayData);
+        // console.log(vis.displayData);
 
         vis.updateVis();
     }
