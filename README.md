@@ -20,7 +20,7 @@ Directories:
 
 for city data: https://simplemaps.com/data/world-cities
 
-## mapvis.js tasks
+## mapVis.js tasks
 - initVis()
     - project map DONE
     - add borders DONE
@@ -33,7 +33,7 @@ for city data: https://simplemaps.com/data/world-cities
     - append circles to map
 
 
-## bubblevis.js tasks
+## bubbleVis.js tasks
 - initVis()
     - append circles for top 25 acquirers
         - size corresponds to 
