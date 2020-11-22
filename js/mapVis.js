@@ -30,6 +30,7 @@ class MapVis {
             .attr("width", vis.width)
             .attr("height", vis.height)
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
+            // .style("background", "white");
 
         // tooltip
         vis.tooltip = d3.select("body").append("div")
@@ -38,8 +39,15 @@ class MapVis {
         
         // set projection
         vis.projection = d3.geoMercator()
-            .scale(vis.width / 1.25)
-            .center([-82, 40.5]);
+            .scale(vis.width / 1.1)
+            .center([-97, 40.5])
+            .translate([vis.width/2, vis.height/2]);
+
+        // vis.center = vis.projection([98.5556, 39.8097]);
+        // console.log(vis.center);
+
+        // vis.projection
+        //     .translate(vis.center);
 
         // create path variable
         vis.path = d3.geoPath()
@@ -175,19 +183,24 @@ class MapVis {
             .data(vis.displayData);
 
         circle.enter().append("circle")
+            .attr("cx", d => vis.projection([d.lng, d.lat])[0])
+            .attr("cy", d => vis.projection([d.lng, d.lat])[1])
             .merge(circle)
+            // .style("opacity", 0)
+            .attr("cx", d => vis.projection([d.lng, d.lat])[0])
+            .attr("cy", d => vis.projection([d.lng, d.lat])[1])
             // .attr("class", "cities")
             .attr("class", d => { return "cities " + d.cityname.replace(" ", "")} )
             .style("opacity", 0)
-            .transition()
-            .duration(1000)
             .attr("cx", d => vis.projection([d.lng, d.lat])[0])
             .attr("cy", d => vis.projection([d.lng, d.lat])[1])
+            .transition()
+            .duration(1000)
+            .style("opacity", 1)
             .attr("r", 10)
             .attr("fill", function(d) {
                 return vis.colorScale(d.numCompanies);
             })
-            .style("opacity", 1)
             .attr("stroke", "black")
             .attr("stroke-width", "0.5px");
 
