@@ -15,7 +15,7 @@ class ChartPackingVis {
     initVis(){
         let vis = this;
 
-        vis.margin = {top: 10, right: 10, bottom: 10, left: 10};
+        vis.margin = {top: 10, right: 10, bottom: 100, left: 10};
         vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right;
         vis.height = $("#" + vis.parentElement).height() - vis.margin.top - vis.margin.bottom;
 
@@ -227,11 +227,20 @@ class ChartPackingVis {
             .style("font-weight", function() {
                 return bold ? "bold" : "normal";
             })
-            .text(d => d.data.name);
+            .text(d => d.data.name + "\n" + displayFunding(d.data.value));
 
         zoomTo([root.x, root.y, root.r * 2]);
 
         return vis.svg.node();
 
+    }
+}
+
+function displayFunding(funding){
+    if (funding >= 1000000000) {
+        return (funding / 1000000000).toFixed(2) + " billion";
+    }
+    else if (funding >= 1000000) {
+        return (funding / 1000000).toFixed(2) + " million";
     }
 }
