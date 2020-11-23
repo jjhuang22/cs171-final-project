@@ -211,7 +211,7 @@ class ChartPackingVis {
             })
             .style("text-shadow", function(){
                 if (shadow) {
-                    return black ? "2px 2px 0px white" : "2px 2px 0px black";
+                    return black ? "2px 2px 0px white" : ".3px .8px 0px black";
                 } else {
                     return "none";
                 }
