@@ -26,20 +26,20 @@ class MapVis {
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width)
             .attr("height", vis.height)
-            .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")")
-            .style("background", "white");
+            // .style("background", "-webkit-linear-gradient(90deg, #94bbe9, #eeaeca)")
+            .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
         // tooltip
         vis.tooltip = d3.select("#mapDiv").append("div")
             .attr("class", "tooltip")
             .attr("id", "mapTooltip")
-            .style("left", vis.width/4 + "px")
-            .style("top", vis.height*2/3 + "px");
+            .style("left", vis.width/8 + "px")
+            .style("top", vis.height * 5/6 + "px");
         
         // set projection
         vis.projection = d3.geoMercator()
             .scale(vis.width / 1.1)
-            .center([-97, 30.5])
+            .center([-97, 38.5])
             .translate([vis.width/2, vis.height/2]);
 
         // create path variable
@@ -54,11 +54,11 @@ class MapVis {
             .enter()
             .append("path")
             .attr("class", "feature")
-            .style("fill", "#3b3933")
+            .style("fill", "#727272")
             .attr("opacity", 0.8)
             .attr("d", vis.path)
-            .attr("stroke-width", '1.5px')
-            .attr("stroke", "white");
+            .attr("stroke-width", '0.5px')
+            .attr("stroke", "#949494");
 
         // wrangleData
         vis.wrangleData();
@@ -157,7 +157,7 @@ class MapVis {
 
         // create color scale
         vis.colorScale = d3.scaleLinear()
-            .range(["#fbc4ff", "#f029ff"]);
+            .range(["#fee2ff", "#f029ff"]);
 
         // get correct range
         let domain_vals = [];
@@ -184,25 +184,28 @@ class MapVis {
             .attr("r", 10)
             .attr("fill", function(d) {
                 return vis.colorScale(d.numCompanies);
-            });
+            })
+            .attr("stroke", "white")
+            .attr("stroke-width", 2);
 
         // mouseover
         vis.svg.selectAll("circle").on("mouseover", function(event, d){
             d3.select(this)
-                .style("fill", "red")
+                .style("fill", "#ffd74c")
                 .style("opacity", 1);
 
             d3.selectAll("circle")
                 .style("opacity", 0.3);
 
             d3.selectAll("." + d.cityname.replace(" ", ""))
-                .style("fill", "red")
+                .style("fill", "#ffd74c")
                 .style("opacity", 1);
 
             vis.tooltip
                 .style("opacity", 1)
                 .html(`
-                         <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+<!--                         <div style="border: thin solid white; border-radius: 0px; padding: 20px">-->
+                         <div style="border-radius: 0px; padding: 20px">
                              <h3>${d.cityname}, ${d.stateCode}<h3>
                              <h6> Rank: ${d.rank}</h6>
                              <h6> Most popular industry: ${d.marketMode}</h6>
