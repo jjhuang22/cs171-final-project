@@ -186,7 +186,7 @@ class BarVis {
 
         rect.enter().append("rect")
             .merge(rect)
-            .attr("class", d => "state bar " + d.cityname.replace(" ", ""))
+            .attr("class", d => "bar " + d.cityname.replace(/\s/g, ""))
             .transition()
             .duration(1000)
             .attr("x", d => vis.x(d.cityname))
@@ -205,7 +205,7 @@ class BarVis {
             d3.selectAll("circle")
                 .style("opacity", 0.3);
 
-            d3.selectAll("." + d.cityname.replace(" ", ""))
+            d3.selectAll("." + d.cityname.replace(/\s/g, ""))
                 .style("fill", "#ffd74c")
                 .style("opacity", 1);
 
@@ -228,7 +228,7 @@ class BarVis {
                 d3.selectAll("circle")
                     .style("opacity", 1)
 
-                d3.selectAll("." + d.cityname.replace(" ", ""))
+                d3.selectAll("." + d.cityname.replace(/\s/g, ""))
                     .style("fill", d => vis.colorScale(d.numCompanies));
 
                 d3.select("#mapTooltip")

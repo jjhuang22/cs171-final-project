@@ -174,7 +174,7 @@ class MapVis {
             .merge(circle)
             .attr("cx", d => vis.projection([d.lng, d.lat])[0])
             .attr("cy", d => vis.projection([d.lng, d.lat])[1])
-            .attr("class", d => { return "cities " + d.cityname.replace(" ", "")} )
+            .attr("class", d => "cities " + d.cityname.replace(/\s/g, ""))
             .style("opacity", 0)
             .attr("cx", d => vis.projection([d.lng, d.lat])[0])
             .attr("cy", d => vis.projection([d.lng, d.lat])[1])
@@ -197,7 +197,7 @@ class MapVis {
             d3.selectAll("circle")
                 .style("opacity", 0.3);
 
-            d3.selectAll("." + d.cityname.replace(" ", ""))
+            d3.selectAll("." + d.cityname.replace(/\s/g, ""))
                 .style("fill", "#ffd74c")
                 .style("opacity", 1);
 
@@ -223,7 +223,7 @@ class MapVis {
                 d3.selectAll("circle")
                     .style("opacity", 1);
 
-                d3.selectAll("." + d.cityname.replace(" ", ""))
+                d3.selectAll("." + d.cityname.replace(/\s/g, ""))
                     .style("fill", function(d) {
                         return vis.colorScale(d.numCompanies);
                     })
