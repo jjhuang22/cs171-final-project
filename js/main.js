@@ -82,7 +82,8 @@ function initMainPage(dataArray) {
         offset: 40
     })
 
-    myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3].slice(0,70));
+    myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3]);
+    // myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3].slice(0,70));
 }
 
 function categoryChange() {
@@ -97,3 +98,4 @@ new simpleParallax(image, {
     scale:1.5,
     overflow: true
 });
+

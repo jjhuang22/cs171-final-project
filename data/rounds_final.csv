@@ -72,17 +72,11 @@
 70,Acquia,Enterprise Software,USA,MA,Boston,Burlington,venture,A,2007-12-01,2007-12, 2007-Q4 ,2007.0,7000000,2007-05-01
 71,Acquia,Enterprise Software,USA,MA,Boston,Burlington,venture,B,2009-07-17,2009-07, 2009-Q3 ,2009.0,8000000,2007-05-01
 72,Acquia,Enterprise Software,USA,MA,Boston,Burlington,venture,C,2010-11-01,2010-11, 2010-Q4 ,2010.0,8500000,2007-05-01
-73,Acquia,Enterprise Software,USA,MA,Boston,Burlington,venture,D,2011-07-20,2011-07, 2011-Q3 ,2011.0,15000000,2007-05-01
-74,Acquia,Enterprise Software,USA,MA,Boston,Burlington,venture,E,2012-11-30,2012-11, 2012-Q4 ,2012.0,30000000,2007-05-01
-75,Acquia,Enterprise Software,USA,MA,Boston,Burlington,venture,F,2014-05-27,2014-05, 2014-Q2 ,2014.0,50000000,2007-05-01
 76,Act-On Software,Marketing Automation,USA,OR,"Portland, Oregon",Beaverton,venture,B,2010-11-15,2010-11, 2010-Q4 ,2010.0,4000000,2008-01-01
 77,Act-On Software,Marketing Automation,USA,OR,"Portland, Oregon",Beaverton,venture,C,2011-06-01,2011-06, 2011-Q2 ,2011.0,10000000,2008-01-01
-78,Act-On Software,Marketing Automation,USA,OR,"Portland, Oregon",Beaverton,venture,D,2012-09-05,2012-09, 2012-Q3 ,2012.0,16000000,2008-01-01
 79,Actifio,Enterprise Software,USA,MA,Boston,Waltham,venture,A,2010-07-21,2010-07, 2010-Q3 ,2010.0,8000000,2009-07-01
 80,Actifio,Enterprise Software,USA,MA,Boston,Waltham,venture,B,2010-09-22,2010-09, 2010-Q3 ,2010.0,16000000,2009-07-01
 81,Actifio,Enterprise Software,USA,MA,Boston,Waltham,venture,C,2011-12-05,2011-12, 2011-Q4 ,2011.0,33500000,2009-07-01
-82,Actifio,Enterprise Software,USA,MA,Boston,Waltham,venture,D,2013-03-06,2013-03, 2013-Q1 ,2013.0,50000000,2009-07-01
-83,Actifio,Enterprise Software,USA,MA,Boston,Waltham,venture,E,2014-03-23,2014-03, 2014-Q1 ,2014.0,100000000,2009-07-01
 84,Activate Networks,Health Care,USA,MA,Boston,Newton,venture,A,2010-08-09,2010-08, 2010-Q3 ,2010.0,5000000,2010-08-09
 85,Activate Networks,Health Care,USA,MA,Boston,Newton,venture,B,2012-11-13,2012-11, 2012-Q4 ,2012.0,10000000,2010-08-09
 86,AdKeeper,Advertising,USA,NY,New York City,New York,venture,A,2010-09-15,2010-09, 2010-Q3 ,2010.0,8000000,2010-01-01
@@ -97,7 +91,6 @@
 95,Adapteva,Mobile,USA,MA,Boston,Lexington,venture,A,2009-10-27,2009-10, 2009-Q4 ,2009.0,1500000,2008-03-15
 96,Adapteva,Mobile,USA,MA,Boston,Lexington,venture,B,2014-01-16,2014-01, 2014-Q1 ,2014.0,3600000,2008-03-15
 97,Adaptive Biotechnologies,Bio-Pharm,USA,WA,Seattle,Seattle,venture,C,2014-04-07,2014-04, 2014-Q2 ,2014.0,5000000,2009-01-01
-98,Adaptive Biotechnologies,Bio-Pharm,USA,WA,Seattle,Seattle,venture,D,2014-04-15,2014-04, 2014-Q2 ,2014.0,104999480,2009-01-01
 99,Adaptive TCR,Biotechnology,USA,WA,Seattle,Seattle,venture,A,2010-03-26,2010-03, 2010-Q1 ,2010.0,4550000,2009-01-01
 100,Adaptive TCR,Biotechnology,USA,WA,Seattle,Seattle,venture,B,2011-06-10,2011-06, 2011-Q2 ,2011.0,5800000,2009-01-01
 101,AdaptiveBlue,Semantic Web,USA,NY,New York City,New York,venture,A,2007-02-15,2007-02, 2007-Q1 ,2007.0,1500000,2007-01-01
@@ -120,7 +113,6 @@
 118,Adimab,Biotechnology,USA,NH,"Manchester, New Hampshire",Lebanon,venture,A,2007-07-01,2007-07, 2007-Q3 ,2007.0,400000,2007-05-01
 119,Adimab,Biotechnology,USA,NH,"Manchester, New Hampshire",Lebanon,venture,B,2008-04-01,2008-04, 2008-Q2 ,2008.0,3180000,2007-05-01
 120,Adimab,Biotechnology,USA,NH,"Manchester, New Hampshire",Lebanon,venture,C,2008-11-20,2008-11, 2008-Q4 ,2008.0,4000000,2007-05-01
-121,Adimab,Biotechnology,USA,NH,"Manchester, New Hampshire",Lebanon,venture,D,2010-01-22,2010-01, 2010-Q1 ,2010.0,8200000,2007-05-01
 122,Adly,Social Media,USA,CA,Los Angeles,Beverly Hills,seed/angel,0,2009-10-20,2009-10, 2009-Q4 ,2009.0,500000,2009-01-01
 123,Adly,Social Media,USA,CA,Los Angeles,Beverly Hills,venture,B,2010-05-11,2010-05, 2010-Q2 ,2010.0,5000000,2009-01-01
 124,Admeld,Auctions,USA,NY,New York City,New York,venture,A,2008-11-10,2008-11, 2008-Q4 ,2008.0,7000000,2007-10-01
@@ -157,7 +149,6 @@
 155,Airbnb,Travel,USA,CA,SF Bay Area,San Francisco,venture,A,2010-11-10,2010-11, 2010-Q4 ,2010.0,7200000,2008-08-01
 156,Airbnb,Travel,USA,CA,SF Bay Area,San Francisco,venture,B,2011-07-25,2011-07, 2011-Q3 ,2011.0,112000000,2008-08-01
 157,Airbnb,Travel,USA,CA,SF Bay Area,San Francisco,venture,C,2013-10-28,2013-10, 2013-Q4 ,2013.0,200000000,2008-08-01
-158,Airbnb,Travel,USA,CA,SF Bay Area,San Francisco,venture,D,2014-04-16,2014-04, 2014-Q2 ,2014.0,475000000,2008-08-01
 159,Airware,Aerospace,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2013-03-31,2013-03, 2013-Q1 ,2013.0,3000000,2011-05-01
 160,Airware,Aerospace,USA,CA,SF Bay Area,San Francisco,venture,A,2013-05-15,2013-05, 2013-Q2 ,2013.0,12200000,2011-05-01
 161,Airware,Aerospace,USA,CA,SF Bay Area,San Francisco,venture,B,2014-07-23,2014-07, 2014-Q3 ,2014.0,25000000,2011-05-01
@@ -202,7 +193,6 @@
 200,Anchor Intelligence,Advertising,USA,CA,SF Bay Area,Mountain View,venture,A,2007-01-01,2007-01, 2007-Q1 ,2007.0,2000000,2007-01-01
 201,Anchor Intelligence,Advertising,USA,CA,SF Bay Area,Mountain View,venture,B,2007-09-01,2007-09, 2007-Q3 ,2007.0,4000000,2007-01-01
 202,Andrew Technologies,Biotechnology,USA,CA,"Orange County, California",Tustin,venture,C,2011-03-24,2011-03, 2011-Q1 ,2011.0,6999684,2007-01-01
-203,Andrew Technologies,Biotechnology,USA,CA,"Orange County, California",Tustin,venture,D,2013-05-30,2013-05, 2013-Q2 ,2013.0,6261769,2007-01-01
 204,AngelList,Databases,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2013-07-22,2013-07, 2013-Q3 ,2013.0,100000,2010-01-01
 205,AngelList,Databases,USA,CA,SF Bay Area,San Francisco,venture,B,2013-09-22,2013-09, 2013-Q3 ,2013.0,24000000,2010-01-01
 206,Anser Innovation,Hardware + Software,USA,MN,Minneapolis,Burnsville,seed/angel,0,2012-09-05,2012-09, 2012-Q3 ,2012.0,1000000,2011-01-01
@@ -220,7 +210,6 @@
 218,App Annie,Analytics,USA,CA,SF Bay Area,San Francisco,venture,A,2011-07-07,2011-07, 2011-Q3 ,2011.0,1000000,2010-01-01
 219,App Annie,Analytics,USA,CA,SF Bay Area,San Francisco,venture,B,2012-08-14,2012-08, 2012-Q3 ,2012.0,6000000,2010-01-01
 220,App Annie,Analytics,USA,CA,SF Bay Area,San Francisco,venture,C,2013-09-18,2013-09, 2013-Q3 ,2013.0,15000000,2010-01-01
-221,App Annie,Analytics,USA,CA,SF Bay Area,San Francisco,venture,D,2014-05-28,2014-05, 2014-Q2 ,2014.0,17000000,2010-01-01
 222,AppDirect,PaaS,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2011-04-28,2011-04, 2011-Q2 ,2011.0,3250000,2009-07-17
 223,AppDirect,PaaS,USA,CA,SF Bay Area,San Francisco,venture,A,2012-07-18,2012-07, 2012-Q3 ,2012.0,8500000,2009-07-17
 224,AppDirect,PaaS,USA,CA,SF Bay Area,San Francisco,venture,B,2013-09-10,2013-09, 2013-Q3 ,2013.0,9000000,2009-07-17
@@ -228,8 +217,6 @@
 226,AppDynamics,Software,USA,CA,SF Bay Area,San Francisco,venture,A,2008-01-01,2008-01, 2008-Q1 ,2008.0,5500000,2008-01-01
 227,AppDynamics,Software,USA,CA,SF Bay Area,San Francisco,venture,B,2010-05-03,2010-05, 2010-Q2 ,2010.0,11000000,2008-01-01
 228,AppDynamics,Software,USA,CA,SF Bay Area,San Francisco,venture,C,2012-01-17,2012-01, 2012-Q1 ,2012.0,20000000,2008-01-01
-229,AppDynamics,Software,USA,CA,SF Bay Area,San Francisco,venture,D,2013-01-23,2013-01, 2013-Q1 ,2013.0,50000000,2008-01-01
-230,AppDynamics,Software,USA,CA,SF Bay Area,San Francisco,venture,E,2014-07-22,2014-07, 2014-Q3 ,2014.0,70000000,2008-01-01
 231,AppFirst,Application Performance Monitoring,USA,NY,New York City,New York,seed/angel,0,2010-07-01,2010-07, 2010-Q3 ,2010.0,1500000,2009-04-01
 232,AppFirst,Application Performance Monitoring,USA,NY,New York City,New York,venture,A,2011-09-06,2011-09, 2011-Q3 ,2011.0,4000000,2009-04-01
 233,AppFirst,Application Performance Monitoring,USA,NY,New York City,New York,venture,B,2012-12-06,2012-12, 2012-Q4 ,2012.0,8700000,2009-04-01
@@ -240,8 +227,6 @@
 238,AppNexus,Technology,USA,NY,New York City,New York,seed/angel,0,2007-12-27,2007-12, 2007-Q4 ,2007.0,2500000,2007-09-01
 239,AppNexus,Technology,USA,NY,New York City,New York,venture,B,2009-11-10,2009-11, 2009-Q4 ,2009.0,5000000,2007-09-01
 240,AppNexus,Technology,USA,NY,New York City,New York,venture,C,2010-10-05,2010-10, 2010-Q4 ,2010.0,50000000,2007-09-01
-241,AppNexus,Technology,USA,NY,New York City,New York,venture,D,2013-01-24,2013-01, 2013-Q1 ,2013.0,75000000,2007-09-01
-242,AppNexus,Technology,USA,NY,New York City,New York,venture,E,2014-09-22,2014-09, 2014-Q3 ,2014.0,110000000,2007-09-01
 243,Appboy,Analytics,USA,NY,New York City,New York,venture,A,2013-11-06,2013-11, 2013-Q4 ,2013.0,7600000,2011-01-01
 244,Appboy,Analytics,USA,NY,New York City,New York,venture,B,2014-10-02,2014-10, 2014-Q4 ,2014.0,15000000,2011-01-01
 245,Appcore,Enterprise Software,USA,IA,Des Moines,Des Moines,seed/angel,0,2009-11-01,2009-11, 2009-Q4 ,2009.0,500000,2008-01-01
@@ -255,8 +240,6 @@
 253,Applause,Testing,USA,MA,Boston,Framingham,venture,A,2007-10-01,2007-10, 2007-Q4 ,2007.0,2300000,2007-08-01
 254,Applause,Testing,USA,MA,Boston,Framingham,venture,B,2008-12-01,2008-12, 2008-Q4 ,2008.0,5000000,2007-08-01
 255,Applause,Testing,USA,MA,Boston,Framingham,venture,C,2010-09-13,2010-09, 2010-Q3 ,2010.0,13000000,2007-08-01
-256,Applause,Testing,USA,MA,Boston,Framingham,venture,D,2011-12-05,2011-12, 2011-Q4 ,2011.0,17000000,2007-08-01
-257,Applause,Testing,USA,MA,Boston,Framingham,venture,E,2014-01-14,2014-01, 2014-Q1 ,2014.0,43000000,2007-08-01
 258,Applauze,Mobile,USA,CA,SF Bay Area,Mountain View,seed/angel,0,2012-01-26,2012-01, 2012-Q1 ,2012.0,3250000,2010-11-01
 259,Applauze,Mobile,USA,CA,SF Bay Area,Mountain View,venture,A,2013-10-23,2013-10, 2013-Q4 ,2013.0,7200000,2010-11-01
 260,Apprenda,PaaS,USA,NY,"Albany, New York",Troy,venture,A,2009-11-09,2009-11, 2009-Q4 ,2009.0,5000000,2007-01-01
@@ -267,8 +250,6 @@
 265,Apptio,SaaS,USA,WA,Seattle,Bellevue,venture,A,2007-11-15,2007-11, 2007-Q4 ,2007.0,7000000,2007-11-01
 266,Apptio,SaaS,USA,WA,Seattle,Bellevue,venture,B,2009-08-18,2009-08, 2009-Q3 ,2009.0,14000000,2007-11-01
 267,Apptio,SaaS,USA,WA,Seattle,Bellevue,venture,C,2010-08-31,2010-08, 2010-Q3 ,2010.0,20000000,2007-11-01
-268,Apptio,SaaS,USA,WA,Seattle,Bellevue,venture,D,2012-03-15,2012-03, 2012-Q1 ,2012.0,50000000,2007-11-01
-269,Apptio,SaaS,USA,WA,Seattle,Bellevue,venture,E,2013-05-15,2013-05, 2013-Q2 ,2013.0,45000000,2007-11-01
 270,Appurify,Testing,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-04-01,2012-04, 2012-Q2 ,2012.0,1750000,2012-04-01
 271,Appurify,Testing,USA,CA,SF Bay Area,San Francisco,venture,A,2013-05-28,2013-05, 2013-Q2 ,2013.0,4500000,2012-04-01
 272,Apsalar,Data Integration,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2010-11-01,2010-11, 2010-Q4 ,2010.0,800000,2010-05-01
@@ -277,12 +258,9 @@
 275,Apture,Curated Web,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2007-07-01,2007-07, 2007-Q3 ,2007.0,500000,2007-06-01
 276,Apture,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,A,2009-03-17,2009-03, 2009-Q1 ,2009.0,4100000,2007-06-01
 277,Aquion Energy,Clean Technology,USA,PA,Pittsburgh,Pittsburgh,venture,A,2008-06-13,2008-06, 2008-Q2 ,2008.0,7500000,2008-01-01
-278,Aquion Energy,Clean Technology,USA,PA,Pittsburgh,Pittsburgh,venture,D,2014-03-14,2014-03, 2014-Q1 ,2014.0,56610788,2008-01-01
-279,Aquion Energy,Clean Technology,USA,PA,Pittsburgh,Pittsburgh,venture,E,2014-09-29,2014-09, 2014-Q3 ,2014.0,36800000,2008-01-01
 280,Aragon Pharmaceuticals,Biotechnology,USA,CA,San Diego,San Diego,venture,A,2009-05-27,2009-05, 2009-Q2 ,2009.0,8000000,2009-01-01
 281,Aragon Pharmaceuticals,Biotechnology,USA,CA,San Diego,San Diego,venture,B,2010-04-22,2010-04, 2010-Q2 ,2010.0,22000000,2009-01-01
 282,Aragon Pharmaceuticals,Biotechnology,USA,CA,San Diego,San Diego,venture,C,2012-03-06,2012-03, 2012-Q1 ,2012.0,42000000,2009-01-01
-283,Aragon Pharmaceuticals,Biotechnology,USA,CA,San Diego,San Diego,venture,D,2012-10-04,2012-10, 2012-Q4 ,2012.0,50000000,2009-01-01
 284,Aratana Therapeutics,Health Care,USA,KS,Kansas City,Kansas City,venture,A,2011-01-07,2011-01, 2011-Q1 ,2011.0,20000000,2010-01-01
 285,Aratana Therapeutics,Health Care,USA,KS,Kansas City,Kansas City,venture,B,2011-12-07,2011-12, 2011-Q4 ,2011.0,15000000,2010-01-01
 286,Aratana Therapeutics,Health Care,USA,KS,Kansas City,Kansas City,venture,C,2013-01-31,2013-01, 2013-Q1 ,2013.0,12000000,2010-01-01
@@ -302,7 +280,6 @@
 300,Aryaka Networks,Enterprise Software,USA,CA,SF Bay Area,Milpitas,venture,A,2010-09-21,2010-09, 2010-Q3 ,2010.0,14000000,2008-11-01
 301,Aryaka Networks,Enterprise Software,USA,CA,SF Bay Area,Milpitas,venture,B,2011-06-07,2011-06, 2011-Q2 ,2011.0,15000000,2008-11-01
 302,Aryaka Networks,Enterprise Software,USA,CA,SF Bay Area,Milpitas,venture,C,2012-07-16,2012-07, 2012-Q3 ,2012.0,25000000,2008-11-01
-303,Aryaka Networks,Enterprise Software,USA,CA,SF Bay Area,Milpitas,venture,D,2014-06-03,2014-06, 2014-Q2 ,2014.0,10000000,2008-11-01
 304,Asana,Collaboration,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2009-04-01,2009-04, 2009-Q2 ,2009.0,1200000,2009-01-01
 305,Asana,Collaboration,USA,CA,SF Bay Area,San Francisco,venture,A,2009-11-24,2009-11, 2009-Q4 ,2009.0,9000000,2009-01-01
 306,Asana,Collaboration,USA,CA,SF Bay Area,San Francisco,venture,B,2012-07-23,2012-07, 2012-Q3 ,2012.0,28000000,2009-01-01
@@ -320,7 +297,6 @@
 318,Attivio,Enterprise Software,USA,MA,Boston,Boston,venture,A,2007-09-01,2007-09, 2007-Q3 ,2007.0,6200000,2007-08-01
 319,Attivio,Enterprise Software,USA,MA,Boston,Boston,venture,B,2008-06-30,2008-06, 2008-Q2 ,2008.0,12000000,2007-08-01
 320,Attivio,Enterprise Software,USA,MA,Boston,Boston,venture,C,2010-01-19,2010-01, 2010-Q1 ,2010.0,11000000,2007-08-01
-321,Attivio,Enterprise Software,USA,MA,Boston,Boston,venture,D,2012-10-11,2012-10, 2012-Q4 ,2012.0,41900000,2007-08-01
 322,Audentes Therapeutics,Biotechnology,USA,CA,SF Bay Area,San Francisco,venture,A,2013-07-18,2013-07, 2013-Q3 ,2013.0,30000000,2013-01-01
 323,Audentes Therapeutics,Biotechnology,USA,CA,SF Bay Area,San Francisco,venture,B,2014-12-02,2014-12, 2014-Q4 ,2014.0,42500000,2013-01-01
 324,AudiencePoint,Enterprise Software,USA,TN,Chattanooga,Chattanooga,seed/angel,0,2012-09-01,2012-09, 2012-Q3 ,2012.0,200000,2010-01-01
@@ -328,7 +304,6 @@
 326,Audiosocket,Media,USA,WA,Seattle,Seattle,seed/angel,0,2008-01-01,2008-01, 2008-Q1 ,2008.0,500000,2008-05-01
 327,Audiosocket,Media,USA,WA,Seattle,Seattle,venture,A,2009-09-02,2009-09, 2009-Q3 ,2009.0,750000,2008-05-01
 328,Augmenix,Health Care,USA,MA,Boston,Waltham,venture,B,2009-10-16,2009-10, 2009-Q4 ,2009.0,6100000,2008-01-01
-329,Augmenix,Health Care,USA,MA,Boston,Waltham,venture,D,2014-07-23,2014-07, 2014-Q3 ,2014.0,10800000,2008-01-01
 330,AuraSense Therapeutics,Biotechnology,USA,IL,Chicago,Evanston,venture,B,2011-12-21,2011-12, 2011-Q4 ,2011.0,5400000,2009-01-01
 331,AuraSense Therapeutics,Biotechnology,USA,IL,Chicago,Evanston,venture,C,2014-06-17,2014-06, 2014-Q2 ,2014.0,13600000,2009-01-01
 332,Aurora Biofuels,Clean Technology,USA,CA,SF Bay Area,Hayward,venture,A,2007-01-24,2007-01, 2007-Q1 ,2007.0,5000000,2007-01-01
@@ -350,18 +325,15 @@
 348,AvantCredit,Finance,USA,IL,Chicago,Chicago,venture,B,2013-08-14,2013-08, 2013-Q3 ,2013.0,25000000,2012-11-01
 349,AvantCredit,Finance,USA,IL,Chicago,Chicago,venture,C,2014-07-23,2014-07, 2014-Q3 ,2014.0,75000000,2012-11-01
 350,Avedro,Health Care,USA,MA,Boston,Waltham,venture,C,2011-07-07,2011-07, 2011-Q3 ,2011.0,25000000,2007-01-01
-351,Avedro,Health Care,USA,MA,Boston,Waltham,venture,D,2013-03-05,2013-03, 2013-Q1 ,2013.0,43000000,2007-01-01
 352,Aver Informatics,Medical,USA,WI,Green Bay,Green Bay,seed/angel,0,2013-03-29,2013-03, 2013-Q1 ,2013.0,1000000,2010-06-04
 353,Aver Informatics,Medical,USA,WI,Green Bay,Green Bay,venture,A,2014-05-27,2014-05, 2014-Q2 ,2014.0,8500000,2010-06-04
 354,Averail,Mobile,USA,CA,SF Bay Area,San Jose,seed/angel,0,2011-07-26,2011-07, 2011-Q3 ,2011.0,250000,2011-01-01
 355,Averail,Mobile,USA,CA,SF Bay Area,San Jose,venture,A,2012-03-20,2012-03, 2012-Q1 ,2012.0,6000000,2011-01-01
 356,Avere Systems,Web Hosting,USA,PA,Pittsburgh,Pittsburgh,venture,B,2010-08-05,2010-08, 2010-Q3 ,2010.0,17000000,2008-01-01
 357,Avere Systems,Web Hosting,USA,PA,Pittsburgh,Pittsburgh,venture,C,2012-07-10,2012-07, 2012-Q3 ,2012.0,20000000,2008-01-01
-358,Avere Systems,Web Hosting,USA,PA,Pittsburgh,Pittsburgh,venture,D,2014-07-10,2014-07, 2014-Q3 ,2014.0,20000000,2008-01-01
 359,Avvo,Marketplaces,USA,WA,Seattle,Seattle,venture,A,2006-01-01,2006-01, 2006-Q1 ,2006.0,3000000,2007-06-01
 360,Avvo,Marketplaces,USA,WA,Seattle,Seattle,venture,B,2007-04-01,2007-04, 2007-Q2 ,2007.0,10000000,2007-06-01
 361,Avvo,Marketplaces,USA,WA,Seattle,Seattle,venture,C,2010-03-17,2010-03, 2010-Q1 ,2010.0,10000000,2007-06-01
-362,Avvo,Marketplaces,USA,WA,Seattle,Seattle,venture,D,2014-04-15,2014-04, 2014-Q2 ,2014.0,37500000,2007-06-01
 363,AwarenessHub,Software,USA,MA,Boston,Boston,venture,A,2007-07-23,2007-07, 2007-Q3 ,2007.0,7000000,2014-01-01
 364,AwarenessHub,Software,USA,MA,Boston,Boston,venture,B,2010-02-05,2010-02, 2010-Q1 ,2010.0,9948190,2014-01-01
 365,Axial,Software,USA,NY,New York City,New York,seed/angel,0,2010-11-05,2010-11, 2010-Q4 ,2010.0,2000000,2009-01-01
@@ -402,8 +374,6 @@
 400,Base CRM,CRM,USA,CA,SF Bay Area,Palo Alto,venture,A,2012-05-09,2012-05, 2012-Q2 ,2012.0,6800000,2009-01-01
 401,Base CRM,CRM,USA,CA,SF Bay Area,Palo Alto,venture,B,2014-03-19,2014-03, 2014-Q1 ,2014.0,15000000,2009-01-01
 402,Basho Technologies,Cloud Infrastructure,USA,MA,Boston,Cambridge,venture,C,2009-04-09,2009-04, 2009-Q2 ,2009.0,4676866,2008-01-01
-403,Basho Technologies,Cloud Infrastructure,USA,MA,Boston,Cambridge,venture,D,2011-02-08,2011-02, 2011-Q1 ,2011.0,7500000,2008-01-01
-404,Basho Technologies,Cloud Infrastructure,USA,MA,Boston,Cambridge,venture,F,2012-07-17,2012-07, 2012-Q3 ,2012.0,11500000,2008-01-01
 405,Basis Science,Fitness,USA,CA,SF Bay Area,San Francisco,venture,A,2011-03-22,2011-03, 2011-Q1 ,2011.0,9000000,2010-04-01
 406,Basis Science,Fitness,USA,CA,SF Bay Area,San Francisco,venture,B,2013-10-08,2013-10, 2013-Q4 ,2013.0,23000000,2010-04-01
 407,BaubleBar,Jewelry,USA,NY,New York City,New York,seed/angel,0,2010-11-05,2010-11, 2010-Q4 ,2010.0,1100000,2011-01-01
@@ -452,7 +422,6 @@
 450,Beyond Gaming,Games,USA,OH,Toledo,Toledo,venture,A,2010-08-24,2010-08, 2010-Q3 ,2010.0,125000,2009-07-27
 451,BiOM,Biotechnology,USA,MA,Boston,Bedford,venture,B,2009-10-21,2009-10, 2009-Q4 ,2009.0,20000000,2007-01-01
 452,BiOM,Biotechnology,USA,MA,Boston,Bedford,venture,C,2011-01-13,2011-01, 2011-Q1 ,2011.0,15000000,2007-01-01
-453,BiOM,Biotechnology,USA,MA,Boston,Bedford,venture,D,2012-09-13,2012-09, 2012-Q3 ,2012.0,17000000,2007-01-01
 454,Big Stage,Entertainment,USA,CA,Los Angeles,South Pasadena,venture,A,2007-03-01,2007-03, 2007-Q1 ,2007.0,7900000,2008-06-01
 455,Big Stage,Entertainment,USA,CA,Los Angeles,South Pasadena,venture,B,2009-04-14,2009-04, 2009-Q2 ,2009.0,2700000,2008-06-01
 456,BigDoor,Game Mechanics,USA,WA,Seattle,Seattle,seed/angel,0,2009-10-14,2009-10, 2009-Q4 ,2009.0,250000,2009-06-01
@@ -461,7 +430,6 @@
 459,Bigcommerce,Web Development,USA,TX,Austin,Austin,venture,A,2011-08-01,2011-08, 2011-Q3 ,2011.0,15000000,2009-01-01
 460,Bigcommerce,Web Development,USA,TX,Austin,Austin,venture,B,2012-09-05,2012-09, 2012-Q3 ,2012.0,20000000,2009-01-01
 461,Bigcommerce,Web Development,USA,TX,Austin,Austin,venture,C,2013-07-25,2013-07, 2013-Q3 ,2013.0,40000000,2009-01-01
-462,Bigcommerce,Web Development,USA,TX,Austin,Austin,venture,D,2014-11-19,2014-11, 2014-Q4 ,2014.0,50000000,2009-01-01
 463,BillGuard,IT and Cybersecurity,USA,NY,New York City,New York,venture,A,2010-05-28,2010-05, 2010-Q2 ,2010.0,3000000,2010-04-11
 464,BillGuard,IT and Cybersecurity,USA,NY,New York City,New York,venture,B,2011-10-06,2011-10, 2011-Q4 ,2011.0,10000000,2010-04-11
 465,BioCatch,Biotechnology,USA,MA,Boston,Boston,seed/angel,0,2012-03-01,2012-03, 2012-Q1 ,2012.0,600000,2010-01-01
@@ -510,7 +478,6 @@
 508,Blue Jeans Network,Chat,USA,CA,SF Bay Area,Mountain View,venture,A,2009-11-01,2009-11, 2009-Q4 ,2009.0,5500000,2009-01-01
 509,Blue Jeans Network,Chat,USA,CA,SF Bay Area,Mountain View,venture,B,2011-04-01,2011-04, 2011-Q2 ,2011.0,18000000,2009-01-01
 510,Blue Jeans Network,Chat,USA,CA,SF Bay Area,Mountain View,venture,C,2012-06-27,2012-06, 2012-Q2 ,2012.0,25000000,2009-01-01
-511,Blue Jeans Network,Chat,USA,CA,SF Bay Area,Mountain View,venture,D,2013-09-18,2013-09, 2013-Q3 ,2013.0,50000000,2009-01-01
 512,BlueCava,Software,USA,CA,Anaheim,Irvine,seed/angel,0,2010-10-18,2010-10, 2010-Q4 ,2010.0,5300000,2010-07-01
 513,BlueCava,Software,USA,CA,Anaheim,Irvine,venture,B,2011-10-21,2011-10, 2011-Q4 ,2011.0,5600000,2010-07-01
 514,BlueConic,Marketing Automation,USA,MA,Boston,Boston,seed/angel,0,2010-08-01,2010-08, 2010-Q3 ,2010.0,1400000,2010-08-01
@@ -518,7 +485,6 @@
 516,BlueKai,Advertising,USA,CA,SF Bay Area,Cupertino,venture,A,2008-04-01,2008-04, 2008-Q2 ,2008.0,3200000,2007-01-01
 517,BlueKai,Advertising,USA,CA,SF Bay Area,Cupertino,venture,B,2008-12-15,2008-12, 2008-Q4 ,2008.0,10500000,2007-01-01
 518,BlueKai,Advertising,USA,CA,SF Bay Area,Cupertino,venture,C,2010-02-01,2010-02, 2010-Q1 ,2010.0,21400000,2007-01-01
-519,BlueKai,Advertising,USA,CA,SF Bay Area,Cupertino,venture,D,2012-01-20,2012-01, 2012-Q1 ,2012.0,15000000,2007-01-01
 520,BlueStacks,Home & Garden,USA,CA,SF Bay Area,Campbell,venture,A,2011-05-17,2011-05, 2011-Q2 ,2011.0,10640690,2009-01-01
 521,BlueStacks,Home & Garden,USA,CA,SF Bay Area,Campbell,venture,B,2011-10-20,2011-10, 2011-Q4 ,2011.0,6400000,2009-01-01
 522,BlueStripe Software,Software,USA,NC,Raleigh,Morrisville,venture,A,2007-01-01,2007-01, 2007-Q1 ,2007.0,5000000,2007-01-01
@@ -538,7 +504,6 @@
 536,Bonfire.com,Social Media,USA,CA,Los Angeles,Santa Monica,seed/angel,0,2012-07-01,2012-07, 2012-Q3 ,2012.0,100000,2012-02-01
 537,Bonfire.com,Social Media,USA,CA,Los Angeles,Santa Monica,venture,A,2013-02-01,2013-02, 2013-Q1 ,2013.0,400000,2012-02-01
 538,Bonobos,Shoes,USA,NY,New York City,New York,seed/angel,0,2010-01-21,2010-01, 2010-Q1 ,2010.0,3999865,2007-06-01
-539,Bonobos,Shoes,USA,NY,New York City,New York,venture,D,2014-07-02,2014-07, 2014-Q3 ,2014.0,55000000,2007-06-01
 540,BookShout!,Software,USA,TX,Dallas,Plano,seed/angel,0,2011-02-11,2011-02, 2011-Q1 ,2011.0,750000,2011-02-01
 541,BookShout!,Software,USA,TX,Dallas,Plano,venture,A,2011-11-01,2011-11, 2011-Q4 ,2011.0,2000000,2011-02-01
 542,BookShout!,Software,USA,TX,Dallas,Plano,venture,B,2013-04-25,2013-04, 2013-Q2 ,2013.0,6000000,2011-02-01
@@ -570,7 +535,6 @@
 568,BranchOut,Networking,USA,CA,SF Bay Area,San Francisco,venture,B,2011-05-11,2011-05, 2011-Q2 ,2011.0,18000000,2010-07-01
 569,BranchOut,Networking,USA,CA,SF Bay Area,San Francisco,venture,C,2012-04-19,2012-04, 2012-Q2 ,2012.0,25000000,2010-07-01
 570,Brand Affinity Technologies,Advertising,USA,CA,Anaheim,Irvine,venture,C,2010-08-24,2010-08, 2010-Q3 ,2010.0,20000000,2007-01-01
-571,Brand Affinity Technologies,Advertising,USA,CA,Anaheim,Irvine,venture,D,2012-05-02,2012-05, 2012-Q2 ,2012.0,7500000,2007-01-01
 572,BrandYourself,SEO,USA,NY,New York City,New York,seed/angel,0,2010-01-01,2010-01, 2010-Q1 ,2010.0,300000,2009-04-08
 573,BrandYourself,SEO,USA,NY,New York City,New York,venture,A,2014-06-05,2014-06, 2014-Q2 ,2014.0,3300000,2009-04-08
 574,Branding Brand,Web Development,USA,PA,Pittsburgh,Pittsburgh,venture,A,2012-10-01,2012-10, 2012-Q4 ,2012.0,7500000,2008-03-01
@@ -619,7 +583,6 @@
 617,Bump Technologies,Mobile,USA,CA,SF Bay Area,Mountain View,venture,B,2011-01-10,2011-01, 2011-Q1 ,2011.0,16500000,2008-10-01
 618,Business Insider,News,USA,NY,New York City,New York,seed/angel,0,2008-07-16,2008-07, 2008-Q3 ,2008.0,900000,2007-05-01
 619,Business Insider,News,USA,NY,New York City,New York,venture,C,2009-05-21,2009-05, 2009-Q2 ,2009.0,2700000,2007-05-01
-620,Business Insider,News,USA,NY,New York City,New York,venture,D,2010-07-28,2010-07, 2010-Q3 ,2010.0,3000000,2007-05-01
 621,Bustle,Curated Web,USA,NY,New York City,Brooklyn,venture,A,2013-08-13,2013-08, 2013-Q3 ,2013.0,6500000,2013-01-01
 622,Bustle,Curated Web,USA,NY,New York City,Brooklyn,venture,B,2014-07-14,2014-07, 2014-Q3 ,2014.0,5000000,2013-01-01
 623,BuyWithMe,Group Buying,USA,NY,New York City,New York,venture,A,2010-01-20,2010-01, 2010-Q1 ,2010.0,5500000,2009-03-01
@@ -632,8 +595,6 @@
 630,BuzzFeed,Entertainment,USA,NY,New York City,New York,venture,A,2008-07-09,2008-07, 2008-Q3 ,2008.0,3500000,2008-01-01
 631,BuzzFeed,Entertainment,USA,NY,New York City,New York,venture,B,2010-05-12,2010-05, 2010-Q2 ,2010.0,8000000,2008-01-01
 632,BuzzFeed,Entertainment,USA,NY,New York City,New York,venture,C,2012-01-09,2012-01, 2012-Q1 ,2012.0,15500000,2008-01-01
-633,BuzzFeed,Entertainment,USA,NY,New York City,New York,venture,D,2013-01-03,2013-01, 2013-Q1 ,2013.0,19300000,2008-01-01
-634,BuzzFeed,Entertainment,USA,NY,New York City,New York,venture,E,2014-08-10,2014-08, 2014-Q3 ,2014.0,50000000,2008-01-01
 635,Buzzwire,Mobile,USA,CO,Denver,Denver,venture,A,2007-07-01,2007-07, 2007-Q3 ,2007.0,4000000,2007-07-01
 636,Buzzwire,Mobile,USA,CO,Denver,Denver,venture,B,2007-12-01,2007-12, 2007-Q4 ,2007.0,8000000,2007-07-01
 637,Bypass Mobile,Mobile,USA,TX,Austin,Austin,seed/angel,0,2010-08-01,2010-08, 2010-Q3 ,2010.0,600000,2010-07-07
@@ -653,7 +614,6 @@
 651,Calithera Biosciences,Biotechnology,USA,CA,SF Bay Area,South San Francisco,venture,A,2010-07-08,2010-07, 2010-Q3 ,2010.0,40000000,2010-06-01
 652,Calithera Biosciences,Biotechnology,USA,CA,SF Bay Area,South San Francisco,venture,B,2012-05-31,2012-05, 2012-Q2 ,2012.0,8000000,2010-06-01
 653,Calithera Biosciences,Biotechnology,USA,CA,SF Bay Area,South San Francisco,venture,C,2012-12-31,2012-12, 2012-Q4 ,2012.0,2000000,2010-06-01
-654,Calithera Biosciences,Biotechnology,USA,CA,SF Bay Area,South San Francisco,venture,D,2013-10-29,2013-10, 2013-Q4 ,2013.0,35000000,2010-06-01
 655,Callidus Biopharma,Biotechnology,USA,PA,Philadelphia,Doylestown,seed/angel,0,2012-07-03,2012-07, 2012-Q3 ,2012.0,1611154,2010-01-01
 656,Callidus Biopharma,Biotechnology,USA,PA,Philadelphia,Doylestown,venture,A,2013-05-14,2013-05, 2013-Q2 ,2013.0,4600000,2010-01-01
 657,Calxeda,Data Centers,USA,TX,Austin,Austin,venture,A,2010-08-16,2010-08, 2010-Q3 ,2010.0,48000000,2008-01-01
@@ -700,7 +660,6 @@
 698,Casper,E-Commerce,USA,NY,New York City,New York,seed/angel,0,2014-01-15,2014-01, 2014-Q1 ,2014.0,1850000,2013-11-01
 699,Casper,E-Commerce,USA,NY,New York City,New York,venture,A,2014-08-07,2014-08, 2014-Q3 ,2014.0,13100000,2013-11-01
 700,Castlight Health,Technology,USA,CA,SF Bay Area,San Francisco,venture,C,2010-06-11,2010-06, 2010-Q2 ,2010.0,60000000,2008-01-01
-701,Castlight Health,Technology,USA,CA,SF Bay Area,San Francisco,venture,D,2012-05-01,2012-05, 2012-Q2 ,2012.0,100000000,2008-01-01
 702,Catabasis Pharmaceuticals,Biotechnology,USA,MA,Boston,Cambridge,venture,A,2010-04-21,2010-04, 2010-Q2 ,2010.0,39000000,2008-01-01
 703,Catabasis Pharmaceuticals,Biotechnology,USA,MA,Boston,Cambridge,venture,B,2013-11-14,2013-11, 2013-Q4 ,2013.0,32400000,2008-01-01
 704,Catalog Spree,Retail,USA,CA,SF Bay Area,Mountain View,seed/angel,0,2011-03-05,2011-03, 2011-Q1 ,2011.0,1300000,2010-01-01
@@ -740,20 +699,16 @@
 738,ChallengePost,Curated Web,USA,NY,New York City,New York,venture,A,2011-08-09,2011-08, 2011-Q3 ,2011.0,4100000,2009-01-01
 739,Change Healthcare,Hospitals,USA,TN,Nashville,Brentwood,venture,A,2007-09-01,2007-09, 2007-Q3 ,2007.0,1000000,2007-01-01
 740,Change Healthcare,Hospitals,USA,TN,Nashville,Brentwood,venture,C,2012-01-17,2012-01, 2012-Q1 ,2012.0,9300000,2007-01-01
-741,Change Healthcare,Hospitals,USA,TN,Nashville,Brentwood,venture,D,2013-08-13,2013-08, 2013-Q3 ,2013.0,15000000,2007-01-01
 742,Change Lane,Hospitality,USA,MN,Minneapolis,Eden Prairie,seed/angel,0,2014-01-21,2014-01, 2014-Q1 ,2014.0,75000,2013-01-01
 743,Change Lane,Hospitality,USA,MN,Minneapolis,Eden Prairie,venture,A,2014-09-09,2014-09, 2014-Q3 ,2014.0,1024999,2013-01-01
 744,Change.org,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,A,2012-01-11,2012-01, 2012-Q1 ,2012.0,2000000,2007-02-01
 745,Change.org,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,B,2013-05-21,2013-05, 2013-Q2 ,2013.0,15000000,2007-02-01
 746,Channelinsight,Enterprise Software,USA,CO,Denver,Denver,venture,C,2011-04-20,2011-04, 2011-Q2 ,2011.0,10000000,2009-01-01
-747,Channelinsight,Enterprise Software,USA,CO,Denver,Denver,venture,D,2012-04-04,2012-04, 2012-Q2 ,2012.0,3304657,2009-01-01
 748,ChargeBee,Billing,USA,CA,Ontario - Inland Empire,Walnut,seed/angel,0,2012-10-01,2012-10, 2012-Q4 ,2012.0,370000,2011-01-01
 749,ChargeBee,Billing,USA,CA,Ontario - Inland Empire,Walnut,venture,A,2014-01-13,2014-01, 2014-Q1 ,2014.0,800000,2011-01-01
 750,"ChargePoint, Inc.",Clean Technology,USA,CA,SF Bay Area,Campbell,venture,A,2009-01-26,2009-01, 2009-Q1 ,2009.0,3750000,2007-01-01
 751,"ChargePoint, Inc.",Clean Technology,USA,CA,SF Bay Area,Campbell,venture,B,2010-03-16,2010-03, 2010-Q1 ,2010.0,8743598,2007-01-01
 752,"ChargePoint, Inc.",Clean Technology,USA,CA,SF Bay Area,Campbell,venture,C,2010-09-08,2010-09, 2010-Q3 ,2010.0,15000000,2007-01-01
-753,"ChargePoint, Inc.",Clean Technology,USA,CA,SF Bay Area,Campbell,venture,D,2012-05-07,2012-05, 2012-Q2 ,2012.0,47500000,2007-01-01
-754,"ChargePoint, Inc.",Clean Technology,USA,CA,SF Bay Area,Campbell,venture,E,2014-05-12,2014-05, 2014-Q2 ,2014.0,22600000,2007-01-01
 755,Chartbeat,Real Time,USA,NY,New York City,New York,seed/angel,0,2010-09-01,2010-09, 2010-Q3 ,2010.0,3000000,2009-04-02
 756,Chartbeat,Real Time,USA,NY,New York City,New York,venture,B,2012-04-16,2012-04, 2012-Q2 ,2012.0,9500000,2009-04-02
 757,Chartboost,Games,USA,CA,SF Bay Area,San Francisco,venture,A,2011-10-01,2011-10, 2011-Q4 ,2011.0,2000000,2011-02-01
@@ -772,7 +727,6 @@
 770,Chef,Software,USA,WA,Seattle,Seattle,venture,A,2009-04-24,2009-04, 2009-Q2 ,2009.0,2500000,2008-09-12
 771,Chef,Software,USA,WA,Seattle,Seattle,venture,B,2010-06-21,2010-06, 2010-Q2 ,2010.0,11000000,2008-09-12
 772,Chef,Software,USA,WA,Seattle,Seattle,venture,C,2012-03-25,2012-03, 2012-Q1 ,2012.0,19500000,2008-09-12
-773,Chef,Software,USA,WA,Seattle,Seattle,venture,D,2013-12-09,2013-12, 2013-Q4 ,2013.0,32000000,2008-09-12
 774,"Chequed.com, Inc.",Software,USA,NY,"Albany, New York",Saratoga Springs,seed/angel,0,2009-01-01,2009-01, 2009-Q1 ,2009.0,150000,2008-10-01
 775,"Chequed.com, Inc.",Software,USA,NY,"Albany, New York",Saratoga Springs,venture,A,2014-07-02,2014-07, 2014-Q3 ,2014.0,2450030,2008-10-01
 776,Chirpify,Marketing Automation,USA,OR,"Portland, Oregon",Portland,seed/angel,0,2012-04-24,2012-04, 2012-Q2 ,2012.0,1300000,2011-07-01
@@ -873,7 +827,6 @@
 871,CloudLock,Google Apps,USA,MA,Boston,Waltham,venture,A,2008-03-16,2008-03, 2008-Q1 ,2008.0,3000000,2011-01-21
 872,CloudLock,Google Apps,USA,MA,Boston,Waltham,venture,B,2012-03-27,2012-03, 2012-Q1 ,2012.0,8700000,2011-01-21
 873,CloudLock,Google Apps,USA,MA,Boston,Waltham,venture,C,2014-01-29,2014-01, 2014-Q1 ,2014.0,16500000,2011-01-21
-874,CloudLock,Google Apps,USA,MA,Boston,Waltham,venture,D,2014-11-24,2014-11, 2014-Q4 ,2014.0,6700000,2011-01-21
 875,CloudOn,Social Media,USA,CA,SF Bay Area,Mountain View,seed/angel,0,2010-10-27,2010-10, 2010-Q4 ,2010.0,1800000,2009-10-01
 876,CloudOn,Social Media,USA,CA,SF Bay Area,Mountain View,venture,A,2011-09-01,2011-09, 2011-Q3 ,2011.0,7700000,2009-10-01
 877,CloudOn,Social Media,USA,CA,SF Bay Area,Mountain View,venture,B,2012-06-21,2012-06, 2012-Q2 ,2012.0,16000000,2009-10-01
@@ -891,9 +844,6 @@
 889,Cloudera,Analytics,USA,CA,SF Bay Area,Palo Alto,venture,A,2009-03-16,2009-03, 2009-Q1 ,2009.0,5000000,2008-10-13
 890,Cloudera,Analytics,USA,CA,SF Bay Area,Palo Alto,venture,B,2009-06-02,2009-06, 2009-Q2 ,2009.0,6000000,2008-10-13
 891,Cloudera,Analytics,USA,CA,SF Bay Area,Palo Alto,venture,C,2010-10-26,2010-10, 2010-Q4 ,2010.0,25000000,2008-10-13
-892,Cloudera,Analytics,USA,CA,SF Bay Area,Palo Alto,venture,D,2011-11-07,2011-11, 2011-Q4 ,2011.0,40000000,2008-10-13
-893,Cloudera,Analytics,USA,CA,SF Bay Area,Palo Alto,venture,E,2012-12-07,2012-12, 2012-Q4 ,2012.0,65000000,2008-10-13
-894,Cloudera,Analytics,USA,CA,SF Bay Area,Palo Alto,venture,F,2014-03-31,2014-03, 2014-Q1 ,2014.0,900000000,2008-10-13
 895,Cloudian,Cloud Infrastructure,USA,CA,SF Bay Area,Foster City,venture,A,2012-04-01,2012-04, 2012-Q2 ,2012.0,11600000,2011-01-01
 896,Cloudian,Cloud Infrastructure,USA,CA,SF Bay Area,Foster City,venture,B,2013-10-22,2013-10, 2013-Q4 ,2013.0,5100000,2011-01-01
 897,Cloudian,Cloud Infrastructure,USA,CA,SF Bay Area,Foster City,venture,C,2014-07-08,2014-07, 2014-Q3 ,2014.0,24000000,2011-01-01
@@ -901,7 +851,6 @@
 899,CoachUp,Training,USA,MA,Boston,Boston,venture,A,2013-11-21,2013-11, 2013-Q4 ,2013.0,6700000,2011-05-15
 900,Coda Automotive,Clean Technology,USA,CA,Los Angeles,Los Angeles,venture,B,2009-07-28,2009-07, 2009-Q3 ,2009.0,24000000,2009-01-01
 901,Coda Automotive,Clean Technology,USA,CA,Los Angeles,Los Angeles,venture,C,2010-05-19,2010-05, 2010-Q2 ,2010.0,58000000,2009-01-01
-902,Coda Automotive,Clean Technology,USA,CA,Los Angeles,Los Angeles,venture,D,2011-01-05,2011-01, 2011-Q1 ,2011.0,76000000,2009-01-01
 903,Codeanywhere,Enterprise Software,USA,CA,SF Bay Area,Palo Alto,seed/angel,0,2011-03-12,2011-03, 2011-Q1 ,2011.0,35000,2013-05-22
 904,Codeanywhere,Enterprise Software,USA,CA,SF Bay Area,Palo Alto,venture,A,2013-07-15,2013-07, 2013-Q3 ,2013.0,600000,2013-05-22
 905,Codeship,Developer Tools,USA,MA,Boston,Cambridge,seed/angel,0,2013-02-25,2013-02, 2013-Q1 ,2013.0,300000,2011-07-15
@@ -943,8 +892,6 @@
 941,Company.com,Lead Generation,USA,GA,Atlanta,Roswell,seed/angel,0,2009-03-01,2009-03, 2009-Q1 ,2009.0,2040000,2010-01-01
 942,Company.com,Lead Generation,USA,GA,Atlanta,Roswell,venture,A,2010-07-30,2010-07, 2010-Q3 ,2010.0,3625000,2010-01-01
 943,Complete Genomics,Life Sciences,USA,CA,SF Bay Area,Mountain View,venture,A,2006-03-28,2006-03, 2006-Q1 ,2006.0,6000000,2007-01-01
-944,Complete Genomics,Life Sciences,USA,CA,SF Bay Area,Mountain View,venture,D,2009-08-24,2009-08, 2009-Q3 ,2009.0,45000000,2007-01-01
-945,Complete Genomics,Life Sciences,USA,CA,SF Bay Area,Mountain View,venture,E,2010-08-19,2010-08, 2010-Q3 ,2010.0,39000000,2007-01-01
 946,Complexa,Biotechnology,USA,PA,Pittsburgh,Pittsburgh,seed/angel,0,2013-10-11,2013-10, 2013-Q4 ,2013.0,200000,2008-01-01
 947,Complexa,Biotechnology,USA,PA,Pittsburgh,Pittsburgh,venture,B,2014-06-05,2014-06, 2014-Q2 ,2014.0,14765747,2008-01-01
 948,Comply365,Enterprise Software,USA,WI,Milwaukee,Beloit,seed/angel,0,2011-09-01,2011-09, 2011-Q3 ,2011.0,2000000,2007-10-01
@@ -992,12 +939,9 @@
 990,Couchbase,Analytics,USA,CA,SF Bay Area,Mountain View,venture,A,2009-01-01,2009-01, 2009-Q1 ,2009.0,6000000,2009-01-02
 991,Couchbase,Analytics,USA,CA,SF Bay Area,Mountain View,venture,B,2010-05-18,2010-05, 2010-Q2 ,2010.0,10000000,2009-01-02
 992,Couchbase,Analytics,USA,CA,SF Bay Area,Mountain View,venture,C,2011-08-10,2011-08, 2011-Q3 ,2011.0,14000000,2009-01-02
-993,Couchbase,Analytics,USA,CA,SF Bay Area,Mountain View,venture,D,2013-08-28,2013-08, 2013-Q3 ,2013.0,25000000,2009-01-02
-994,Couchbase,Analytics,USA,CA,SF Bay Area,Mountain View,venture,E,2014-06-26,2014-06, 2014-Q2 ,2014.0,60000000,2009-01-02
 995,Counsyl,Technology,USA,CA,SF Bay Area,South San Francisco,venture,A,2010-06-01,2010-06, 2010-Q2 ,2010.0,7500000,2008-01-01
 996,Counsyl,Technology,USA,CA,SF Bay Area,South San Francisco,venture,B,2012-03-01,2012-03, 2012-Q1 ,2012.0,34000000,2008-01-01
 997,Counsyl,Technology,USA,CA,SF Bay Area,South San Francisco,venture,C,2012-08-01,2012-08, 2012-Q3 ,2012.0,7500000,2008-01-01
-998,Counsyl,Technology,USA,CA,SF Bay Area,South San Francisco,venture,D,2014-05-08,2014-05, 2014-Q2 ,2014.0,41500000,2008-01-01
 999,CounterTack,Cloud Security,USA,MA,Boston,Waltham,venture,A,2011-01-01,2011-01, 2011-Q1 ,2011.0,5000000,2007-01-01
 1000,CounterTack,Cloud Security,USA,MA,Boston,Waltham,venture,B,2014-06-15,2014-06, 2014-Q2 ,2014.0,5000000,2007-01-01
 1001,CourseHorse,Internet,USA,NY,New York City,New York,seed/angel,0,2012-10-11,2012-10, 2012-Q4 ,2012.0,500000,2011-04-14
@@ -1013,7 +957,6 @@
 1011,Craftsy,Video,USA,CO,Denver,Denver,venture,A,2011-09-14,2011-09, 2011-Q3 ,2011.0,6000000,2010-01-01
 1012,Craftsy,Video,USA,CO,Denver,Denver,venture,B,2012-04-20,2012-04, 2012-Q2 ,2012.0,15000000,2010-01-01
 1013,Craftsy,Video,USA,CO,Denver,Denver,venture,C,2013-12-19,2013-12, 2013-Q4 ,2013.0,35000000,2010-01-01
-1014,Craftsy,Video,USA,CO,Denver,Denver,venture,D,2014-11-13,2014-11, 2014-Q4 ,2014.0,50000000,2010-01-01
 1015,Crashlytics,Mobile,USA,MA,Boston,Cambridge,seed/angel,0,2011-10-13,2011-10, 2011-Q4 ,2011.0,1000000,2011-02-01
 1016,Crashlytics,Mobile,USA,MA,Boston,Cambridge,venture,A,2012-04-10,2012-04, 2012-Q2 ,2012.0,5000000,2011-02-01
 1017,CreativeLive,Education,USA,CA,SF Bay Area,San Francisco,venture,A,2012-10-09,2012-10, 2012-Q4 ,2012.0,7500000,2010-04-01
@@ -1022,7 +965,6 @@
 1020,Credit Karma,Credit,USA,CA,SF Bay Area,San Francisco,venture,A,2009-11-04,2009-11, 2009-Q4 ,2009.0,2500000,2007-06-01
 1021,Credit Karma,Credit,USA,CA,SF Bay Area,San Francisco,venture,B,2013-04-02,2013-04, 2013-Q2 ,2013.0,30000000,2007-06-01
 1022,Credit Karma,Credit,USA,CA,SF Bay Area,San Francisco,venture,C,2014-03-12,2014-03, 2014-Q1 ,2014.0,85000000,2007-06-01
-1023,Credit Karma,Credit,USA,CA,SF Bay Area,San Francisco,venture,D,2014-09-29,2014-09, 2014-Q3 ,2014.0,75000000,2007-06-01
 1024,Credit Sesame,Finance,USA,CA,SF Bay Area,Mountain View,venture,A,2010-04-29,2010-04, 2010-Q2 ,2010.0,1200000,2010-04-01
 1025,Credit Sesame,Finance,USA,CA,SF Bay Area,Mountain View,venture,B,2011-03-09,2011-03, 2011-Q1 ,2011.0,6150000,2010-04-01
 1026,Credit Sesame,Finance,USA,CA,SF Bay Area,Mountain View,venture,C,2012-06-11,2012-06, 2012-Q2 ,2012.0,12000000,2010-04-01
@@ -1067,7 +1009,6 @@
 1065,Currensee,Finance,USA,MA,Boston,Boston,venture,C,2012-01-23,2012-01, 2012-Q1 ,2012.0,2000000,2008-08-01
 1066,CyVek,Life Sciences,USA,CT,Hartford,Wallingford,venture,B,2010-02-12,2010-02, 2010-Q1 ,2010.0,1950000,2008-01-01
 1067,CyVek,Life Sciences,USA,CT,Hartford,Wallingford,venture,C,2012-05-11,2012-05, 2012-Q2 ,2012.0,3000000,2008-01-01
-1068,CyVek,Life Sciences,USA,CT,Hartford,Wallingford,venture,D,2013-02-04,2013-02, 2013-Q1 ,2013.0,5500000,2008-01-01
 1069,Cyanogen,Software,USA,CA,SF Bay Area,Palo Alto,venture,A,2013-09-18,2013-09, 2013-Q3 ,2013.0,7000000,2009-04-01
 1070,Cyanogen,Software,USA,CA,SF Bay Area,Palo Alto,venture,B,2013-12-19,2013-12, 2013-Q4 ,2013.0,23000000,2009-04-01
 1071,"CyberCity 3D, Inc.",Software,USA,CA,Los Angeles,El Segundo,venture,A,2008-12-03,2008-12, 2008-Q4 ,2008.0,6300000,2008-05-01
@@ -1075,7 +1016,6 @@
 1073,Cylance,Security,USA,CA,Anaheim,Irvine,venture,A,2013-02-13,2013-02, 2013-Q1 ,2013.0,15000000,2012-01-01
 1074,Cylance,Security,USA,CA,Anaheim,Irvine,venture,B,2014-02-20,2014-02, 2014-Q1 ,2014.0,20000000,2012-01-01
 1075,DC Devices,Health Care,USA,MA,Boston,Andover,venture,A,2013-03-01,2013-03, 2013-Q1 ,2013.0,10736836,2009-01-01
-1076,DC Devices,Health Care,USA,MA,Boston,Andover,venture,D,2014-07-01,2014-07, 2014-Q3 ,2014.0,34000000,2009-01-01
 1077,DECA,Video,USA,CA,Los Angeles,Santa Monica,venture,A,2007-09-01,2007-09, 2007-Q3 ,2007.0,5000000,2007-01-01
 1078,DECA,Video,USA,CA,Los Angeles,Santa Monica,venture,B,2009-01-12,2009-01, 2009-Q1 ,2009.0,10000000,2007-01-01
 1079,DIY,Education,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-11-01,2012-11, 2012-Q4 ,2012.0,1500000,2011-11-01
@@ -1118,14 +1058,12 @@
 1116,DataXu,Advertising,USA,MA,Boston,Boston,venture,A,2009-04-17,2009-04, 2009-Q2 ,2009.0,7800000,2009-09-01
 1117,DataXu,Advertising,USA,MA,Boston,Boston,venture,B,2010-03-08,2010-03, 2010-Q1 ,2010.0,11000000,2009-09-01
 1118,DataXu,Advertising,USA,MA,Boston,Boston,venture,C,2013-02-07,2013-02, 2013-Q1 ,2013.0,27000000,2009-09-01
-1119,DataXu,Advertising,USA,MA,Boston,Boston,venture,D,2014-02-05,2014-02, 2014-Q1 ,2014.0,10000000,2009-09-01
 1120,Datadog,Software,USA,NY,New York City,New York,seed/angel,0,2011-04-29,2011-04, 2011-Q2 ,2011.0,1200000,2010-01-01
 1121,Datadog,Software,USA,NY,New York City,New York,venture,A,2012-11-21,2012-11, 2012-Q4 ,2012.0,6200000,2010-01-01
 1122,Datadog,Software,USA,NY,New York City,New York,venture,B,2014-02-04,2014-02, 2014-Q1 ,2014.0,15000000,2010-01-01
 1123,Datameer,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,A,2010-04-15,2010-04, 2010-Q2 ,2010.0,2500000,2009-09-01
 1124,Datameer,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,B,2011-05-16,2011-05, 2011-Q2 ,2011.0,9250000,2009-09-01
 1125,Datameer,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,C,2012-09-26,2012-09, 2012-Q3 ,2012.0,6000000,2009-09-01
-1126,Datameer,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,D,2013-12-17,2013-12, 2013-Q4 ,2013.0,19000000,2009-09-01
 1127,Dataminr,Analytics,USA,NY,New York City,New York,venture,A,2011-07-26,2011-07, 2011-Q3 ,2011.0,1086000,2009-01-01
 1128,Dataminr,Analytics,USA,NY,New York City,New York,venture,B,2012-09-24,2012-09, 2012-Q3 ,2012.0,16500000,2009-01-01
 1129,Dataminr,Analytics,USA,NY,New York City,New York,venture,C,2013-06-12,2013-06, 2013-Q2 ,2013.0,30000000,2009-01-01
@@ -1154,7 +1092,6 @@
 1152,Digabit,Software,USA,CO,Denver,Lakewood,venture,A,2009-07-08,2009-07, 2009-Q3 ,2009.0,1408983,2008-01-01
 1153,Digabit,Software,USA,CO,Denver,Lakewood,venture,B,2009-08-12,2009-08, 2009-Q3 ,2009.0,1350000,2008-01-01
 1154,Digabit,Software,USA,CO,Denver,Lakewood,venture,C,2010-09-30,2010-09, 2010-Q3 ,2010.0,1245000,2008-01-01
-1155,Digabit,Software,USA,CO,Denver,Lakewood,venture,D,2013-01-05,2013-01, 2013-Q1 ,2013.0,1255000,2008-01-01
 1156,Digital Assent,Software,USA,GA,Atlanta,Atlanta,venture,A,2011-01-24,2011-01, 2011-Q1 ,2011.0,2000000,2009-10-01
 1157,Digital Assent,Software,USA,GA,Atlanta,Atlanta,venture,B,2011-10-14,2011-10, 2011-Q4 ,2011.0,2500000,2009-10-01
 1158,Digital Lumens,Internet of Things,USA,MA,Boston,Boston,venture,B,2011-04-12,2011-04, 2011-Q2 ,2011.0,10000000,2008-01-01
@@ -1205,7 +1142,6 @@
 1203,DoubleDutch,Enterprise Application,USA,CA,SF Bay Area,San Francisco,venture,A,2012-04-23,2012-04, 2012-Q2 ,2012.0,2028000,2011-01-01
 1204,DoubleDutch,Enterprise Application,USA,CA,SF Bay Area,San Francisco,venture,B,2012-11-12,2012-11, 2012-Q4 ,2012.0,3971000,2011-01-01
 1205,DoubleDutch,Enterprise Application,USA,CA,SF Bay Area,San Francisco,venture,C,2013-09-25,2013-09, 2013-Q3 ,2013.0,11500000,2011-01-01
-1206,DoubleDutch,Enterprise Application,USA,CA,SF Bay Area,San Francisco,venture,D,2014-08-21,2014-08, 2014-Q3 ,2014.0,19046000,2011-01-01
 1207,DoubleVerify,Advertising,USA,NY,New York City,New York,venture,A,2009-05-18,2009-05, 2009-Q2 ,2009.0,3500000,2008-01-01
 1208,DoubleVerify,Advertising,USA,NY,New York City,New York,venture,B,2010-03-08,2010-03, 2010-Q1 ,2010.0,10000000,2008-01-01
 1209,DraftKings,Fantasy Sports,USA,MA,Boston,Boston,seed/angel,0,2012-07-19,2012-07, 2012-Q3 ,2012.0,1400000,2011-01-01
@@ -1245,7 +1181,6 @@
 1243,Dwolla,Software,USA,IA,Des Moines,Des Moines,venture,A,2010-11-17,2010-11, 2010-Q4 ,2010.0,1000000,2008-06-16
 1244,Dwolla,Software,USA,IA,Des Moines,Des Moines,venture,B,2012-02-07,2012-02, 2012-Q1 ,2012.0,5000000,2008-06-16
 1245,Dwolla,Software,USA,IA,Des Moines,Des Moines,venture,C,2013-05-01,2013-05, 2013-Q2 ,2013.0,16500000,2008-06-16
-1246,Dwolla,Software,USA,IA,Des Moines,Des Moines,venture,D,2014-09-30,2014-09, 2014-Q3 ,2014.0,9700000,2008-06-16
 1247,Dynamic Signal,Software,USA,CA,SF Bay Area,San Bruno,venture,A,2011-02-17,2011-02, 2011-Q1 ,2011.0,8000000,2010-01-01
 1248,Dynamic Signal,Software,USA,CA,SF Bay Area,San Bruno,venture,B,2012-07-16,2012-07, 2012-Q3 ,2012.0,13300000,2010-01-01
 1249,Dynamic Signal,Software,USA,CA,SF Bay Area,San Bruno,venture,C,2014-08-25,2014-08, 2014-Q3 ,2014.0,12000000,2010-01-01
@@ -1289,8 +1224,6 @@
 1287,Elcelyx Therapeutics,Biotechnology,USA,CA,San Diego,San Diego,venture,C,2014-02-21,2014-02, 2014-Q1 ,2014.0,24720101,2010-01-01
 1288,Elevance Renewable Sciences,Clean Technology,USA,IL,Chicago,Woodridge,venture,A,2008-03-26,2008-03, 2008-Q1 ,2008.0,40000000,2007-11-01
 1289,Elevance Renewable Sciences,Clean Technology,USA,IL,Chicago,Woodridge,venture,C,2010-12-21,2010-12, 2010-Q4 ,2010.0,100000000,2007-11-01
-1290,Elevance Renewable Sciences,Clean Technology,USA,IL,Chicago,Woodridge,venture,D,2011-07-20,2011-07, 2011-Q3 ,2011.0,50000000,2007-11-01
-1291,Elevance Renewable Sciences,Clean Technology,USA,IL,Chicago,Woodridge,venture,E,2012-07-10,2012-07, 2012-Q3 ,2012.0,104000000,2007-11-01
 1292,Elevate Digital,Software,USA,IL,Chicago,Chicago,venture,A,2012-05-30,2012-05, 2012-Q2 ,2012.0,2700000,2011-03-01
 1293,Elevate Digital,Software,USA,IL,Chicago,Chicago,venture,B,2014-11-07,2014-11, 2014-Q4 ,2014.0,4000000,2011-03-01
 1294,Elevation Pharmaceuticals,Biotechnology,USA,CA,San Diego,San Diego,venture,A,2010-01-21,2010-01, 2010-Q1 ,2010.0,30000000,2007-01-01
@@ -1358,7 +1291,6 @@
 1356,EvoApp,Customer Service,USA,NC,Raleigh,Durham,venture,A,2011-01-31,2011-01, 2011-Q1 ,2011.0,1500000,2009-01-01
 1357,Evolv,Career Management,USA,CA,SF Bay Area,San Francisco,venture,A,2008-01-29,2008-01, 2008-Q1 ,2008.0,3450000,2007-01-01
 1358,Evolv,Career Management,USA,CA,SF Bay Area,San Francisco,venture,C,2011-04-26,2011-04, 2011-Q2 ,2011.0,15800000,2007-01-01
-1359,Evolv,Career Management,USA,CA,SF Bay Area,San Francisco,venture,D,2013-03-12,2013-03, 2013-Q1 ,2013.0,15000000,2007-01-01
 1360,Exclusively.in,Fashion,USA,NY,New York City,New York,venture,A,2010-11-03,2010-11, 2010-Q4 ,2010.0,2800000,2010-01-01
 1361,Exclusively.in,Fashion,USA,NY,New York City,New York,venture,B,2011-05-29,2011-05, 2011-Q2 ,2011.0,16000000,2010-01-01
 1362,ExecOnline,Education,USA,NY,New York City,New York,seed/angel,0,2013-07-10,2013-07, 2013-Q3 ,2013.0,1216100,2012-04-01
@@ -1385,7 +1317,6 @@
 1383,Eyeview,Online Video Advertising,USA,NY,New York City,New York,venture,A,2010-03-01,2010-03, 2010-Q1 ,2010.0,6000000,2007-11-01
 1384,Eyeview,Online Video Advertising,USA,NY,New York City,New York,venture,B,2012-01-10,2012-01, 2012-Q1 ,2012.0,5250000,2007-11-01
 1385,Eyeview,Online Video Advertising,USA,NY,New York City,New York,venture,C,2013-07-25,2013-07, 2013-Q3 ,2013.0,8100000,2007-11-01
-1386,Eyeview,Online Video Advertising,USA,NY,New York City,New York,venture,D,2014-11-17,2014-11, 2014-Q4 ,2014.0,15000000,2007-11-01
 1387,FRX Polymers,Clean Technology,USA,MA,Boston,Chelmsford,venture,A,2009-07-27,2009-07, 2009-Q3 ,2009.0,6000000,2007-01-01
 1388,FRX Polymers,Clean Technology,USA,MA,Boston,Chelmsford,venture,B,2011-06-06,2011-06, 2011-Q2 ,2011.0,15700000,2007-01-01
 1389,FRX Polymers,Clean Technology,USA,MA,Boston,Chelmsford,venture,C,2014-05-07,2014-05, 2014-Q2 ,2014.0,8000000,2007-01-01
@@ -1395,7 +1326,6 @@
 1393,Fab,Design,USA,NY,New York City,New York,venture,A,2011-08-11,2011-08, 2011-Q3 ,2011.0,7700000,2011-06-09
 1394,Fab,Design,USA,NY,New York City,New York,venture,B,2011-12-07,2011-12, 2011-Q4 ,2011.0,40000000,2011-06-09
 1395,Fab,Design,USA,NY,New York City,New York,venture,C,2012-07-18,2012-07, 2012-Q3 ,2012.0,105000000,2011-06-09
-1396,Fab,Design,USA,NY,New York City,New York,venture,D,2013-06-19,2013-06, 2013-Q2 ,2013.0,150000000,2011-06-09
 1397,FaceFirst (Airborne Biometrics),Software,USA,CA,Santa Barbara,Camarillo,seed/angel,0,2010-11-16,2010-11, 2010-Q4 ,2010.0,100320,2007-01-01
 1398,FaceFirst (Airborne Biometrics),Software,USA,CA,Santa Barbara,Camarillo,venture,A,2010-12-10,2010-12, 2010-Q4 ,2010.0,1185360,2007-01-01
 1399,Factual,Databases,USA,CA,Los Angeles,Los Angeles,seed/angel,0,2010-02-03,2010-02, 2010-Q1 ,2010.0,1000000,2007-01-01
@@ -1406,7 +1336,6 @@
 1404,FanDuel,Fantasy Sports,USA,NY,New York City,New York,venture,A,2009-01-14,2009-01, 2009-Q1 ,2009.0,1200000,2009-07-21
 1405,FanDuel,Fantasy Sports,USA,NY,New York City,New York,venture,B,2011-09-07,2011-09, 2011-Q3 ,2011.0,4000000,2009-07-21
 1406,FanDuel,Fantasy Sports,USA,NY,New York City,New York,venture,C,2013-01-30,2013-01, 2013-Q1 ,2013.0,11000000,2009-07-21
-1407,FanDuel,Fantasy Sports,USA,NY,New York City,New York,venture,D,2014-09-02,2014-09, 2014-Q3 ,2014.0,70000000,2009-07-21
 1408,Fancy,Online Shopping,USA,NY,New York City,New York,seed/angel,0,2009-06-01,2009-06, 2009-Q2 ,2009.0,2000000,2009-01-01
 1409,Fancy,Online Shopping,USA,NY,New York City,New York,venture,A,2010-05-01,2010-05, 2010-Q2 ,2010.0,6000000,2009-01-01
 1410,Fancy,Online Shopping,USA,NY,New York City,New York,venture,B,2011-11-01,2011-11, 2011-Q4 ,2011.0,10000000,2009-01-01
@@ -1414,7 +1343,6 @@
 1412,Farfetch,Fashion,USA,CA,Los Angeles,Cerritos,venture,A,2010-07-09,2010-07, 2010-Q3 ,2010.0,4500000,2007-01-01
 1413,Farfetch,Fashion,USA,CA,Los Angeles,Cerritos,venture,B,2012-01-15,2012-01, 2012-Q1 ,2012.0,18000000,2007-01-01
 1414,Farfetch,Fashion,USA,CA,Los Angeles,Cerritos,venture,C,2013-03-03,2013-03, 2013-Q1 ,2013.0,20000000,2007-01-01
-1415,Farfetch,Fashion,USA,CA,Los Angeles,Cerritos,venture,D,2014-05-01,2014-05, 2014-Q2 ,2014.0,66000000,2007-01-01
 1416,FarmLogs,Software,USA,MI,Detroit,Ann Arbor,seed/angel,0,2013-01-25,2013-01, 2013-Q1 ,2013.0,1000000,2012-01-01
 1417,FarmLogs,Software,USA,MI,Detroit,Ann Arbor,venture,A,2014-01-15,2014-01, 2014-Q1 ,2014.0,4000000,2012-01-01
 1418,Farmigo,Green Consumer Goods,USA,NY,New York City,Brooklyn,seed/angel,0,2009-08-01,2009-08, 2009-Q3 ,2009.0,2000000,2009-08-01
@@ -1446,12 +1374,9 @@
 1444,Findery,Mobile,USA,CA,SF Bay Area,San Francisco,venture,A,2012-02-16,2012-02, 2012-Q1 ,2012.0,7500000,2011-01-01
 1445,Finsphere,Identity Management,USA,WA,Seattle,Bellevue,venture,A,2008-06-06,2008-06, 2008-Q2 ,2008.0,9900000,2007-01-01
 1446,Finsphere,Identity Management,USA,WA,Seattle,Bellevue,venture,C,2012-01-23,2012-01, 2012-Q1 ,2012.0,11300000,2007-01-01
-1447,Finsphere,Identity Management,USA,WA,Seattle,Bellevue,venture,D,2013-12-10,2013-12, 2013-Q4 ,2013.0,500000,2007-01-01
 1448,FireHost,IaaS,USA,TX,Dallas,Richardson,venture,A,2010-03-11,2010-03, 2010-Q1 ,2010.0,2000000,2009-01-01
 1449,FireHost,IaaS,USA,TX,Dallas,Richardson,venture,B,2011-09-15,2011-09, 2011-Q3 ,2011.0,10000000,2009-01-01
 1450,FireHost,IaaS,USA,TX,Dallas,Richardson,venture,C,2012-09-18,2012-09, 2012-Q3 ,2012.0,10000000,2009-01-01
-1451,FireHost,IaaS,USA,TX,Dallas,Richardson,venture,D,2013-06-12,2013-06, 2013-Q2 ,2013.0,12000000,2009-01-01
-1452,FireHost,IaaS,USA,TX,Dallas,Richardson,venture,E,2014-04-16,2014-04, 2014-Q2 ,2014.0,25000000,2009-01-01
 1453,Firebase,Developer Tools,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-05-24,2012-05, 2012-Q2 ,2012.0,1400000,2011-09-01
 1454,Firebase,Developer Tools,USA,CA,SF Bay Area,San Francisco,venture,A,2013-06-20,2013-06, 2013-Q2 ,2013.0,5600000,2011-09-01
 1455,Firespotter Labs,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,A,2011-05-04,2011-05, 2011-Q2 ,2011.0,3000000,2011-04-01
@@ -1466,15 +1391,12 @@
 1464,FiscalNote,Legal,USA,DC,"Washington, D.C.",Washington,seed/angel,0,2013-09-11,2013-09, 2013-Q3 ,2013.0,1200000,2013-04-01
 1465,FiscalNote,Legal,USA,DC,"Washington, D.C.",Washington,venture,A,2014-11-19,2014-11, 2014-Q4 ,2014.0,7000000,2013-04-01
 1466,Fisker Automotive,Automotive,USA,CA,Anaheim,Irvine,venture,C,2008-09-09,2008-09, 2008-Q3 ,2008.0,65000000,2008-01-01
-1467,Fisker Automotive,Automotive,USA,CA,Anaheim,Irvine,venture,D,2009-04-07,2009-04, 2009-Q2 ,2009.0,86000000,2008-01-01
 1468,Fisoc,Loyalty Programs,USA,TX,Austin,Austin,venture,C,2012-12-21,2012-12, 2012-Q4 ,2012.0,5000000,2009-01-01
-1469,Fisoc,Loyalty Programs,USA,TX,Austin,Austin,venture,D,2013-09-27,2013-09, 2013-Q3 ,2013.0,21000000,2009-01-01
 1470,FitStar,Health and Wellness,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-12-20,2012-12, 2012-Q4 ,2012.0,1000000,2012-04-01
 1471,FitStar,Health and Wellness,USA,CA,SF Bay Area,San Francisco,venture,A,2013-06-20,2013-06, 2013-Q2 ,2013.0,4000000,2012-04-01
 1472,Fitbit,Hardware,USA,CA,SF Bay Area,San Francisco,venture,A,2008-10-10,2008-10, 2008-Q4 ,2008.0,2000000,2007-05-01
 1473,Fitbit,Hardware,USA,CA,SF Bay Area,San Francisco,venture,B,2010-09-10,2010-09, 2010-Q3 ,2010.0,9000000,2007-05-01
 1474,Fitbit,Hardware,USA,CA,SF Bay Area,San Francisco,venture,C,2012-01-24,2012-01, 2012-Q1 ,2012.0,12000000,2007-05-01
-1475,Fitbit,Hardware,USA,CA,SF Bay Area,San Francisco,venture,D,2013-08-13,2013-08, 2013-Q3 ,2013.0,43000000,2007-05-01
 1476,Fitmoo,Health and Wellness,USA,NY,New York City,New York,seed/angel,0,2013-10-01,2013-10, 2013-Q4 ,2013.0,550000,2012-12-01
 1477,Fitmoo,Health and Wellness,USA,NY,New York City,New York,venture,A,2014-06-01,2014-06, 2014-Q2 ,2014.0,5000000,2012-12-01
 1478,FiveStars,Loyalty Programs,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2011-01-01,2011-01, 2011-Q1 ,2011.0,150000,2011-01-01
@@ -1522,14 +1444,12 @@
 1520,Foursquare,Location Based Services,USA,NY,New York City,New York,seed/angel,0,2009-09-04,2009-09, 2009-Q3 ,2009.0,1350000,2009-03-01
 1521,Foursquare,Location Based Services,USA,NY,New York City,New York,venture,B,2010-06-29,2010-06, 2010-Q2 ,2010.0,20000000,2009-03-01
 1522,Foursquare,Location Based Services,USA,NY,New York City,New York,venture,C,2011-06-24,2011-06, 2011-Q2 ,2011.0,50000000,2009-03-01
-1523,Foursquare,Location Based Services,USA,NY,New York City,New York,venture,D,2014-02-04,2014-02, 2014-Q1 ,2014.0,15000000,2009-03-01
 1524,Fracture,E-Commerce,USA,FL,Gainesville,Gainesville,venture,A,2012-05-16,2012-05, 2012-Q2 ,2012.0,750000,2009-01-01
 1525,Fracture,E-Commerce,USA,FL,Gainesville,Gainesville,venture,B,2013-06-03,2013-06, 2013-Q2 ,2013.0,500000,2009-01-01
 1526,FreshPlanet,Games,USA,NY,New York City,New York,seed/angel,0,2009-12-01,2009-12, 2009-Q4 ,2009.0,750521,2009-01-01
 1527,FreshPlanet,Games,USA,NY,New York City,New York,venture,A,2010-04-01,2010-04, 2010-Q2 ,2010.0,1500000,2009-01-01
 1528,Freshdesk,Customer Support Tools,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-03-19,2012-03, 2012-Q1 ,2012.0,1051638,2010-01-01
 1529,Freshdesk,Customer Support Tools,USA,CA,SF Bay Area,San Francisco,venture,C,2013-11-21,2013-11, 2013-Q4 ,2013.0,6999930,2010-01-01
-1530,Freshdesk,Customer Support Tools,USA,CA,SF Bay Area,San Francisco,venture,D,2014-06-12,2014-06, 2014-Q2 ,2014.0,31000000,2010-01-01
 1531,Front Desk HQ,Payments,USA,WA,Seattle,Seattle,seed/angel,0,2013-09-06,2013-09, 2013-Q3 ,2013.0,3200000,2012-11-30
 1532,Front Desk HQ,Payments,USA,WA,Seattle,Seattle,venture,A,2014-02-13,2014-02, 2014-Q1 ,2014.0,4000000,2012-11-30
 1533,Front Flip,Entertainment,USA,KS,Kansas City,Leawood,venture,A,2012-01-01,2012-01, 2012-Q1 ,2012.0,3950000,2011-01-01
@@ -1573,13 +1493,10 @@
 1571,Gather,News,USA,MA,Boston,Boston,venture,A,2004-12-01,2004-12, 2004-Q4 ,2004.0,3000000,2014-01-01
 1572,Gather,News,USA,MA,Boston,Boston,venture,B,2005-12-01,2005-12, 2005-Q4 ,2005.0,6750000,2014-01-01
 1573,Gather,News,USA,MA,Boston,Boston,venture,C,2006-11-01,2006-11, 2006-Q4 ,2006.0,10000000,2014-01-01
-1574,Gather,News,USA,MA,Boston,Boston,venture,D,2009-06-14,2009-06, 2009-Q2 ,2009.0,5300000,2014-01-01
-1575,Gather,News,USA,MA,Boston,Boston,venture,E,2010-11-24,2010-11, 2010-Q4 ,2010.0,2400000,2014-01-01
 1576,Gauss Surgical,Medical,USA,CA,SF Bay Area,Los Altos,seed/angel,0,2011-12-31,2011-12, 2011-Q4 ,2011.0,805000,2011-01-01
 1577,Gauss Surgical,Medical,USA,CA,SF Bay Area,Los Altos,venture,A,2013-02-01,2013-02, 2013-Q1 ,2013.0,3200000,2011-01-01
 1578,Gemvara,E-Commerce,USA,MA,Boston,Boston,venture,B,2010-04-07,2010-04, 2010-Q2 ,2010.0,5200000,2007-01-01
 1579,Gemvara,E-Commerce,USA,MA,Boston,Boston,venture,C,2011-03-23,2011-03, 2011-Q1 ,2011.0,15000000,2007-01-01
-1580,Gemvara,E-Commerce,USA,MA,Boston,Boston,venture,D,2012-06-04,2012-06, 2012-Q2 ,2012.0,25000000,2007-01-01
 1581,GeneWeave Biosciences,Biotechnology,USA,CA,SF Bay Area,Los Gatos,seed/angel,0,2010-07-26,2010-07, 2010-Q3 ,2010.0,1000000,2010-06-11
 1582,GeneWeave Biosciences,Biotechnology,USA,CA,SF Bay Area,Los Gatos,venture,A,2012-02-28,2012-02, 2012-Q1 ,2012.0,12000000,2010-06-11
 1583,GeneWeave Biosciences,Biotechnology,USA,CA,SF Bay Area,Los Gatos,venture,B,2014-06-20,2014-06, 2014-Q2 ,2014.0,11999998,2010-06-11
@@ -1614,7 +1531,6 @@
 1612,Gilt Groupe,Shopping,USA,NY,New York City,New York,venture,A,2007-11-01,2007-11, 2007-Q4 ,2007.0,5000000,2007-01-01
 1613,Gilt Groupe,Shopping,USA,NY,New York City,New York,venture,B,2009-08-11,2009-08, 2009-Q3 ,2009.0,43000000,2007-01-01
 1614,Gilt Groupe,Shopping,USA,NY,New York City,New York,venture,C,2010-05-14,2010-05, 2010-Q2 ,2010.0,35000000,2007-01-01
-1615,Gilt Groupe,Shopping,USA,NY,New York City,New York,venture,E,2011-05-08,2011-05, 2011-Q2 ,2011.0,138000000,2007-01-01
 1616,Ginger.io,Big Data,USA,MA,Boston,Cambridge,seed/angel,0,2011-10-01,2011-10, 2011-Q4 ,2011.0,1700000,2011-01-01
 1617,Ginger.io,Big Data,USA,MA,Boston,Cambridge,venture,A,2012-11-28,2012-11, 2012-Q4 ,2012.0,6500000,2011-01-01
 1618,GiveForward,Startups,USA,IL,Chicago,Chicago,seed/angel,0,2010-06-01,2010-06, 2010-Q2 ,2010.0,15000,2008-01-01
@@ -1624,8 +1540,6 @@
 1622,Glassdoor,Recruiting,USA,CA,SF Bay Area,Sausalito,venture,A,2008-03-27,2008-03, 2008-Q1 ,2008.0,3000000,2007-06-01
 1623,Glassdoor,Recruiting,USA,CA,SF Bay Area,Sausalito,venture,B,2008-10-28,2008-10, 2008-Q4 ,2008.0,6500000,2007-06-01
 1624,Glassdoor,Recruiting,USA,CA,SF Bay Area,Sausalito,venture,C,2011-02-10,2011-02, 2011-Q1 ,2011.0,12000000,2007-06-01
-1625,Glassdoor,Recruiting,USA,CA,SF Bay Area,Sausalito,venture,D,2012-10-31,2012-10, 2012-Q4 ,2012.0,20000000,2007-06-01
-1626,Glassdoor,Recruiting,USA,CA,SF Bay Area,Sausalito,venture,F,2013-12-05,2013-12, 2013-Q4 ,2013.0,50000000,2007-06-01
 1627,GliaCure,Biotechnology,USA,WI,Madison,Middleton,venture,A,2012-04-25,2012-04, 2012-Q2 ,2012.0,2750000,2011-01-01
 1628,GliaCure,Biotechnology,USA,WI,Madison,Middleton,venture,B,2014-08-04,2014-08, 2014-Q3 ,2014.0,5800000,2011-01-01
 1629,Gliknik,Biotechnology,USA,MD,Baltimore,Baltimore,venture,A,2010-01-13,2010-01, 2010-Q1 ,2010.0,2887515,2007-01-01
@@ -1659,8 +1573,6 @@
 1657,GoodData,Collaboration,USA,CA,SF Bay Area,San Francisco,venture,A,2010-07-21,2010-07, 2010-Q3 ,2010.0,6500000,2007-05-01
 1658,GoodData,Collaboration,USA,CA,SF Bay Area,San Francisco,venture,B,2011-08-18,2011-08, 2011-Q3 ,2011.0,15000000,2007-05-01
 1659,GoodData,Collaboration,USA,CA,SF Bay Area,San Francisco,venture,C,2012-07-25,2012-07, 2012-Q3 ,2012.0,25000000,2007-05-01
-1660,GoodData,Collaboration,USA,CA,SF Bay Area,San Francisco,venture,D,2013-06-12,2013-06, 2013-Q2 ,2013.0,22000000,2007-05-01
-1661,GoodData,Collaboration,USA,CA,SF Bay Area,San Francisco,venture,E,2014-09-10,2014-09, 2014-Q3 ,2014.0,25699993,2007-05-01
 1662,GoodGuide,Consumers,USA,CA,SF Bay Area,San Francisco,venture,A,2009-01-19,2009-01, 2009-Q1 ,2009.0,3730000,2007-12-01
 1663,GoodGuide,Consumers,USA,CA,SF Bay Area,San Francisco,venture,B,2009-11-18,2009-11, 2009-Q4 ,2009.0,5500000,2007-12-01
 1664,GoodPeople,E-Commerce,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2011-08-01,2011-08, 2011-Q3 ,2011.0,400000,2009-11-01
@@ -1711,7 +1623,6 @@
 1709,Groupon,Advertising,USA,IL,Chicago,Chicago,venture,A,2008-01-01,2008-01, 2008-Q1 ,2008.0,4800000,2008-11-11
 1710,Groupon,Advertising,USA,IL,Chicago,Chicago,venture,B,2009-12-01,2009-12, 2009-Q4 ,2009.0,30000000,2008-11-11
 1711,Groupon,Advertising,USA,IL,Chicago,Chicago,venture,C,2010-04-18,2010-04, 2010-Q2 ,2010.0,135000000,2008-11-11
-1712,Groupon,Advertising,USA,IL,Chicago,Chicago,venture,D,2011-01-11,2011-01, 2011-Q1 ,2011.0,950000000,2008-11-11
 1713,Grovo,Video,USA,NY,New York City,New York,seed/angel,0,2011-09-02,2011-09, 2011-Q3 ,2011.0,1523992,2010-07-01
 1714,Grovo,Video,USA,NY,New York City,New York,venture,A,2013-07-17,2013-07, 2013-Q3 ,2013.0,5500000,2010-07-01
 1715,Guerrilla RF,Mobile,USA,NC,Greensboro,Greensboro,seed/angel,0,2013-05-05,2013-05, 2013-Q2 ,2013.0,50000,2013-03-15
@@ -1761,7 +1672,6 @@
 1759,Harvest Power,Clean Technology,USA,MA,Boston,Waltham,venture,A,2009-12-24,2009-12, 2009-Q4 ,2009.0,10000000,2008-01-01
 1760,Harvest Power,Clean Technology,USA,MA,Boston,Waltham,venture,B,2011-05-24,2011-05, 2011-Q2 ,2011.0,6300000,2008-01-01
 1761,Harvest Power,Clean Technology,USA,MA,Boston,Waltham,venture,C,2012-07-19,2012-07, 2012-Q3 ,2012.0,15000000,2008-01-01
-1762,Harvest Power,Clean Technology,USA,MA,Boston,Waltham,venture,D,2014-10-27,2014-10, 2014-Q4 ,2014.0,20000000,2008-01-01
 1763,HauteLook,E-Commerce,USA,CA,Los Angeles,Los Angeles,venture,B,2009-05-12,2009-05, 2009-Q2 ,2009.0,10000000,2007-12-01
 1764,HauteLook,E-Commerce,USA,CA,Los Angeles,Los Angeles,venture,C,2010-06-03,2010-06, 2010-Q2 ,2010.0,31000000,2007-12-01
 1765,Hazelcast,Cloud Computing,USA,CA,SF Bay Area,Palo Alto,venture,A,2013-09-19,2013-09, 2013-Q3 ,2013.0,2500000,2008-12-20
@@ -1772,7 +1682,6 @@
 1770,Health Catalyst,Analytics,USA,UT,Salt Lake City,Salt Lake City,venture,C,2014-01-27,2014-01, 2014-Q1 ,2014.0,41000000,2008-01-01
 1771,Health Guru Media Inc.,Health Care,USA,NY,New York City,New York,venture,A,2007-01-01,2007-01, 2007-Q1 ,2007.0,250000,2007-01-01
 1772,Health Guru Media Inc.,Health Care,USA,NY,New York City,New York,venture,C,2009-10-21,2009-10, 2009-Q4 ,2009.0,3200000,2007-01-01
-1773,Health Guru Media Inc.,Health Care,USA,NY,New York City,New York,venture,D,2011-06-29,2011-06, 2011-Q2 ,2011.0,6000000,2007-01-01
 1774,HealthTap,Health Care,USA,CA,SF Bay Area,Palo Alto,seed/angel,0,2011-03-23,2011-03, 2011-Q1 ,2011.0,2350000,2010-01-01
 1775,HealthTap,Health Care,USA,CA,SF Bay Area,Palo Alto,venture,A,2011-12-06,2011-12, 2011-Q4 ,2011.0,11500000,2010-01-01
 1776,HealthTap,Health Care,USA,CA,SF Bay Area,Palo Alto,venture,B,2013-05-08,2013-05, 2013-Q2 ,2013.0,24000000,2010-01-01
@@ -1785,13 +1694,11 @@
 1783,Helium,Publishing,USA,MA,Boston,Andover,venture,A,2008-10-27,2008-10, 2008-Q4 ,2008.0,17000000,2013-07-01
 1784,HelloFresh,Hospitality,USA,NY,New York City,New York,venture,B,2012-12-12,2012-12, 2012-Q4 ,2012.0,10000000,2012-01-01
 1785,HelloFresh,Hospitality,USA,NY,New York City,New York,venture,C,2013-09-30,2013-09, 2013-Q3 ,2013.0,7500000,2012-01-01
-1786,HelloFresh,Hospitality,USA,NY,New York City,New York,venture,D,2014-06-18,2014-06, 2014-Q2 ,2014.0,50000000,2012-01-01
 1787,HelloWallet,Software,USA,DC,"Washington, D.C.",Washington,venture,A,2010-05-06,2010-05, 2010-Q2 ,2010.0,3600000,2009-01-01
 1788,HelloWallet,Software,USA,DC,"Washington, D.C.",Washington,venture,B,2012-01-26,2012-01, 2012-Q1 ,2012.0,12000000,2009-01-01
 1789,"Helpshift, Inc.",Customer Service,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-10-30,2012-10, 2012-Q4 ,2012.0,3200000,2011-01-01
 1790,"Helpshift, Inc.",Customer Service,USA,CA,SF Bay Area,San Francisco,venture,A,2014-06-24,2014-06, 2014-Q2 ,2014.0,10000000,2011-01-01
 1791,HemoShear,Biotechnology,USA,VA,"Washington, D.C.",Charlottesville,venture,C,2014-05-07,2014-05, 2014-Q2 ,2014.0,8700000,2008-01-01
-1792,HemoShear,Biotechnology,USA,VA,"Washington, D.C.",Charlottesville,venture,D,2012-10-24,2012-10, 2012-Q4 ,2012.0,4000000,2008-01-01
 1793,"Hero Network, Inc.",Technology,USA,PA,Philadelphia,Philadelphia,seed/angel,0,2013-07-15,2013-07, 2013-Q3 ,2013.0,400000,2010-10-10
 1794,"Hero Network, Inc.",Technology,USA,PA,Philadelphia,Philadelphia,venture,A,2010-10-27,2010-10, 2010-Q4 ,2010.0,400000,2010-10-10
 1795,Heroku,Enterprise Software,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2008-01-01,2008-01, 2008-Q1 ,2008.0,20000,2007-07-01
@@ -1839,11 +1746,9 @@
 1837,Hortonworks,Search,USA,CA,SF Bay Area,Palo Alto,venture,A,2011-06-01,2011-06, 2011-Q2 ,2011.0,23000000,2011-06-01
 1838,Hortonworks,Search,USA,CA,SF Bay Area,Palo Alto,venture,B,2011-11-01,2011-11, 2011-Q4 ,2011.0,25000000,2011-06-01
 1839,Hortonworks,Search,USA,CA,SF Bay Area,Palo Alto,venture,C,2013-06-01,2013-06, 2013-Q2 ,2013.0,50000000,2011-06-01
-1840,Hortonworks,Search,USA,CA,SF Bay Area,Palo Alto,venture,D,2014-03-24,2014-03, 2014-Q1 ,2014.0,100000000,2011-06-01
 1841,HotelTonight,Hotels,USA,CA,SF Bay Area,San Francisco,venture,A,2011-05-10,2011-05, 2011-Q2 ,2011.0,3585000,2010-12-01
 1842,HotelTonight,Hotels,USA,CA,SF Bay Area,San Francisco,venture,B,2011-11-18,2011-11, 2011-Q4 ,2011.0,9100000,2010-12-01
 1843,HotelTonight,Hotels,USA,CA,SF Bay Area,San Francisco,venture,C,2012-06-05,2012-06, 2012-Q2 ,2012.0,23000000,2010-12-01
-1844,HotelTonight,Hotels,USA,CA,SF Bay Area,San Francisco,venture,D,2013-09-05,2013-09, 2013-Q3 ,2013.0,45000000,2010-12-01
 1845,HourlyNerd,Consulting,USA,NY,New York City,New York,seed/angel,0,2013-09-12,2013-09, 2013-Q3 ,2013.0,750000,2013-01-01
 1846,HourlyNerd,Consulting,USA,NY,New York City,New York,venture,A,2014-03-26,2014-03, 2014-Q1 ,2014.0,4000000,2013-01-01
 1847,Househappy,Search,USA,OR,"Portland, Oregon",Portland,seed/angel,0,2012-03-01,2012-03, 2012-Q1 ,2012.0,1000000,2011-03-01
@@ -1851,7 +1756,6 @@
 1849,Houzz,Curated Web,USA,CA,SF Bay Area,Palo Alto,venture,A,2010-11-11,2010-11, 2010-Q4 ,2010.0,2000000,2009-01-01
 1850,Houzz,Curated Web,USA,CA,SF Bay Area,Palo Alto,venture,B,2011-12-19,2011-12, 2011-Q4 ,2011.0,11600000,2009-01-01
 1851,Houzz,Curated Web,USA,CA,SF Bay Area,Palo Alto,venture,C,2013-01-29,2013-01, 2013-Q1 ,2013.0,35000000,2009-01-01
-1852,Houzz,Curated Web,USA,CA,SF Bay Area,Palo Alto,venture,D,2014-10-01,2014-10, 2014-Q4 ,2014.0,165000000,2009-01-01
 1853,HowAboutWe,Curated Web,USA,NY,New York City,Brooklyn,venture,A,2010-09-01,2010-09, 2010-Q3 ,2010.0,3100000,2009-11-01
 1854,HowAboutWe,Curated Web,USA,NY,New York City,Brooklyn,venture,B,2011-11-01,2011-11, 2011-Q4 ,2011.0,15000000,2009-11-01
 1855,Howcast,Photography,USA,NY,New York City,New York,venture,A,2008-10-01,2008-10, 2008-Q4 ,2008.0,2000000,2008-02-06
@@ -1900,7 +1804,6 @@
 1898,InContext Solutions,Software,USA,IL,Chicago,Chicago,venture,A,2010-06-14,2010-06, 2010-Q2 ,2010.0,1057000,2009-01-01
 1899,InContext Solutions,Software,USA,IL,Chicago,Chicago,venture,B,2011-12-31,2011-12, 2011-Q4 ,2011.0,1534290,2009-01-01
 1900,InContext Solutions,Software,USA,IL,Chicago,Chicago,venture,C,2013-01-29,2013-01, 2013-Q1 ,2013.0,6351930,2009-01-01
-1901,InContext Solutions,Software,USA,IL,Chicago,Chicago,venture,D,2014-08-27,2014-08, 2014-Q3 ,2014.0,12000000,2009-01-01
 1902,InMobi,Mobile,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2007-01-01,2007-01, 2007-Q1 ,2007.0,500000,2007-01-01
 1903,InMobi,Mobile,USA,CA,SF Bay Area,San Francisco,venture,A,2008-01-01,2008-01, 2008-Q1 ,2008.0,7100000,2007-01-01
 1904,InMobi,Mobile,USA,CA,SF Bay Area,San Francisco,venture,B,2010-07-13,2010-07, 2010-Q3 ,2010.0,8000000,2007-01-01
@@ -1912,8 +1815,6 @@
 1910,InVision,Product Design,USA,NY,New York City,New York,venture,A,2013-12-20,2013-12, 2013-Q4 ,2013.0,11600000,2011-01-01
 1911,InVision,Product Design,USA,NY,New York City,New York,venture,B,2014-08-06,2014-08, 2014-Q3 ,2014.0,21000000,2011-01-01
 1912,InVitae,Biotechnology,USA,CA,SF Bay Area,San Francisco,venture,A,2012-11-08,2012-11, 2012-Q4 ,2012.0,29557113,2012-01-01
-1913,InVitae,Biotechnology,USA,CA,SF Bay Area,San Francisco,venture,E,2013-12-10,2013-12, 2013-Q4 ,2013.0,40000000,2012-01-01
-1914,InVitae,Biotechnology,USA,CA,SF Bay Area,San Francisco,venture,F,2014-10-13,2014-10, 2014-Q4 ,2014.0,120000000,2012-01-01
 1915,Inadco,Advertising,USA,CA,SF Bay Area,Palo Alto,seed/angel,0,2009-01-01,2009-01, 2009-Q1 ,2009.0,1000000,2008-04-01
 1916,Inadco,Advertising,USA,CA,SF Bay Area,Palo Alto,venture,A,2009-09-01,2009-09, 2009-Q3 ,2009.0,5000000,2008-04-01
 1917,Inadco,Advertising,USA,CA,SF Bay Area,Palo Alto,venture,B,2013-06-26,2013-06, 2013-Q2 ,2013.0,11000000,2008-04-01
@@ -1960,7 +1861,6 @@
 1958,Inspirato,Lifestyle,USA,CO,Denver,Denver,venture,B,2012-01-31,2012-01, 2012-Q1 ,2012.0,20000000,2011-01-01
 1959,Inspirato,Lifestyle,USA,CO,Denver,Denver,venture,C,2014-09-23,2014-09, 2014-Q3 ,2014.0,20000000,2011-01-01
 1960,Inspire Medical Systems,Health Care,USA,MN,Minneapolis,Maple Grove,venture,B,2009-06-29,2009-06, 2009-Q2 ,2009.0,17000000,2007-01-01
-1961,Inspire Medical Systems,Health Care,USA,MN,Minneapolis,Maple Grove,venture,E,2014-05-15,2014-05, 2014-Q2 ,2014.0,40000000,2007-01-01
 1962,Instacart,Groceries,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-10-15,2012-10, 2012-Q4 ,2012.0,2300000,2012-07-01
 1963,Instacart,Groceries,USA,CA,SF Bay Area,San Francisco,venture,A,2013-07-10,2013-07, 2013-Q3 ,2013.0,8500000,2012-07-01
 1964,Instacart,Groceries,USA,CA,SF Bay Area,San Francisco,venture,B,2014-06-16,2014-06, 2014-Q2 ,2014.0,44000000,2012-07-01
@@ -1972,11 +1872,9 @@
 1970,Instart Logic,E-Commerce,USA,CA,SF Bay Area,Palo Alto,venture,C,2014-05-13,2014-05, 2014-Q2 ,2014.0,26000000,2010-11-01
 1971,Instructure,Enterprise Software,USA,UT,Salt Lake City,Salt Lake City,venture,A,2010-03-01,2010-03, 2010-Q1 ,2010.0,1100000,2008-05-01
 1972,Instructure,Enterprise Software,USA,UT,Salt Lake City,Salt Lake City,venture,B,2011-04-15,2011-04, 2011-Q2 ,2011.0,8000000,2008-05-01
-1973,Instructure,Enterprise Software,USA,UT,Salt Lake City,Salt Lake City,venture,D,2013-06-05,2013-06, 2013-Q2 ,2013.0,30000000,2008-05-01
 1974,Integral Ad Science,Advertising,USA,NY,New York City,New York,venture,A,2009-10-06,2009-10, 2009-Q4 ,2009.0,2500000,2009-01-01
 1975,Integral Ad Science,Advertising,USA,NY,New York City,New York,venture,B,2010-07-06,2010-07, 2010-Q3 ,2010.0,7250000,2009-01-01
 1976,Integral Ad Science,Advertising,USA,NY,New York City,New York,venture,C,2012-04-18,2012-04, 2012-Q2 ,2012.0,10000000,2009-01-01
-1977,Integral Ad Science,Advertising,USA,NY,New York City,New York,venture,D,2014-01-02,2014-01, 2014-Q1 ,2014.0,30000000,2009-01-01
 1978,Integrate,Software,USA,AZ,Phoenix,Scottsdale,venture,A,2010-12-14,2010-12, 2010-Q4 ,2010.0,4250000,2010-04-01
 1979,Integrate,Software,USA,AZ,Phoenix,Scottsdale,venture,B,2012-03-21,2012-03, 2012-Q1 ,2012.0,11000000,2010-04-01
 1980,Integrated Diagnostics,Diagnostics,USA,WA,Seattle,Seattle,seed/angel,0,2013-09-20,2013-09, 2013-Q3 ,2013.0,1500000,2009-01-01
@@ -2052,7 +1950,6 @@
 2050,Jobaline,Curated Web,USA,WA,Seattle,Kirkland,venture,B,2014-05-28,2014-05, 2014-Q2 ,2014.0,7000000,2012-11-30
 2051,Joule Unlimited,Clean Technology,USA,MA,Boston,Bedford,venture,B,2010-04-27,2010-04, 2010-Q2 ,2010.0,30000000,2007-01-01
 2052,Joule Unlimited,Clean Technology,USA,MA,Boston,Bedford,venture,C,2012-01-17,2012-01, 2012-Q1 ,2012.0,70000000,2007-01-01
-2053,Joule Unlimited,Clean Technology,USA,MA,Boston,Bedford,venture,D,2013-08-20,2013-08, 2013-Q3 ,2013.0,50000000,2007-01-01
 2054,JouleX,Enterprise Software,USA,GA,Atlanta,Atlanta,venture,A,2010-04-01,2010-04, 2010-Q2 ,2010.0,1700000,2009-01-01
 2055,JouleX,Enterprise Software,USA,GA,Atlanta,Atlanta,venture,B,2011-06-10,2011-06, 2011-Q2 ,2011.0,17000000,2009-01-01
 2056,Joyus,E-Commerce,USA,CA,SF Bay Area,San Francisco,venture,A,2011-08-01,2011-08, 2011-Q3 ,2011.0,7900000,2011-01-01
@@ -2068,7 +1965,6 @@
 2066,JustFab,Lifestyle,USA,CA,Los Angeles,El Segundo,venture,A,2011-09-21,2011-09, 2011-Q3 ,2011.0,33000000,2010-02-01
 2067,JustFab,Lifestyle,USA,CA,Los Angeles,El Segundo,venture,B,2012-07-26,2012-07, 2012-Q3 ,2012.0,76000000,2010-02-01
 2068,JustFab,Lifestyle,USA,CA,Los Angeles,El Segundo,venture,C,2013-12-19,2013-12, 2013-Q4 ,2013.0,15000000,2010-02-01
-2069,JustFab,Lifestyle,USA,CA,Los Angeles,El Segundo,venture,D,2014-08-28,2014-08, 2014-Q3 ,2014.0,85000000,2010-02-01
 2070,Justworks,Human Resources,USA,NY,New York City,New York,seed/angel,0,2013-10-16,2013-10, 2013-Q4 ,2013.0,1000000,2012-10-01
 2071,Justworks,Human Resources,USA,NY,New York City,New York,venture,A,2014-10-08,2014-10, 2014-Q4 ,2014.0,6000000,2012-10-01
 2072,Juventas Therapeutics,Biotechnology,USA,OH,Cleveland,Cleveland,seed/angel,0,2008-09-30,2008-09, 2008-Q3 ,2008.0,300000,2007-01-01
@@ -2080,7 +1976,6 @@
 2078,KIXEYE,Games,USA,CA,SF Bay Area,San Francisco,venture,C,2011-08-03,2011-08, 2011-Q3 ,2011.0,18000000,2007-01-01
 2079,Kabbage,Finance,USA,GA,Atlanta,Atlanta,venture,B,2011-08-17,2011-08, 2011-Q3 ,2011.0,17000000,2009-02-12
 2080,Kabbage,Finance,USA,GA,Atlanta,Atlanta,venture,C,2012-09-17,2012-09, 2012-Q3 ,2012.0,30000000,2009-02-12
-2081,Kabbage,Finance,USA,GA,Atlanta,Atlanta,venture,D,2014-05-05,2014-05, 2014-Q2 ,2014.0,50000000,2009-02-12
 2082,Kahuna,Analytics,USA,CA,SF Bay Area,Palo Alto,seed/angel,0,2013-10-08,2013-10, 2013-Q4 ,2013.0,2000000,2011-01-01
 2083,Kahuna,Analytics,USA,CA,SF Bay Area,Palo Alto,venture,A,2014-02-26,2014-02, 2014-Q1 ,2014.0,11000000,2011-01-01
 2084,Kaiam,Semiconductors,USA,CA,SF Bay Area,Newark,venture,A,2011-03-01,2011-03, 2011-Q1 ,2011.0,8000000,2009-01-01
@@ -2095,7 +1990,6 @@
 2093,Kamcord,Games,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-12-19,2012-12, 2012-Q4 ,2012.0,1500000,2012-04-01
 2094,Kamcord,Games,USA,CA,SF Bay Area,San Francisco,venture,A,2014-05-01,2014-05, 2014-Q2 ,2014.0,7100000,2012-04-01
 2095,Kaminario,Enterprise Software,USA,MA,Boston,Newton,venture,C,2011-05-02,2011-05, 2011-Q2 ,2011.0,15000000,2008-01-01
-2096,Kaminario,Enterprise Software,USA,MA,Boston,Newton,venture,D,2012-06-07,2012-06, 2012-Q2 ,2012.0,25000000,2008-01-01
 2097,Kapitall,Investment Management,USA,NY,New York City,New York,venture,A,2010-09-17,2010-09, 2010-Q3 ,2010.0,7300000,2008-03-01
 2098,Kapitall,Investment Management,USA,NY,New York City,New York,venture,B,2014-02-19,2014-02, 2014-Q1 ,2014.0,13000000,2008-03-01
 2099,Kapost,Content,USA,CO,Denver,Boulder,seed/angel,0,2013-01-11,2013-01, 2013-Q1 ,2013.0,500000,2010-04-02
@@ -2152,8 +2046,6 @@
 2150,Knewton,Education,USA,NY,New York City,New York,venture,A,2008-05-21,2008-05, 2008-Q2 ,2008.0,2500000,2008-01-01
 2151,Knewton,Education,USA,NY,New York City,New York,venture,B,2009-04-07,2009-04, 2009-Q2 ,2009.0,6000000,2008-01-01
 2152,Knewton,Education,USA,NY,New York City,New York,venture,C,2010-04-19,2010-04, 2010-Q2 ,2010.0,12500000,2008-01-01
-2153,Knewton,Education,USA,NY,New York City,New York,venture,D,2011-10-13,2011-10, 2011-Q4 ,2011.0,33000000,2008-01-01
-2154,Knewton,Education,USA,NY,New York City,New York,venture,E,2013-12-01,2013-12, 2013-Q4 ,2013.0,51000000,2008-01-01
 2155,Knopp Biosciences LLC,Biotechnology,USA,PA,Pittsburgh,Pittsburgh,venture,A,2006-01-01,2006-01, 2006-Q1 ,2006.0,10000000,2010-01-01
 2156,Knopp Biosciences LLC,Biotechnology,USA,PA,Pittsburgh,Pittsburgh,venture,B,2008-01-22,2008-01, 2008-Q1 ,2008.0,10000000,2010-01-01
 2157,KnowledgeVision,Software,USA,MA,Boston,Concord,seed/angel,0,2010-06-10,2010-06, 2010-Q2 ,2010.0,450000,2010-02-01
@@ -2164,16 +2056,12 @@
 2162,Kolltan Pharmaceuticals,Biotechnology,USA,CT,Hartford,New Haven,venture,A,2009-10-12,2009-10, 2009-Q4 ,2009.0,5000000,2007-01-01
 2163,Kolltan Pharmaceuticals,Biotechnology,USA,CT,Hartford,New Haven,venture,B,2010-01-20,2010-01, 2010-Q1 ,2010.0,10000000,2007-01-01
 2164,Kolltan Pharmaceuticals,Biotechnology,USA,CT,Hartford,New Haven,venture,C,2012-03-08,2012-03, 2012-Q1 ,2012.0,25000000,2007-01-01
-2165,Kolltan Pharmaceuticals,Biotechnology,USA,CT,Hartford,New Haven,venture,D,2014-03-19,2014-03, 2014-Q1 ,2014.0,60000000,2007-01-01
 2166,Kona Medical,Therapeutics,USA,WA,Seattle,Bellevue,venture,A,2010-07-01,2010-07, 2010-Q3 ,2010.0,2600441,2009-01-01
 2167,Kona Medical,Therapeutics,USA,WA,Seattle,Bellevue,venture,B,2011-06-06,2011-06, 2011-Q2 ,2011.0,10857236,2009-01-01
 2168,Kona Medical,Therapeutics,USA,WA,Seattle,Bellevue,venture,C,2012-05-30,2012-05, 2012-Q2 ,2012.0,30000000,2009-01-01
-2169,Kona Medical,Therapeutics,USA,WA,Seattle,Bellevue,venture,D,2013-10-21,2013-10, 2013-Q4 ,2013.0,10000000,2009-01-01
 2170,Kony,Health Care,USA,FL,Orlando,Orlando,venture,A,2011-01-18,2011-01, 2011-Q1 ,2011.0,20000000,2007-01-01
 2171,Kony,Health Care,USA,FL,Orlando,Orlando,venture,B,2012-01-01,2012-01, 2012-Q1 ,2012.0,2000000,2007-01-01
 2172,Kony,Health Care,USA,FL,Orlando,Orlando,venture,C,2012-05-23,2012-05, 2012-Q2 ,2012.0,15100000,2007-01-01
-2173,Kony,Health Care,USA,FL,Orlando,Orlando,venture,D,2013-06-25,2013-06, 2013-Q2 ,2013.0,11300000,2007-01-01
-2174,Kony,Health Care,USA,FL,Orlando,Orlando,venture,E,2014-06-17,2014-06, 2014-Q2 ,2014.0,50000000,2007-01-01
 2175,Koofers,Employment,USA,VA,"Washington, D.C.",Ashburn,seed/angel,0,2010-01-22,2010-01, 2010-Q1 ,2010.0,2000000,2008-01-01
 2176,Koofers,Employment,USA,VA,"Washington, D.C.",Ashburn,venture,A,2010-09-29,2010-09, 2010-Q3 ,2010.0,5000000,2008-01-01
 2177,Koupon Media,Mobile Coupons,USA,TX,Dallas,Frisco,venture,A,2011-11-09,2011-11, 2011-Q4 ,2011.0,2000000,2011-03-01
@@ -2183,7 +2071,6 @@
 2181,Krux,Big Data Analytics,USA,CA,SF Bay Area,San Francisco,venture,B,2014-06-11,2014-06, 2014-Q2 ,2014.0,35000000,2009-12-01
 2182,Kuapay,Mobile,USA,CA,Los Angeles,Santa Monica,seed/angel,0,2011-03-01,2011-03, 2011-Q1 ,2011.0,900000,2011-01-01
 2183,Kuapay,Mobile,USA,CA,Los Angeles,Santa Monica,venture,A,2013-03-20,2013-03, 2013-Q1 ,2013.0,2200000,2011-01-01
-2184,Kuapay,Mobile,USA,CA,Los Angeles,Santa Monica,venture,D,2014-04-30,2014-04, 2014-Q2 ,2014.0,8000000,2011-01-01
 2185,Kwarter,Advertising,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2011-09-30,2011-09, 2011-Q3 ,2011.0,1000000,2011-04-04
 2186,Kwarter,Advertising,USA,CA,SF Bay Area,San Francisco,venture,A,2013-01-14,2013-01, 2013-Q1 ,2013.0,4000000,2011-04-04
 2187,Kyruus,Health Care,USA,MA,Boston,Boston,venture,A,2011-06-21,2011-06, 2011-Q2 ,2011.0,5500000,2010-01-01
@@ -2197,7 +2084,6 @@
 2195,LOC Enterprises,Digital Media,USA,OH,Cincinnati,Cincinnati,seed/angel,0,2013-05-31,2013-05, 2013-Q2 ,2013.0,1835300,2012-01-02
 2196,LOC Enterprises,Digital Media,USA,OH,Cincinnati,Cincinnati,venture,A,2013-10-31,2013-10, 2013-Q4 ,2013.0,700000,2012-01-02
 2197,LOYAL3,Finance,USA,CA,SF Bay Area,San Francisco,venture,C,2013-05-01,2013-05, 2013-Q2 ,2013.0,18000000,2008-01-01
-2198,LOYAL3,Finance,USA,CA,SF Bay Area,San Francisco,venture,D,2014-07-18,2014-07, 2014-Q3 ,2014.0,30223650,2008-01-01
 2199,LP Amina,Clean Energy,USA,NC,Charlotte,Charlotte,venture,A,2008-06-30,2008-06, 2008-Q2 ,2008.0,5000000,2007-01-01
 2200,LP Amina,Clean Energy,USA,NC,Charlotte,Charlotte,venture,B,2009-12-01,2009-12, 2009-Q4 ,2009.0,9400000,2007-01-01
 2201,LP Amina,Clean Energy,USA,NC,Charlotte,Charlotte,venture,C,2013-08-06,2013-08, 2013-Q3 ,2013.0,20000000,2007-01-01
@@ -2224,7 +2110,6 @@
 2222,LearnVest,Financial Services,USA,NY,New York City,New York,venture,A,2010-04-01,2010-04, 2010-Q2 ,2010.0,4430000,2007-05-01
 2223,LearnVest,Financial Services,USA,NY,New York City,New York,venture,B,2011-07-12,2011-07, 2011-Q3 ,2011.0,19000000,2007-05-01
 2224,LearnVest,Financial Services,USA,NY,New York City,New York,venture,C,2013-07-26,2013-07, 2013-Q3 ,2013.0,16500000,2007-05-01
-2225,LearnVest,Financial Services,USA,NY,New York City,New York,venture,D,2014-04-15,2014-04, 2014-Q2 ,2014.0,28000000,2007-05-01
 2226,LearnZillion,Technology,USA,DC,"Washington, D.C.",Washington,seed/angel,0,2012-03-29,2012-03, 2012-Q1 ,2012.0,2400000,2011-01-01
 2227,LearnZillion,Technology,USA,DC,"Washington, D.C.",Washington,venture,A,2013-04-15,2013-04, 2013-Q2 ,2013.0,7000000,2011-01-01
 2228,"LendKey Technologies, Inc.",Finance,USA,NY,New York City,New York,seed/angel,0,2007-10-01,2007-10, 2007-Q4 ,2007.0,500000,2007-04-01
@@ -2234,11 +2119,9 @@
 2232,Lending Club,Credit,USA,CA,SF Bay Area,San Francisco,venture,A,2007-08-23,2007-08, 2007-Q3 ,2007.0,10260000,2007-01-01
 2233,Lending Club,Credit,USA,CA,SF Bay Area,San Francisco,venture,B,2009-03-19,2009-03, 2009-Q1 ,2009.0,12000000,2007-01-01
 2234,Lending Club,Credit,USA,CA,SF Bay Area,San Francisco,venture,C,2010-04-14,2010-04, 2010-Q2 ,2010.0,24500000,2007-01-01
-2235,Lending Club,Credit,USA,CA,SF Bay Area,San Francisco,venture,D,2011-08-03,2011-08, 2011-Q3 ,2011.0,25000000,2007-01-01
 2236,Lexity,Enterprise Software,USA,CA,SF Bay Area,Mountain View,seed/angel,0,2009-09-01,2009-09, 2009-Q3 ,2009.0,1200000,2009-08-01
 2237,Lexity,Enterprise Software,USA,CA,SF Bay Area,Mountain View,venture,A,2011-03-03,2011-03, 2011-Q1 ,2011.0,4500000,2009-08-01
 2238,Liazon,Health and Insurance,USA,NY,Buffalo,Buffalo,venture,C,2011-04-05,2011-04, 2011-Q2 ,2011.0,12600000,2007-01-01
-2239,Liazon,Health and Insurance,USA,NY,Buffalo,Buffalo,venture,D,2012-04-24,2012-04, 2012-Q2 ,2012.0,18200000,2007-01-01
 2240,Librato,SaaS,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-10-01,2012-10, 2012-Q4 ,2012.0,1250000,2011-01-01
 2241,Librato,SaaS,USA,CA,SF Bay Area,San Francisco,venture,A,2013-07-25,2013-07, 2013-Q3 ,2013.0,3800000,2011-01-01
 2242,Life360,Tracking,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2009-05-28,2009-05, 2009-Q2 ,2009.0,50000,2008-01-01
@@ -2286,9 +2169,6 @@
 2284,LivingSocial,E-Commerce,USA,DC,"Washington, D.C.",Washington,venture,A,2008-07-21,2008-07, 2008-Q3 ,2008.0,5000000,2007-01-01
 2285,LivingSocial,E-Commerce,USA,DC,"Washington, D.C.",Washington,venture,B,2010-01-04,2010-01, 2010-Q1 ,2010.0,5000000,2007-01-01
 2286,LivingSocial,E-Commerce,USA,DC,"Washington, D.C.",Washington,venture,C,2010-04-29,2010-04, 2010-Q2 ,2010.0,14000000,2007-01-01
-2287,LivingSocial,E-Commerce,USA,DC,"Washington, D.C.",Washington,venture,D,2010-12-02,2010-12, 2010-Q4 ,2010.0,183000000,2007-01-01
-2288,LivingSocial,E-Commerce,USA,DC,"Washington, D.C.",Washington,venture,E,2011-04-04,2011-04, 2011-Q2 ,2011.0,400000000,2007-01-01
-2289,LivingSocial,E-Commerce,USA,DC,"Washington, D.C.",Washington,venture,F,2011-11-18,2011-11, 2011-Q4 ,2011.0,176000000,2007-01-01
 2290,Lob,Developer Tools,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2013-11-04,2013-11, 2013-Q4 ,2013.0,2400000,2013-05-28
 2291,Lob,Developer Tools,USA,CA,SF Bay Area,San Francisco,venture,A,2014-09-08,2014-09, 2014-Q3 ,2014.0,7000000,2013-05-28
 2292,Local Market Launch,Local,USA,CA,Santa Barbara,Santa Barbara,seed/angel,0,2012-01-03,2012-01, 2012-Q1 ,2012.0,1000000,2012-01-03
@@ -2325,7 +2205,6 @@
 2323,Lookout,Security,USA,CA,SF Bay Area,San Francisco,venture,A,2009-12-22,2009-12, 2009-Q4 ,2009.0,5500000,2007-01-01
 2324,Lookout,Security,USA,CA,SF Bay Area,San Francisco,venture,B,2010-05-18,2010-05, 2010-Q2 ,2010.0,11000000,2007-01-01
 2325,Lookout,Security,USA,CA,SF Bay Area,San Francisco,venture,C,2010-12-23,2010-12, 2010-Q4 ,2010.0,19500000,2007-01-01
-2326,Lookout,Security,USA,CA,SF Bay Area,San Francisco,venture,E,2013-10-10,2013-10, 2013-Q4 ,2013.0,55000000,2007-01-01
 2327,Loop Commerce,E-Commerce,USA,CA,SF Bay Area,Mountain View,seed/angel,0,2012-11-08,2012-11, 2012-Q4 ,2012.0,1000000,2012-01-01
 2328,Loop Commerce,E-Commerce,USA,CA,SF Bay Area,Mountain View,venture,A,2013-12-10,2013-12, 2013-Q4 ,2013.0,5000000,2012-01-01
 2329,Loosecubes,Curated Web,USA,NY,New York City,Brooklyn,seed/angel,0,2010-01-01,2010-01, 2010-Q1 ,2010.0,1230000,2010-01-01
@@ -2364,7 +2243,6 @@
 2362,Lyft,Transportation,USA,CA,SF Bay Area,San Francisco,venture,A,2011-09-21,2011-09, 2011-Q3 ,2011.0,6000000,2012-01-01
 2363,Lyft,Transportation,USA,CA,SF Bay Area,San Francisco,venture,B,2013-01-30,2013-01, 2013-Q1 ,2013.0,15000000,2012-01-01
 2364,Lyft,Transportation,USA,CA,SF Bay Area,San Francisco,venture,C,2013-05-23,2013-05, 2013-Q2 ,2013.0,60000000,2012-01-01
-2365,Lyft,Transportation,USA,CA,SF Bay Area,San Francisco,venture,D,2014-04-02,2014-04, 2014-Q2 ,2014.0,250000000,2012-01-01
 2366,Lytics,Predictive Analytics,USA,OR,"Portland, Oregon",Portland,seed/angel,0,2013-08-09,2013-08, 2013-Q3 ,2013.0,2200000,2012-01-01
 2367,Lytics,Predictive Analytics,USA,OR,"Portland, Oregon",Portland,venture,A,2014-10-22,2014-10, 2014-Q4 ,2014.0,7000000,2012-01-01
 2368,Lyxia,Biotechnology,USA,CA,Los Angeles,Culver City,seed/angel,0,2013-06-30,2013-06, 2013-Q2 ,2013.0,1600000,2012-07-26
@@ -2465,9 +2343,6 @@
 2463,Medivo,Enterprise Software,USA,NY,New York City,New York,venture,A,2011-11-17,2011-11, 2011-Q4 ,2011.0,7000000,2010-01-08
 2464,Medivo,Enterprise Software,USA,NY,New York City,New York,venture,B,2013-06-17,2013-06, 2013-Q2 ,2013.0,15000000,2010-01-08
 2465,Medrobotics,Hardware,USA,MA,MA - Other,Raynham,venture,C,2011-11-21,2011-11, 2011-Q4 ,2011.0,11700000,2011-01-01
-2466,Medrobotics,Hardware,USA,MA,MA - Other,Raynham,venture,D,2012-12-20,2012-12, 2012-Q4 ,2012.0,33600000,2011-01-01
-2467,Medrobotics,Hardware,USA,MA,MA - Other,Raynham,venture,E,2014-05-14,2014-05, 2014-Q2 ,2014.0,26000000,2011-01-01
-2468,Medrobotics,Hardware,USA,MA,MA - Other,Raynham,venture,F,2014-10-21,2014-10, 2014-Q4 ,2014.0,20000000,2011-01-01
 2469,MeetMoi,Social Media,USA,NY,New York City,New York,venture,A,2007-06-01,2007-06, 2007-Q2 ,2007.0,1500000,2007-01-01
 2470,MeetMoi,Social Media,USA,NY,New York City,New York,venture,B,2008-07-01,2008-07, 2008-Q3 ,2008.0,1500000,2007-01-01
 2471,MeetMoi,Social Media,USA,NY,New York City,New York,venture,C,2009-09-01,2009-09, 2009-Q3 ,2009.0,2575000,2007-01-01
@@ -2510,7 +2385,6 @@
 2508,Minted,Home Decor,USA,CA,SF Bay Area,San Francisco,venture,A,2008-09-01,2008-09, 2008-Q3 ,2008.0,2100000,2007-08-01
 2509,Minted,Home Decor,USA,CA,SF Bay Area,San Francisco,venture,B,2011-11-15,2011-11, 2011-Q4 ,2011.0,5500000,2007-08-01
 2510,Minted,Home Decor,USA,CA,SF Bay Area,San Francisco,venture,C,2013-10-16,2013-10, 2013-Q4 ,2013.0,41000000,2007-08-01
-2511,Minted,Home Decor,USA,CA,SF Bay Area,San Francisco,venture,D,2014-10-30,2014-10, 2014-Q4 ,2014.0,38000000,2007-08-01
 2512,MinuteKey,Hardware + Software,USA,CO,Denver,Boulder,seed/angel,0,2010-07-15,2010-07, 2010-Q3 ,2010.0,1645000,2008-01-01
 2513,MinuteKey,Hardware + Software,USA,CO,Denver,Boulder,venture,A,2010-11-30,2010-11, 2010-Q4 ,2010.0,3550767,2008-01-01
 2514,MinuteKey,Hardware + Software,USA,CO,Denver,Boulder,venture,B,2012-10-04,2012-10, 2012-Q4 ,2012.0,10000000,2008-01-01
@@ -2521,7 +2395,6 @@
 2519,Mirantis,Infrastructure,USA,CA,SF Bay Area,Mountain View,venture,B,2014-10-20,2014-10, 2014-Q4 ,2014.0,100000000,2011-01-11
 2520,Mirna Therapeutics,Therapeutics,USA,TX,Austin,Austin,venture,B,2011-08-23,2011-08, 2011-Q3 ,2011.0,1500000,2007-01-01
 2521,Mirna Therapeutics,Therapeutics,USA,TX,Austin,Austin,venture,C,2012-10-24,2012-10, 2012-Q4 ,2012.0,34500000,2007-01-01
-2522,Mirna Therapeutics,Therapeutics,USA,TX,Austin,Austin,venture,D,2012-11-02,2012-11, 2012-Q4 ,2012.0,17249995,2007-01-01
 2523,Miso,Entertainment,USA,CA,SF Bay Area,San Francisco,venture,A,2010-12-29,2010-12, 2010-Q4 ,2010.0,1500000,2010-03-01
 2524,Miso,Entertainment,USA,CA,SF Bay Area,San Francisco,venture,B,2011-12-01,2011-12, 2011-Q4 ,2011.0,4000000,2010-03-01
 2525,Mixamo,Software,USA,CA,SF Bay Area,San Francisco,venture,A,2009-07-27,2009-07, 2009-Q3 ,2009.0,4000000,2008-07-18
@@ -2537,18 +2410,12 @@
 2535,Moat,Displays,USA,NY,New York City,New York,seed/angel,0,2011-08-23,2011-08, 2011-Q3 ,2011.0,1500000,2010-01-01
 2536,Moat,Displays,USA,NY,New York City,New York,venture,B,2012-04-23,2012-04, 2012-Q2 ,2012.0,12000000,2010-01-01
 2537,Mobile Iron,Mobile,USA,CA,SF Bay Area,Mountain View,venture,B,2009-08-13,2009-08, 2009-Q3 ,2009.0,10976725,2007-01-01
-2538,Mobile Iron,Mobile,USA,CA,SF Bay Area,Mountain View,venture,D,2011-06-09,2011-06, 2011-Q2 ,2011.0,19674696,2007-01-01
-2539,Mobile Iron,Mobile,USA,CA,SF Bay Area,Mountain View,venture,E,2012-06-01,2012-06, 2012-Q2 ,2012.0,40099568,2007-01-01
-2540,Mobile Iron,Mobile,USA,CA,SF Bay Area,Mountain View,venture,F,2013-08-29,2013-08, 2013-Q3 ,2013.0,59833258,2007-01-01
 2541,MobileDay,Android,USA,CO,Denver,Boulder,seed/angel,0,2011-12-27,2011-12, 2011-Q4 ,2011.0,1475000,2011-01-01
 2542,MobileDay,Android,USA,CO,Denver,Boulder,venture,A,2014-08-20,2014-08, 2014-Q3 ,2014.0,6000000,2011-01-01
 2543,MobileIron,Mobile Security,USA,CA,SF Bay Area,Mountain View,seed/angel,0,2007-09-24,2007-09, 2007-Q3 ,2007.0,500000,2007-05-01
 2544,MobileIron,Mobile Security,USA,CA,SF Bay Area,Mountain View,venture,A,2008-03-01,2008-03, 2008-Q1 ,2008.0,8800000,2007-05-01
 2545,MobileIron,Mobile Security,USA,CA,SF Bay Area,Mountain View,venture,B,2009-08-01,2009-08, 2009-Q3 ,2009.0,11000000,2007-05-01
 2546,MobileIron,Mobile Security,USA,CA,SF Bay Area,Mountain View,venture,C,2010-07-12,2010-07, 2010-Q3 ,2010.0,16000000,2007-05-01
-2547,MobileIron,Mobile Security,USA,CA,SF Bay Area,Mountain View,venture,D,2011-05-27,2011-05, 2011-Q2 ,2011.0,20000000,2007-05-01
-2548,MobileIron,Mobile Security,USA,CA,SF Bay Area,Mountain View,venture,E,2012-05-29,2012-05, 2012-Q2 ,2012.0,40000000,2007-05-01
-2549,MobileIron,Mobile Security,USA,CA,SF Bay Area,Mountain View,venture,F,2013-10-10,2013-10, 2013-Q4 ,2013.0,48000000,2007-05-01
 2550,MobileROI,Mobile Commerce,USA,NY,New York City,New York,seed/angel,0,2010-05-01,2010-05, 2010-Q2 ,2010.0,1000000,2013-01-01
 2551,MobileROI,Mobile Commerce,USA,NY,New York City,New York,venture,A,2011-02-25,2011-02, 2011-Q1 ,2011.0,5000000,2013-01-01
 2552,MobileSpaces,Mobile,USA,MD,"Washington, D.C.",Silver Spring,venture,A,2012-08-23,2012-08, 2012-Q3 ,2012.0,3000000,2011-01-01
@@ -2557,9 +2424,7 @@
 2555,Mobiquity,Mobile,USA,MA,Boston,Wellesley,venture,B,2014-08-26,2014-08, 2014-Q3 ,2014.0,5000000,2011-04-07
 2556,Moda Operandi,Fashion,USA,NY,New York City,New York,venture,B,2011-06-27,2011-06, 2011-Q2 ,2011.0,10000000,2010-08-01
 2557,Moda Operandi,Fashion,USA,NY,New York City,New York,venture,C,2012-06-09,2012-06, 2012-Q2 ,2012.0,36000000,2010-08-01
-2558,Moda Operandi,Fashion,USA,NY,New York City,New York,venture,D,2013-12-27,2013-12, 2013-Q4 ,2013.0,21607906,2010-08-01
 2559,"Modernizing Medicine, Inc.",Health Care Information Technology,USA,FL,Palm Beaches,Boca Raton,venture,C,2013-08-20,2013-08, 2013-Q3 ,2013.0,14000000,2010-02-01
-2560,"Modernizing Medicine, Inc.",Health Care Information Technology,USA,FL,Palm Beaches,Boca Raton,venture,D,2014-11-11,2014-11, 2014-Q4 ,2014.0,15000000,2010-02-01
 2561,Modria,Legal,USA,CA,SF Bay Area,San Jose,seed/angel,0,2012-11-15,2012-11, 2012-Q4 ,2012.0,2500000,2011-04-01
 2562,Modria,Legal,USA,CA,SF Bay Area,San Jose,venture,A,2013-07-01,2013-07, 2013-Q3 ,2013.0,5000000,2011-04-01
 2563,Mojiva,Mobile,USA,NY,New York City,New York,seed/angel,0,2008-01-01,2008-01, 2008-Q1 ,2008.0,300000,2008-05-05
@@ -2576,16 +2441,12 @@
 2574,MongoDB,Cloud Computing,USA,NY,New York City,New York,venture,A,2008-07-21,2008-07, 2008-Q3 ,2008.0,1500000,2007-11-01
 2575,MongoDB,Cloud Computing,USA,NY,New York City,New York,venture,B,2009-11-04,2009-11, 2009-Q4 ,2009.0,3400000,2007-11-01
 2576,MongoDB,Cloud Computing,USA,NY,New York City,New York,venture,C,2010-12-02,2010-12, 2010-Q4 ,2010.0,6500000,2007-11-01
-2577,MongoDB,Cloud Computing,USA,NY,New York City,New York,venture,D,2011-09-12,2011-09, 2011-Q3 ,2011.0,20000000,2007-11-01
-2578,MongoDB,Cloud Computing,USA,NY,New York City,New York,venture,E,2012-05-29,2012-05, 2012-Q2 ,2012.0,42000000,2007-11-01
-2579,MongoDB,Cloud Computing,USA,NY,New York City,New York,venture,F,2013-10-04,2013-10, 2013-Q4 ,2013.0,150000000,2007-11-01
 2580,Moontoast,E-Commerce,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-01-05,2012-01, 2012-Q1 ,2012.0,6000000,2008-02-01
 2581,Moontoast,E-Commerce,USA,CA,SF Bay Area,San Francisco,venture,B,2013-01-14,2013-01, 2013-Q1 ,2013.0,5000000,2008-02-01
 2582,Moovweb,Apps,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2009-01-01,2009-01, 2009-Q1 ,2009.0,700000,2007-01-01
 2583,Moovweb,Apps,USA,CA,SF Bay Area,San Francisco,venture,A,2013-03-28,2013-03, 2013-Q1 ,2013.0,16000000,2007-01-01
 2584,Morphlabs,Cloud Management,USA,CA,Los Angeles,Manhattan Beach,venture,B,2010-07-14,2010-07, 2010-Q3 ,2010.0,5500000,2007-08-10
 2585,Morphlabs,Cloud Management,USA,CA,Los Angeles,Manhattan Beach,venture,C,2011-09-06,2011-09, 2011-Q3 ,2011.0,5000000,2007-08-10
-2586,Morphlabs,Cloud Management,USA,CA,Los Angeles,Manhattan Beach,venture,D,2013-08-22,2013-08, 2013-Q3 ,2013.0,10000000,2007-08-10
 2587,Mosaic,Solar,USA,CA,SF Bay Area,Oakland,venture,A,2012-05-31,2012-05, 2012-Q2 ,2012.0,2500000,2011-01-01
 2588,Mosaic,Solar,USA,CA,SF Bay Area,Oakland,venture,B,2013-07-29,2013-07, 2013-Q3 ,2013.0,15000000,2011-01-01
 2589,Moseo (SeniorHomes.com),Curated Web,USA,WA,Seattle,Seattle,venture,A,2010-06-01,2010-06, 2010-Q2 ,2010.0,1600000,2009-01-01
@@ -2627,7 +2488,6 @@
 2625,Narrative Science,Big Data,USA,IL,Chicago,Chicago,seed/angel,0,2010-04-22,2010-04, 2010-Q2 ,2010.0,1350000,2010-01-01
 2626,Narrative Science,Big Data,USA,IL,Chicago,Chicago,venture,B,2011-01-01,2011-01, 2011-Q1 ,2011.0,6000000,2010-01-01
 2627,Narrative Science,Big Data,USA,IL,Chicago,Chicago,venture,C,2013-09-10,2013-09, 2013-Q3 ,2013.0,11500000,2010-01-01
-2628,Narrative Science,Big Data,USA,IL,Chicago,Chicago,venture,D,2014-11-28,2014-11, 2014-Q4 ,2014.0,10000000,2010-01-01
 2629,Nasuni,Enterprise Software,USA,MA,Boston,Natick,venture,A,2009-12-14,2009-12, 2009-Q4 ,2009.0,8000000,2009-04-01
 2630,Nasuni,Enterprise Software,USA,MA,Boston,Natick,venture,B,2010-12-20,2010-12, 2010-Q4 ,2010.0,15000000,2009-04-01
 2631,Nasuni,Enterprise Software,USA,MA,Boston,Natick,venture,C,2014-08-11,2014-08, 2014-Q3 ,2014.0,10000000,2009-04-01
@@ -2660,7 +2520,6 @@
 2658,Netpulse,Health and Wellness,USA,CA,SF Bay Area,San Francisco,venture,A,2009-10-26,2009-10, 2009-Q4 ,2009.0,3100000,2009-01-01
 2659,Netpulse,Health and Wellness,USA,CA,SF Bay Area,San Francisco,venture,B,2010-08-10,2010-08, 2010-Q3 ,2010.0,2000000,2009-01-01
 2660,Netpulse,Health and Wellness,USA,CA,SF Bay Area,San Francisco,venture,C,2012-07-30,2012-07, 2012-Q3 ,2012.0,15600000,2009-01-01
-2661,Netpulse,Health and Wellness,USA,CA,SF Bay Area,San Francisco,venture,D,2014-09-29,2014-09, 2014-Q3 ,2014.0,18600000,2009-01-01
 2662,"Netsertive, Inc",Local Businesses,USA,NC,Raleigh,Morrisville,venture,A,2010-12-13,2010-12, 2010-Q4 ,2010.0,4475002,2009-01-01
 2663,"Netsertive, Inc",Local Businesses,USA,NC,Raleigh,Morrisville,venture,B,2012-08-14,2012-08, 2012-Q3 ,2012.0,7300000,2009-01-01
 2664,"Netsertive, Inc",Local Businesses,USA,NC,Raleigh,Morrisville,venture,C,2014-09-04,2014-09, 2014-Q3 ,2014.0,3000000,2009-01-01
@@ -2682,7 +2541,6 @@
 2680,Newsle,Social Network Media,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-02-22,2012-02, 2012-Q1 ,2012.0,600000,2011-01-01
 2681,Newsle,Social Network Media,USA,CA,SF Bay Area,San Francisco,venture,A,2013-11-08,2013-11, 2013-Q4 ,2013.0,200000,2011-01-01
 2682,NexPlanar,Semiconductors,USA,OR,"Portland, Oregon",Hillsboro,venture,C,2008-04-09,2008-04, 2008-Q2 ,2008.0,14500000,2008-06-12
-2683,NexPlanar,Semiconductors,USA,OR,"Portland, Oregon",Hillsboro,venture,D,2011-03-31,2011-03, 2011-Q1 ,2011.0,10000000,2008-06-12
 2684,Nexgate,Brand Marketing,USA,CA,SF Bay Area,Burlingame,seed/angel,0,2011-09-30,2011-09, 2011-Q3 ,2011.0,250000,2011-05-30
 2685,Nexgate,Brand Marketing,USA,CA,SF Bay Area,Burlingame,venture,A,2013-04-09,2013-04, 2013-Q2 ,2013.0,3500000,2011-05-30
 2686,Next Big Sound,Music,USA,NY,New York City,New York,seed/angel,0,2009-12-03,2009-12, 2009-Q4 ,2009.0,1000000,2008-06-20
@@ -2692,7 +2550,6 @@
 2690,Next New Networks,Video,USA,NY,New York City,New York,venture,C,2010-03-31,2010-03, 2010-Q1 ,2010.0,3063781,2007-03-01
 2691,Next Step Living,Clean Technology,USA,MA,Boston,Boston,venture,B,2010-08-16,2010-08, 2010-Q3 ,2010.0,2600000,2008-03-01
 2692,Next Step Living,Clean Technology,USA,MA,Boston,Boston,venture,C,2012-12-06,2012-12, 2012-Q4 ,2012.0,18200000,2008-03-01
-2693,Next Step Living,Clean Technology,USA,MA,Boston,Boston,venture,D,2014-06-25,2014-06, 2014-Q2 ,2014.0,25000000,2008-03-01
 2694,NextGxDX,Biotechnology,USA,TN,Nashville,Franklin,seed/angel,0,2013-03-05,2013-03, 2013-Q1 ,2013.0,1000000,2010-11-01
 2695,NextGxDX,Biotechnology,USA,TN,Nashville,Franklin,venture,B,2014-03-05,2014-03, 2014-Q1 ,2014.0,2949029,2010-11-01
 2696,NextImage Medical,Health Care,USA,CA,San Diego,San Diego,venture,A,2009-11-17,2009-11, 2009-Q4 ,2009.0,5000000,2008-01-01
@@ -2708,8 +2565,6 @@
 2706,Nimble Storage,Technology,USA,CA,SF Bay Area,San Jose,venture,A,2008-12-21,2008-12, 2008-Q4 ,2008.0,8776231,2008-01-01
 2707,Nimble Storage,Technology,USA,CA,SF Bay Area,San Jose,venture,B,2008-12-24,2008-12, 2008-Q4 ,2008.0,8274999,2008-01-01
 2708,Nimble Storage,Technology,USA,CA,SF Bay Area,San Jose,venture,C,2010-12-08,2010-12, 2010-Q4 ,2010.0,16000000,2008-01-01
-2709,Nimble Storage,Technology,USA,CA,SF Bay Area,San Jose,venture,D,2011-07-14,2011-07, 2011-Q3 ,2011.0,25000000,2008-01-01
-2710,Nimble Storage,Technology,USA,CA,SF Bay Area,San Jose,venture,E,2012-09-10,2012-09, 2012-Q3 ,2012.0,40700000,2008-01-01
 2711,Nimble TV,Software,USA,NY,New York City,New York,seed/angel,0,2011-10-27,2011-10, 2011-Q4 ,2011.0,1650000,2010-01-01
 2712,Nimble TV,Software,USA,NY,New York City,New York,venture,A,2012-09-14,2012-09, 2012-Q3 ,2012.0,4500000,2010-01-01
 2713,Nimbula,Infrastructure,USA,CA,SF Bay Area,Mountain View,venture,A,2010-06-23,2010-06, 2010-Q2 ,2010.0,5750000,2008-01-01
@@ -2749,8 +2604,6 @@
 2747,Nutanix,Enterprise Software,USA,CA,SF Bay Area,San Jose,venture,A,2011-04-19,2011-04, 2011-Q2 ,2011.0,13200000,2009-01-01
 2748,Nutanix,Enterprise Software,USA,CA,SF Bay Area,San Jose,venture,B,2011-10-25,2011-10, 2011-Q4 ,2011.0,25000000,2009-01-01
 2749,Nutanix,Enterprise Software,USA,CA,SF Bay Area,San Jose,venture,C,2012-08-22,2012-08, 2012-Q3 ,2012.0,33000000,2009-01-01
-2750,Nutanix,Enterprise Software,USA,CA,SF Bay Area,San Jose,venture,D,2014-01-14,2014-01, 2014-Q1 ,2014.0,101000000,2009-01-01
-2751,Nutanix,Enterprise Software,USA,CA,SF Bay Area,San Jose,venture,E,2014-08-27,2014-08, 2014-Q3 ,2014.0,140000000,2009-01-01
 2752,NxThera,Health Care,USA,MN,Minneapolis,Maple Grove,venture,B,2011-10-04,2011-10, 2011-Q4 ,2011.0,21600000,2008-01-01
 2753,NxThera,Health Care,USA,MN,Minneapolis,Maple Grove,venture,C,2014-02-26,2014-02, 2014-Q1 ,2014.0,25000000,2008-01-01
 2754,OPX Biotechnologies,Clean Technology,USA,CO,Denver,Boulder,venture,A,2007-12-06,2007-12, 2007-Q4 ,2007.0,3600000,2007-01-01
@@ -2773,8 +2626,6 @@
 2771,Okta,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,A,2010-02-12,2010-02, 2010-Q1 ,2010.0,10000000,2008-12-01
 2772,Okta,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,B,2011-08-01,2011-08, 2011-Q3 ,2011.0,16500000,2008-12-01
 2773,Okta,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,C,2012-12-04,2012-12, 2012-Q4 ,2012.0,25000000,2008-12-01
-2774,Okta,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,D,2013-09-13,2013-09, 2013-Q3 ,2013.0,27000000,2008-12-01
-2775,Okta,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,E,2014-06-09,2014-06, 2014-Q2 ,2014.0,75000000,2008-12-01
 2776,Olapic,Content,USA,NY,New York City,New York,seed/angel,0,2012-04-15,2012-04, 2012-Q2 ,2012.0,1000000,2010-11-25
 2777,Olapic,Content,USA,NY,New York City,New York,venture,A,2013-07-30,2013-07, 2013-Q3 ,2013.0,5000000,2010-11-25
 2778,Omada Health,Education,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2011-05-01,2011-05, 2011-Q2 ,2011.0,20000,2011-01-01
@@ -2787,8 +2638,6 @@
 2785,OnDeck,Credit,USA,NY,New York City,New York,venture,A,2006-01-01,2006-01, 2006-Q1 ,2006.0,2000000,2007-01-01
 2786,OnDeck,Credit,USA,NY,New York City,New York,venture,B,2007-01-01,2007-01, 2007-Q1 ,2007.0,16000000,2007-01-01
 2787,OnDeck,Credit,USA,NY,New York City,New York,venture,C,2011-01-01,2011-01, 2011-Q1 ,2011.0,25000000,2007-01-01
-2788,OnDeck,Credit,USA,NY,New York City,New York,venture,D,2013-02-13,2013-02, 2013-Q1 ,2013.0,42000000,2007-01-01
-2789,OnDeck,Credit,USA,NY,New York City,New York,venture,E,2014-03-06,2014-03, 2014-Q1 ,2014.0,77000000,2007-01-01
 2790,OnShift,Health Care,USA,OH,Cleveland,Cleveland,seed/angel,0,2009-09-02,2009-09, 2009-Q3 ,2009.0,350000,2008-01-01
 2791,OnShift,Health Care,USA,OH,Cleveland,Cleveland,venture,B,2012-02-02,2012-02, 2012-Q1 ,2012.0,4483008,2008-01-01
 2792,OnShift,Health Care,USA,OH,Cleveland,Cleveland,venture,C,2014-02-03,2014-02, 2014-Q1 ,2014.0,7000000,2008-01-01
@@ -2798,12 +2647,8 @@
 2796,OncoPep,Biotechnology,USA,MA,Boston,North Andover,venture,B,2014-08-28,2014-08, 2014-Q3 ,2014.0,6900000,2010-01-01
 2797,One Kings Lane,Home & Garden,USA,CA,SF Bay Area,San Francisco,venture,B,2011-02-11,2011-02, 2011-Q1 ,2011.0,23000000,2009-01-01
 2798,One Kings Lane,Home & Garden,USA,CA,SF Bay Area,San Francisco,venture,C,2011-09-18,2011-09, 2011-Q3 ,2011.0,40000000,2009-01-01
-2799,One Kings Lane,Home & Garden,USA,CA,SF Bay Area,San Francisco,venture,D,2012-12-12,2012-12, 2012-Q4 ,2012.0,50000000,2009-01-01
-2800,One Kings Lane,Home & Garden,USA,CA,SF Bay Area,San Francisco,venture,E,2014-01-30,2014-01, 2014-Q1 ,2014.0,112000000,2009-01-01
 2801,One Medical Group,Doctors,USA,CA,SF Bay Area,San Francisco,venture,B,2007-01-01,2007-01, 2007-Q1 ,2007.0,3500000,2007-01-01
 2802,One Medical Group,Doctors,USA,CA,SF Bay Area,San Francisco,venture,C,2008-01-01,2008-01, 2008-Q1 ,2008.0,8000000,2007-01-01
-2803,One Medical Group,Doctors,USA,CA,SF Bay Area,San Francisco,venture,D,2009-01-01,2009-01, 2009-Q1 ,2009.0,15000000,2007-01-01
-2804,One Medical Group,Doctors,USA,CA,SF Bay Area,San Francisco,venture,E,2011-09-02,2011-09, 2011-Q3 ,2011.0,20000000,2007-01-01
 2805,One Season,All Markets,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2007-01-01,2007-01, 2007-Q1 ,2007.0,250000,2007-06-01
 2806,One Season,All Markets,USA,CA,SF Bay Area,San Francisco,venture,A,2009-01-21,2009-01, 2009-Q1 ,2009.0,3500000,2007-06-01
 2807,OneHealth Solutions,Game Mechanics,USA,CA,San Diego,Solana Beach,venture,A,2010-07-28,2010-07, 2010-Q3 ,2010.0,7000000,2007-01-01
@@ -2819,9 +2664,6 @@
 2817,Ooyala,Video,USA,CA,SF Bay Area,Mountain View,venture,A,2007-06-01,2007-06, 2007-Q2 ,2007.0,1500000,2007-04-05
 2818,Ooyala,Video,USA,CA,SF Bay Area,Mountain View,venture,B,2007-12-18,2007-12, 2007-Q4 ,2007.0,8500000,2007-04-05
 2819,Ooyala,Video,USA,CA,SF Bay Area,Mountain View,venture,C,2009-10-12,2009-10, 2009-Q4 ,2009.0,10000000,2007-04-05
-2820,Ooyala,Video,USA,CA,SF Bay Area,Mountain View,venture,D,2010-09-09,2010-09, 2010-Q3 ,2010.0,24000000,2007-04-05
-2821,Ooyala,Video,USA,CA,SF Bay Area,Mountain View,venture,E,2012-06-18,2012-06, 2012-Q2 ,2012.0,35000000,2007-04-05
-2822,Ooyala,Video,USA,CA,SF Bay Area,Mountain View,venture,F,2013-12-11,2013-12, 2013-Q4 ,2013.0,43000000,2007-04-05
 2823,Opal Labs,Software,USA,OR,"Portland, Oregon",Portland,seed/angel,0,2013-11-25,2013-11, 2013-Q4 ,2013.0,2100000,2010-10-01
 2824,Opal Labs,Software,USA,OR,"Portland, Oregon",Portland,venture,A,2014-10-03,2014-10, 2014-Q4 ,2014.0,8000000,2010-10-01
 2825,Opbeat,Software,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-05-01,2012-05, 2012-Q2 ,2012.0,100000,2012-01-01
@@ -2844,8 +2686,6 @@
 2842,OpenX,Advertising Exchanges,USA,CA,Los Angeles,Pasadena,venture,A,2007-06-01,2007-06, 2007-Q2 ,2007.0,5000000,2008-05-01
 2843,OpenX,Advertising Exchanges,USA,CA,Los Angeles,Pasadena,venture,B,2008-01-01,2008-01, 2008-Q1 ,2008.0,15500000,2008-05-01
 2844,OpenX,Advertising Exchanges,USA,CA,Los Angeles,Pasadena,venture,C,2009-05-26,2009-05, 2009-Q2 ,2009.0,10000000,2008-05-01
-2845,OpenX,Advertising Exchanges,USA,CA,Los Angeles,Pasadena,venture,D,2011-05-31,2011-05, 2011-Q2 ,2011.0,20000000,2008-05-01
-2846,OpenX,Advertising Exchanges,USA,CA,Los Angeles,Pasadena,venture,E,2013-01-17,2013-01, 2013-Q1 ,2013.0,25011200,2008-05-01
 2847,Opower,Software,USA,VA,"Washington, D.C.",Arlington,venture,A,2007-08-01,2007-08, 2007-Q3 ,2007.0,1700000,2007-01-01
 2848,Opower,Software,USA,VA,"Washington, D.C.",Arlington,venture,B,2008-12-29,2008-12, 2008-Q4 ,2008.0,14000000,2007-01-01
 2849,Opower,Software,USA,VA,"Washington, D.C.",Arlington,venture,C,2010-11-29,2010-11, 2010-Q4 ,2010.0,50000000,2007-01-01
@@ -2865,11 +2705,9 @@
 2863,Orbotix,Finance,USA,CO,Denver,Boulder,venture,A,2010-10-21,2010-10, 2010-Q4 ,2010.0,1115543,2010-02-01
 2864,Orbotix,Finance,USA,CO,Denver,Boulder,venture,B,2011-04-07,2011-04, 2011-Q2 ,2011.0,5000000,2010-02-01
 2865,Orbotix,Finance,USA,CO,Denver,Boulder,venture,C,2012-05-25,2012-05, 2012-Q2 ,2012.0,5000000,2010-02-01
-2866,Orbotix,Finance,USA,CO,Denver,Boulder,venture,D,2014-05-05,2014-05, 2014-Q2 ,2014.0,20000000,2010-02-01
 2867,Orchard Platform,Peer-to-Peer,USA,NY,New York City,New York,seed/angel,0,2013-11-13,2013-11, 2013-Q4 ,2013.0,2700000,2013-11-23
 2868,Orchard Platform,Peer-to-Peer,USA,NY,New York City,New York,venture,A,2014-10-21,2014-10, 2014-Q4 ,2014.0,12000000,2013-11-23
 2869,Ormet Circuits,Material Science,USA,CA,San Diego,San Diego,seed/angel,0,2012-09-24,2012-09, 2012-Q3 ,2012.0,1000000,2011-01-01
-2870,Ormet Circuits,Material Science,USA,CA,San Diego,San Diego,venture,E,2009-04-24,2009-04, 2009-Q2 ,2009.0,487500,2011-01-01
 2871,OrthAlign,Health Care,USA,CA,Anaheim,Irvine,venture,A,2010-03-15,2010-03, 2010-Q1 ,2010.0,5200000,2008-01-01
 2872,OrthAlign,Health Care,USA,CA,Anaheim,Irvine,venture,B,2010-11-17,2010-11, 2010-Q4 ,2010.0,3970000,2008-01-01
 2873,OrthAlign,Health Care,USA,CA,Anaheim,Irvine,venture,C,2014-11-06,2014-11, 2014-Q4 ,2014.0,15000000,2008-01-01
@@ -2886,7 +2724,6 @@
 2884,Otonomy,Biotechnology,USA,CA,San Diego,San Diego,venture,A,2010-06-11,2010-06, 2010-Q2 ,2010.0,10000000,2008-01-01
 2885,Otonomy,Biotechnology,USA,CA,San Diego,San Diego,venture,B,2010-08-30,2010-08, 2010-Q3 ,2010.0,38500000,2008-01-01
 2886,Otonomy,Biotechnology,USA,CA,San Diego,San Diego,venture,C,2013-09-04,2013-09, 2013-Q3 ,2013.0,45900000,2008-01-01
-2887,Otonomy,Biotechnology,USA,CA,San Diego,San Diego,venture,D,2014-04-30,2014-04, 2014-Q2 ,2014.0,49000000,2008-01-01
 2888,OutSmart Power Systems,Hardware + Software,USA,MA,Boston,Natick,seed/angel,0,2009-05-27,2009-05, 2009-Q2 ,2009.0,2000000,2008-01-01
 2889,OutSmart Power Systems,Hardware + Software,USA,MA,Boston,Natick,venture,A,2013-10-09,2013-10, 2013-Q4 ,2013.0,3600000,2008-01-01
 2890,OutSmart Power Systems,Hardware + Software,USA,MA,Boston,Natick,venture,B,2012-12-05,2012-12, 2012-Q4 ,2012.0,1500000,2008-01-01
@@ -2898,7 +2735,6 @@
 2896,OvaScience,Biotechnology,USA,MA,Boston,Boston,venture,A,2011-10-11,2011-10, 2011-Q4 ,2011.0,6000000,2011-01-01
 2897,OvaScience,Biotechnology,USA,MA,Boston,Boston,venture,B,2012-04-03,2012-04, 2012-Q2 ,2012.0,37000000,2011-01-01
 2898,OvaScience,Biotechnology,USA,MA,Boston,Boston,venture,C,2012-08-07,2012-08, 2012-Q3 ,2012.0,4000000,2011-01-01
-2899,OvaScience,Biotechnology,USA,MA,Boston,Boston,venture,D,2013-03-28,2013-03, 2013-Q1 ,2013.0,34999920,2011-01-01
 2900,Oyster,E-Books,USA,NY,New York City,New York,seed/angel,0,2012-10-11,2012-10, 2012-Q4 ,2012.0,3000000,2012-01-01
 2901,Oyster,E-Books,USA,NY,New York City,New York,venture,A,2014-01-14,2014-01, 2014-Q1 ,2014.0,14000000,2012-01-01
 2902,Oyster.com,Travel,USA,NY,New York City,New York,venture,A,2008-03-01,2008-03, 2008-Q1 ,2008.0,6400000,2008-03-01
@@ -2921,12 +2757,10 @@
 2919,Panzura,Software,USA,CA,SF Bay Area,Campbell,venture,A,2008-09-28,2008-09, 2008-Q3 ,2008.0,6000000,2008-07-01
 2920,Panzura,Software,USA,CA,SF Bay Area,Campbell,venture,B,2010-12-07,2010-12, 2010-Q4 ,2010.0,12000000,2008-07-01
 2921,Panzura,Software,USA,CA,SF Bay Area,Campbell,venture,C,2012-06-19,2012-06, 2012-Q2 ,2012.0,15000000,2008-07-01
-2922,Panzura,Software,USA,CA,SF Bay Area,Campbell,venture,D,2013-06-06,2013-06, 2013-Q2 ,2013.0,25000000,2008-07-01
 2923,Paperless Post,Messaging,USA,NY,New York City,New York,venture,A,2012-05-07,2012-05, 2012-Q2 ,2012.0,6000000,2008-09-01
 2924,Paperless Post,Messaging,USA,NY,New York City,New York,venture,C,2014-04-15,2014-04, 2014-Q2 ,2014.0,25000000,2008-09-01
 2925,ParAccel,Analytics,USA,CA,SF Bay Area,Campbell,venture,B,2007-12-10,2007-12, 2007-Q4 ,2007.0,22000000,2007-01-01
 2926,ParAccel,Analytics,USA,CA,SF Bay Area,Campbell,venture,C,2009-06-30,2009-06, 2009-Q2 ,2009.0,22000000,2007-01-01
-2927,ParAccel,Analytics,USA,CA,SF Bay Area,Campbell,venture,E,2011-08-04,2011-08, 2011-Q3 ,2011.0,10000000,2007-01-01
 2928,ParLevel Systems,Software,USA,TX,San Antonio,San Antonio,seed/angel,0,2013-03-07,2013-03, 2013-Q1 ,2013.0,25000,2012-10-01
 2929,ParLevel Systems,Software,USA,TX,San Antonio,San Antonio,venture,A,2013-08-28,2013-08, 2013-Q3 ,2013.0,830313,2012-10-01
 2930,ParStream,Databases,USA,CA,SF Bay Area,Cupertino,venture,A,2012-08-14,2012-08, 2012-Q3 ,2012.0,5600000,2008-01-01
@@ -2974,7 +2808,6 @@
 2972,Peek,Tourism,USA,CA,SF Bay Area,San Francisco,venture,A,2013-11-04,2013-11, 2013-Q4 ,2013.0,5000000,2007-11-01
 2973,Peel,Mobile,USA,CA,SF Bay Area,Mountain View,venture,B,2011-05-02,2011-05, 2011-Q2 ,2011.0,16700000,2009-01-01
 2974,Peel,Mobile,USA,CA,SF Bay Area,Mountain View,venture,C,2013-04-05,2013-04, 2013-Q2 ,2013.0,20000000,2009-01-01
-2975,Peel,Mobile,USA,CA,SF Bay Area,Mountain View,venture,D,2014-10-09,2014-10, 2014-Q4 ,2014.0,50000000,2009-01-01
 2976,Peloton Interactive,Hardware + Software,USA,NY,New York City,New York,seed/angel,0,2012-02-01,2012-02, 2012-Q1 ,2012.0,400000,2012-02-15
 2977,Peloton Interactive,Hardware + Software,USA,NY,New York City,New York,venture,A,2012-12-05,2012-12, 2012-Q4 ,2012.0,3500000,2012-02-15
 2978,Peloton Interactive,Hardware + Software,USA,NY,New York City,New York,venture,B,2014-04-25,2014-04, 2014-Q2 ,2014.0,10500000,2012-02-15
@@ -2982,14 +2815,11 @@
 2980,PeopleDoc,Innovation Engineering,USA,NY,New York City,New York,venture,B,2014-05-15,2014-05, 2014-Q2 ,2014.0,17500000,2013-01-01
 2981,PeopleMatter,Enterprise Software,USA,SC,"Charleston, South Carolina",North Charleston,venture,B,2011-05-03,2011-05, 2011-Q2 ,2011.0,7200000,2009-09-01
 2982,PeopleMatter,Enterprise Software,USA,SC,"Charleston, South Carolina",North Charleston,venture,C,2012-02-26,2012-02, 2012-Q1 ,2012.0,14000000,2009-09-01
-2983,PeopleMatter,Enterprise Software,USA,SC,"Charleston, South Carolina",North Charleston,venture,D,2013-03-04,2013-03, 2013-Q1 ,2013.0,19000000,2009-09-01
-2984,PeopleMatter,Enterprise Software,USA,SC,"Charleston, South Carolina",North Charleston,venture,E,2013-10-28,2013-10, 2013-Q4 ,2013.0,16000000,2009-09-01
 2985,Percolate,Brand Marketing,USA,NY,New York City,New York,seed/angel,0,2011-12-15,2011-12, 2011-Q4 ,2011.0,1500000,2011-01-01
 2986,Percolate,Brand Marketing,USA,NY,New York City,New York,venture,A,2012-11-14,2012-11, 2012-Q4 ,2012.0,9000000,2011-01-01
 2987,Percolate,Brand Marketing,USA,NY,New York City,New York,venture,B,2014-03-18,2014-03, 2014-Q1 ,2014.0,24000000,2011-01-01
 2988,Perfect Market,Journalism,USA,CA,Los Angeles,Pasadena,venture,A,2008-07-09,2008-07, 2008-Q3 ,2008.0,15600000,2007-01-01
 2989,Perfect Market,Journalism,USA,CA,Los Angeles,Pasadena,venture,C,2010-03-01,2010-03, 2010-Q1 ,2010.0,6000000,2007-01-01
-2990,Perfect Market,Journalism,USA,CA,Los Angeles,Pasadena,venture,D,2011-01-18,2011-01, 2011-Q1 ,2011.0,9000000,2007-01-01
 2991,PerkStreet Financial,Banking,USA,MA,Boston,Boston,venture,A,2009-01-01,2009-01, 2009-Q1 ,2009.0,6000000,2008-01-01
 2992,PerkStreet Financial,Banking,USA,MA,Boston,Boston,venture,B,2011-05-11,2011-05, 2011-Q2 ,2011.0,9000000,2008-01-01
 2993,Perkville,Advertising,USA,CA,SF Bay Area,Oakland,seed/angel,0,2013-01-30,2013-01, 2013-Q1 ,2013.0,450000,2010-01-11
@@ -3013,8 +2843,6 @@
 3011,PharmaSecure,Health Care Information Technology,USA,NY,New York City,New York,venture,B,2013-06-12,2013-06, 2013-Q2 ,2013.0,553002,2007-01-01
 3012,PhotoRocket,Photography,USA,WA,Seattle,Seattle,seed/angel,0,2010-04-12,2010-04, 2010-Q2 ,2010.0,376917,2009-01-01
 3013,PhotoRocket,Photography,USA,WA,Seattle,Seattle,venture,A,2010-11-10,2010-11, 2010-Q4 ,2010.0,1348917,2009-01-01
-3014,Phunware,Mobile,USA,CA,"Orange County, California",Tustin,venture,D,2013-05-01,2013-05, 2013-Q2 ,2013.0,8380000,2009-02-23
-3015,Phunware,Mobile,USA,CA,"Orange County, California",Tustin,venture,E,2014-03-18,2014-03, 2014-Q1 ,2014.0,30000000,2009-02-23
 3016,Pie Digital,Internet of Things,USA,CA,SF Bay Area,Palo Alto,venture,A,2013-12-18,2013-12, 2013-Q4 ,2013.0,4000000,2007-01-01
 3017,Pie Digital,Internet of Things,USA,CA,SF Bay Area,Palo Alto,venture,B,2010-02-02,2010-02, 2010-Q1 ,2010.0,6019999,2007-01-01
 3018,PillPack,Health Care,USA,MA,Boston,Cambridge,seed/angel,0,2013-04-01,2013-04, 2013-Q2 ,2013.0,550000,2013-01-31
@@ -3027,9 +2855,6 @@
 3025,Pinterest,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,A,2011-05-07,2011-05, 2011-Q2 ,2011.0,10000000,2009-01-01
 3026,Pinterest,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,B,2011-10-07,2011-10, 2011-Q4 ,2011.0,27000000,2009-01-01
 3027,Pinterest,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,C,2012-05-17,2012-05, 2012-Q2 ,2012.0,100000000,2009-01-01
-3028,Pinterest,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,D,2013-02-20,2013-02, 2013-Q1 ,2013.0,200000000,2009-01-01
-3029,Pinterest,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,E,2013-10-23,2013-10, 2013-Q4 ,2013.0,225000000,2009-01-01
-3030,Pinterest,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,F,2014-05-15,2014-05, 2014-Q2 ,2014.0,200000000,2009-01-01
 3031,"Piston Cloud Computing, Inc.",Software,USA,CA,SF Bay Area,San Francisco,venture,A,2011-06-21,2011-06, 2011-Q2 ,2011.0,4500000,2011-01-01
 3032,"Piston Cloud Computing, Inc.",Software,USA,CA,SF Bay Area,San Francisco,venture,B,2013-02-04,2013-02, 2013-Q1 ,2013.0,8000000,2011-01-01
 3033,Pixability,Video Streaming,USA,MA,Boston,Boston,seed/angel,0,2011-02-18,2011-02, 2011-Q1 ,2011.0,1000000,2008-03-14
@@ -3143,17 +2968,12 @@
 3141,Pure Storage,Storage,USA,CA,SF Bay Area,Mountain View,venture,A,2009-01-01,2009-01, 2009-Q1 ,2009.0,5000000,2009-09-01
 3142,Pure Storage,Storage,USA,CA,SF Bay Area,Mountain View,venture,B,2010-08-01,2010-08, 2010-Q3 ,2010.0,20000000,2009-09-01
 3143,Pure Storage,Storage,USA,CA,SF Bay Area,Mountain View,venture,C,2011-08-23,2011-08, 2011-Q3 ,2011.0,30000000,2009-09-01
-3144,Pure Storage,Storage,USA,CA,SF Bay Area,Mountain View,venture,D,2012-08-15,2012-08, 2012-Q3 ,2012.0,40000000,2009-09-01
-3145,Pure Storage,Storage,USA,CA,SF Bay Area,Mountain View,venture,E,2013-08-29,2013-08, 2013-Q3 ,2013.0,150000000,2009-09-01
-3146,Pure Storage,Storage,USA,CA,SF Bay Area,Mountain View,venture,F,2014-04-22,2014-04, 2014-Q2 ,2014.0,225000000,2009-09-01
 3147,PureCars,Automotive,USA,SC,"Charleston, South Carolina",Charleston,venture,A,2013-01-08,2013-01, 2013-Q1 ,2013.0,5000000,2007-01-01
 3148,PureCars,Automotive,USA,SC,"Charleston, South Carolina",Charleston,venture,B,2013-12-18,2013-12, 2013-Q4 ,2013.0,5000000,2007-01-01
 3149,Q-Sensei,Enterprise Search,USA,NY,New York City,Brooklyn,seed/angel,0,2007-07-01,2007-07, 2007-Q3 ,2007.0,1400000,2007-01-01
 3150,Q-Sensei,Enterprise Search,USA,NY,New York City,Brooklyn,venture,A,2013-10-01,2013-10, 2013-Q4 ,2013.0,1265000,2007-01-01
 3151,QPID Health,Healthcare Services,USA,MA,Boston,Boston,venture,A,2013-03-20,2013-03, 2013-Q1 ,2013.0,4000000,2012-12-01
 3152,QPID Health,Healthcare Services,USA,MA,Boston,Boston,venture,B,2014-05-06,2014-05, 2014-Q2 ,2014.0,12300000,2012-12-01
-3153,Qspex Technologies,Health Care,USA,GA,Atlanta,Alpharetta,venture,D,2012-06-07,2012-06, 2012-Q2 ,2012.0,20502760,2007-01-01
-3154,Qspex Technologies,Health Care,USA,GA,Atlanta,Alpharetta,venture,E,2014-01-14,2014-01, 2014-Q1 ,2014.0,15000000,2007-01-01
 3155,Qstream,Enterprise Software,USA,MA,Boston,Burlington,seed/angel,0,2013-09-27,2013-09, 2013-Q3 ,2013.0,1550000,2008-09-01
 3156,Qstream,Enterprise Software,USA,MA,Boston,Burlington,venture,A,2013-09-27,2013-09, 2013-Q3 ,2013.0,2800000,2008-09-01
 3157,Quad Learning,Education,USA,DC,"Washington, D.C.",Washington,venture,A,2013-02-14,2013-02, 2013-Q1 ,2013.0,11000000,2012-01-01
@@ -3184,7 +3004,6 @@
 3182,Quirky,E-Commerce,USA,NY,New York City,New York,venture,A,2010-04-07,2010-04, 2010-Q2 ,2010.0,6000000,2009-03-01
 3183,Quirky,E-Commerce,USA,NY,New York City,New York,venture,B,2011-08-04,2011-08, 2011-Q3 ,2011.0,16000000,2009-03-01
 3184,Quirky,E-Commerce,USA,NY,New York City,New York,venture,C,2012-09-06,2012-09, 2012-Q3 ,2012.0,68000000,2009-03-01
-3185,Quirky,E-Commerce,USA,NY,New York City,New York,venture,D,2013-11-13,2013-11, 2013-Q4 ,2013.0,79000000,2009-03-01
 3186,Quixey,Search,USA,CA,SF Bay Area,Mountain View,seed/angel,0,2011-04-07,2011-04, 2011-Q2 ,2011.0,400000,2009-11-01
 3187,Quixey,Search,USA,CA,SF Bay Area,Mountain View,venture,A,2011-08-29,2011-08, 2011-Q3 ,2011.0,3800000,2009-11-01
 3188,Quixey,Search,USA,CA,SF Bay Area,Mountain View,venture,B,2012-06-07,2012-06, 2012-Q2 ,2012.0,20000000,2009-11-01
@@ -3306,7 +3125,6 @@
 3304,RetailNext,Analytics,USA,CA,SF Bay Area,San Jose,venture,A,2009-12-21,2009-12, 2009-Q4 ,2009.0,6400000,2007-11-01
 3305,RetailNext,Analytics,USA,CA,SF Bay Area,San Jose,venture,B,2011-06-03,2011-06, 2011-Q2 ,2011.0,8000000,2007-11-01
 3306,RetailNext,Analytics,USA,CA,SF Bay Area,San Jose,venture,C,2013-04-30,2013-04, 2013-Q2 ,2013.0,15000000,2007-11-01
-3307,RetailNext,Analytics,USA,CA,SF Bay Area,San Jose,venture,D,2014-07-08,2014-07, 2014-Q3 ,2014.0,30000000,2007-11-01
 3308,Retention Science,Marketing Automation,USA,CA,Los Angeles,Santa Monica,seed/angel,0,2012-04-26,2012-04, 2012-Q2 ,2012.0,21000,2011-01-01
 3309,Retention Science,Marketing Automation,USA,CA,Los Angeles,Santa Monica,venture,A,2014-08-05,2014-08, 2014-Q3 ,2014.0,7000000,2011-01-01
 3310,Rethink Books,Software,USA,TX,Dallas,Plano,seed/angel,0,2010-04-21,2010-04, 2010-Q2 ,2010.0,250000,2010-01-01
@@ -3343,16 +3161,12 @@
 3341,Robinhood,Personal Finance,USA,CA,SF Bay Area,Palo Alto,venture,A,2014-09-23,2014-09, 2014-Q3 ,2014.0,13000000,2013-01-01
 3342,Rocket Lawyer,Legal,USA,CA,SF Bay Area,San Francisco,venture,B,2009-01-08,2009-01, 2009-Q1 ,2009.0,2100000,2008-08-27
 3343,Rocket Lawyer,Legal,USA,CA,SF Bay Area,San Francisco,venture,C,2010-05-03,2010-05, 2010-Q2 ,2010.0,6550818,2008-08-27
-3344,Rocket Lawyer,Legal,USA,CA,SF Bay Area,San Francisco,venture,D,2011-08-11,2011-08, 2011-Q3 ,2011.0,18500000,2008-08-27
-3345,Rocket Lawyer,Legal,USA,CA,SF Bay Area,San Francisco,venture,E,2013-05-13,2013-05, 2013-Q2 ,2013.0,19000000,2008-08-27
 3346,Rocketmiles,Travel,USA,IL,Chicago,Chicago,seed/angel,0,2013-04-29,2013-04, 2013-Q2 ,2013.0,2000000,2012-11-01
 3347,Rocketmiles,Travel,USA,IL,Chicago,Chicago,venture,A,2014-01-29,2014-01, 2014-Q1 ,2014.0,6500000,2012-11-01
 3348,Rockmelt,Browser Extensions,USA,CA,SF Bay Area,Mountain View,seed/angel,0,2009-02-19,2009-02, 2009-Q1 ,2009.0,1675000,2009-01-01
 3349,Rockmelt,Browser Extensions,USA,CA,SF Bay Area,Mountain View,venture,A,2009-09-01,2009-09, 2009-Q3 ,2009.0,8200000,2009-01-01
 3350,Rockmelt,Browser Extensions,USA,CA,SF Bay Area,Mountain View,venture,B,2011-06-29,2011-06, 2011-Q2 ,2011.0,30000000,2009-01-01
 3351,Roka Bioscience,Biotechnology,USA,NJ,Newark,Warren,venture,C,2011-07-28,2011-07, 2011-Q3 ,2011.0,20000000,2009-01-01
-3352,Roka Bioscience,Biotechnology,USA,NJ,Newark,Warren,venture,D,2012-01-08,2012-01, 2012-Q1 ,2012.0,47500000,2009-01-01
-3353,Roka Bioscience,Biotechnology,USA,NJ,Newark,Warren,venture,E,2013-12-05,2013-12, 2013-Q4 ,2013.0,16996657,2009-01-01
 3354,Rolith,Solar,USA,CA,SF Bay Area,Pleasanton,seed/angel,0,2010-08-01,2010-08, 2010-Q3 ,2010.0,700000,2008-08-01
 3355,Rolith,Solar,USA,CA,SF Bay Area,Pleasanton,venture,A,2012-04-05,2012-04, 2012-Q2 ,2012.0,5000000,2008-08-01
 3356,Room 77,Travel,USA,CA,SF Bay Area,Mountain View,seed/angel,0,2010-01-01,2010-01, 2010-Q1 ,2010.0,3000000,2010-04-01
@@ -3390,7 +3204,6 @@
 3388,SCVNGR,Mobile,USA,MA,Boston,Boston,seed/angel,0,2008-06-01,2008-06, 2008-Q2 ,2008.0,35000,2008-01-01
 3389,SCVNGR,Mobile,USA,MA,Boston,Boston,venture,A,2009-08-13,2009-08, 2009-Q3 ,2009.0,750000,2008-01-01
 3390,SCVNGR,Mobile,USA,MA,Boston,Boston,venture,B,2010-01-11,2010-01, 2010-Q1 ,2010.0,4000000,2008-01-01
-3391,SCVNGR,Mobile,USA,MA,Boston,Boston,venture,D,2012-08-02,2012-08, 2012-Q3 ,2012.0,9000000,2008-01-01
 3392,SEVENROOMS,Restaurants,USA,NY,New York City,New York,seed/angel,0,2013-10-01,2013-10, 2013-Q4 ,2013.0,865000,2011-05-01
 3393,SEVENROOMS,Restaurants,USA,NY,New York City,New York,venture,A,2014-08-14,2014-08, 2014-Q3 ,2014.0,800000,2011-05-01
 3394,SGB,Biotechnology,USA,CA,San Diego,Encinitas,venture,A,2010-09-14,2010-09, 2010-Q3 ,2010.0,9400000,2007-01-01
@@ -3423,7 +3236,6 @@
 3421,Salesforce Buddy Media,Social Network Media,USA,NY,New York City,New York,venture,A,2007-09-01,2007-09, 2007-Q3 ,2007.0,1500000,2007-09-01
 3422,Salesforce Buddy Media,Social Network Media,USA,NY,New York City,New York,venture,B,2008-04-15,2008-04, 2008-Q2 ,2008.0,6500000,2007-09-01
 3423,Salesforce Buddy Media,Social Network Media,USA,NY,New York City,New York,venture,C,2010-10-19,2010-10, 2010-Q4 ,2010.0,23000000,2007-09-01
-3424,Salesforce Buddy Media,Social Network Media,USA,NY,New York City,New York,venture,D,2011-08-15,2011-08, 2011-Q3 ,2011.0,54000000,2007-09-01
 3425,Salesfusion,Software,USA,GA,Atlanta,Atlanta,venture,A,2013-03-07,2013-03, 2013-Q1 ,2013.0,1000000,2007-01-01
 3426,Salesfusion,Software,USA,GA,Atlanta,Atlanta,venture,B,2013-09-04,2013-09, 2013-Q3 ,2013.0,800000,2007-01-01
 3427,Sample6,Biotechnology,USA,MA,Boston,Boston,venture,A,2011-05-31,2011-05, 2011-Q2 ,2011.0,5750000,2009-01-01
@@ -3431,11 +3243,9 @@
 3429,Sand 9,Mobile,USA,MA,Boston,Cambridge,venture,A,2008-05-09,2008-05, 2008-Q2 ,2008.0,4000000,2007-06-01
 3430,Sand 9,Mobile,USA,MA,Boston,Cambridge,venture,B,2010-05-12,2010-05, 2010-Q2 ,2010.0,12000000,2007-06-01
 3431,Sand 9,Mobile,USA,MA,Boston,Cambridge,venture,C,2012-09-01,2012-09, 2012-Q3 ,2012.0,3000000,2007-06-01
-3432,Sand 9,Mobile,USA,MA,Boston,Cambridge,venture,D,2013-01-04,2013-01, 2013-Q1 ,2013.0,21152684,2007-06-01
 3433,Sapheon,Health Care,USA,CA,Napa Valley,Santa Rosa,venture,A,2011-03-07,2011-03, 2011-Q1 ,2011.0,2399250,2007-01-01
 3434,Sapheon,Health Care,USA,CA,Napa Valley,Santa Rosa,venture,B,2012-08-24,2012-08, 2012-Q3 ,2012.0,8600000,2007-01-01
 3435,Sapphire Energy,Clean Technology,USA,CA,San Diego,San Diego,venture,C,2008-05-28,2008-05, 2008-Q2 ,2008.0,50000000,2007-01-01
-3436,Sapphire Energy,Clean Technology,USA,CA,San Diego,San Diego,venture,D,2008-09-17,2008-09, 2008-Q3 ,2008.0,35000000,2007-01-01
 3437,Sauce Labs,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,A,2009-07-30,2009-07, 2009-Q3 ,2009.0,7000000,2008-08-01
 3438,Sauce Labs,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,B,2012-08-27,2012-08, 2012-Q3 ,2012.0,4000000,2008-08-01
 3439,Sauce Labs,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,C,2014-02-01,2014-02, 2014-Q1 ,2014.0,5000000,2008-08-01
@@ -3467,7 +3277,6 @@
 3465,ScoreBig,E-Commerce,USA,CA,Los Angeles,Los Angeles,venture,A,2010-03-01,2010-03, 2010-Q1 ,2010.0,2375000,2009-08-01
 3466,ScoreBig,E-Commerce,USA,CA,Los Angeles,Los Angeles,venture,B,2011-04-20,2011-04, 2011-Q2 ,2011.0,14100000,2009-08-01
 3467,ScoreBig,E-Commerce,USA,CA,Los Angeles,Los Angeles,venture,C,2013-09-10,2013-09, 2013-Q3 ,2013.0,10000000,2009-08-01
-3468,ScoreBig,E-Commerce,USA,CA,Los Angeles,Los Angeles,venture,D,2014-10-28,2014-10, 2014-Q4 ,2014.0,18000000,2009-08-01
 3469,Scoutmob,Coupons,USA,GA,Atlanta,Atlanta,seed/angel,0,2012-05-24,2012-05, 2012-Q2 ,2012.0,3250000,2010-01-13
 3470,Scoutmob,Coupons,USA,GA,Atlanta,Atlanta,venture,A,2011-04-12,2011-04, 2011-Q2 ,2011.0,1500000,2010-01-13
 3471,Scoutmob,Coupons,USA,GA,Atlanta,Atlanta,venture,B,2014-04-10,2014-04, 2014-Q2 ,2014.0,3000000,2010-01-13
@@ -3513,7 +3322,6 @@
 3511,Sente Inc.,Biotechnology,USA,CA,San Diego,Encinitas,venture,C,2014-06-02,2014-06, 2014-Q2 ,2014.0,5000000,2007-01-01
 3512,Sequent Medical,Health Care,USA,CA,Anaheim,Aliso Viejo,venture,B,2010-05-14,2010-05, 2010-Q2 ,2010.0,15600000,2007-01-01
 3513,Sequent Medical,Health Care,USA,CA,Anaheim,Aliso Viejo,venture,C,2012-03-06,2012-03, 2012-Q1 ,2012.0,26000000,2007-01-01
-3514,Sequent Medical,Health Care,USA,CA,Anaheim,Aliso Viejo,venture,D,2014-04-08,2014-04, 2014-Q2 ,2014.0,20000000,2007-01-01
 3515,Sequenta,Biotechnology,USA,CA,SF Bay Area,San Francisco,venture,B,2010-12-08,2010-12, 2010-Q4 ,2010.0,13000000,2008-01-01
 3516,Sequenta,Biotechnology,USA,CA,SF Bay Area,San Francisco,venture,C,2013-07-02,2013-07, 2013-Q3 ,2013.0,20000000,2008-01-01
 3517,Seriously,Mobile,USA,CA,Los Angeles,Santa Monica,seed/angel,0,2014-05-30,2014-05, 2014-Q2 ,2014.0,2650000,2013-08-01
@@ -3521,8 +3329,6 @@
 3519,ServiceMax,Enterprise Software,USA,CA,SF Bay Area,Pleasanton,venture,A,2008-11-04,2008-11, 2008-Q4 ,2008.0,2000000,2007-01-01
 3520,ServiceMax,Enterprise Software,USA,CA,SF Bay Area,Pleasanton,venture,B,2010-04-15,2010-04, 2010-Q2 ,2010.0,8000000,2007-01-01
 3521,ServiceMax,Enterprise Software,USA,CA,SF Bay Area,Pleasanton,venture,C,2011-06-08,2011-06, 2011-Q2 ,2011.0,14000000,2007-01-01
-3522,ServiceMax,Enterprise Software,USA,CA,SF Bay Area,Pleasanton,venture,D,2012-11-07,2012-11, 2012-Q4 ,2012.0,27000000,2007-01-01
-3523,ServiceMax,Enterprise Software,USA,CA,SF Bay Area,Pleasanton,venture,E,2014-03-04,2014-03, 2014-Q1 ,2014.0,71000000,2007-01-01
 3524,Servio,Translation,USA,CA,SF Bay Area,San Francisco,venture,A,2010-08-13,2010-08, 2010-Q3 ,2010.0,5100000,2009-04-30
 3525,Servio,Translation,USA,CA,SF Bay Area,San Francisco,venture,B,2013-03-06,2013-03, 2013-Q1 ,2013.0,4256180,2009-04-30
 3526,SessionM,Advertising,USA,MA,Boston,Boston,venture,A,2011-05-21,2011-05, 2011-Q2 ,2011.0,6500000,2011-01-01
@@ -3549,7 +3355,6 @@
 3547,Sharethrough,Monetization,USA,CA,SF Bay Area,San Francisco,venture,A,2010-10-18,2010-10, 2010-Q4 ,2010.0,5000000,2008-01-01
 3548,Sharethrough,Monetization,USA,CA,SF Bay Area,San Francisco,venture,B,2012-10-11,2012-10, 2012-Q4 ,2012.0,5000000,2008-01-01
 3549,Sharethrough,Monetization,USA,CA,SF Bay Area,San Francisco,venture,C,2014-01-22,2014-01, 2014-Q1 ,2014.0,7000000,2008-01-01
-3550,Sharethrough,Monetization,USA,CA,SF Bay Area,San Francisco,venture,D,2014-09-29,2014-09, 2014-Q3 ,2014.0,10000000,2008-01-01
 3551,Sharp Edge Labs,Biotechnology,USA,PA,Pittsburgh,Pittsburgh,seed/angel,0,2013-07-09,2013-07, 2013-Q3 ,2013.0,250000,2011-01-01
 3552,Sharp Edge Labs,Biotechnology,USA,PA,Pittsburgh,Pittsburgh,venture,B,2014-08-19,2014-08, 2014-Q3 ,2014.0,600000,2011-01-01
 3553,Shelby.tv,Video,USA,NY,New York City,New York,seed/angel,0,2011-07-14,2011-07, 2011-Q3 ,2011.0,1500000,2011-01-10
@@ -3620,7 +3425,6 @@
 3618,Siluria Technologies,Nanotechnology,USA,CA,SF Bay Area,San Francisco,venture,A,2010-10-19,2010-10, 2010-Q4 ,2010.0,13300000,2008-01-01
 3619,Siluria Technologies,Nanotechnology,USA,CA,SF Bay Area,San Francisco,venture,B,2011-09-27,2011-09, 2011-Q3 ,2011.0,20000000,2008-01-01
 3620,Siluria Technologies,Nanotechnology,USA,CA,SF Bay Area,San Francisco,venture,C,2013-01-25,2013-01, 2013-Q1 ,2013.0,2900582,2008-01-01
-3621,Siluria Technologies,Nanotechnology,USA,CA,SF Bay Area,San Francisco,venture,D,2014-08-20,2014-08, 2014-Q3 ,2014.0,30000000,2008-01-01
 3622,Silverback Learning Solutions,Education,USA,ID,Boise,Boise,seed/angel,0,2013-06-12,2013-06, 2013-Q2 ,2013.0,2500000,2010-01-01
 3623,Silverback Learning Solutions,Education,USA,ID,Boise,Boise,venture,A,2012-01-10,2012-01, 2012-Q1 ,2012.0,721062,2010-01-01
 3624,Silverback Learning Solutions,Education,USA,ID,Boise,Boise,venture,B,2012-05-14,2012-05, 2012-Q2 ,2012.0,2095420,2010-01-01
@@ -3658,7 +3462,6 @@
 3656,Simulmedia,Media,USA,NY,New York City,New York,venture,A,2009-03-06,2009-03, 2009-Q1 ,2009.0,4000000,2009-01-01
 3657,Simulmedia,Media,USA,NY,New York City,New York,venture,B,2010-04-21,2010-04, 2010-Q2 ,2010.0,8000000,2009-01-01
 3658,Simulmedia,Media,USA,NY,New York City,New York,venture,C,2013-02-11,2013-02, 2013-Q1 ,2013.0,6000000,2009-01-01
-3659,Simulmedia,Media,USA,NY,New York City,New York,venture,D,2013-12-10,2013-12, 2013-Q4 ,2013.0,25000000,2009-01-01
 3660,SinglePlatform,Web Development,USA,NY,New York City,New York,seed/angel,0,2010-09-29,2010-09, 2010-Q3 ,2010.0,1200000,2010-01-01
 3661,SinglePlatform,Web Development,USA,NY,New York City,New York,venture,A,2011-08-01,2011-08, 2011-Q3 ,2011.0,3250000,2010-01-01
 3662,Singly,Analytics,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2011-02-01,2011-02, 2011-Q1 ,2011.0,1950000,2010-12-21
@@ -3688,13 +3491,9 @@
 3686,Slack,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,A,2010-04-01,2010-04, 2010-Q2 ,2010.0,5000000,2009-01-01
 3687,Slack,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,B,2011-04-01,2011-04, 2011-Q2 ,2011.0,10700000,2009-01-01
 3688,Slack,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,C,2014-04-27,2014-04, 2014-Q2 ,2014.0,42750000,2009-01-01
-3689,Slack,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,D,2014-10-31,2014-10, 2014-Q4 ,2014.0,120000000,2009-01-01
 3690,Slice,Curated Web,USA,CA,SF Bay Area,Palo Alto,venture,A,2011-05-25,2011-05, 2011-Q2 ,2011.0,9400000,2010-01-01
 3691,Slice,Curated Web,USA,CA,SF Bay Area,Palo Alto,venture,B,2013-08-23,2013-08, 2013-Q3 ,2013.0,23000000,2010-01-01
 3692,Small Bone Innovations,Health Care,USA,PA,Philadelphia,Morrisville,venture,C,2008-01-01,2008-01, 2008-Q1 ,2008.0,36000000,2009-05-01
-3693,Small Bone Innovations,Health Care,USA,PA,Philadelphia,Morrisville,venture,D,2009-04-30,2009-04, 2009-Q2 ,2009.0,108000000,2009-05-01
-3694,Small Bone Innovations,Health Care,USA,PA,Philadelphia,Morrisville,venture,E,2010-05-13,2010-05, 2010-Q2 ,2010.0,12000000,2009-05-01
-3695,Small Bone Innovations,Health Care,USA,PA,Philadelphia,Morrisville,venture,F,2010-12-17,2010-12, 2010-Q4 ,2010.0,15000000,2009-05-01
 3696,Smart Lunches,E-Commerce,USA,MA,Boston,Boston,venture,A,2012-08-23,2012-08, 2012-Q3 ,2012.0,1000000,2011-01-01
 3697,Smart Lunches,E-Commerce,USA,MA,Boston,Boston,venture,B,2013-06-19,2013-06, 2013-Q2 ,2013.0,1600000,2011-01-01
 3698,Smart Skin Technologies,Hardware + Software,USA,NJ,Newark,New Brunswick,seed/angel,0,2014-01-17,2014-01, 2014-Q1 ,2014.0,3900000,2009-01-01
@@ -3714,7 +3513,6 @@
 3712,Smartling,Enterprise Software,USA,NY,New York City,New York,venture,A,2010-03-18,2010-03, 2010-Q1 ,2010.0,4099998,2009-01-01
 3713,Smartling,Enterprise Software,USA,NY,New York City,New York,venture,B,2011-07-27,2011-07, 2011-Q3 ,2011.0,10000000,2009-01-01
 3714,Smartling,Enterprise Software,USA,NY,New York City,New York,venture,C,2013-10-09,2013-10, 2013-Q4 ,2013.0,24000000,2009-01-01
-3715,Smartling,Enterprise Software,USA,NY,New York City,New York,venture,D,2014-05-21,2014-05, 2014-Q2 ,2014.0,25000000,2009-01-01
 3716,Smule,Music,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2008-01-01,2008-01, 2008-Q1 ,2008.0,1600000,2008-01-01
 3717,Smule,Music,USA,CA,SF Bay Area,San Francisco,venture,A,2009-02-13,2009-02, 2009-Q1 ,2009.0,3900000,2008-01-01
 3718,Smule,Music,USA,CA,SF Bay Area,San Francisco,venture,C,2009-12-16,2009-12, 2009-Q4 ,2009.0,8000000,2008-01-01
@@ -3766,13 +3564,11 @@
 3764,Sojern,Travel,USA,CA,SF Bay Area,San Francisco,venture,C,2013-12-17,2013-12, 2013-Q4 ,2013.0,10000000,2007-09-10
 3765,Solar Junction,Manufacturing,USA,CA,SF Bay Area,San Jose,venture,A,2008-05-23,2008-05, 2008-Q2 ,2008.0,18020000,2007-01-01
 3766,Solar Junction,Manufacturing,USA,CA,SF Bay Area,San Jose,venture,C,2010-03-17,2010-03, 2010-Q1 ,2010.0,13300000,2007-01-01
-3767,Solar Junction,Manufacturing,USA,CA,SF Bay Area,San Jose,venture,D,2012-02-13,2012-02, 2012-Q1 ,2012.0,19200000,2007-01-01
 3768,Soldsie,E-Commerce,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2013-03-06,2013-03, 2013-Q1 ,2013.0,1000000,2012-05-01
 3769,Soldsie,E-Commerce,USA,CA,SF Bay Area,San Francisco,venture,A,2014-05-16,2014-05, 2014-Q2 ,2014.0,4000000,2012-05-01
 3770,SolidFire,Enterprise Software,USA,CO,Denver,Boulder,venture,A,2011-02-02,2011-02, 2011-Q1 ,2011.0,11000000,2010-01-01
 3771,SolidFire,Enterprise Software,USA,CO,Denver,Boulder,venture,B,2011-10-31,2011-10, 2011-Q4 ,2011.0,25000000,2010-01-01
 3772,SolidFire,Enterprise Software,USA,CO,Denver,Boulder,venture,C,2013-07-25,2013-07, 2013-Q3 ,2013.0,31000000,2010-01-01
-3773,SolidFire,Enterprise Software,USA,CO,Denver,Boulder,venture,D,2014-10-07,2014-10, 2014-Q4 ,2014.0,82000000,2010-01-01
 3774,"Solix BioSystems, Inc.",Clean Technology,USA,CO,Fort Collins,Fort Collins,venture,A,2009-07-02,2009-07, 2009-Q3 ,2009.0,6300000,2009-01-01
 3775,"Solix BioSystems, Inc.",Clean Technology,USA,CO,Fort Collins,Fort Collins,venture,B,2011-03-28,2011-03, 2011-Q1 ,2011.0,16000000,2009-01-01
 3776,"Solix BioSystems, Inc.",Clean Technology,USA,CO,Fort Collins,Fort Collins,venture,C,2012-08-03,2012-08, 2012-Q3 ,2012.0,31000000,2009-01-01
@@ -3841,13 +3637,11 @@
 3839,SpoonRocket,Hospitality,USA,CA,SF Bay Area,Berkeley,venture,A,2014-05-15,2014-05, 2014-Q2 ,2014.0,11000000,2013-01-01
 3840,Sport Ngin,Software,USA,MN,Minneapolis,Minneapolis,venture,B,2011-08-25,2011-08, 2011-Q3 ,2011.0,3500000,2008-01-01
 3841,Sport Ngin,Software,USA,MN,Minneapolis,Minneapolis,venture,C,2013-04-02,2013-04, 2013-Q2 ,2013.0,6000000,2008-01-01
-3842,Sport Ngin,Software,USA,MN,Minneapolis,Minneapolis,venture,D,2014-06-25,2014-06, 2014-Q2 ,2014.0,25000000,2008-01-01
 3843,SportsManias,Sports,USA,FL,Miami,Miami,seed/angel,0,2013-08-15,2013-08, 2013-Q3 ,2013.0,1000000,2012-01-01
 3844,SportsManias,Sports,USA,FL,Miami,Miami,venture,A,2014-07-27,2014-07, 2014-Q3 ,2014.0,3500000,2012-01-01
 3845,Spredfast,Twitter Applications,USA,TX,Austin,Austin,venture,A,2010-04-14,2010-04, 2010-Q2 ,2010.0,1600000,2008-03-10
 3846,Spredfast,Twitter Applications,USA,TX,Austin,Austin,venture,B,2011-09-26,2011-09, 2011-Q3 ,2011.0,12000000,2008-03-10
 3847,Spredfast,Twitter Applications,USA,TX,Austin,Austin,venture,C,2013-02-05,2013-02, 2013-Q1 ,2013.0,18000000,2008-03-10
-3848,Spredfast,Twitter Applications,USA,TX,Austin,Austin,venture,D,2014-01-03,2014-01, 2014-Q1 ,2014.0,32500000,2008-03-10
 3849,Spree Commerce,E-Commerce,USA,MD,"Washington, D.C.",Bethesda,seed/angel,0,2011-10-10,2011-10, 2011-Q4 ,2011.0,1500000,2011-07-01
 3850,Spree Commerce,E-Commerce,USA,MD,"Washington, D.C.",Bethesda,venture,A,2014-02-25,2014-02, 2014-Q1 ,2014.0,5000000,2011-07-01
 3851,Sprig,Hospitality,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2013-11-06,2013-11, 2013-Q4 ,2013.0,1200000,2013-04-01
@@ -3855,7 +3649,6 @@
 3853,Sprinklr,Social CRM,USA,NY,New York City,New York,venture,A,2012-03-07,2012-03, 2012-Q1 ,2012.0,5000000,2009-09-01
 3854,Sprinklr,Social CRM,USA,NY,New York City,New York,venture,B,2013-02-05,2013-02, 2013-Q1 ,2013.0,15000000,2009-09-01
 3855,Sprinklr,Social CRM,USA,NY,New York City,New York,venture,C,2013-11-05,2013-11, 2013-Q4 ,2013.0,17500000,2009-09-01
-3856,Sprinklr,Social CRM,USA,NY,New York City,New York,venture,D,2014-04-29,2014-04, 2014-Q2 ,2014.0,40000000,2009-09-01
 3857,Sprout,Advertising,USA,CA,SF Bay Area,San Francisco,venture,A,2007-05-31,2007-05, 2007-Q2 ,2007.0,3300000,2008-02-01
 3858,Sprout,Advertising,USA,CA,SF Bay Area,San Francisco,venture,B,2008-05-01,2008-05, 2008-Q2 ,2008.0,5000000,2008-02-01
 3859,Sprout Social,Google Apps,USA,IL,Chicago,Chicago,venture,B,2014-06-20,2014-06, 2014-Q2 ,2014.0,18000000,2010-01-01
@@ -3865,8 +3658,6 @@
 3863,Square,P2P Money Transfer,USA,CA,SF Bay Area,San Francisco,venture,A,2009-11-01,2009-11, 2009-Q4 ,2009.0,10000000,2009-02-01
 3864,Square,P2P Money Transfer,USA,CA,SF Bay Area,San Francisco,venture,B,2011-01-10,2011-01, 2011-Q1 ,2011.0,27500000,2009-02-01
 3865,Square,P2P Money Transfer,USA,CA,SF Bay Area,San Francisco,venture,C,2011-12-09,2011-12, 2011-Q4 ,2011.0,3000000,2009-02-01
-3866,Square,P2P Money Transfer,USA,CA,SF Bay Area,San Francisco,venture,D,2012-09-17,2012-09, 2012-Q3 ,2012.0,200000000,2009-02-01
-3867,Square,P2P Money Transfer,USA,CA,SF Bay Area,San Francisco,venture,E,2014-10-05,2014-10, 2014-Q4 ,2014.0,150000000,2009-02-01
 3868,Stack Exchange,Software,USA,NY,New York City,New York,venture,A,2010-05-04,2010-05, 2010-Q2 ,2010.0,6000000,2008-07-01
 3869,Stack Exchange,Software,USA,NY,New York City,New York,venture,B,2011-03-08,2011-03, 2011-Q1 ,2011.0,12000000,2008-07-01
 3870,Stackdriver,Enterprise Software,USA,MA,Boston,Boston,venture,A,2012-07-27,2012-07, 2012-Q3 ,2012.0,5000000,2012-06-22
@@ -3911,7 +3702,6 @@
 3909,StoryBox,Media,USA,CA,SF Bay Area,San Francisco,venture,A,2011-06-09,2011-06, 2011-Q2 ,2011.0,2000000,2010-03-01
 3910,Strava,iOS,USA,CA,SF Bay Area,San Francisco,venture,A,2011-01-12,2011-01, 2011-Q1 ,2011.0,3500000,2009-01-01
 3911,Strava,iOS,USA,CA,SF Bay Area,San Francisco,venture,B,2011-07-27,2011-07, 2011-Q3 ,2011.0,12600000,2009-01-01
-3912,Strava,iOS,USA,CA,SF Bay Area,San Francisco,venture,D,2014-10-29,2014-10, 2014-Q4 ,2014.0,18500000,2009-01-01
 3913,Stray Boots,Travel,USA,NY,New York City,New York,seed/angel,0,2012-04-01,2012-04, 2012-Q2 ,2012.0,200000,2009-01-02
 3914,Stray Boots,Travel,USA,NY,New York City,New York,venture,A,2012-11-27,2012-11, 2012-Q4 ,2012.0,2000000,2009-01-02
 3915,Streamweaver,Social Media,USA,TN,Nashville,Nashville,seed/angel,0,2012-09-01,2012-09, 2012-Q3 ,2012.0,650000,2011-01-01
@@ -3920,7 +3710,6 @@
 3918,Stripe,Credit Cards,USA,CA,SF Bay Area,San Francisco,venture,A,2012-02-09,2012-02, 2012-Q1 ,2012.0,18000000,2010-01-01
 3919,Stripe,Credit Cards,USA,CA,SF Bay Area,San Francisco,venture,B,2012-07-09,2012-07, 2012-Q3 ,2012.0,20000000,2010-01-01
 3920,Stripe,Credit Cards,USA,CA,SF Bay Area,San Francisco,venture,C,2014-01-22,2014-01, 2014-Q1 ,2014.0,80000000,2010-01-01
-3921,Stripe,Credit Cards,USA,CA,SF Bay Area,San Francisco,venture,D,2014-12-02,2014-12, 2014-Q4 ,2014.0,70000000,2010-01-01
 3922,StudioNow,Photography,USA,TN,Nashville,Nashville,venture,A,2008-08-26,2008-08, 2008-Q3 ,2008.0,2000000,2007-01-01
 3923,StudioNow,Photography,USA,TN,Nashville,Nashville,venture,B,2014-08-20,2014-08, 2014-Q3 ,2014.0,5000000,2007-01-01
 3924,StyleHaul,Fashion,USA,CA,Los Angeles,Los Angeles,venture,A,2012-02-02,2012-02, 2012-Q1 ,2012.0,4400000,2011-01-01
@@ -3934,16 +3723,13 @@
 3932,Sun Catalytix,Clean Technology,USA,MA,Boston,Cambridge,venture,B,2010-10-07,2010-10, 2010-Q4 ,2010.0,9500000,2008-01-01
 3933,Sun Catalytix,Clean Technology,USA,MA,Boston,Cambridge,venture,C,2009-11-23,2009-11, 2009-Q4 ,2009.0,1000000,2008-01-01
 3934,Sungevity,Clean Technology,USA,CA,SF Bay Area,Oakland,venture,C,2010-12-15,2010-12, 2010-Q4 ,2010.0,15000000,2008-01-01
-3935,Sungevity,Clean Technology,USA,CA,SF Bay Area,Oakland,venture,D,2012-01-16,2012-01, 2012-Q1 ,2012.0,12000000,2008-01-01
 3936,Sunrise,Design,USA,NY,New York City,New York,seed/angel,0,2013-06-04,2013-06, 2013-Q2 ,2013.0,2200000,2012-12-01
 3937,Sunrise,Design,USA,NY,New York City,New York,venture,A,2014-07-22,2014-07, 2014-Q3 ,2014.0,6000000,2012-12-01
 3938,Sunrun,Solar,USA,CA,SF Bay Area,San Francisco,venture,A,2008-06-20,2008-06, 2008-Q2 ,2008.0,12000000,2007-01-01
 3939,Sunrun,Solar,USA,CA,SF Bay Area,San Francisco,venture,B,2009-07-28,2009-07, 2009-Q3 ,2009.0,18000000,2007-01-01
 3940,Sunrun,Solar,USA,CA,SF Bay Area,San Francisco,venture,C,2010-06-29,2010-06, 2010-Q2 ,2010.0,55000000,2007-01-01
-3941,Sunrun,Solar,USA,CA,SF Bay Area,San Francisco,venture,D,2012-05-23,2012-05, 2012-Q2 ,2012.0,60000000,2007-01-01
 3942,SuperData Research,Market Research,USA,NY,New York City,New York,venture,B,1999-04-01,1999-04, 1999-Q2 ,1999.0,1999069,2009-08-01
 3943,SuperData Research,Market Research,USA,NY,New York City,New York,venture,C,2000-01-01,2000-01, 2000-Q1 ,2000.0,5378509,2009-08-01
-3944,SuperData Research,Market Research,USA,NY,New York City,New York,venture,D,2010-07-01,2010-07, 2010-Q3 ,2010.0,29469548,2009-08-01
 3945,Superpedestrian,Automotive,USA,MA,Boston,Cambridge,venture,A,2013-10-21,2013-10, 2013-Q4 ,2013.0,2100000,2008-07-01
 3946,Superpedestrian,Automotive,USA,MA,Boston,Cambridge,venture,B,2014-09-29,2014-09, 2014-Q3 ,2014.0,4000000,2008-07-01
 3947,Supersonic,Mobile,USA,CA,SF Bay Area,San Bruno,seed/angel,0,2010-05-01,2010-05, 2010-Q2 ,2010.0,2000000,2009-01-01
@@ -4018,7 +3804,6 @@
 4016,Talari Networks,Internet,USA,CA,SF Bay Area,San Jose,venture,A,2008-01-01,2008-01, 2008-Q1 ,2008.0,1400000,2009-01-01
 4017,Talari Networks,Internet,USA,CA,SF Bay Area,San Jose,venture,B,2008-12-10,2008-12, 2008-Q4 ,2008.0,6200000,2009-01-01
 4018,Talari Networks,Internet,USA,CA,SF Bay Area,San Jose,venture,C,2010-07-30,2010-07, 2010-Q3 ,2010.0,10000000,2009-01-01
-4019,Talari Networks,Internet,USA,CA,SF Bay Area,San Jose,venture,D,2013-11-18,2013-11, 2013-Q4 ,2013.0,15000000,2009-01-01
 4020,TalentBin,Recruiting,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2013-07-16,2013-07, 2013-Q3 ,2013.0,1200000,2011-05-20
 4021,TalentBin,Recruiting,USA,CA,SF Bay Area,San Francisco,venture,A,2013-07-16,2013-07, 2013-Q3 ,2013.0,2000000,2011-05-20
 4022,Talenthouse,Sales and Marketing,USA,CA,Los Angeles,West Hollywood,venture,A,2009-01-01,2009-01, 2009-Q1 ,2009.0,6000000,2009-06-30
@@ -4029,7 +3814,6 @@
 4027,Tango,Messaging,USA,CA,SF Bay Area,Mountain View,venture,A,2010-06-01,2010-06, 2010-Q2 ,2010.0,500000,2009-09-09
 4028,Tango,Messaging,USA,CA,SF Bay Area,Mountain View,venture,B,2011-07-20,2011-07, 2011-Q3 ,2011.0,42000000,2009-09-09
 4029,Tango,Messaging,USA,CA,SF Bay Area,Mountain View,venture,C,2012-04-19,2012-04, 2012-Q2 ,2012.0,38097364,2009-09-09
-4030,Tango,Messaging,USA,CA,SF Bay Area,Mountain View,venture,D,2014-03-19,2014-03, 2014-Q1 ,2014.0,280000000,2009-09-09
 4031,Tango Card,Enterprise Software,USA,WA,Seattle,Seattle,seed/angel,0,2010-01-01,2010-01, 2010-Q1 ,2010.0,1000000,2009-01-01
 4032,Tango Card,Enterprise Software,USA,WA,Seattle,Seattle,venture,B,2014-04-02,2014-04, 2014-Q2 ,2014.0,3328850,2009-01-01
 4033,Tango Health,Health Care,USA,TX,Austin,Austin,venture,A,2010-11-17,2010-11, 2010-Q4 ,2010.0,3000000,2009-01-01
@@ -4048,9 +3832,7 @@
 4046,Tapjoy,Brand Marketing,USA,CA,SF Bay Area,San Francisco,venture,A,2007-06-01,2007-06, 2007-Q2 ,2007.0,4600000,2007-01-01
 4047,Tapjoy,Brand Marketing,USA,CA,SF Bay Area,San Francisco,venture,B,2009-02-17,2009-02, 2009-Q1 ,2009.0,15000000,2007-01-01
 4048,Tapjoy,Brand Marketing,USA,CA,SF Bay Area,San Francisco,venture,C,2011-01-06,2011-01, 2011-Q1 ,2011.0,21000000,2007-01-01
-4049,Tapjoy,Brand Marketing,USA,CA,SF Bay Area,San Francisco,venture,D,2011-07-05,2011-07, 2011-Q3 ,2011.0,30000000,2007-01-01
 4050,Taptu,News,USA,CO,Denver,Denver,venture,B,2008-12-18,2008-12, 2008-Q4 ,2008.0,9914102,2007-10-01
-4051,Taptu,News,USA,CO,Denver,Denver,venture,D,2010-04-01,2010-04, 2010-Q2 ,2010.0,4566197,2007-10-01
 4052,"TargetSpot, Inc.",Digital Media,USA,NY,New York City,New York,venture,B,2008-03-11,2008-03, 2008-Q1 ,2008.0,8600000,2007-01-01
 4053,"TargetSpot, Inc.",Digital Media,USA,NY,New York City,New York,venture,C,2011-01-11,2011-01, 2011-Q1 ,2011.0,8000000,2007-01-01
 4054,Tarsa Therapeutics,Biotechnology,USA,PA,Philadelphia,Philadelphia,venture,A,2010-01-17,2010-01, 2010-Q1 ,2010.0,24000000,2009-01-01
@@ -4069,14 +3851,12 @@
 4067,Taulia,Hardware + Software,USA,CA,SF Bay Area,San Francisco,venture,A,2010-12-06,2010-12, 2010-Q4 ,2010.0,3200000,2009-01-01
 4068,Taulia,Hardware + Software,USA,CA,SF Bay Area,San Francisco,venture,B,2011-07-01,2011-07, 2011-Q3 ,2011.0,8500000,2009-01-01
 4069,Taulia,Hardware + Software,USA,CA,SF Bay Area,San Francisco,venture,C,2013-08-23,2013-08, 2013-Q3 ,2013.0,18000000,2009-01-01
-4070,Taulia,Hardware + Software,USA,CA,SF Bay Area,San Francisco,venture,D,2014-07-22,2014-07, 2014-Q3 ,2014.0,27000000,2009-01-01
 4071,Taykey,Advertising,USA,NY,New York City,New York,venture,A,2010-05-24,2010-05, 2010-Q2 ,2010.0,2000000,2009-01-01
 4072,Taykey,Advertising,USA,NY,New York City,New York,venture,B,2011-06-09,2011-06, 2011-Q2 ,2011.0,9000000,2009-01-01
 4073,Taykey,Advertising,USA,NY,New York City,New York,venture,C,2013-07-17,2013-07, 2013-Q3 ,2013.0,6000000,2009-01-01
 4074,Tealium,Enterprise Software,USA,CA,San Diego,San Diego,venture,A,2012-01-10,2012-01, 2012-Q1 ,2012.0,1100000,2008-03-01
 4075,Tealium,Enterprise Software,USA,CA,San Diego,San Diego,venture,B,2012-07-16,2012-07, 2012-Q3 ,2012.0,10500000,2008-03-01
 4076,Tealium,Enterprise Software,USA,CA,San Diego,San Diego,venture,C,2013-04-03,2013-04, 2013-Q2 ,2013.0,15600000,2008-03-01
-4077,Tealium,Enterprise Software,USA,CA,San Diego,San Diego,venture,D,2014-04-29,2014-04, 2014-Q2 ,2014.0,20000000,2008-03-01
 4078,TeamSnap,Mobile,USA,CO,Denver,Boulder,venture,A,2010-06-09,2010-06, 2010-Q2 ,2010.0,700000,2009-05-01
 4079,TeamSnap,Mobile,USA,CO,Denver,Boulder,venture,B,2014-02-04,2014-02, 2014-Q1 ,2014.0,7500000,2009-05-01
 4080,Teespring,E-Commerce,USA,RI,Providence,Providence,seed/angel,0,2012-02-01,2012-02, 2012-Q1 ,2012.0,675000,2011-01-01
@@ -4142,7 +3922,6 @@
 4140,ThirdMotion,Games,USA,CA,SF Bay Area,San Francisco,venture,B,2011-11-22,2011-11, 2011-Q4 ,2011.0,7500000,2009-01-01
 4141,Thismoment,Software,USA,CA,SF Bay Area,San Francisco,venture,A,2011-11-15,2011-11, 2011-Q4 ,2011.0,7300000,2008-04-01
 4142,Thismoment,Software,USA,CA,SF Bay Area,San Francisco,venture,C,2012-06-13,2012-06, 2012-Q2 ,2012.0,22000000,2008-04-01
-4143,Thismoment,Software,USA,CA,SF Bay Area,San Francisco,venture,D,2014-10-15,2014-10, 2014-Q4 ,2014.0,17600000,2008-04-01
 4144,Threadflip,E-Commerce,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-04-18,2012-04, 2012-Q2 ,2012.0,1600000,2011-01-01
 4145,Threadflip,E-Commerce,USA,CA,SF Bay Area,San Francisco,venture,A,2012-06-05,2012-06, 2012-Q2 ,2012.0,6500000,2011-01-01
 4146,Threadflip,E-Commerce,USA,CA,SF Bay Area,San Francisco,venture,B,2014-07-18,2014-07, 2014-Q3 ,2014.0,13000000,2011-01-01
@@ -4154,7 +3933,6 @@
 4152,Thumbtack,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,A,2012-01-09,2012-01, 2012-Q1 ,2012.0,4500000,2008-01-01
 4153,Thumbtack,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,B,2013-06-13,2013-06, 2013-Q2 ,2013.0,12500000,2008-01-01
 4154,Thumbtack,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,C,2014-05-20,2014-05, 2014-Q2 ,2014.0,30000000,2008-01-01
-4155,Thumbtack,Curated Web,USA,CA,SF Bay Area,San Francisco,venture,D,2014-08-20,2014-08, 2014-Q3 ,2014.0,100000000,2008-01-01
 4156,Ticket Evolution,Software,USA,NY,New York City,New York,seed/angel,0,2010-10-01,2010-10, 2010-Q4 ,2010.0,1700000,2010-07-14
 4157,Ticket Evolution,Software,USA,NY,New York City,New York,venture,A,2012-05-21,2012-05, 2012-Q2 ,2012.0,3500000,2010-07-14
 4158,Ticketfly,Social Media Marketing,USA,CA,SF Bay Area,San Francisco,venture,A,2010-05-12,2010-05, 2010-Q2 ,2010.0,3000000,2008-02-01
@@ -4168,7 +3946,6 @@
 4166,Tigo Energy,Clean Technology,USA,CA,SF Bay Area,Los Gatos,venture,A,2008-05-23,2008-05, 2008-Q2 ,2008.0,6000000,2007-01-01
 4167,Tigo Energy,Clean Technology,USA,CA,SF Bay Area,Los Gatos,venture,B,2009-06-08,2009-06, 2009-Q2 ,2009.0,10000000,2007-01-01
 4168,Tigo Energy,Clean Technology,USA,CA,SF Bay Area,Los Gatos,venture,C,2011-11-02,2011-11, 2011-Q4 ,2011.0,5000000,2007-01-01
-4169,Tigo Energy,Clean Technology,USA,CA,SF Bay Area,Los Gatos,venture,D,2011-12-12,2011-12, 2011-Q4 ,2011.0,18000000,2007-01-01
 4170,Tilt,Finance,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-05-17,2012-05, 2012-Q2 ,2012.0,2100000,2012-02-08
 4171,Tilt,Finance,USA,CA,SF Bay Area,San Francisco,venture,A,2013-03-22,2013-03, 2013-Q1 ,2013.0,12000000,2012-02-08
 4172,Tilt,Finance,USA,CA,SF Bay Area,San Francisco,venture,B,2013-12-16,2013-12, 2013-Q4 ,2013.0,23000000,2012-02-08
@@ -4178,14 +3955,12 @@
 4176,TinderBox,Document Management,USA,IN,Indianapolis,Indianapolis,venture,B,2013-02-25,2013-02, 2013-Q1 ,2013.0,1300000,2010-01-01
 4177,TinderBox,Document Management,USA,IN,Indianapolis,Indianapolis,venture,C,2014-03-26,2014-03, 2014-Q1 ,2014.0,3000000,2010-01-01
 4178,Tintri,Virtualization,USA,CA,SF Bay Area,Mountain View,venture,C,2011-06-15,2011-06, 2011-Q2 ,2011.0,18000000,2008-01-01
-4179,Tintri,Virtualization,USA,CA,SF Bay Area,Mountain View,venture,E,2014-02-13,2014-02, 2014-Q1 ,2014.0,75000000,2008-01-01
 4180,TinyCo,Games,USA,CA,SF Bay Area,San Francisco,venture,A,2011-02-25,2011-02, 2011-Q1 ,2011.0,18000000,2009-01-01
 4181,TinyCo,Games,USA,CA,SF Bay Area,San Francisco,venture,B,2013-11-14,2013-11, 2013-Q4 ,2013.0,20000000,2009-01-01
 4182,Tinybop,Software,USA,NY,New York City,Brooklyn,seed/angel,0,2012-11-01,2012-11, 2012-Q4 ,2012.0,1000000,2011-11-01
 4183,Tinybop,Software,USA,NY,New York City,Brooklyn,venture,A,2014-05-23,2014-05, 2014-Q2 ,2014.0,5000000,2011-11-01
 4184,Tocagen,Biotechnology,USA,CA,San Diego,San Diego,venture,B,2009-06-02,2009-06, 2009-Q2 ,2009.0,10846000,2007-01-01
 4185,Tocagen,Biotechnology,USA,CA,San Diego,San Diego,venture,C,2009-11-23,2009-11, 2009-Q4 ,2009.0,9116162,2007-01-01
-4186,Tocagen,Biotechnology,USA,CA,San Diego,San Diego,venture,D,2010-03-09,2010-03, 2010-Q1 ,2010.0,7800000,2007-01-01
 4187,TokBox,Archiving,USA,CA,SF Bay Area,San Francisco,venture,A,2007-12-26,2007-12, 2007-Q4 ,2007.0,4000000,2007-05-01
 4188,TokBox,Archiving,USA,CA,SF Bay Area,San Francisco,venture,B,2008-08-06,2008-08, 2008-Q3 ,2008.0,10000000,2007-05-01
 4189,TokBox,Archiving,USA,CA,SF Bay Area,San Francisco,venture,C,2010-11-15,2010-11, 2010-Q4 ,2010.0,12000000,2007-05-01
@@ -4222,8 +3997,6 @@
 4220,Transpera,Mobile,USA,CA,SF Bay Area,San Francisco,venture,B,2008-11-12,2008-11, 2008-Q4 ,2008.0,8250000,2007-01-01
 4221,Transpera,Mobile,USA,CA,SF Bay Area,San Francisco,venture,C,2010-06-02,2010-06, 2010-Q2 ,2010.0,9000000,2007-01-01
 4222,Transphorm,Clean Technology,USA,CA,Santa Barbara,Goleta,venture,C,2011-02-23,2011-02, 2011-Q1 ,2011.0,20000000,2007-01-01
-4223,Transphorm,Clean Technology,USA,CA,Santa Barbara,Goleta,venture,D,2011-06-23,2011-06, 2011-Q2 ,2011.0,25000000,2007-01-01
-4224,Transphorm,Clean Technology,USA,CA,Santa Barbara,Goleta,venture,E,2012-10-01,2012-10, 2012-Q4 ,2012.0,35000000,2007-01-01
 4225,TravelMuse,Travel,USA,NY,New York City,New York,seed/angel,0,2007-05-01,2007-05, 2007-Q2 ,2007.0,3000000,2007-04-16
 4226,TravelMuse,Travel,USA,NY,New York City,New York,venture,A,2008-11-15,2008-11, 2008-Q4 ,2008.0,600000,2007-04-16
 4227,TravelMuse,Travel,USA,NY,New York City,New York,venture,B,2009-06-01,2009-06, 2009-Q2 ,2009.0,2000000,2007-04-16
@@ -4269,8 +4042,6 @@
 4267,Tumblr,Opinions,USA,NY,New York City,New York,venture,A,2007-10-31,2007-10, 2007-Q4 ,2007.0,750000,2007-02-01
 4268,Tumblr,Opinions,USA,NY,New York City,New York,venture,B,2008-12-11,2008-12, 2008-Q4 ,2008.0,4500000,2007-02-01
 4269,Tumblr,Opinions,USA,NY,New York City,New York,venture,C,2010-04-20,2010-04, 2010-Q2 ,2010.0,5000000,2007-02-01
-4270,Tumblr,Opinions,USA,NY,New York City,New York,venture,D,2010-11-19,2010-11, 2010-Q4 ,2010.0,30000000,2007-02-01
-4271,Tumblr,Opinions,USA,NY,New York City,New York,venture,E,2011-09-26,2011-09, 2011-Q3 ,2011.0,85000000,2007-02-01
 4272,TuneUp,Software,USA,CA,SF Bay Area,San Francisco,venture,A,2009-05-19,2009-05, 2009-Q2 ,2009.0,3000000,2007-08-01
 4273,TuneUp,Software,USA,CA,SF Bay Area,San Francisco,venture,C,2010-09-10,2010-09, 2010-Q3 ,2010.0,6300000,2007-08-01
 4274,TuneWiki,Games,USA,CA,Los Angeles,Santa Monica,venture,A,2008-04-01,2008-04, 2008-Q2 ,2008.0,3000000,2007-12-01
@@ -4284,7 +4055,6 @@
 4282,Twilio,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,A,2009-12-30,2009-12, 2009-Q4 ,2009.0,3700000,2007-01-01
 4283,Twilio,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,B,2010-11-09,2010-11, 2010-Q4 ,2010.0,12000000,2007-01-01
 4284,Twilio,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,C,2011-12-07,2011-12, 2011-Q4 ,2011.0,17000000,2007-01-01
-4285,Twilio,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,D,2013-06-07,2013-06, 2013-Q2 ,2013.0,70000000,2007-01-01
 4286,Twist Bioscience,Biotechnology,USA,CA,SF Bay Area,San Francisco,venture,A,2014-02-10,2014-02, 2014-Q1 ,2014.0,9110714,2013-01-01
 4287,Twist Bioscience,Biotechnology,USA,CA,SF Bay Area,San Francisco,venture,B,2014-05-27,2014-05, 2014-Q2 ,2014.0,26000000,2013-01-01
 4288,Twitch,Video Games,USA,CA,SF Bay Area,San Francisco,venture,B,2012-09-19,2012-09, 2012-Q3 ,2012.0,15000000,2007-01-01
@@ -4301,7 +4071,6 @@
 4299,Uber,Transportation,USA,CA,SF Bay Area,San Francisco,venture,A,2011-02-14,2011-02, 2011-Q1 ,2011.0,11000000,2009-03-01
 4300,Uber,Transportation,USA,CA,SF Bay Area,San Francisco,venture,B,2011-12-07,2011-12, 2011-Q4 ,2011.0,37000000,2009-03-01
 4301,Uber,Transportation,USA,CA,SF Bay Area,San Francisco,venture,C,2013-08-23,2013-08, 2013-Q3 ,2013.0,258000000,2009-03-01
-4302,Uber,Transportation,USA,CA,SF Bay Area,San Francisco,venture,D,2014-06-06,2014-06, 2014-Q2 ,2014.0,1200000000,2009-03-01
 4303,UberMedia,Ad Targeting,USA,CA,Los Angeles,Pasadena,venture,A,2010-04-11,2010-04, 2010-Q2 ,2010.0,3500000,2010-03-01
 4304,UberMedia,Ad Targeting,USA,CA,Los Angeles,Pasadena,venture,B,2011-02-14,2011-02, 2011-Q1 ,2011.0,17500000,2010-03-01
 4305,Ubiquity Global Services,Consulting,USA,NY,New York City,New York,venture,A,2012-09-01,2012-09, 2012-Q3 ,2012.0,4000000,2012-01-01
@@ -4375,14 +4144,12 @@
 4373,Veracyte,Health Care,USA,CA,SF Bay Area,South San Francisco,venture,B,2010-06-11,2010-06, 2010-Q2 ,2010.0,28000000,2008-01-01
 4374,Veracyte,Health Care,USA,CA,SF Bay Area,South San Francisco,venture,C,2013-06-28,2013-06, 2013-Q2 ,2013.0,28000000,2008-01-01
 4375,VeriTeQ Corporation,Mobile,USA,FL,Palm Beaches,Delray Beach,venture,C,2013-07-17,2013-07, 2013-Q3 ,2013.0,7393665,2011-12-01
-4376,VeriTeQ Corporation,Mobile,USA,FL,Palm Beaches,Delray Beach,venture,D,2014-11-13,2014-11, 2014-Q4 ,2014.0,1841000,2011-12-01
 4377,Vicarious,Software,USA,CA,SF Bay Area,San Francisco,venture,A,2012-08-21,2012-08, 2012-Q3 ,2012.0,15000000,2010-01-01
 4378,Vicarious,Software,USA,CA,SF Bay Area,San Francisco,venture,B,2014-03-21,2014-03, 2014-Q1 ,2014.0,40000000,2010-01-01
 4379,Vicarious,Software,USA,CA,SF Bay Area,San Francisco,venture,C,2014-11-06,2014-11, 2014-Q4 ,2014.0,12000000,2010-01-01
 4380,Videology,Video,USA,MD,Baltimore,Baltimore,venture,A,2008-02-26,2008-02, 2008-Q1 ,2008.0,15000000,2007-02-01
 4381,Videology,Video,USA,MD,Baltimore,Baltimore,venture,B,2010-02-16,2010-02, 2010-Q1 ,2010.0,16000000,2007-02-01
 4382,Videology,Video,USA,MD,Baltimore,Baltimore,venture,C,2011-03-31,2011-03, 2011-Q1 ,2011.0,30000000,2007-02-01
-4383,Videology,Video,USA,MD,Baltimore,Baltimore,venture,D,2013-05-28,2013-05, 2013-Q2 ,2013.0,60000000,2007-02-01
 4384,View the Space,Real Estate,USA,NY,New York City,New York,seed/angel,0,2012-06-28,2012-06, 2012-Q2 ,2012.0,700000,2011-01-01
 4385,View the Space,Real Estate,USA,NY,New York City,New York,venture,A,2013-12-02,2013-12, 2013-Q4 ,2013.0,7000000,2011-01-01
 4386,Viewfinity,Enterprise Software,USA,MA,Boston,Waltham,venture,B,2010-02-16,2010-02, 2010-Q1 ,2010.0,9000000,2007-01-01
@@ -4400,11 +4167,9 @@
 4398,Virtual Instruments Corporation,Enterprise Software,USA,CA,SF Bay Area,San Jose,venture,A,2009-08-07,2009-08, 2009-Q3 ,2009.0,5959538,2008-06-01
 4399,Virtual Instruments Corporation,Enterprise Software,USA,CA,SF Bay Area,San Jose,venture,B,2009-09-17,2009-09, 2009-Q3 ,2009.0,3798153,2008-06-01
 4400,Virtual Instruments Corporation,Enterprise Software,USA,CA,SF Bay Area,San Jose,venture,C,2010-10-27,2010-10, 2010-Q4 ,2010.0,21858476,2008-06-01
-4401,Virtual Instruments Corporation,Enterprise Software,USA,CA,SF Bay Area,San Jose,venture,D,2012-09-26,2012-09, 2012-Q3 ,2012.0,27500000,2008-06-01
 4402,Virtustream,Enterprise Software,USA,MD,"Washington, D.C.",Bethesda,venture,A,2011-02-02,2011-02, 2011-Q1 ,2011.0,9750000,2008-01-01
 4403,Virtustream,Enterprise Software,USA,MD,"Washington, D.C.",Bethesda,venture,B,2012-03-09,2012-03, 2012-Q1 ,2012.0,15000000,2008-01-01
 4404,Virtustream,Enterprise Software,USA,MD,"Washington, D.C.",Bethesda,venture,C,2012-11-08,2012-11, 2012-Q4 ,2012.0,5000000,2008-01-01
-4405,Virtustream,Enterprise Software,USA,MD,"Washington, D.C.",Bethesda,venture,D,2013-09-10,2013-09, 2013-Q3 ,2013.0,40000000,2008-01-01
 4406,VisibleBrands,Advertising,USA,WA,Seattle,Redmond,venture,A,2013-04-04,2013-04, 2013-Q2 ,2013.0,4600000,2008-01-01
 4407,VisibleBrands,Advertising,USA,WA,Seattle,Redmond,venture,B,2014-01-23,2014-01, 2014-Q1 ,2014.0,2300000,2008-01-01
 4408,Visterra,Biotechnology,USA,MA,Boston,Cambridge,venture,A,2012-11-09,2012-11, 2012-Q4 ,2012.0,26099699,2007-01-01
@@ -4446,7 +4211,6 @@
 4444,Vuclip,Advertising,USA,CA,SF Bay Area,Milpitas,venture,A,2008-08-01,2008-08, 2008-Q3 ,2008.0,13000000,2008-01-01
 4445,Vuclip,Advertising,USA,CA,SF Bay Area,Milpitas,venture,B,2009-09-22,2009-09, 2009-Q3 ,2009.0,6000000,2008-01-01
 4446,Vuclip,Advertising,USA,CA,SF Bay Area,Milpitas,venture,C,2011-05-19,2011-05, 2011-Q2 ,2011.0,8000000,2008-01-01
-4447,Vuclip,Advertising,USA,CA,SF Bay Area,Milpitas,venture,D,2012-11-15,2012-11, 2012-Q4 ,2012.0,13000000,2008-01-01
 4448,Vungle,Video,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2012-05-02,2012-05, 2012-Q2 ,2012.0,2000000,2011-01-01
 4449,Vungle,Video,USA,CA,SF Bay Area,San Francisco,venture,A,2013-08-01,2013-08, 2013-Q3 ,2013.0,6500000,2011-01-01
 4450,Vungle,Video,USA,CA,SF Bay Area,San Francisco,venture,B,2014-02-06,2014-02, 2014-Q1 ,2014.0,17000000,2011-01-01
@@ -4480,7 +4244,6 @@
 4478,WatchDox,Enterprise Software,USA,CA,SF Bay Area,Palo Alto,venture,A,2008-08-01,2008-08, 2008-Q3 ,2008.0,5500000,2008-08-01
 4479,WatchDox,Enterprise Software,USA,CA,SF Bay Area,Palo Alto,venture,B,2011-01-11,2011-01, 2011-Q1 ,2011.0,9250000,2008-08-01
 4480,WatchDox,Enterprise Software,USA,CA,SF Bay Area,Palo Alto,venture,C,2012-03-01,2012-03, 2012-Q1 ,2012.0,9000000,2008-08-01
-4481,WatchDox,Enterprise Software,USA,CA,SF Bay Area,Palo Alto,venture,D,2013-01-29,2013-01, 2013-Q1 ,2013.0,12000000,2008-08-01
 4482,WaterSmart Software,Software,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2011-05-16,2011-05, 2011-Q2 ,2011.0,900000,2009-11-01
 4483,WaterSmart Software,Software,USA,CA,SF Bay Area,San Francisco,venture,A,2013-08-27,2013-08, 2013-Q3 ,2013.0,4500000,2009-11-01
 4484,Wayin,Twitter Applications,USA,CO,Denver,Denver,seed/angel,0,2013-05-01,2013-05, 2013-Q2 ,2013.0,48062,2010-11-01
@@ -4500,7 +4263,6 @@
 4498,Wealthfront,Wealth Management,USA,CA,SF Bay Area,Palo Alto,venture,A,2009-12-15,2009-12, 2009-Q4 ,2009.0,7500000,2011-01-01
 4499,Wealthfront,Wealth Management,USA,CA,SF Bay Area,Palo Alto,venture,B,2013-03-20,2013-03, 2013-Q1 ,2013.0,20000000,2011-01-01
 4500,Wealthfront,Wealth Management,USA,CA,SF Bay Area,Palo Alto,venture,C,2014-04-02,2014-04, 2014-Q2 ,2014.0,35000000,2011-01-01
-4501,Wealthfront,Wealth Management,USA,CA,SF Bay Area,Palo Alto,venture,D,2014-10-27,2014-10, 2014-Q4 ,2014.0,64000000,2011-01-01
 4502,Weave,Mobile,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2014-07-16,2014-07, 2014-Q3 ,2014.0,120000,2013-01-01
 4503,Weave,Mobile,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2014-07-16,2014-07, 2014-Q3 ,2014.0,120000,2014-02-19
 4504,Weave,Telecommunications,USA,UT,Salt Lake City,Pleasant Grove,venture,A,2014-06-11,2014-06, 2014-Q2 ,2014.0,5000000,2013-01-01
@@ -4518,7 +4280,6 @@
 4516,Welltok,Health and Wellness,USA,CO,Denver,Denver,venture,A,2011-08-24,2011-08, 2011-Q3 ,2011.0,4977288,2009-01-01
 4517,Welltok,Health and Wellness,USA,CO,Denver,Denver,venture,B,2013-04-10,2013-04, 2013-Q2 ,2013.0,18700000,2009-01-01
 4518,Welltok,Health and Wellness,USA,CO,Denver,Denver,venture,C,2014-02-11,2014-02, 2014-Q1 ,2014.0,22000000,2009-01-01
-4519,Welltok,Health and Wellness,USA,CO,Denver,Denver,venture,D,2014-10-14,2014-10, 2014-Q4 ,2014.0,25000000,2009-01-01
 4520,Weplay,Social Media,USA,NY,New York City,New York,seed/angel,0,2006-01-01,2006-01, 2006-Q1 ,2006.0,870000,2008-03-01
 4521,Weplay,Social Media,USA,NY,New York City,New York,venture,A,2007-07-01,2007-07, 2007-Q3 ,2007.0,3500000,2008-03-01
 4522,Weplay,Social Media,USA,NY,New York City,New York,venture,B,2008-08-05,2008-08, 2008-Q3 ,2008.0,8600000,2008-03-01
@@ -4590,13 +4351,10 @@
 4588,Yammer,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,A,2009-01-19,2009-01, 2009-Q1 ,2009.0,5000000,2008-09-10
 4589,Yammer,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,B,2010-02-02,2010-02, 2010-Q1 ,2010.0,10000000,2008-09-10
 4590,Yammer,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,C,2010-11-30,2010-11, 2010-Q4 ,2010.0,25000000,2008-09-10
-4591,Yammer,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,D,2011-09-27,2011-09, 2011-Q3 ,2011.0,17000000,2008-09-10
-4592,Yammer,Enterprise Software,USA,CA,SF Bay Area,San Francisco,venture,E,2012-02-29,2012-02, 2012-Q1 ,2012.0,85000000,2008-09-10
 4593,Yapta,Tracking,USA,WA,Seattle,Seattle,seed/angel,0,2007-07-01,2007-07, 2007-Q3 ,2007.0,700000,2007-07-01
 4594,Yapta,Tracking,USA,WA,Seattle,Seattle,venture,A,2007-07-01,2007-07, 2007-Q3 ,2007.0,2300000,2007-07-01
 4595,Yapta,Tracking,USA,WA,Seattle,Seattle,venture,B,2008-12-12,2008-12, 2008-Q4 ,2008.0,2700000,2007-07-01
 4596,Yapta,Tracking,USA,WA,Seattle,Seattle,venture,C,2009-06-25,2009-06, 2009-Q2 ,2009.0,2000000,2007-07-01
-4597,Yapta,Tracking,USA,WA,Seattle,Seattle,venture,D,2013-11-13,2013-11, 2013-Q4 ,2013.0,2000000,2007-07-01
 4598,Yashi,Video,USA,NJ,Atlantic City,Toms River,seed/angel,0,2010-12-17,2010-12, 2010-Q4 ,2010.0,250000,2007-08-22
 4599,Yashi,Video,USA,NJ,Atlantic City,Toms River,venture,A,2012-11-19,2012-11, 2012-Q4 ,2012.0,1500000,2007-08-22
 4600,Yashi,Video,USA,NJ,Atlantic City,Toms River,venture,B,2013-12-05,2013-12, 2013-Q4 ,2013.0,1500000,2007-08-22
@@ -4635,7 +4393,6 @@
 4633,ZOZI,Travel,USA,CA,SF Bay Area,San Francisco,venture,A,2010-08-30,2010-08, 2010-Q3 ,2010.0,3000000,2007-01-01
 4634,ZOZI,Travel,USA,CA,SF Bay Area,San Francisco,venture,B,2013-04-04,2013-04, 2013-Q2 ,2013.0,10000000,2007-01-01
 4635,ZS Pharma,Biotechnology,USA,TX,Dallas,Coppell,venture,C,2012-10-23,2012-10, 2012-Q4 ,2012.0,46000000,2008-01-01
-4636,ZS Pharma,Biotechnology,USA,TX,Dallas,Coppell,venture,D,2014-03-05,2014-03, 2014-Q1 ,2014.0,55000000,2008-01-01
 4637,Zaarly,Startups,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2011-03-09,2011-03, 2011-Q1 ,2011.0,1000000,2011-02-20
 4638,Zaarly,Startups,USA,CA,SF Bay Area,San Francisco,venture,A,2011-10-24,2011-10, 2011-Q4 ,2011.0,14150000,2011-02-20
 4639,Zadara Storage,Cloud Data Services,USA,CA,Anaheim,Irvine,venture,A,2012-07-16,2012-07, 2012-Q3 ,2012.0,7000000,2011-01-01
@@ -4650,7 +4407,6 @@
 4648,Zendesk,Tech Field Support,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2008-06-18,2008-06, 2008-Q2 ,2008.0,500000,2007-10-05
 4649,Zendesk,Tech Field Support,USA,CA,SF Bay Area,San Francisco,venture,B,2009-08-17,2009-08, 2009-Q3 ,2009.0,6000000,2007-10-05
 4650,Zendesk,Tech Field Support,USA,CA,SF Bay Area,San Francisco,venture,C,2010-12-07,2010-12, 2010-Q4 ,2010.0,19000000,2007-10-05
-4651,Zendesk,Tech Field Support,USA,CA,SF Bay Area,San Francisco,venture,D,2012-09-12,2012-09, 2012-Q3 ,2012.0,60000000,2007-10-05
 4652,Zenefits,Human Resources,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2013-07-26,2013-07, 2013-Q3 ,2013.0,2100000,2013-01-01
 4653,Zenefits,Human Resources,USA,CA,SF Bay Area,San Francisco,venture,A,2014-01-22,2014-01, 2014-Q1 ,2014.0,15000000,2013-01-01
 4654,Zenefits,Human Resources,USA,CA,SF Bay Area,San Francisco,venture,B,2014-06-03,2014-06, 2014-Q2 ,2014.0,66500000,2013-01-01
@@ -4663,14 +4419,12 @@
 4661,Zerto,Enterprise Software,USA,MA,Boston,Boston,seed/angel,0,2010-01-31,2010-01, 2010-Q1 ,2010.0,200000,2009-01-01
 4662,Zerto,Enterprise Software,USA,MA,Boston,Boston,venture,B,2011-08-15,2011-08, 2011-Q3 ,2011.0,15000000,2009-01-01
 4663,Zerto,Enterprise Software,USA,MA,Boston,Boston,venture,C,2013-04-04,2013-04, 2013-Q2 ,2013.0,13000000,2009-01-01
-4664,Zerto,Enterprise Software,USA,MA,Boston,Boston,venture,D,2014-06-18,2014-06, 2014-Q2 ,2014.0,26000000,2009-01-01
 4665,ZestFinance,Analytics,USA,CA,Los Angeles,Los Angeles,venture,A,2011-07-21,2011-07, 2011-Q3 ,2011.0,19000000,2009-01-01
 4666,ZestFinance,Analytics,USA,CA,Los Angeles,Los Angeles,venture,B,2012-07-19,2012-07, 2012-Q3 ,2012.0,73000000,2009-01-01
 4667,ZestFinance,Analytics,USA,CA,Los Angeles,Los Angeles,venture,C,2013-07-31,2013-07, 2013-Q3 ,2013.0,20000000,2009-01-01
 4668,Zettics,Software,USA,MA,Boston,Concord,venture,A,2009-06-30,2009-06, 2009-Q2 ,2009.0,2628328,2008-01-01
 4669,Zettics,Software,USA,MA,Boston,Concord,venture,B,2010-04-27,2010-04, 2010-Q2 ,2010.0,7000000,2008-01-01
 4670,Zettics,Software,USA,MA,Boston,Concord,venture,C,2011-07-14,2011-07, 2011-Q3 ,2011.0,8000000,2008-01-01
-4671,Zettics,Software,USA,MA,Boston,Concord,venture,D,2013-07-24,2013-07, 2013-Q3 ,2013.0,8199999,2008-01-01
 4672,Ziften Technologies,Enterprise Software,USA,TX,Austin,Austin,venture,A,2011-07-14,2011-07, 2011-Q3 ,2011.0,5800000,2009-01-01
 4673,Ziften Technologies,Enterprise Software,USA,TX,Austin,Austin,venture,B,2012-05-08,2012-05, 2012-Q2 ,2012.0,5500000,2009-01-01
 4674,Zignal Labs,Real Time,USA,CA,SF Bay Area,San Francisco,venture,A,2013-01-31,2013-01, 2013-Q1 ,2013.0,4200000,2011-07-01
@@ -4699,8 +4453,6 @@
 4697,Zoosk,Social Media,USA,CA,SF Bay Area,San Francisco,venture,A,2007-11-01,2007-11, 2007-Q4 ,2007.0,400000,2007-11-01
 4698,Zoosk,Social Media,USA,CA,SF Bay Area,San Francisco,venture,B,2008-06-12,2008-06, 2008-Q2 ,2008.0,4100000,2007-11-01
 4699,Zoosk,Social Media,USA,CA,SF Bay Area,San Francisco,venture,C,2009-06-13,2009-06, 2009-Q2 ,2009.0,6000000,2007-11-01
-4700,Zoosk,Social Media,USA,CA,SF Bay Area,San Francisco,venture,D,2009-11-25,2009-11, 2009-Q4 ,2009.0,30000000,2007-11-01
-4701,Zoosk,Social Media,USA,CA,SF Bay Area,San Francisco,venture,E,2012-01-01,2012-01, 2012-Q1 ,2012.0,21100000,2007-11-01
 4702,Zuberance,Social Media,USA,CA,SF Bay Area,San Carlos,venture,A,2008-11-24,2008-11, 2008-Q4 ,2008.0,4000000,2007-02-01
 4703,Zuberance,Social Media,USA,CA,SF Bay Area,San Carlos,venture,B,2010-10-26,2010-10, 2010-Q4 ,2010.0,8000000,2007-02-01
 4704,Zula,Mobile,USA,NY,New York City,New York,seed/angel,0,2013-05-22,2013-05, 2013-Q2 ,2013.0,1000000,2012-03-01
@@ -4713,12 +4465,9 @@
 4711,Zuora,Billing,USA,CA,SF Bay Area,Foster City,venture,A,2008-03-13,2008-03, 2008-Q1 ,2008.0,6500000,2007-01-01
 4712,Zuora,Billing,USA,CA,SF Bay Area,Foster City,venture,B,2008-10-28,2008-10, 2008-Q4 ,2008.0,15000000,2007-01-01
 4713,Zuora,Billing,USA,CA,SF Bay Area,Foster City,venture,C,2010-11-09,2010-11, 2010-Q4 ,2010.0,20000000,2007-01-01
-4714,Zuora,Billing,USA,CA,SF Bay Area,Foster City,venture,D,2011-11-16,2011-11, 2011-Q4 ,2011.0,36000000,2007-01-01
-4715,Zuora,Billing,USA,CA,SF Bay Area,Foster City,venture,E,2013-09-05,2013-09, 2013-Q3 ,2013.0,50000000,2007-01-01
 4716,Zurex Pharma,Health Care,USA,WI,Madison,Middleton,venture,A,2012-05-22,2012-05, 2012-Q2 ,2012.0,6200000,2010-01-01
 4717,Zurex Pharma,Health Care,USA,WI,Madison,Middleton,venture,B,2014-07-02,2014-07, 2014-Q3 ,2014.0,4099999,2010-01-01
 4718,Zyga,Medical Devices,USA,MN,Minneapolis,Minnetonka,venture,C,2012-05-16,2012-05, 2012-Q2 ,2012.0,25000000,2008-01-01
-4719,Zyga,Medical Devices,USA,MN,Minneapolis,Minnetonka,venture,D,2014-09-25,2014-09, 2014-Q3 ,2014.0,2000000,2008-01-01
 4720,Zynga,Technology,USA,CA,SF Bay Area,San Francisco,venture,A,2008-01-01,2008-01, 2008-Q1 ,2008.0,10000000,2007-07-01
 4721,Zynga,Technology,USA,CA,SF Bay Area,San Francisco,venture,B,2010-06-14,2010-06, 2010-Q2 ,2010.0,300000000,2007-07-01
 4722,Zynga,Technology,USA,CA,SF Bay Area,San Francisco,venture,C,2011-02-18,2011-02, 2011-Q1 ,2011.0,490000000,2007-07-01
@@ -4747,7 +4496,6 @@
 4745,eCurv,Energy Efficiency,USA,MA,Boston,Cambridge,seed/angel,0,2013-09-01,2013-09, 2013-Q3 ,2013.0,800000,2011-01-01
 4746,eCurv,Energy Efficiency,USA,MA,Boston,Cambridge,venture,A,2014-06-24,2014-06, 2014-Q2 ,2014.0,2500000,2011-01-01
 4747,eSolar,Clean Technology,USA,CA,Los Angeles,Pasadena,venture,B,2008-04-21,2008-04, 2008-Q2 ,2008.0,130000000,2007-01-01
-4748,eSolar,Clean Technology,USA,CA,Los Angeles,Pasadena,venture,F,2009-01-01,2009-01, 2009-Q1 ,2009.0,40000000,2007-01-01
 4749,eVariant,Hospitals,USA,CT,Hartford,Farmington,venture,A,2011-11-21,2011-11, 2011-Q4 ,2011.0,5300000,2008-10-29
 4750,eVariant,Hospitals,USA,CT,Hartford,Farmington,venture,B,2014-05-02,2014-05, 2014-Q2 ,2014.0,18300000,2008-10-29
 4751,eXelate,Big Data Analytics,USA,NY,New York City,New York,venture,A,2007-10-01,2007-10, 2007-Q4 ,2007.0,4000000,2007-01-01
@@ -4793,8 +4541,6 @@
 4791,ideeli,E-Commerce,USA,NY,New York City,New York,venture,A,2007-12-01,2007-12, 2007-Q4 ,2007.0,3800000,2007-01-01
 4792,ideeli,E-Commerce,USA,NY,New York City,New York,venture,B,2009-12-07,2009-12, 2009-Q4 ,2009.0,20000000,2007-01-01
 4793,ideeli,E-Commerce,USA,NY,New York City,New York,venture,C,2011-04-28,2011-04, 2011-Q2 ,2011.0,41000000,2007-01-01
-4794,ideeli,E-Commerce,USA,NY,New York City,New York,venture,D,2012-06-21,2012-06, 2012-Q2 ,2012.0,30000000,2007-01-01
-4795,ideeli,E-Commerce,USA,NY,New York City,New York,venture,E,2013-07-07,2013-07, 2013-Q3 ,2013.0,12000000,2007-01-01
 4796,imgix,Internet Infrastructure,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2011-05-01,2011-05, 2011-Q2 ,2011.0,164000,2011-05-04
 4797,imgix,Internet Infrastructure,USA,CA,SF Bay Area,San Francisco,venture,A,2013-05-01,2013-05, 2013-Q2 ,2013.0,5000000,2011-05-04
 4798,innRoad,Hotels,USA,NY,New York City,New York,seed/angel,0,2013-02-27,2013-02, 2013-Q1 ,2013.0,4645311,2007-01-01
@@ -4855,11 +4601,9 @@
 4853,threadsy,Messaging,USA,CA,SF Bay Area,San Francisco,venture,B,2010-12-07,2010-12, 2010-Q4 ,2010.0,3000000,2008-06-01
 4854,thredUP,Fashion,USA,CA,SF Bay Area,San Francisco,venture,B,2011-05-12,2011-05, 2011-Q2 ,2011.0,7000000,2009-01-01
 4855,thredUP,Fashion,USA,CA,SF Bay Area,San Francisco,venture,C,2012-10-03,2012-10, 2012-Q4 ,2012.0,14500000,2009-01-01
-4856,thredUP,Fashion,USA,CA,SF Bay Area,San Francisco,venture,D,2014-07-29,2014-07, 2014-Q3 ,2014.0,23000000,2009-01-01
 4857,true[x] Media,Non Profit,USA,CA,Los Angeles,Los Angeles,venture,A,2007-12-01,2007-12, 2007-Q4 ,2007.0,4200000,2007-01-01
 4858,true[x] Media,Non Profit,USA,CA,Los Angeles,Los Angeles,venture,B,2009-01-11,2009-01, 2009-Q1 ,2009.0,8000000,2007-01-01
 4859,true[x] Media,Non Profit,USA,CA,Los Angeles,Los Angeles,venture,C,2010-05-10,2010-05, 2010-Q2 ,2010.0,11650000,2007-01-01
-4860,true[x] Media,Non Profit,USA,CA,Los Angeles,Los Angeles,venture,D,2014-05-21,2014-05, 2014-Q2 ,2014.0,6000000,2007-01-01
 4861,uBeam,Internet of Things,USA,CA,Los Angeles,Los Angeles,seed/angel,0,2012-07-10,2012-07, 2012-Q3 ,2012.0,1500000,2011-01-01
 4862,uBeam,Internet of Things,USA,CA,Los Angeles,Los Angeles,venture,A,2014-10-30,2014-10, 2014-Q4 ,2014.0,10000000,2011-01-01
 4863,uBiome,Health Care,USA,CA,SF Bay Area,San Francisco,seed/angel,0,2014-07-16,2014-07, 2014-Q3 ,2014.0,120000,2013-01-01
@@ -4868,8 +4612,6 @@
 4866,uTest,Testing,USA,MA,Boston,Framingham,venture,A,2007-10-01,2007-10, 2007-Q4 ,2007.0,2300000,2007-08-01
 4867,uTest,Testing,USA,MA,Boston,Framingham,venture,B,2008-12-01,2008-12, 2008-Q4 ,2008.0,5000000,2007-08-01
 4868,uTest,Testing,USA,MA,Boston,Framingham,venture,C,2010-09-13,2010-09, 2010-Q3 ,2010.0,13000000,2007-08-01
-4869,uTest,Testing,USA,MA,Boston,Framingham,venture,D,2011-12-05,2011-12, 2011-Q4 ,2011.0,17000000,2007-08-01
-4870,uTest,Testing,USA,MA,Boston,Framingham,venture,E,2014-01-14,2014-01, 2014-Q1 ,2014.0,43000000,2007-08-01
 4871,vArmour,Software,USA,CA,SF Bay Area,Mountain View,venture,A,2013-01-15,2013-01, 2013-Q1 ,2013.0,6000000,2011-01-01
 4872,vArmour,Software,USA,CA,SF Bay Area,Mountain View,venture,B,2013-12-14,2013-12, 2013-Q4 ,2013.0,15000000,2011-01-01
 4873,vArmour,Software,USA,CA,SF Bay Area,Mountain View,venture,C,2014-08-20,2014-08, 2014-Q3 ,2014.0,21000000,2011-01-01
@@ -4878,10 +4620,8 @@
 4876,xAd,Wireless,USA,NY,New York City,New York,venture,A,2008-08-01,2008-08, 2008-Q3 ,2008.0,15000000,2009-01-01
 4877,xAd,Wireless,USA,NY,New York City,New York,venture,B,2010-10-13,2010-10, 2010-Q4 ,2010.0,4000000,2009-01-01
 4878,xAd,Wireless,USA,NY,New York City,New York,venture,C,2012-11-09,2012-11, 2012-Q4 ,2012.0,5000000,2009-01-01
-4879,xAd,Wireless,USA,NY,New York City,New York,venture,D,2014-09-04,2014-09, 2014-Q3 ,2014.0,50000000,2009-01-01
 4880,ybuy,Curated Web,USA,CA,Los Angeles,Beverly Hills,seed/angel,0,2012-01-17,2012-01, 2012-Q1 ,2012.0,750000,2011-08-01
 4881,ybuy,Curated Web,USA,CA,Los Angeles,Beverly Hills,venture,A,2012-07-05,2012-07, 2012-Q3 ,2012.0,1000000,2011-08-01
 4882,zulily,E-Commerce,USA,WA,Seattle,Seattle,venture,A,2009-12-17,2009-12, 2009-Q4 ,2009.0,4600000,2010-01-01
 4883,zulily,E-Commerce,USA,WA,Seattle,Seattle,venture,B,2010-08-04,2010-08, 2010-Q3 ,2010.0,6000000,2010-01-01
 4884,zulily,E-Commerce,USA,WA,Seattle,Seattle,venture,C,2011-08-11,2011-08, 2011-Q3 ,2011.0,43000000,2010-01-01
-4885,zulily,E-Commerce,USA,WA,Seattle,Seattle,venture,D,2012-11-15,2012-11, 2012-Q4 ,2012.0,85000000,2010-01-01
