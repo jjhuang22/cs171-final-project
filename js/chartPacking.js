@@ -227,7 +227,23 @@ class ChartPackingVis {
             .style("font-weight", function() {
                 return bold ? "bold" : "normal";
             })
-            .text(d => d.data.name + "\n" + displayFunding(d.data.value));
+            .text(function(d) {
+
+            });
+
+        // label.append("tspan")
+        //     .text(d => d.data.name)
+        //
+        // label.append("tspan")
+        //     .text(d => displayFunding(d.data.value))
+        //     .attr("dx", "-17%")
+        //     .attr("dy", "1.2em")label.append("tspan")
+        //     .text(d => d.data.name)
+        //
+        // label.append("tspan")
+        //     .text(d => displayFunding(d.data.value))
+        //     .attr("dx", "-17%")
+        //     .attr("dy", "1.2em")
 
         zoomTo([root.x, root.y, root.r * 2]);
 
