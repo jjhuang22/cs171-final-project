@@ -21,8 +21,8 @@ class ChartPackingVis {
 
         // init drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
-            .attr("width", vis.width)
-            .attr("height", vis.height)
+            .attr("width", vis.width/4)
+            .attr("height", vis.height/4)
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
         // tooltip
@@ -184,7 +184,7 @@ class ChartPackingVis {
         }
 
         vis.svg
-            .attr("viewBox", `-${vis.width / 2} -${vis.height / 2} ${vis.width} ${vis.height}`)
+            .attr("viewBox", `-${vis.width} -${vis.height} ${vis.width*2} ${vis.height*2}`)
             .style("display", "block")
             .style("margin", "0 -14px")
             .style("width", "calc(100% + 28px)")
@@ -227,9 +227,10 @@ class ChartPackingVis {
             .style("font-weight", function() {
                 return bold ? "bold" : "normal";
             })
-            .text(function(d) {
-
-            });
+            .text(d => d.data.name);
+            // .text(function(d) {
+            //
+            // });
 
         // label.append("tspan")
         //     .text(d => d.data.name)
