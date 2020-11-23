@@ -62,6 +62,7 @@ class InnovativeVis {
         console.log(matrix);
 
         console.log(d3.timeMonth.count(vis.companies[0].funded_at, vis.companies[1].funded_at));
+
         // let markers = vis.svg.selectAll('.marker')
 
         let circleEnter = vis.svg.selectAll('circle')

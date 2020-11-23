@@ -43,6 +43,7 @@ Promise.all(promises)
 
         data[3].forEach(function(d) {
             d.funded_at = parseDate(d.funded_at);
+            d.founded_at = parseDate(d.founded_at);
             d.raised_amount_usd  = +d.raised_amount_usd;
         })
 
@@ -69,7 +70,7 @@ function initMainPage(dataArray) {
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
     // myBrushVis = new BrushVis('brushDiv', dataArray[1]);
     myBarVis = new BarVis('barDiv', dataArray[1]);
-    myChartPackingVis = new ChartPackingVis('otherDiv2', dataArray[3]);
+    myChartPackingVis = new ChartPackingVis('otherDiv2', dataArray[4]);
 
     var waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),
