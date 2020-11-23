@@ -91,6 +91,10 @@ class InnovativeVis {
             .attr('text-anchor', 'middle')
             .style('fill', 'white')
             .text(d => d)
+            .style('opacity', 0)
+            .transition()
+            .duration(800)
+            .style('opacity', 1);
 
         // LEGEND
         let legendEnter = vis.svg.selectAll('.legend')
@@ -104,6 +108,11 @@ class InnovativeVis {
             .attr('text-anchor', 'middle')
             .style('fill', 'white')
             .text(d => d)
+            .style('opacity', 0)
+            .transition()
+            .duration(800)
+            .style('opacity', 1);
+
 
 
         // CIRCLES
@@ -117,12 +126,13 @@ class InnovativeVis {
             .attr("cx", offset/2 + offset + vis.margin.left)
             .attr("cy", (d,i) => 220 + i*70)
             .attr("r", 12)
-            .attr("opacity", 1)
+            .attr("opacity", 0)
             .attr("fill", (d,i) => colors[i%4])
             .merge(circleEnter)
             .transition()
             .delay(2000)
             .duration(d => d[0] * 100)
+            .style('opacity', 1)
             .attr("cx", offset/2 + offset*2 + vis.margin.left)
             .transition()
             .duration(d => d[1] * 100)
