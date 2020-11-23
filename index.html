@@ -112,7 +112,7 @@
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-3 offset-1 map-header" style="display: flex; align-items: center; justify-content: flex-end">
-					<p style="text-align: right">The most popular city for</p>
+					<p class="sub-question" style="text-align: right">The most popular city for</p>
 				</div>
 				<div class="col-md-3" style="display: flex; align-items: center">
 					<select id='categorySelector' class="custom-select" style="width: 100%" onchange="categoryChange()">
@@ -130,7 +130,7 @@
 					</select>
 				</div>
 				<div class="col-md-4 map-header" id="most-popular-city" style="display: flex; align-items: center">
-					<p style="text-align: left"></p>
+					<p class="sub-question" style="text-align: left"></p>
 				</div>
 			</div>
 			<!-- graph -->
@@ -200,12 +200,11 @@
 		</div>
 	</div>
 
-	<div class="section-divider"></div>
 	<div class="mega-section-break"></div>
 
 	<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
 		<div class="col-md-6 text-center">
-			<p class="vis-explainer">Explore this animation to find out if there are differences in the way companies in different locations
+			<p class="vis-explainer">Explore this animation to compare the rates at which companies in different locations
 				and different industries advance through the stages of funding.</p>
 		</div>
 	</div>
@@ -217,7 +216,7 @@
 			<!-- header -->
 			<div class="row justify-content-center" style="height: 15vh">
 				<div class="align-self-center">
-					<h3>Do startups in different industries and regions progress through funding stages faster?</h3>
+					<h3>Do startups progress through funding stages at different rates?</h3>
 
 					<select id="example-getting-started" multiple="multiple" style="background-color: white">
 						<option value="SF">San Fransisco</option>
@@ -246,7 +245,6 @@
 			<p>"You have to see failure as the beginning and the middle, but never entertain it as an end."</p>
 			<p class="speaker"><i>- Jessica Herrin, founder and CEO of Stella & Dot</i></p>
 			<br>
-
 			<h3 class="chapter-title">chapter 3: journey's end?</h3>
 			<div class="mega-section-break"></div>
 		</div>
@@ -263,7 +261,8 @@
 
 	<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
 		<div class="col-md-6 text-center">
-			<p>Generally, venture-funded startups have two exit options once they mature: go public or sell.</p>
+			<p>Generally, venture-funded startups have two exit options once they mature:</p>
+			<p class="emphasize">go public or sell.</p>
 		</div>
 		<div class="mega-section-break"></div>
 	</div>
@@ -271,16 +270,18 @@
 	<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
 		<div class="col-md-6 text-center">
 			<p>When a company goes public, or IPOs, it makes a splash in the business world. (have headlines zoom in on
-				parallax in the background) From 2007 to 2013, the average IPO-bound startup raised $162 million in
-				funding for a $467.9 million IPO. Highlight Facebook and Twitter as major IPOs in 2012/2013</p>
+				parallax in the background) From 2007 to 2013,</p> <p class="emphasize">the average IPO-bound startup
+			raised $162 million in funding for a <br>$467.9 million IPO.</p>
+			<p>Highlight Facebook and Twitter as major IPOs in 2012/2013</p>
 		</div>
 		<div class="mega-section-break"></div>
 	</div>
 
 	<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
 		<div class="col-md-6 text-center">
-			<p>Getting acquired is less flashy but fills pockets nonetheless: the average startup that is successfully
-				acquired raised $29.4 million and sold for $155.5 million. Examples include YouTube</p>
+			<p>Getting acquired is less flashy but fills pockets nonetheless: <p class="emphasize">the average
+			successfully acquired startup raised $29.4 million and sold for $155.5 million.</p>
+			<p>Examples include YouTube</p>
 		</div>
 		<div class="mega-section-break"></div>
 	</div>
@@ -311,9 +312,6 @@
 		</div>
 	</div>
 
-
-
-	<div class="section-divider"></div>
 	<div class="mega-section-break"></div>
 
 	<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
@@ -328,8 +326,9 @@
 
 			<!-- header -->
 			<div class="row justify-content-center" style="height: 10vh">
-				<div class="align-self-center">
+				<div class="align-self-center text-center">
 					<h3>Who are the big players in "Big Tech"?</h3>
+					<p class="sub-question">What markets are they gobbling up, and what remains relatively untouched?</p>
 				</div>
 			</div>
 
@@ -384,12 +383,19 @@
 	</div>
 
 	<div class="section-divider"></div>
+	<div class="mega-section-break"></div>
 
 	<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
 		<div class="col-md-6 text-center">
-			<h3>epilogue</h3>
+			<p>"If you tune it so that you have zero chance of failure, you usually also have zero chance of success.
+				The key is to look at ways for when you get to your failure checkpoint, you know to stop."</p>
+			<p class="speaker"><i>- Reid Hoffman, co-founder of LinkedIn</i></p>
+			<br>
+			<h3 class="chapter-title">epilogue</h3>
 		</div>
 	</div>
+
+	<div class="mega-section-break"></div>
 
 	<!--startup simulator-->
 	<div class="row" id="chooseDivWaypoint">
@@ -401,15 +407,14 @@
 		<!--				 style="z-index: 1; position: absolute; left: 10vh; height: 85vh; width: 85vh;"><div class="module">-->
 		<!--			</div></div>-->
 
-		<div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000"
-			 class="col-md-6 offset-1 vis-border"
+		<div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000" class="col-md-6 offset-1 vis-border"
 			 style="background-color: black; border-color: salmon; z-index: 2">
 
 			<!-- header -->
 			<div class="row justify-content-center" style="height: 15vh;">
 				<div class="align-self-center">
-					<h1 style="color: white">Startup Simulator</h1>
-					<h2></h2>
+					<h3>Which startups will make it?</h3>
+					<h5 class="sub-question"></h5>
 				</div>
 			</div>
 			<br>
@@ -420,29 +425,13 @@
 		</div>
 
 		<div data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000"
-			 class="col-md-3 offset-1 vis-border"
+			 class="col-md-3 offset-1"
 			 style="background-color: black; border-color: salmon">
 			<div class="container d-flex h-100">
 				<div class="row justify-content-center align-self-center">
 					<h2 class="align-text-bottom" style="word-wrap: break-word;" id="chooseDivText"></h2>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
-		<div class="col-md-6 text-center">
-			<p>(This is the text more or less going in the startup simulator panel) Research tells us that 21.5% of
-				startups fail in the first year; 50% by the fifth; and 70% by the tenth.</p>
-			<br>
-
-			<p>But remember, patience is a virtue: a company’s age seems to have no relationship to whether it will
-				eventually be acquired or taken public, or the amount that it exits at.</p>
-			<br>
-
-			<p>"If you tune it so that you have zero chance of failure, you usually also have zero chance of success.
-				The key is to look at ways for when you get to your failure checkpoint, you know to stop."</p>
-			<p>-Reid Hoffman, co-founder of LinkedIn</p>
 		</div>
 	</div>
 
