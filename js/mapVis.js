@@ -33,9 +33,11 @@ class MapVis {
             .style("background", "white");
 
         // tooltip
-        vis.tooltip = vis.svg.append("g")
+        vis.tooltip = d3.select("#mapDiv").append("div")
             .attr("class", "tooltip")
-            .attr("id", "mapTooltip");
+            .attr("id", "mapTooltip")
+            .style("left", vis.width/4 + "px")
+            .style("top", vis.height*2/3 + "px");
         
         // set projection
         vis.projection = d3.geoMercator()
@@ -44,10 +46,6 @@ class MapVis {
             .translate([vis.width/2, vis.height/2]);
 
         // vis.center = vis.projection([98.5556, 39.8097]);
-        // console.log(vis.center);
-
-        // vis.projection
-        //     .translate(vis.center);
 
         // create path variable
         vis.path = d3.geoPath()
@@ -217,8 +215,6 @@ class MapVis {
 
             vis.tooltip
                 .style("opacity", 1)
-                .style("left", 50 + "px")
-                .style("top", 50 + "px")
                 .html(`
                          <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
                              <h3>${d.cityname}, ${d.stateCode}<h3>
@@ -255,8 +251,6 @@ class MapVis {
 
                 vis.tooltip
                     .style("opacity", 0)
-                    .style("left", 0)
-                    .style("top", 0)
                     .html(``);
             });
 
