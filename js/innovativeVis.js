@@ -105,7 +105,10 @@ class InnovativeVis {
             .style('fill', 'white')
             .text(d => d)
 
+
         // CIRCLES
+        let colors = ['dodgerblue', 'salmon', 'lightgreen', 'lemonchiffon'];
+
         let circleEnter = vis.svg.selectAll('circle')
             .data(matrix);
         circleEnter
@@ -113,9 +116,9 @@ class InnovativeVis {
             .append('circle')
             .attr("cx", offset/2 + offset + vis.margin.left)
             .attr("cy", (d,i) => 220 + i*70)
-            .attr("r", 20)
+            .attr("r", 12)
             .attr("opacity", 1)
-            .attr("fill", 'salmon')
+            .attr("fill", (d,i) => colors[i%4])
             .merge(circleEnter)
             .transition()
             .delay(2000)

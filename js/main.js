@@ -72,7 +72,7 @@ function initMainPage(dataArray) {
     myBarVis = new BarVis('barDiv', dataArray[1]);
     myChartPackingVis = new ChartPackingVis('otherDiv2', dataArray[4]);
 
-    var waypoint = new Waypoint({
+    var choose_waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),
         handler: function() {
             myChooseVis = new ChooseVis('chooseDiv', dataArray[1].slice(0,70), 'chooseDivText');
@@ -82,7 +82,16 @@ function initMainPage(dataArray) {
         offset: 40
     })
 
-    myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3]);
+    var inno_waypoint = new Waypoint({
+        element: document.getElementById('innovativeDivWaypoint'),
+        handler: function() {
+            myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3]);
+
+            this.destroy();
+        },
+        offset: 40
+    })
+
     // myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3].slice(0,70));
 }
 
