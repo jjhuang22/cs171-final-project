@@ -50,6 +50,10 @@ body {
     font-weight: bold;
 }
 
+.sub-question {
+    color: #F1D1F2;
+}
+
 #title-slide {
     margin-top: 84px;
     margin-bottom: 72px;
@@ -136,6 +140,7 @@ p {
 .test-button:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background-position: right center;
+    text-decoration: none;
 }
 /*.test-button-1 {background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)}*/
 /*.test-button-1:hover { background-position: right center; }*/
@@ -154,7 +159,7 @@ h2 {
     color: white;
 }
 
-h3, h4, h6 {
+h3, h4, h5, h6 {
     color: white;
     font-family: 'IBM Plex Mono', monospace;
 }

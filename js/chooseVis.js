@@ -56,6 +56,7 @@ class ChooseVis {
             .attr('y', vis.margin.top * 2)
             .attr('fill', 'black')
             .text('Click on a company!')
+            .style("font-family", '"IBM Plex Mono", monospace')
             .transition()
             .delay(7000)
             .duration(1000)
@@ -63,20 +64,22 @@ class ChooseVis {
 
         let instructions2 = d3.select("#" + vis.secondElement)
             .style('color', 'black')
-            .text('okokokok')
+            .text('Research tells us that 21.5% of startups fail in the first year; 50% by the fifth; and 70% by the tenth.')
+            .style("font-family", '"IBM Plex Mono", monospace')
             .transition()
             .delay(800)
             .duration(1000)
             .style('color', 'white')
 
             .transition()
-            .delay(800)
+            .delay(3000)
             .duration(1000)
             .style('color', 'black')
 
             .transition()
-            .text('break-all: Will break the string at the very end, breaking at the last word word-break: ' +
-                'is more of pretty brake, will break nicely for example at ? point normal: same as word-break')
+            .text("Sometimes you run out of time and money. Maybe you're in the wrong market, or your product isn't" +
+                " as game-changing as you thought it would be, or there is simply too much competition.")
+            .style("font-family", '"IBM Plex Mono", monospace')
 
             .transition()
             .delay(800)
@@ -99,11 +102,13 @@ class ChooseVis {
 
                 d3.select("#" + vis.secondElement)
                     .style('color', 'white')
-                    .text('okokokok')
+                    .text("But remember, patience is a virtue: a company’s age seems to have no relationship to " +
+                        "whether it will eventually be acquired or taken public, or the amount that it exits at.")
+                    .style("font-family", '"IBM Plex Mono", monospace')
                     .transition()
                     .delay(800)
                     .duration(1000)
-                    .style('color', '#282828')
+                    .style('color', 'white')
 
                 let ok = vis.svg.selectAll('circle')
                     .data(circles);
