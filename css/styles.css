@@ -16,9 +16,14 @@ body {
     height: 4px;
     margin-right: 45%;
     margin-left: 45%;
-    margin-top: 15%;
-    margin-bottom: 15%;
+    margin-top: 8%;
+    margin-bottom: 8%;
     background-image: linear-gradient(90deg, #ec90fa 8%, #ffb1e9 29%, #ffd74c 56%, #f1d1f2 80%, #dbd6ff 98%, #fff)
+}
+
+.section-break {
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
 
 .vis-explainer {
