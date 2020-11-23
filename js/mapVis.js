@@ -28,19 +28,19 @@ class MapVis {
         // init drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width)
-            .attr("height", vis.height * 2/3)
+            .attr("height", vis.height)
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")")
             .style("background", "white");
 
         // tooltip
-        vis.tooltip = d3.select("body").append("div")
+        vis.tooltip = vis.svg.append("g")
             .attr("class", "tooltip")
             .attr("id", "mapTooltip");
         
         // set projection
         vis.projection = d3.geoMercator()
             .scale(vis.width / 1.1)
-            .center([-97, 31.5])
+            .center([-97, 30.5])
             .translate([vis.width/2, vis.height/2]);
 
         // vis.center = vis.projection([98.5556, 39.8097]);
@@ -217,8 +217,8 @@ class MapVis {
 
             vis.tooltip
                 .style("opacity", 1)
-                .style("left", event.pageX + 20 + "px")
-                .style("top", event.pageY + "px")
+                .style("left", 50 + "px")
+                .style("top", 50 + "px")
                 .html(`
                          <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
                              <h3>${d.cityname}, ${d.stateCode}<h3>
