@@ -21,6 +21,10 @@ body {
     background-image: linear-gradient(90deg, #ec90fa 8%, #ffb1e9 29%, #ffd74c 56%, #f1d1f2 80%, #dbd6ff 98%, #fff)
 }
 
+.vis-explainer {
+    color: #ffd74c;
+}
+
 #title-slide {
     margin-top: 84px;
     margin-bottom: 72px;
@@ -61,8 +65,10 @@ p {
 
 
 
-
-
+/*mapVis styling*/
+.map-header p {
+    margin-bottom: 0px;
+}
 
 
 

@@ -19,7 +19,7 @@ class BarVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 20, right: 20, bottom: 80, left: 20};
+        vis.margin = {top: 60, right: 40, bottom: 120, left: 40};
         vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right;
         vis.height = $("#" + vis.parentElement).height() - vis.margin.top - vis.margin.bottom;
 
@@ -97,8 +97,6 @@ class BarVis {
         vis.cityInfo = [];
 
         companiesByCity.forEach( cityState => {
-            let cityStatename = cityState.key;
-
             // init counters
             let numCompanies = 0;
             let totalFunding = 0;
@@ -140,24 +138,20 @@ class BarVis {
     updateVis() {
         let vis = this;
 
-        vis.displayData[0].cityname + ", " + vis.displayData[0].stateCode;
-
-        d3.select("#most-popular-city p").text("Most popular city: " + vis.displayData[0].cityname + ", " +
+        d3.select("#most-popular-city p").text("startups is: " + vis.displayData[0].cityname + ", " +
             vis.displayData[0].stateCode);
 
         // create color scale
         vis.colorScale = d3.scaleLinear()
-            .range(["#fbc4ff", "#f029ff"]);
+            .range(["#fee2ff", "#f029ff"]);
 
         // get correct range
         let domain_vals = [];
         Object.keys(vis.cityInfo).forEach( key => domain_vals.push(vis.cityInfo[key].numCompanies));
         vis.colorScale.domain([0, d3.max(domain_vals)]);
-        // console.log(domain_vals);
 
         vis.x.domain(vis.displayData.map(d => d.cityname));
         vis.y.domain([0, d3.max(vis.displayData, d => d.numCompanies)]);
-        // vis.colorScale.domain([0, d3.max(vis.stateInfo, d => d[selectedCategory])]);
 
         vis.xAxisGroup.transition()
             .duration(1000)
@@ -191,23 +185,26 @@ class BarVis {
             .attr("width", vis.x.bandwidth())
             .attr("height", d => vis.height - vis.y(d.numCompanies))
             .style("fill", d => vis.colorScale(d.numCompanies))
-            .style("opacity", 1);
+            .style("opacity", 1)
+            .attr("stroke", "white")
+            .attr("stroke-width", 0.8);
 
         vis.svg.selectAll("rect").on("mouseover", function(event, d){
             d3.select(this)
-                .style("fill", "red");
+                .style("fill", "#ffd74c");
 
             d3.selectAll("circle")
                 .style("opacity", 0.3);
 
             d3.selectAll("." + d.cityname.replace(" ", ""))
-                .style("fill", "red")
+                .style("fill", "#ffd74c")
                 .style("opacity", 1);
 
             d3.select("#mapTooltip")
                 .style("opacity", 1)
                 .html(`
-                         <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+<!--                         <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">-->
+                         <div style="border-radius: 0px; padding: 20px">
                              <h3>${d.cityname}, ${d.stateCode}<h3>
                              <h6> Rank: ${d.rank}</h6>
                              <h6> Most popular industry: ${d.marketMode}</h6>

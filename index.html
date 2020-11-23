@@ -76,7 +76,7 @@
 
 	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
 		<div class="col-md-6 text-center">
-			<p>Explore the most popular founding cities for the 10 largest startup markets from 2007 to 2014.</p>
+			<p class="vis-explainer">Explore the most popular founding cities for the 10 largest startup markets from 2007 to 2014.</p>
 		</div>
 	</div>
 
@@ -92,11 +92,11 @@
 			</div>
 			<br>
 			<div class="row justify-content-center">
-				<div class="col-md-3 offset-1">
-					<p>Pick an industry:</p>
+				<div class="col-md-3 offset-1 map-header">
+					<p>The most popular city for</p>
 				</div>
 				<div class="col-md-3">
-					<select id='categorySelector' class="custom-select" style="width: 80%" onchange="categoryChange()">
+					<select id='categorySelector' class="custom-select" style="width: 100%" onchange="categoryChange()">
 						<option value="All" selected>All</option>
 						<option value="Software">Software</option>
 						<option value="Biotechnology">Biotechnology</option>
@@ -110,7 +110,7 @@
 						<option value="Education">Education</option>
 					</select>
 				</div>
-				<div class="col-md-4" id="most-popular-city">
+				<div class="col-md-4 map-header" id="most-popular-city">
 					<p></p>
 				</div>
 			</div>
@@ -118,11 +118,11 @@
 			<div class="row justify-content-center" style="height: 70vh">
 
 				<!--map-->
-				<div class="col-md-7" style="height: 100%; width: 100%">
-					<div class="align-self-center" id="mapDiv" style="height: 100%;"></div>
+				<div class="col-md-4" style="height: 100%; width: 100%">
+					<div class="align-self-center" id="mapDiv" style="height: 60%; width: 100%"></div>
 				</div>
 				<!--bar chart-->
-				<div class="col-md-3" style="height: 100%">
+				<div class="col-md-6" style="height: 100%">
 					<div class="align-self-center" id="barDiv" style="height: 100%;"></div>
 				</div>
 			</div>
@@ -168,7 +168,7 @@
 
 	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row justify-content-center">
 		<div class="col-md-6 text-center">
-			<p>Explore this animation to find out if there are differences in the way companies in different locations
+			<p class="vis-explainer"i>Explore this animation to find out if there are differences in the way companies in different locations
 				and different industries advance through the stages of funding.</p>
 		</div>
 	</div>
