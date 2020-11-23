@@ -221,40 +221,52 @@ class ChartPackingVis {
             .selectAll("text")
             .data(root.descendants())
             .enter().append("text")
+            .attr("class", "text-label")
             .style("fill-opacity", d => d.parent === root ? 1 : 0)
             .style("display", d => d.parent === root ? "inline" : "none")
             .style("font", d => fontsize(d.depth) + "px sans-serif")
             .style("font-weight", function() {
                 return bold ? "bold" : "normal";
             })
-            .text(d => d.data.name);
-            // .text(function(d) {
-            //
-            // });
+            // .text(d => d.data.name)
+            .text(d => d.data.name + " " + displayFunding(d.data.value));
 
-        // label.append("tspan")
-        //     .text(d => d.data.name)
-        //
-        // label.append("tspan")
-        //     .text(d => displayFunding(d.data.value))
-        //     .attr("dx", "-17%")
-        //     .attr("dy", "1.2em")label.append("tspan")
-        //     .text(d => d.data.name)
-        //
-        // label.append("tspan")
-        //     .text(d => displayFunding(d.data.value))
-        //     .attr("dx", "-17%")
-        //     .attr("dy", "1.2em")
+        vis.svg.selectAll(".text-label")
+            .call(wrap);
 
         zoomTo([root.x, root.y, root.r * 2]);
 
         return vis.svg.node();
-
     }
 }
 
+function wrap(text) {
+    text.each(function() {
+        var text = d3.select(this),
+            words = text.text().split(/([0-9].+)/).reverse().slice(1, 3),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 1.1,
+            y = text.attr("y"),
+            dy = 0
+            tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em").attr("font-size", "22px");
+
+        console.log(words);
+        while (word = words.pop()) {
+            if (word != "00"){
+                tspan.text(word);
+                tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").attr("font-size", "16px");
+            }
+        }
+    });
+}
+
 function displayFunding(funding){
-    if (funding >= 1000000000) {
+    if (typeof funding == "undefined") {
+        return "00";
+    }
+    else if (funding >= 1000000000) {
         return (funding / 1000000000).toFixed(2) + " billion";
     }
     else if (funding >= 1000000) {
