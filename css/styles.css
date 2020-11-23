@@ -26,8 +26,28 @@ body {
     margin-bottom: 8%;
 }
 
+.mega-section-break {
+    margin-top: 35vh;
+    margin-bottom: 35vh;
+}
+
 .vis-explainer {
     color: #ffd74c;
+}
+
+.emphasize {
+    color: #ffd74c;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.speaker {
+    color: gray;
+}
+
+.chapter-title {
+    color: #b8b0ff;
+    font-weight: bold;
 }
 
 #title-slide {
