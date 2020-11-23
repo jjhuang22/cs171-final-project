@@ -117,7 +117,7 @@ class BarVis {
                     lng: cityState.value[0].lng,
                     marketMode: cityState.value[0].marketMode,
                     numCompanies: numCompanies,
-                    totalFunding: (totalFunding / 1000000).toFixed(2)// in millions
+                    totalFunding: displayFunding(totalFunding)
                 }
             )
         })
@@ -231,5 +231,14 @@ class BarVis {
             });
 
         rect.exit().remove();
+    }
+}
+
+function displayFunding(funding){
+    if (funding >= 1000000000) {
+        return (funding / 1000000000).toFixed(2) + " billion";
+    }
+    else if (funding >= 1000000) {
+        return (funding / 1000000).toFixed(2) + " million";
     }
 }
