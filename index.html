@@ -94,10 +94,10 @@
 			</div>
 			<br>
 			<div class="row justify-content-center">
-				<div class="col-md-3 offset-1 map-header">
-					<p>The most popular city for</p>
+				<div class="col-md-3 offset-1 map-header" style="display: flex; align-items: center; justify-content: flex-end">
+					<p style="text-align: right">The most popular city for</p>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3" style="display: flex; align-items: center">
 					<select id='categorySelector' class="custom-select" style="width: 100%" onchange="categoryChange()">
 						<option value="All" selected>All</option>
 						<option value="Software">Software</option>
@@ -112,19 +112,19 @@
 						<option value="Education">Education</option>
 					</select>
 				</div>
-				<div class="col-md-4 map-header" id="most-popular-city">
-					<p></p>
+				<div class="col-md-4 map-header" id="most-popular-city" style="display: flex; align-items: center">
+					<p style="text-align: left"></p>
 				</div>
 			</div>
 			<!-- graph -->
 			<div class="row justify-content-center" style="height: 70vh">
 
 				<!--map-->
-				<div class="col-md-4" style="height: 100%; width: 100%">
+				<div class="col-md-5" style="height: 100%; width: 100%">
 					<div class="align-self-center" id="mapDiv" style="height: 60%; width: 100%"></div>
 				</div>
 				<!--bar chart-->
-				<div class="col-md-6" style="height: 100%">
+				<div class="col-md-5" style="height: 100%">
 					<div class="align-self-center" id="barDiv" style="height: 100%;"></div>
 				</div>
 			</div>

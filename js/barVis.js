@@ -33,7 +33,7 @@ class BarVis {
 
         vis.x = d3.scaleBand()
             .rangeRound([25, vis.width + vis.margin.right - 5])
-            .paddingInner(0.15);
+            .padding(0.15);
 
         vis.y = d3.scaleLinear()
             .range([vis.height, 0]);
@@ -54,9 +54,11 @@ class BarVis {
 
         vis.svg.append("text")
             .attr("transform",
-                `translate(${vis.width/2},0)`)
+                `translate(${vis.width/2 + 30},0)`)
             .style("text-anchor", "middle")
-            .text("# of Startups Founded (2007-2014)")
+            .text("Number of Startups Founded (2007-2014)")
+            .style("font-family", '"IBM Plex Mono", monospace')
+            .style("font-size", "16px")
             .style("fill", "white");
 
         vis.colorScale = d3.scaleLinear()
@@ -146,7 +148,7 @@ class BarVis {
         let vis = this;
 
         d3.select("#most-popular-city p").text("startups is: " + vis.displayData[0].cityname + ", " +
-            vis.displayData[0].stateCode);
+            vis.displayData[0].stateCode + ".");
 
         // create color scale
         vis.colorScale = d3.scaleLinear()
@@ -158,7 +160,7 @@ class BarVis {
         vis.colorScale.domain([0, d3.max(domain_vals)]);
 
         vis.x.domain(vis.displayData.map(d => d.cityname));
-        vis.y.domain([0, d3.max(vis.displayData, d => d.numCompanies)]);
+        vis.y.domain([0, 1.1 * d3.max(vis.displayData, d => d.numCompanies)]);
 
         vis.xAxisGroup.transition()
             .duration(1000)
