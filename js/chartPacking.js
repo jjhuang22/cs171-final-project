@@ -229,7 +229,7 @@ class ChartPackingVis {
                 return bold ? "bold" : "normal";
             })
             // .text(d => d.data.name)
-            .text(d => d.data.name + " " + displayFunding(d.data.value));
+            .text(d => d.data.name + "` " + displayFunding(d.data.value));
 
         vis.svg.selectAll(".text-label")
             .call(wrap);
@@ -243,7 +243,7 @@ class ChartPackingVis {
 function wrap(text) {
     text.each(function() {
         var text = d3.select(this),
-            words = text.text().split(/([0-9].+)/).reverse().slice(1, 3),
+            words = text.text().split(/([`].+)/).reverse().slice(1, 3),
             word,
             line = [],
             lineNumber = 0,
@@ -252,7 +252,8 @@ function wrap(text) {
             dy = 0
             tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em").attr("font-size", "22px");
 
-        console.log(words);
+        words[0] = words[0].replace("`", "").trim();
+
         while (word = words.pop()) {
             if (word != "00"){
                 tspan.text(word);
@@ -273,3 +274,6 @@ function displayFunding(funding){
         return (funding / 1000000).toFixed(2) + " million";
     }
 }
+
+// test = "Test` 45 Billion";
+// console.log(test.split(/([`].+)/).reverse().slice(1, 3))
