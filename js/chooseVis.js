@@ -54,25 +54,25 @@ class ChooseVis {
             .attr("text-anchor", "middle")
             .attr('x', vis.width / 2)
             .attr('y', vis.margin.top * 2)
-            .attr('fill', 'white')
+            .attr('fill', 'black')
             .text('Click on a company!')
             .transition()
             .delay(7000)
             .duration(1000)
-            .attr('fill', '#282828');
+            .attr('fill', 'white');
 
         let instructions2 = d3.select("#" + vis.secondElement)
-            .style('color', 'white')
+            .style('color', 'black')
             .text('okokokok')
             .transition()
             .delay(800)
             .duration(1000)
-            .style('color', '#282828')
+            .style('color', 'white')
 
             .transition()
             .delay(800)
             .duration(1000)
-            .style('color', 'white')
+            .style('color', 'black')
 
             .transition()
             .text('break-all: Will break the string at the very end, breaking at the last word word-break: ' +
@@ -81,7 +81,7 @@ class ChooseVis {
             .transition()
             .delay(800)
             .duration(1000)
-            .style('color', 'black');
+            .style('color', 'white');
 
         let circleEnter = vis.svg.selectAll('circle')
             .data(circles);
