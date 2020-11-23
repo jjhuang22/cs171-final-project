@@ -70,6 +70,7 @@ body {
 .subtitle {
     font: 48px 'IBM Plex Mono', monospace;
     color: #ffd74c;
+    color: white;
     text-align: right;
     margin-top: 24px;
 }
