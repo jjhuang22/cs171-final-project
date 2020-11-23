@@ -21,8 +21,8 @@ class ChartPackingVis {
 
         // init drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
-            .attr("width", vis.width/4)
-            .attr("height", vis.height/4)
+            .attr("width", vis.width)
+            .attr("height", vis.height)
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
         // tooltip
@@ -99,7 +99,7 @@ class ChartPackingVis {
         const format = d3.format(",d")
 
         const pack = data => d3.pack()
-            .size([vis.width/2, vis.height/2])
+            .size([vis.width, vis.height])
             .padding(3)
             (d3.hierarchy(vis.acquisitions)
                 .sum(d => d.size)
@@ -224,7 +224,7 @@ class ChartPackingVis {
             .attr("class", "text-label")
             .style("fill-opacity", d => d.parent === root ? 1 : 0)
             .style("display", d => d.parent === root ? "inline" : "none")
-            .style("font", d => fontsize(d.depth) + "px sans-serif")
+            .style("font", d => (fontsize(d.depth)) + "px sans-serif")
             .style("font-weight", function() {
                 return bold ? "bold" : "normal";
             })
@@ -250,14 +250,14 @@ function wrap(text) {
             lineHeight = 1.1,
             y = text.attr("y"),
             dy = 0
-            tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em").attr("font-size", "22px");
+            tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em").attr("font-size", "30px");
 
         words[0] = words[0].replace("`", "").trim();
 
         while (word = words.pop()) {
             if (word != "00"){
                 tspan.text(word);
-                tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").attr("font-size", "16px");
+                tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").attr("font-size", "22px");
             }
         }
     });
