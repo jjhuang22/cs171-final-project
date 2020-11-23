@@ -228,7 +228,7 @@ class ChartPackingVis {
             .style("font-weight", function() {
                 return bold ? "bold" : "normal";
             })
-            .text(d => d.data.name + "` " + displayFunding(d.data));
+            .text(d => d.data.name + "` " + formatFunding(d.data));
             // .text(d => d.data.name)
 
         vis.svg.selectAll(".text-label")
@@ -263,7 +263,7 @@ function wrap(text) {
     });
 }
 
-function displayFunding(company){
+function formatFunding(company){
     if (typeof company.value == "undefined") {
         company.value = company.size;
     }

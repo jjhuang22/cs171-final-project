@@ -124,12 +124,16 @@ class BarVis {
                     lng: cityState.value[0].lng,
                     marketMode: cityState.value[0].marketMode,
                     numCompanies: numCompanies,
+                    totalFundingNumeric: totalFunding,
                     totalFunding: displayFunding(totalFunding)
                 }
             )
         })
 
         vis.cityInfo.sort((a, b) => {
+            if (b.numCompanies == a.numCompanies) {
+                return b.totalFundingNumeric - a.totalFundingNumeric;
+            }
             return b.numCompanies - a.numCompanies;
         })
 
@@ -147,8 +151,20 @@ class BarVis {
     updateVis() {
         let vis = this;
 
+        // if (selectedCategory == 'Clean Technology') {
+        //     d3.select("#most-popular-city-header p").text("The most popular cities for ");
+        //     d3.select("#most-popular-city p").text("startups are: " + vis.displayData[0].cityname + ", " +
+        //         vis.displayData[0].stateCode + " and " + vis.displayData[1].cityname + ", " + vis.displayData[1].stateCode + ".");
+        //     vis.displayData[1].rank = 1;
+        // }
+        // else {
+        //     d3.select("#most-popular-city-header p").text("The most popular city for ");
+        //     d3.select("#most-popular-city p").text("startups is: " + vis.displayData[0].cityname + ", " +
+        //         vis.displayData[0].stateCode + ".");
+        // }
+
         d3.select("#most-popular-city p").text("startups is: " + vis.displayData[0].cityname + ", " +
-            vis.displayData[0].stateCode + ".");
+                vis.displayData[0].stateCode + ".");
 
         // create color scale
         vis.colorScale = d3.scaleLinear()
@@ -237,14 +253,5 @@ class BarVis {
             });
 
         rect.exit().remove();
-    }
-}
-
-function displayFunding(funding){
-    if (funding >= 1000000000) {
-        return (funding / 1000000000).toFixed(2) + " billion";
-    }
-    else if (funding >= 1000000) {
-        return (funding / 1000000).toFixed(2) + " million";
     }
 }

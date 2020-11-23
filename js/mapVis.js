@@ -121,12 +121,16 @@ class MapVis {
                     lng: cityState.value[0].lng,
                     marketMode: cityState.value[0].marketMode,
                     numCompanies: numCompanies,
+                    totalFundingNumeric: totalFunding,
                     totalFunding: displayFunding(totalFunding)
                 }
             )
         })
 
         vis.cityInfo.sort((a, b) => {
+            if (b.numCompanies == a.numCompanies) {
+                return b.totalFundingNumeric - a.totalFundingNumeric;
+            }
             return b.numCompanies - a.numCompanies;
         })
 
@@ -136,10 +140,6 @@ class MapVis {
         }
 
         vis.displayData = vis.cityInfo.slice(0, 10);
-
-        vis.displayData.sort((a, b) => {
-            return a.numCompanies - b.numCompanies;
-        })
 
         vis.updateVis();
     }
