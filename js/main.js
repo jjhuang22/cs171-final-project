@@ -82,15 +82,16 @@ function initMainPage(dataArray) {
         offset: 40
     })
 
-    var inno_waypoint = new Waypoint({
-        element: document.getElementById('innovativeDivWaypoint'),
-        handler: function() {
-            myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3]);
-
-            this.destroy();
-        },
-        offset: 40
-    })
+    // var inno_waypoint = new Waypoint({
+    //     element: document.getElementById('innovativeDivWaypoint'),
+    //     handler: function() {
+    //         myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3]);
+    //
+    //         this.destroy();
+    //     },
+    //     offset: 40
+    // })
+    myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3]);
 
     // myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3].slice(0,70));
 }
