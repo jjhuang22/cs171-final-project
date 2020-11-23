@@ -228,8 +228,8 @@ class ChartPackingVis {
             .style("font-weight", function() {
                 return bold ? "bold" : "normal";
             })
+            .text(d => d.data.name + "` " + displayFunding(d.data));
             // .text(d => d.data.name)
-            .text(d => d.data.name + "` " + displayFunding(d.data.value));
 
         vis.svg.selectAll(".text-label")
             .call(wrap);
@@ -263,15 +263,15 @@ function wrap(text) {
     });
 }
 
-function displayFunding(funding){
-    if (typeof funding == "undefined") {
-        return "00";
+function displayFunding(company){
+    if (typeof company.value == "undefined") {
+        company.value = company.size;
     }
-    else if (funding >= 1000000000) {
-        return (funding / 1000000000).toFixed(2) + " billion";
+    if (company.value >= 1000000000) {
+        return (company.value / 1000000000).toFixed(2) + " billion";
     }
-    else if (funding >= 1000000) {
-        return (funding / 1000000).toFixed(2) + " million";
+    else if (company.value >= 1000000) {
+        return (company.value / 1000000).toFixed(2) + " million";
     }
 }
 
