@@ -27,7 +27,6 @@ class BarVis {
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
             .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
-            // .style("background", "red")
             .append('g')
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
@@ -97,8 +96,6 @@ class BarVis {
         vis.cityInfo = [];
 
         companiesByCity.forEach( cityState => {
-            let cityStatename = cityState.key;
-
             // init counters
             let numCompanies = 0;
             let totalFunding = 0;
@@ -140,8 +137,6 @@ class BarVis {
     updateVis() {
         let vis = this;
 
-        vis.displayData[0].cityname + ", " + vis.displayData[0].stateCode;
-
         d3.select("#most-popular-city p").text("Most popular city: " + vis.displayData[0].cityname + ", " +
             vis.displayData[0].stateCode);
 
@@ -153,11 +148,9 @@ class BarVis {
         let domain_vals = [];
         Object.keys(vis.cityInfo).forEach( key => domain_vals.push(vis.cityInfo[key].numCompanies));
         vis.colorScale.domain([0, d3.max(domain_vals)]);
-        // console.log(domain_vals);
 
         vis.x.domain(vis.displayData.map(d => d.cityname));
         vis.y.domain([0, d3.max(vis.displayData, d => d.numCompanies)]);
-        // vis.colorScale.domain([0, d3.max(vis.stateInfo, d => d[selectedCategory])]);
 
         vis.xAxisGroup.transition()
             .duration(1000)

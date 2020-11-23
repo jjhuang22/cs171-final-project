@@ -2,9 +2,6 @@
 *          MapVis          *
 * * * * * * * * * * * * * */
 
-// TODO
-// fix transition so that circles fade in from their location
-
 class MapVis {
 
     // constructor method to initialize MapVis object
@@ -44,8 +41,6 @@ class MapVis {
             .scale(vis.width / 1.1)
             .center([-97, 30.5])
             .translate([vis.width/2, vis.height/2]);
-
-        // vis.center = vis.projection([98.5556, 39.8097]);
 
         // create path variable
         vis.path = d3.geoPath()
@@ -107,11 +102,7 @@ class MapVis {
 
         vis.cityInfo = [];
 
-
-
         companiesByCity.forEach( cityState => {
-            let cityStatename = cityState.key;
-
             // init counters
             let numCompanies = 0;
             let totalFunding = 0;
@@ -144,13 +135,11 @@ class MapVis {
             vis.cityInfo[i].rank = i + 1;
         }
 
-        vis.displayData = vis.cityInfo.slice(0, 10); // change this as needed
+        vis.displayData = vis.cityInfo.slice(0, 10);
 
         vis.displayData.sort((a, b) => {
             return a.numCompanies - b.numCompanies;
         })
-
-        // console.log(vis.displayData);
 
         vis.updateVis();
     }
@@ -174,7 +163,6 @@ class MapVis {
         let domain_vals = [];
         Object.keys(vis.cityInfo).forEach( key => domain_vals.push(vis.cityInfo[key].numCompanies));
         vis.colorScale.domain([0, d3.max(domain_vals)]);
-        // console.log(domain_vals);
 
         // add circles to svg
         let circle = vis.svg.selectAll("circle")
@@ -184,10 +172,8 @@ class MapVis {
             .attr("cx", d => vis.projection([d.lng, d.lat])[0])
             .attr("cy", d => vis.projection([d.lng, d.lat])[1])
             .merge(circle)
-            // .style("opacity", 0)
             .attr("cx", d => vis.projection([d.lng, d.lat])[0])
             .attr("cy", d => vis.projection([d.lng, d.lat])[1])
-            // .attr("class", "cities")
             .attr("class", d => { return "cities " + d.cityname.replace(" ", "")} )
             .style("opacity", 0)
             .attr("cx", d => vis.projection([d.lng, d.lat])[0])
@@ -227,15 +213,7 @@ class MapVis {
             .on('mouseout', function(event,   d){
                 d3.select(this)
                     .style("fill", function(d) {
-                        let color = vis.colorScale(d.numCompanies);
-                        return color;
-                        // if (selectedCategory == "All") {
-                        //     let color = vis.colorScale(d.numCompanies);
-                        //     return color;
-                        // }
-                        // else {
-                        //     return d3.schemeCategory10[$("#categorySelector option:selected").index() - 1];
-                        // }
+                        return vis.colorScale(d.numCompanies);
                     })
                     .style("opacity", 1);
 
@@ -244,8 +222,7 @@ class MapVis {
 
                 d3.selectAll("." + d.cityname.replace(" ", ""))
                     .style("fill", function(d) {
-                        let color = vis.colorScale(d.numCompanies);
-                        return color;
+                        return vis.colorScale(d.numCompanies);
                     })
                     .style("opacity", 1);
 
