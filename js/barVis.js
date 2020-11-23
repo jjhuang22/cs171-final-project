@@ -52,6 +52,13 @@ class BarVis {
             .attr("class", "y-axis axis")
             .attr("transform", "translate(25, 0)");
 
+        vis.svg.append("text")
+            .attr("transform",
+                `translate(${vis.width/2},0)`)
+            .style("text-anchor", "middle")
+            .text("# of Startups Founded (2007-2014)")
+            .style("fill", "white");
+
         vis.colorScale = d3.scaleLinear()
             .range(["white", "darkcyan"]);
 
