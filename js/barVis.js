@@ -55,11 +55,6 @@ class BarVis {
         vis.colorScale = d3.scaleLinear()
             .range(["white", "darkcyan"]);
 
-        // tooltip
-        vis.tooltip = d3.select("body").append("div")
-            .attr("class", "tooltip")
-            .attr("id", "mapTooltip");
-
         vis.wrangleData();
     }
 
@@ -122,7 +117,7 @@ class BarVis {
                     lng: cityState.value[0].lng,
                     marketMode: cityState.value[0].marketMode,
                     numCompanies: numCompanies,
-                    totalFunding: (totalFunding / 1000000).toFixed(2)// in millions
+                    totalFunding: displayFunding(totalFunding)
                 }
             )
         })
@@ -205,14 +200,20 @@ class BarVis {
             d3.selectAll("circle")
                 .style("opacity", 0.3);
 
-            // if (d.cityname == 'Mountain View') {
-            //     d3.selectAll("." + d.cityname.replace(" ", ""))
-            //         .raise();
-            // }
-
             d3.selectAll("." + d.cityname.replace(" ", ""))
                 .style("fill", "red")
                 .style("opacity", 1);
+
+            d3.select("#mapTooltip")
+                .style("opacity", 1)
+                .html(`
+                         <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+                             <h3>${d.cityname}, ${d.stateCode}<h3>
+                             <h6> Rank: ${d.rank}</h6>
+                             <h6> Most popular industry: ${d.marketMode}</h6>
+                             <h6> Number of Companies: ${Number(d.numCompanies).toLocaleString()}</h6>
+                             <h6> Total Funding: ${d.totalFunding}</h6>
+                         </div>`);
             })
             .on("mouseout", function(event, d){
                 d3.select(this)
@@ -220,16 +221,24 @@ class BarVis {
 
                 d3.selectAll("circle")
                     .style("opacity", 1)
-                //
-                // if (d.cityname == 'Mountain View') {
-                //     d3.selectAll("." + d.cityname.replace(" ", ""))
-                //         .lower();
-                // }
 
                 d3.selectAll("." + d.cityname.replace(" ", ""))
                     .style("fill", d => vis.colorScale(d.numCompanies));
+
+                d3.select("#mapTooltip")
+                    .style("opacity", 0)
+                    .html(``);
             });
 
         rect.exit().remove();
+    }
+}
+
+function displayFunding(funding){
+    if (funding >= 1000000000) {
+        return (funding / 1000000000).toFixed(2) + " billion";
+    }
+    else if (funding >= 1000000) {
+        return (funding / 1000000).toFixed(2) + " million";
     }
 }
