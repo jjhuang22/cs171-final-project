@@ -89,7 +89,7 @@ class InnovativeVis {
             .attr('x', offset/2 + vis.margin.left)
             .attr('y', (d,i) => 220 + i*70)
             .attr('text-anchor', 'middle')
-            .style('fill', white)
+            .style('fill', 'white')
             .text(d => d)
 
         // LEGEND
@@ -102,7 +102,7 @@ class InnovativeVis {
             .attr('x', (d,i) => offset/2 + offset*(i+1) + vis.margin.left)
             .attr('y', 150)
             .attr('text-anchor', 'middle')
-            .style('fill', white)
+            .style('fill', 'white')
             .text(d => d)
 
         // CIRCLES
