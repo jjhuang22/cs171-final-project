@@ -128,10 +128,15 @@ class MapVis {
         })
 
         vis.cityInfo.sort((a, b) => {
-            if (b.numCompanies == a.numCompanies) {
+            if (sortByCategory == 'numCompanies') {
+                if (b.numCompanies == a.numCompanies) {
+                    return b.totalFundingNumeric - a.totalFundingNumeric;
+                }
+                return b.numCompanies - a.numCompanies;
+            }
+            else if (sortByCategory == 'totalFunding') {
                 return b.totalFundingNumeric - a.totalFundingNumeric;
             }
-            return b.numCompanies - a.numCompanies;
         })
 
         // add rank of city based on chosen industry

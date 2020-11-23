@@ -4,6 +4,8 @@
 
 let selectedTimeRange = [];
 let selectedCategory = $('#categorySelector').val();
+let sortByCategory = 'numCompanies'; // totalFunding
+// = $('#sortyBySelector').val();
 
 let parseDate = d3.timeParse("%Y-%m-%d");
 let formatDate = d3.timeFormat("%Y-%m-%d");

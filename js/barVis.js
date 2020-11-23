@@ -189,13 +189,15 @@ class BarVis {
             .attr("dx", "-.8em")
             .attr("dy", ".15em")
             .attr("transform", "rotate(-45)")
+            .attr("font-size", "12px")
 
         vis.yAxisGroup.transition()
             .duration(1000)
             .call(vis.yAxis)
             .style("stroke", "white")
             .attr("stroke-width", 0.5)
-            .attr("color", "white");
+            .attr("color", "white")
+            .attr("font-size", "12px");
 
         let rect = vis.svg.selectAll("rect")
             .data(vis.displayData);
