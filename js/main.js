@@ -4,9 +4,11 @@
 
 let selectedTimeRange = [];
 let selectedCategory = $('#categorySelector').val();
-let sortByCategory = 'numCompanies'; // totalFunding
-// = $('#sortyBySelector').val();
+let sortByCategory = 'numCompanies';
 let selectedRegions = $('#example-getting-started').val();
+let selectedCompany = '';
+let selectedLat = Number.NaN;
+let selectedLong = Number.NaN;
 
 let parseDate = d3.timeParse("%Y-%m-%d");
 let formatDate = d3.timeFormat("%Y-%m-%d");
@@ -105,6 +107,27 @@ function categoryChange() {
 function regionChange() {
     selectedRegions = $('#example-getting-started').val();
     myInnovativeVis.initVis();
+}
+
+function selectUber() {
+    selectedCompany = 'Uber';
+    selectedLat = 37.7562;
+    selectedLong = -122.443;
+    myMapVis.wrangleData();
+}
+
+function selectAirbnb() {
+    selectedCompany = 'Airbnb';
+    selectedLat = 37.7562;
+    selectedLong = -122.443;
+    myMapVis.wrangleData();
+}
+
+function selectLyft() {
+    selectedCompany = 'Lyft';
+    selectedLat = 37.7562;
+    selectedLong = -122.443;
+    myMapVis.wrangleData();
 }
 
 var image = document.getElementsByClassName('thumbnail');

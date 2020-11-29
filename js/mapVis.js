@@ -96,7 +96,6 @@ class MapVis {
         } else {
             filteredData = filteredData0;
         }
-
         // group companies by city
         let companiesByCity = Array.from(d3.group(filteredData, d => d.cityState), ([key, value]) => ({key, value}));
 
@@ -152,6 +151,16 @@ class MapVis {
     updateVis(){
         let vis = this;
 
+        // extra marker for selectedCompany
+        if (selectedCompany != ''){
+            vis.svg.append("circle")
+                .attr("class", "selectedCompanyCircle")
+                .attr("cx", vis.projection([selectedLong, selectedLat])[0])
+                .attr("cy", vis.projection([selectedLong, selectedLat])[1])
+                .attr("r", 20)
+                .attr("fill", "blue");
+        }
+
         // vis.legendScale.domain([0, vis.domainMax]);
         // vis.colorScale.domain([0, vis.domainMax]);
 
@@ -170,7 +179,7 @@ class MapVis {
         vis.colorScale.domain([0, d3.max(domain_vals)]);
 
         // add circles to svg
-        let circle = vis.svg.selectAll("circle")
+        let circle = vis.svg.selectAll(".circle")
             .data(vis.displayData);
 
         circle.enter().append("circle")

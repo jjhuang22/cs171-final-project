@@ -13,6 +13,20 @@ class BarVis {
 
         this.parseDate = d3.timeParse("%m/%d/%Y");
 
+        this.popularCompanies = {
+            "All": "Uber, AirBnB, and Lyft.",
+            "Software": "Slack, Cloudera, and Dropbox.",
+            "Biotechnology": "Noteable Labs, Spero Therapeutics, and Transcriptic.",
+            "Health": "Doximity, Tempus, and Flatiron Health.",
+            "Mobile": "Instagram, Snapchat, and Robinhood.",
+            "Curated Web": "Reddit, Pinterest, and Groupon.",
+            "E-Commerce": "Venmo, Square, and Instacart.",
+            "Advertising": "FCB and Accenture Interactive.",
+            "Clean Technology": "Tesla and Bird.",
+            "Games": "Twitch and Curse.",
+            "Education": "HackerRank and Codecademy."
+        };
+
         this.initVis()
     }
 
@@ -166,6 +180,16 @@ class BarVis {
         d3.select("#most-popular-city p").text("startups is: " + vis.displayData[0].cityname + ", " +
                 vis.displayData[0].stateCode + ".");
 
+        // update list of popular companies
+        if (selectedCategory == 'All'){
+            d3.select("#most-popular-startups p").text("Famous startups include " +
+                this.popularCompanies[selectedCategory]);
+        }
+        else {
+            d3.select("#most-popular-startups p").text("Famous startups in " + selectedCategory.toLowerCase()
+                + " include " + this.popularCompanies[selectedCategory]);
+        }
+
         // create color scale
         vis.colorScale = d3.scaleLinear()
             .range(["#fee2ff", "#f029ff"]);
@@ -187,9 +211,11 @@ class BarVis {
             .selectAll("text")
             .style("text-anchor", "end")
             .attr("dx", "-.8em")
+            .attr("font-size", "12px");
+
+        vis.xAxisGroup.selectAll("text")
             .attr("dy", ".15em")
             .attr("transform", "rotate(-45)")
-            .attr("font-size", "12px")
 
         vis.yAxisGroup.transition()
             .duration(1000)

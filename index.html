@@ -52,11 +52,10 @@
 			<p><i>Venmo. Uber. Slack. Square.</i> These companies, and more, belong to a generation of startups
 				that emerged from the devastation of the 2008 global recession to become household names today.
 				Choose a company to follow its journey.</p>
-			<p style="color: red;">UNDER CONSTRUCTION. Eventually, the selected company will be highlighted
-				in each of the subsequent visualizations. Please ignore the buttons for now.</p>
-			<a href="#" class="test-button test-button-1">Uber</a>
-			<a href="#" class="test-button test-button-1">AirBnB</a>
-			<a href="#" class="test-button test-button-1">Alibaba</a>
+
+			<button type="button" class="test-button test-button-1" onclick="selectUber()">Uber</button>
+			<button type="button" class="test-button test-button-1" onclick="selectAirbnb()">AirBnB</button>
+			<button type="button" class="test-button test-button-1" onclick="selectLyft()">Lyft</button>
 		</div>
 	</div>
 
@@ -131,6 +130,12 @@
 				</div>
 				<div class="col-md-4 map-header" id="most-popular-city" style="display: flex; align-items: center">
 					<p class="sub-question" style="text-align: left"></p>
+				</div>
+			</div>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-8 justify-content-center" id="most-popular-startups" style="display: flex; align-items: center">
+					<p class="sub-question" style="text-align: center"></p>
 				</div>
 			</div>
 			<!-- graph -->
