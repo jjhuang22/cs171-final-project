@@ -6,13 +6,10 @@ let selectedTimeRange = [];
 let selectedCategory = $('#categorySelector').val();
 let sortByCategory = 'numCompanies'; // totalFunding
 // = $('#sortyBySelector').val();
+let selectedRegions = $('#example-getting-started').val();
 
 let parseDate = d3.timeParse("%Y-%m-%d");
 let formatDate = d3.timeFormat("%Y-%m-%d");
-
-
-// d.funded_at = parseDate(d.funded_at);
-// d.raised_amount_usd  = +d.raised_amount_usd;
 
 // load data using promises
 let promises = [
@@ -20,7 +17,8 @@ let promises = [
     d3.csv("data/companies_final.csv"),
     d3.csv("data/acquisitions_final.csv"),
     d3.csv("data/rounds_final.csv"),
-    d3.json("data/chartPacking.json")
+    d3.json("data/chartPacking.json"),
+    d3.csv("data/scatterplot.csv")
 ];
 
 Promise.all(promises)
@@ -59,10 +57,10 @@ Promise.all(promises)
 let myMapVis,
     myBubbleVis,
     myBarVis,
-    // myBrushVis,
     myChooseVis,
     myInnovativeVis,
-    myChartPackingVis;
+    myChartPackingVis,
+    myScatterVis;
 
 
 // initMainPage
@@ -70,9 +68,9 @@ function initMainPage(dataArray) {
     // init map
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
-    // myBrushVis = new BrushVis('brushDiv', dataArray[1]);
     myBarVis = new BarVis('barDiv', dataArray[1]);
     myChartPackingVis = new ChartPackingVis('otherDiv2', dataArray[4]);
+    myScatterVis = new ScatterVis('scatterDiv', dataArray[5]);
 
     var choose_waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),
@@ -104,6 +102,10 @@ function categoryChange() {
     myBarVis.wrangleData();
 }
 
+function regionChange() {
+    selectedRegions = $('#example-getting-started').val();
+    myInnovativeVis.initVis();
+}
 
 var image = document.getElementsByClassName('thumbnail');
 new simpleParallax(image, {

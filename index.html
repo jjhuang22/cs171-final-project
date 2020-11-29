@@ -218,13 +218,13 @@
 				<div class="align-self-center">
 					<h3>Do startups progress through funding stages at different rates?</h3>
 
-					<select id="example-getting-started" multiple="multiple" style="background-color: white">
-						<option value="SF">San Fransisco</option>
-						<option value="BOSTON">Boston</option>
-						<option value="LA">Los Angeles</option>
-						<option value="ATLANTA">Atlanta</option>
-						<option value="SEATTLE">Seattle</option>
-						<option value="INTERNATIONAL">International</option>
+					<select id="example-getting-started" multiple="multiple" style="background-color: white" onchange="regionChange()">
+						<option value="SF Bay Area" selected>San Fransisco</option>
+						<option value="Boston" selected>Boston</option>
+						<option value="Raleigh" selected>Los Angeles</option>
+						<option value="Atlanta">Atlanta</option>
+						<option value="Seattle" selected>Seattle</option>
+						<option value="International">International</option>
 					</select>
 
 				</div>
@@ -296,17 +296,17 @@
 
 	<!--last visualization-->
 	<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" class="row">
-		<div class="col-md-6 offset-3" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid orange; height: 50vh;">
+		<div class="col-md-8 offset-2" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid orange; height: 90vh;">
 
 			<!-- header -->
 			<div class="row justify-content-center">
 				<div class="align-self-center">
-					<h3>Simple scatterplot will go here</h3>
+					<h3>Do startups that raise more exit for more?</h3>
 				</div>
 			</div>
 			<br>
 			<!-- graph -->
-			<div class="row justify-content-center">
+			<div class="row justify-content-center" style="height: 50vh">
 				<div class="align-self-center" id="scatterDiv" style="height: 100%; width: 100%"></div>
 			</div>
 		</div>
@@ -464,6 +464,7 @@
 <script src="js/chooseVis.js"></script>
 <script src="js/innovativeVis.js"></script>
 <script src="js/chartPacking.js"></script>
+<script src="js/scatterVis.js"></script>
 
 <script src="js/main.js"></script>
 

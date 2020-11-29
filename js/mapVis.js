@@ -35,7 +35,7 @@ class MapVis {
             .attr("id", "mapTooltip")
             .style("left", vis.width/8 + "px")
             .style("top", vis.height * 5/6 + "px");
-        
+
         // set projection
         vis.projection = d3.geoMercator()
             .scale(vis.width / 1.1)
@@ -249,5 +249,8 @@ function displayFunding(funding){
     }
     else if (funding >= 1000000) {
         return (funding / 1000000).toFixed(2) + " million";
+    }
+    else {
+        return funding.toLocaleString('en');
     }
 }
