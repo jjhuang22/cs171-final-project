@@ -26,19 +26,18 @@ class InnovativeVis {
             .attr("height", vis.height)
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
-
         // let ok = d3.rollup(vis.companies, v => d3.sum(v, d=> d.raised_amount_usd) / v.length , d => d.company_region);
         //     console.log(ok);
 
         let huh = d3.groups(vis.companies, d => d.company_region, d => d.company_name);
-
+        console.log(huh);
         //            0     1   2   3
         // founded=> Seed / A / B / C+
-        let matrix = [...Array(4)].map(x=>Array(5).fill(0));
-
+        let durations = [...Array(4)].map(x=>Array(5).fill(0));
         for (let i = 0; i < 4; i++) {
-            matrix[i][4] = [0,0,0,0];
+            durations[i][4] = [0,0,0,0];
         }
+        console.log(durations);
 
         function gah(code) {
             switch (code) {
@@ -49,22 +48,31 @@ class InnovativeVis {
             }
         }
 
-        for (const [v, company] of huh.slice(0,4).entries()) {
+        // TODO
+        // take user-selected cities and filter huh to only contain those cities
+        // store durations
+        console.log(selectedRegions);
+        // let cities = ["SF Bay Area", "Boston", "San Diego"];
+        let huh_sub = huh.filter(d => selectedRegions.includes(d[0]));
+        console.log(huh_sub);
+
+        // store durations
+        for (const [v, company] of huh_sub.entries()) {
             // console.log(company,v);
             for (var rounds of company[1]) {
                 for (let i = 0; i < rounds[1].length; i++) {
-                    matrix[v][gah(rounds[1][i]['funding_round_code'])] += d3.timeMonth.count(rounds[1][i].founded_at, rounds[1][i].funded_at);
-                    matrix[v][4][gah(rounds[1][i]['funding_round_code'])] += 1;
+                    durations[v][gah(rounds[1][i]['funding_round_code'])] += d3.timeMonth.count(rounds[1][i].founded_at, rounds[1][i].funded_at);
+                    durations[v][4][gah(rounds[1][i]['funding_round_code'])] += 1;
                 }
             }
         }
 
-        for (var rows of matrix) {
+        for (var rows of durations) {
             for (let i = 0; i < 4; i++) {
                 rows[i] /= rows[4][i];
             }
         }
-        console.log(matrix);
+        console.log(durations);
 
         // console.log(d3.timeMonth.count(vis.companies[0].funded_at, vis.companies[1].funded_at));
 
@@ -74,7 +82,7 @@ class InnovativeVis {
 
         let labels = [];
         for (let i = 0; i<4; i++) {
-            labels.push(huh.slice(0,4)[i][0])
+            labels.push(huh_sub[i][0])
         }
 
         let offset = vis.width/6;
@@ -119,7 +127,7 @@ class InnovativeVis {
         let colors = ['dodgerblue', 'salmon', 'lightgreen', 'lemonchiffon'];
 
         let circleEnter = vis.svg.selectAll('circle')
-            .data(matrix);
+            .data(durations);
         circleEnter
             .enter()
             .append('circle')
