@@ -86,18 +86,6 @@ class ScatterVis {
         vis.svg.selectAll("circle").remove();
         vis.svg.selectAll(".regression").remove();
 
-        vis.svg.append("g")
-            .selectAll("circle")
-            .data(vis.companies)
-            .enter()
-            .append("circle")
-            .attr("class", "scatterCircle")
-            .attr("cx", d => vis.x(d.raised_amount_usd))
-            .attr("cy", d => vis.y(d.price_amount))
-            .attr("r", 5)
-            .style("fill", "#f029ff")
-            .style("opacity", 0);
-
         vis.timer = 2006;
 
         setInterval(function() {
@@ -114,40 +102,27 @@ class ScatterVis {
         let vis = this;
 
         // version if want to transition circles with set delay
-        // let circle = vis.svg.selectAll("circle")
-        //     .data(vis.companies);
-        //
-        // let count = 0;
-        //
-        // circle.enter().append("circle")
-        //     .attr("class", "scatterCircle")
-        //     .attr("cx", d => vis.x(d.raised_amount_usd))
-        //     .attr("cy", d => vis.y(d.price_amount))
-        //     .attr("r", 5)
-        //     .style("opacity", 0)
-        //     .transition()
-        //     .duration(1000)
-        //     .delay(function(d, i) {
-        //         count++;
-        //         return i * 10;
-        //     })
-        //     .style("fill", "#f029ff")
-        //     .style("opacity", 0.8)
-        //     .on("end", function(d, event) {
-        //         count--;
-        //         // d3.select("#scatterYear").text("Current year: " + d.acquired_year)
-        //         if (!count){
-        //             vis.drawLine();
-        //         }
-        //     })
+        let circle = vis.svg.selectAll("circle")
+            .data(vis.companies);
 
-        vis.svg.selectAll("circle")
+        circle.enter().append("circle")
+            .merge(circle)
+            .attr("class", "scatterCircle")
+            .transition()
+            .duration(1000)
+
+            .attr("cx", d => vis.x(d.raised_amount_usd))
+            .attr("cy", d => vis.y(d.price_amount))
+            .style("fill", "#f029ff")
             .attr("r", function(d){
                 if (d.acquired_year == vis.timer){
                     return 7;
                 }
-                else {
+                else if (d.acquired_year < vis.timer){
                     return 5;
+                }
+                else {
+                    return 0;
                 }
             })
             .style("opacity", function(d){
@@ -160,13 +135,16 @@ class ScatterVis {
                 else {
                     return 0;
                 }
-            });
+            })
 
         if (vis.timer == 2014){
-            vis.svg.selectAll("circle")
-                .attr("r", 5)
-                .style("opacity", 1);
-            setTimeout(vis.drawLine(), 2000)
+            setTimeout(function() {
+                vis.svg.selectAll("circle")
+                    .attr("r", 5)
+                    .style("opacity", 1);
+
+                vis.drawLine();
+            }, 2000)
         }
 
         vis.svg.selectAll("circle").on("mouseover", function(event, d) {
@@ -197,9 +175,8 @@ class ScatterVis {
                     .html(``);
             })
 
-        // circle.exit().remove();
+        circle.exit().remove();
 
-        // vis.drawLine();
     }
     // http://duspviz.mit.edu/d3-workshop/transitions-animation/
     drawLine() {
