@@ -7,23 +7,30 @@ let selectedCategory = $('#categorySelector').val();
 let sortByCategory = 'numCompanies';
 let selectedRegions = $('#example-getting-started').val();
 let selectedCompany = '';
-let selectedLat = Number.NaN;
-let selectedLong = Number.NaN;
+// let selectedLat = Number.NaN;
+// let selectedLong = Number.NaN;
 
-selectedLat = 37.7562;
-selectedLong = -122.443;
+let compareCategory = $('#compare-by').val();
 
 let parseDate = d3.timeParse("%Y-%m-%d");
 let formatDate = d3.timeFormat("%Y-%m-%d");
+function getStage(code) {
+    switch (code) {
+        case '0': return 0;
+        case 'A': return 1;
+        case 'B': return 2;
+        case 'C': return 3;
+    }
+}
 
 // load data using promises
 let promises = [
-    d3.json("data/states.json"),
-    d3.csv("data/companies_final.csv"),
-    d3.csv("data/acquisitions_final.csv"),
-    d3.csv("data/rounds_final.csv"),
-    d3.json("data/chartPacking.json"),
-    d3.csv("data/scatterplot.csv")
+    d3.json("data/clean/states.json"),
+    d3.csv("data/clean/companies_final.csv"),
+    d3.csv("data/clean/acquisitions_final.csv"),
+    d3.csv("data/clean/rounds_final.csv"),
+    d3.json("data/clean/chartPacking.json"),
+    d3.csv("data/clean/scatterplot.csv")
 ];
 
 Promise.all(promises)
@@ -50,6 +57,7 @@ Promise.all(promises)
             d.funded_at = parseDate(d.funded_at);
             d.founded_at = parseDate(d.founded_at);
             d.raised_amount_usd  = +d.raised_amount_usd;
+            d.funding_round_code = getStage(d.funding_round_code);
         })
 
         initMainPage(data)
@@ -96,15 +104,18 @@ function initMainPage(dataArray) {
         },
         offset: 40
     })
-    // myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3]);
-
-    // myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3].slice(0,70));
 }
 
 function categoryChange() {
     selectedCategory = $('#categorySelector').val();
     myMapVis.wrangleData();
     myBarVis.wrangleData();
+}
+
+function applyRegion() {
+    selectedRegions = $('#select-region').val();
+    console.log("main: " + selectedRegions);
+    myInnovativeVis.wrangleData();
 }
 
 function regionChange() {

@@ -11,8 +11,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@600&family=IBM+Plex+Mono:wght@300&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/styles.css">
+
 	<!--	multiselect option-->
-	<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+	<link rel="stylesheet" href="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569006288/BBBootstrap/choices.min.css?version=7.0.0">
 
 </head>
 <body>
@@ -214,27 +215,35 @@
 		</div>
 	</div>
 
+	<br>
+
 	<!--innovative visualization-->
 	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row" id="innovativeDivWaypoint">
-		<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid salmon">
 
-			<!-- header -->
-			<div class="row justify-content-center" style="height: 15vh">
-				<div class="align-self-center">
-					<h3>Do startups progress through funding stages at different rates?</h3>
+		<div class="col-md-10 offset-1">
+			<!--header -->
+			<div class="row justify-content-center">
+				<h3>Do startups progress through funding stages at different rates?</h3>
+			</div>
 
-					<select id="example-getting-started" multiple="multiple" style="background-color: white" onchange="regionChange()">
-						<option value="SF Bay Area" selected>San Fransisco</option>
-						<option value="Boston" selected>Boston</option>
-						<option value="Raleigh" selected>Los Angeles</option>
-						<option value="Atlanta">Atlanta</option>
-						<option value="Seattle" selected>Seattle</option>
-						<option value="International">International</option>
+			<br>
+
+			<div class="row justify-content-center">
+				<div class="col-md-3 align-self-center">
+					<select id='compare-by' class="custom-select" style="width: 100%">
+						<option disabled selected value> -- Compare by -- </option>
+						<option value="market" selected>Market</option>
+						<option value="company_region">Region</option>
 					</select>
-
+				</div>
+				<div class="col-md-4 align-self-center">
+					<select id="select-region" placeholder="Select 4 regions or markets to compare" multiple></select>
+				</div>
+				<div class="col-md-3">
+					<button class="test-button test-button-1" onclick="applyRegion()">Compare</button>
 				</div>
 			</div>
-			<br>
+
 			<!-- graph -->
 			<div class="row justify-content-center" style="height: 70vh">
 				<div class="align-self-center" id="innovativeDiv" style="height: 100%; width: 100%"></div>
@@ -414,16 +423,8 @@
 
 	<!--startup simulator-->
 	<div class="row" id="chooseDivWaypoint">
-		<img class="thumbnail"
-			 style="z-index: 1; position: absolute; left: 10vh; height: 85vh; width: 85vh;"
-			 src="https://uploads-ssl.webflow.com/5eccfe972c6a906c6bb49a3e/5ed3e15da90a9cd2fb1f8cd0_hero-bg-rectangle.svg">
-
-		<!--			<div class="thumbnail module-border-wrap"-->
-		<!--				 style="z-index: 1; position: absolute; left: 10vh; height: 85vh; width: 85vh;"><div class="module">-->
-		<!--			</div></div>-->
-
-		<div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000" class="col-md-6 offset-1 vis-border"
-			 style="background-color: black; border-color: salmon; z-index: 2">
+		<div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000" class="col-md-6 offset-1"
+			 style="background-color: #080314; z-index: 2">
 
 			<!-- header -->
 			<div class="row justify-content-center" style="height: 15vh;">
@@ -441,7 +442,7 @@
 
 		<div data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000"
 			 class="col-md-3 offset-1"
-			 style="background-color: black; border-color: salmon">
+			 style="background-color: #080314">
 			<div class="container d-flex h-100">
 				<div class="row justify-content-center align-self-center">
 					<h2 class="align-text-bottom" style="word-wrap: break-word;" id="chooseDivText"></h2>
@@ -461,6 +462,9 @@
 					<p>Our data, data cleaning scripts, and source code can be found in our
 						<a href="https://github.com/jjhuang22/cs171-final-project" target="_blank">Github repository</a>.
 					</p>
+					<p>
+						Random stuff about data sources, us, screencast?
+					</p>
 				</div>
 			</div>
 		</div>
@@ -478,6 +482,9 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+<!--multiselect-->
+<script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569006273/BBBootstrap/choices.min.js?version=7.0.0"></script>
+
 <!-- d3 -->
 <script src="https://d3js.org/d3.v6.min.js"></script>
 
@@ -486,7 +493,6 @@
 <script src="https://d3js.org/d3-geo.v1.min.js"></script>
 
 <script src="js/noframework.waypoints.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 
 <!-- OWN JS -->
 <script src="js/mapVis.js"></script>
@@ -500,12 +506,6 @@
 <script src="js/main.js"></script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#example-getting-started').multiselect();
-	});
-</script>
 
 <!-- AOS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

@@ -2,6 +2,8 @@
 *          innovativeVis          *
 * * * * * * * * * * * * * */
 
+// TODO check Alexandra, for example; weird behavior
+
 class InnovativeVis {
 
     // constructor method to initialize MapVis object
@@ -9,8 +11,10 @@ class InnovativeVis {
         this.parentElement = parentElement;
         this.companies = companies;
 
+        // group companies by region
+        this.groupedData = d3.groups(this.companies, d => d.company_region, d => d.company_name);
+
         this.initVis()
-        // console.log(companies);
     }
 
     initVis() {
@@ -19,140 +23,165 @@ class InnovativeVis {
         vis.margin = {top: 10, right: 10, bottom: 10, left: 10};
         vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right;
         vis.height = $("#" + vis.parentElement).height() - vis.margin.top - vis.margin.bottom;
+        vis.offset = vis.width/6;
 
         // init drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width)
             .attr("height", vis.height)
+            // .style("background-color", "red")
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
-        // let ok = d3.rollup(vis.companies, v => d3.sum(v, d=> d.raised_amount_usd) / v.length , d => d.company_region);
-        //     console.log(ok);
+        // get names of regions
+        let regions = [];
+        vis.groupedData.forEach(d => {
+            regions.push(d[0]);
+        })
 
-        let huh = d3.groups(vis.companies, d => d.company_region, d => d.company_name);
-        // console.log(huh);
-        //            0     1   2   3
-        // founded=> Seed / A / B / C+
-        let durations = [...Array(4)].map(x=>Array(5).fill(0));
+        // add regions to selection menu
+        let selectMenu = d3.select("#select-region");
+        regions.forEach(d => {
+            selectMenu.append("option")
+                .text(d);
+        });
+
+        var multipleCancelButton = new Choices('#select-region', {
+            removeItemButton: true,
+            maxItemCount:4
+        });
+    }
+
+    wrangleData() {
+
+        let vis = this;
+
+        // subset to selected regions
+        let regionSub = vis.groupedData.filter(d => selectedRegions.includes(d[0]));
+        console.log(regionSub);
+        console.log("innovis: " + selectedRegions);
+
+        // create array of labels based on selected regions
+        vis.labels = [];
+        for (let i = 0; i<4; i++) {
+            vis.labels.push(regionSub[i][0])
+        }
+        console.log(vis.labels);
+
+        // create empty array to store durations (1 row per region, 1 column per milestone + 1 column for tracking denominator)
+        vis.durations = [...Array(4)].map(x => Array(5).fill(0));
         for (let i = 0; i < 4; i++) {
-            durations[i][4] = [0,0,0,0];
-        }
-        // console.log(durations);
-
-        function gah(code) {
-            switch (code) {
-                case '0': return 0;
-                case 'A': return 1;
-                case 'B': return 2;
-                case 'C': return 3;
-            }
+            vis.durations[i][4] = [0,0,0,0];
         }
 
-        // TODO
-        // take user-selected cities and filter huh to only contain those cities
-        // store durations
-        // console.log(selectedRegions);
-        // let cities = ["SF Bay Area", "Boston", "San Diego"];
-        let huh_sub = huh.filter(d => selectedRegions.includes(d[0]));
-        // console.log(huh_sub);
-
-        // store durations
-        for (const [v, company] of huh_sub.entries()) {
-            // console.log(company,v);
+        // iterate over each region
+        for (const [v, company] of regionSub.entries()) {
+            // iterate over each company
             for (var rounds of company[1]) {
+                // iterate over each round
                 for (let i = 0; i < rounds[1].length; i++) {
-                    durations[v][gah(rounds[1][i]['funding_round_code'])] += d3.timeMonth.count(rounds[1][i].founded_at, rounds[1][i].funded_at);
-                    durations[v][4][gah(rounds[1][i]['funding_round_code'])] += 1;
+                    let stage = rounds[1][i]['funding_round_code'];
+                    vis.durations[v][stage] += d3.timeMonth.count(rounds[1][i].founded_at, rounds[1][i].funded_at);
+                    vis.durations[v][4][stage] += 1; // record number of companies that have been tallied so far
                 }
             }
         }
 
-        for (var rows of durations) {
-            for (let i = 0; i < 4; i++) {
-                rows[i] /= rows[4][i];
+        // for each region and round, get average duration
+        for (var region of vis.durations) {
+            for (let i = 3; i >= 0; i--) {
+                if (i === 0){
+                    region[i] /= region[4][i];
+                } else {
+                    region[i] = region[i]/region[4][i] - region[i-1]/region[4][i-1];
+                }
             }
         }
-        // console.log(durations);
+        // console.log(vis.durations);
 
-        // console.log(d3.timeMonth.count(vis.companies[0].funded_at, vis.companies[1].funded_at));
+        vis.updateVis();
+    }
 
-        // let markers = vis.svg.selectAll('.marker')
+    updateVis() {
 
+        let vis = this;
+
+        // LEGEND (milestone markers)
         let legend = ['Founded', 'Seed/Angel', 'A', 'B', 'C+'];
-
-        let labels = [];
-        for (let i = 0; i<4; i++) {
-            labels.push(huh_sub[i][0])
-        }
-
-        let offset = vis.width/6;
-
-        // LABELS
-        let labelEnter = vis.svg.selectAll('.label')
-            .data(labels);
-        labelEnter
-            .enter()
-            .append('text')
-            .attr('class', 'label')
-            .attr('x', offset/2 + vis.margin.left)
-            .attr('y', (d,i) => 220 + i*70)
-            .attr('text-anchor', 'middle')
-            .style('fill', 'white')
-            .text(d => d)
-            .style('opacity', 0)
-            .transition()
-            .duration(800)
-            .style('opacity', 1);
-
-        // LEGEND
         let legendEnter = vis.svg.selectAll('.legend')
             .data(legend);
         legendEnter
             .enter()
             .append('text')
             .attr('class', 'legend')
-            .attr('x', (d,i) => offset/2 + offset*(i+1) + vis.margin.left)
+            .attr('x', (d,i) => vis.offset/2 + vis.offset*(i+1) + vis.margin.left)
             .attr('y', 150)
             .attr('text-anchor', 'middle')
             .style('fill', 'white')
+            .style("font-family", '"IBM Plex Mono", monospace')
             .text(d => d)
             .style('opacity', 0)
             .transition()
             .duration(800)
             .style('opacity', 1);
 
+        // LABELS (region labels)
+        let labelEnter = vis.svg.selectAll('.label')
+            .data(vis.labels);
+        labelEnter
+            .enter()
+            .append('text')
+            .attr('class', 'label')
+            .attr('x', vis.offset/2 + vis.margin.left)
+            .attr('y', (d,i) => 220 + i*70)
+            .attr('text-anchor', 'middle')
+            .style('fill', 'white')
+            .style("font-family", '"IBM Plex Mono", monospace')
+            .merge(labelEnter)
+            .text(d => d)
+            .style('opacity', 0)
+            .transition()
+            .duration(800)
+            .style('opacity', 1);
 
+        labelEnter.exit().remove();
 
         // CIRCLES
         let colors = ['dodgerblue', 'salmon', 'lightgreen', 'lemonchiffon'];
 
         let circleEnter = vis.svg.selectAll('circle')
-            .data(durations);
+            .data(vis.durations);
+
         circleEnter
             .enter()
             .append('circle')
-            .attr("cx", offset/2 + offset + vis.margin.left)
+            .merge(circleEnter)
+            .attr("cx", vis.offset/2 + vis.offset + vis.margin.left)
             .attr("cy", (d,i) => 220 + i*70)
             .attr("r", 12)
             .attr("opacity", 0)
             .attr("fill", (d,i) => colors[i%4])
-            .merge(circleEnter)
+            // .merge(circleEnter)
             .transition()
             .delay(2000)
-            .duration(d => d[0] * 100)
+            .duration(d => d[0] * 150)
             .style('opacity', 1)
-            .attr("cx", offset/2 + offset*2 + vis.margin.left)
+            .attr("cx", vis.offset/2 + vis.offset*2 + vis.margin.left)
             .transition()
-            .duration(d => d[1] * 100)
-            .attr("cx", offset/2 + offset*3 + vis.margin.left)
+            .duration(d => d[1] * 150)
+            .attr("cx", vis.offset/2 + vis.offset*3 + vis.margin.left)
             .transition()
-            .duration(d => d[2] * 100)
-            .attr("cx", offset/2 + offset*4 + vis.margin.left)
+            .duration(d => d[2] * 150)
+            .attr("cx", vis.offset/2 + vis.offset*4 + vis.margin.left)
             .transition()
-            .duration(d => d[3] * 100)
-            .attr("cx", offset/2 + offset*5 + vis.margin.left)
+            .duration(d => d[3] * 150)
+            .attr("cx", vis.offset/2 + vis.offset*5 + vis.margin.left)
+            .transition()
+            .duration(600)
+            .attr("opacity", 0)
+        // literally why does this opacity thing not work smh
+        // also if you click choose in the middle it resets to seed A instead of removing the circles
 
-
+        circleEnter.exit().remove();
 
     }
 }
