@@ -7,6 +7,7 @@ let selectedCategory = $('#categorySelector').val();
 let sortByCategory = 'numCompanies';
 let selectedRegions = $('#example-getting-started').val();
 let selectedCompany = '';
+let alreadyExploredScatter = 0;
 // let selectedLat = Number.NaN;
 // let selectedLong = Number.NaN;
 
@@ -60,6 +61,13 @@ Promise.all(promises)
             d.funding_round_code = getStage(d.funding_round_code);
         })
 
+        data[5].forEach(function(d) {
+            d.raised_amount_usd  = +d.raised_amount_usd;
+            d.price_amount = +d.price_amount;
+            d.acquired_at = parseDate(d.acquired_at);
+            d.acquired_year = +d.acquired_year;
+        })
+
         initMainPage(data)
     })
     .catch( function (err){console.log(err)} );
@@ -110,6 +118,18 @@ function categoryChange() {
     selectedCategory = $('#categorySelector').val();
     myMapVis.wrangleData();
     myBarVis.wrangleData();
+}
+
+function animateScatter() {
+    if (!alreadyExploredScatter) {
+        alreadyExploredScatter = 1;
+        myScatterVis.startAnimation();
+    }
+    else if (alreadyExploredScatter && document.getElementById('animateScatter').innerText == 'RESTART'){
+        document.getElementById('animateScatter').innerHTML = 'EXPLORE';
+        d3.select("#scatterYear").text("Current year: ");
+        myScatterVis.startAnimation();
+    }
 }
 
 function applyRegion() {
