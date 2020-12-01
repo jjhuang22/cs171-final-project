@@ -71,7 +71,7 @@ function initMainPage(dataArray) {
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
     myBarVis = new BarVis('barDiv', dataArray[1]);
-    myChartPackingVis = new ChartPackingVis('otherDiv2', dataArray[4]);
+    myChartPackingVis = new ChartPackingVis('chartPackingDiv', dataArray[4]);
     myScatterVis = new ScatterVis('scatterDiv', dataArray[5]);
 
     var choose_waypoint = new Waypoint({
@@ -109,26 +109,26 @@ function regionChange() {
     myInnovativeVis.initVis();
 }
 
-function selectUber() {
-    selectedCompany = 'Uber';
-    selectedLat = 37.7562;
-    selectedLong = -122.443;
-    myMapVis.wrangleData();
-}
-
-function selectAirbnb() {
-    selectedCompany = 'Airbnb';
-    selectedLat = 37.7562;
-    selectedLong = -122.443;
-    myMapVis.wrangleData();
-}
-
-function selectLyft() {
-    selectedCompany = 'Lyft';
-    selectedLat = 37.7562;
-    selectedLong = -122.443;
-    myMapVis.wrangleData();
-}
+// function selectUber() {
+//     selectedCompany = 'Uber';
+//     selectedLat = 37.7562;
+//     selectedLong = -122.443;
+//     myMapVis.wrangleData();
+// }
+//
+// function selectAirbnb() {
+//     selectedCompany = 'Airbnb';
+//     selectedLat = 37.7562;
+//     selectedLong = -122.443;
+//     myMapVis.wrangleData();
+// }
+//
+// function selectLyft() {
+//     selectedCompany = 'Lyft';
+//     selectedLat = 37.7562;
+//     selectedLong = -122.443;
+//     myMapVis.wrangleData();
+// }
 
 var image = document.getElementsByClassName('thumbnail');
 new simpleParallax(image, {

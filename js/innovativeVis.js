@@ -10,7 +10,7 @@ class InnovativeVis {
         this.companies = companies;
 
         this.initVis()
-        console.log(companies);
+        // console.log(companies);
     }
 
     initVis() {
@@ -30,14 +30,14 @@ class InnovativeVis {
         //     console.log(ok);
 
         let huh = d3.groups(vis.companies, d => d.company_region, d => d.company_name);
-        console.log(huh);
+        // console.log(huh);
         //            0     1   2   3
         // founded=> Seed / A / B / C+
         let durations = [...Array(4)].map(x=>Array(5).fill(0));
         for (let i = 0; i < 4; i++) {
             durations[i][4] = [0,0,0,0];
         }
-        console.log(durations);
+        // console.log(durations);
 
         function gah(code) {
             switch (code) {
@@ -51,10 +51,10 @@ class InnovativeVis {
         // TODO
         // take user-selected cities and filter huh to only contain those cities
         // store durations
-        console.log(selectedRegions);
+        // console.log(selectedRegions);
         // let cities = ["SF Bay Area", "Boston", "San Diego"];
         let huh_sub = huh.filter(d => selectedRegions.includes(d[0]));
-        console.log(huh_sub);
+        // console.log(huh_sub);
 
         // store durations
         for (const [v, company] of huh_sub.entries()) {
@@ -72,7 +72,7 @@ class InnovativeVis {
                 rows[i] /= rows[4][i];
             }
         }
-        console.log(durations);
+        // console.log(durations);
 
         // console.log(d3.timeMonth.count(vis.companies[0].funded_at, vis.companies[1].funded_at));
 
