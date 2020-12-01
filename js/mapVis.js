@@ -143,7 +143,7 @@ class MapVis {
             vis.cityInfo[i].rank = i + 1;
         }
 
-        vis.displayData = vis.cityInfo.slice(0, 10);
+        vis.displayData = vis.cityInfo.slice(0, 10).reverse();
 
         vis.updateVis();
     }

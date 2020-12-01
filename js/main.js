@@ -10,6 +10,9 @@ let selectedCompany = '';
 let selectedLat = Number.NaN;
 let selectedLong = Number.NaN;
 
+selectedLat = 37.7562;
+selectedLong = -122.443;
+
 let parseDate = d3.timeParse("%Y-%m-%d");
 let formatDate = d3.timeFormat("%Y-%m-%d");
 

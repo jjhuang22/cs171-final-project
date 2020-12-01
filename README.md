@@ -1,44 +1,24 @@
 # cs171-final-project
-Title
+Crunch Time: A Story of Startups, c. 2007 - 2014
 
-Website: 
+Website: https://jjhuang22.github.io/cs171-final-project/
+Video: TBD
 
 By Jonathan Huang, Joyce Lu, Chris Sun 
 
 Final Project for Harvard's CS 171 (Fall 2020) 
 
-Data Source: 
+Data Source: Our dataset comes from [Crunchbase](https://public.tableau.com/s/resources?qt-overview_resources=1#qt-overview_resources) - it contains information for nearly 50,000 companies: what markets they operate in, when they were founded, where they're based, how many funding rounds they had, who invested, by whom they were acquired, etc. We also used data from [here](https://public.tableau.com/s/resources?qt-overview_resources=1#qt-overview_resources) to get latitude and longitude coordinates for cities.  
 
 Directories:
-- css:
+- css: contains library CSS files and our custom style.css
 
 - data: 
+	raw data: aquisitions.csv, companies.csv, investments.csv, rounds.csv
+	other: contains Jupyter Notebook EDA/scripts, modified CSVs, and custom json files
 
 - img: 
 
 - js:  
 
-for city data: https://simplemaps.com/data/world-cities
-
-## mapVis.js tasks
-- initVis()
-    - project map DONE
-    - add borders DONE
-    - add tooltip (city name, # companies, ranking)
-- wrangleData()
-    - filter by industry
-    - aggregate # of companies by region
-    - subset to top 10 "most innovative" regions in US
-- updateVis()
-    - append circles to map
-
-
-## bubbleVis.js tasks
-- initVis()
-    - append circles for top 25 acquirers
-        - size corresponds to 
-        - color corresponds to  
-- wrangleData()
-    - filter by 
-
-## 
+index.html: main html file 
