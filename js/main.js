@@ -5,22 +5,32 @@
 let selectedTimeRange = [];
 let selectedCategory = $('#categorySelector').val();
 let sortByCategory = 'numCompanies';
-let selectedRegions = $('#example-getting-started').val();
 let selectedCompany = '';
-let selectedLat = Number.NaN;
-let selectedLong = Number.NaN;
+let alreadyExploredScatter = 0;
+// let selectedLat = Number.NaN;
+// let selectedLong = Number.NaN;
+
+let compareCategory = $('#compare-by').val();
 
 let parseDate = d3.timeParse("%Y-%m-%d");
 let formatDate = d3.timeFormat("%Y-%m-%d");
+function getStage(code) {
+    switch (code) {
+        case '0': return 0;
+        case 'A': return 1;
+        case 'B': return 2;
+        case 'C': return 3;
+    }
+}
 
 // load data using promises
 let promises = [
-    d3.json("data/states.json"),
-    d3.csv("data/companies_final.csv"),
-    d3.csv("data/acquisitions_final.csv"),
-    d3.csv("data/rounds_final.csv"),
-    d3.json("data/chartPacking.json"),
-    d3.csv("data/scatterplot.csv")
+    d3.json("data/clean/states.json"),
+    d3.csv("data/clean/companies_final.csv"),
+    d3.csv("data/clean/acquisitions_final.csv"),
+    d3.csv("data/clean/rounds_final.csv"),
+    d3.json("data/clean/chartPacking.json"),
+    d3.csv("data/clean/scatterplot.csv")
 ];
 
 Promise.all(promises)
@@ -47,6 +57,14 @@ Promise.all(promises)
             d.funded_at = parseDate(d.funded_at);
             d.founded_at = parseDate(d.founded_at);
             d.raised_amount_usd  = +d.raised_amount_usd;
+            d.funding_round_code = getStage(d.funding_round_code);
+        })
+
+        data[5].forEach(function(d) {
+            d.raised_amount_usd  = +d.raised_amount_usd;
+            d.price_amount = +d.price_amount;
+            d.acquired_at = parseDate(d.acquired_at);
+            d.acquired_year = +d.acquired_year;
         })
 
         initMainPage(data)
@@ -71,7 +89,7 @@ function initMainPage(dataArray) {
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
     myBarVis = new BarVis('barDiv', dataArray[1]);
-    myChartPackingVis = new ChartPackingVis('otherDiv2', dataArray[4]);
+    myChartPackingVis = new ChartPackingVis('chartPackingDiv', dataArray[4]);
     myScatterVis = new ScatterVis('scatterDiv', dataArray[5]);
 
     var choose_waypoint = new Waypoint({
@@ -93,9 +111,6 @@ function initMainPage(dataArray) {
         },
         offset: 40
     })
-    // myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3]);
-
-    // myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3].slice(0,70));
 }
 
 function categoryChange() {
@@ -104,35 +119,42 @@ function categoryChange() {
     myBarVis.wrangleData();
 }
 
-function regionChange() {
-    selectedRegions = $('#example-getting-started').val();
-    myInnovativeVis.initVis();
+function animateScatter() {
+    if (!alreadyExploredScatter) {
+        alreadyExploredScatter = 1;
+        myScatterVis.startAnimation();
+    }
+    else if (alreadyExploredScatter && document.getElementById('animateScatter').innerText == 'RESTART'){
+        document.getElementById('animateScatter').innerHTML = 'EXPLORE';
+        d3.select("#scatterYear").text("Current year: ");
+        myScatterVis.startAnimation();
+    }
 }
 
-function selectUber() {
-    selectedCompany = 'Uber';
-    selectedLat = 37.7562;
-    selectedLong = -122.443;
-    myMapVis.wrangleData();
+function applyRegion() {
+    selectedRegions = $('#select-region').val();
+    console.log("main: " + selectedRegions);
+    myInnovativeVis.wrangleData();
 }
 
-function selectAirbnb() {
-    selectedCompany = 'Airbnb';
-    selectedLat = 37.7562;
-    selectedLong = -122.443;
-    myMapVis.wrangleData();
-}
-
-function selectLyft() {
-    selectedCompany = 'Lyft';
-    selectedLat = 37.7562;
-    selectedLong = -122.443;
-    myMapVis.wrangleData();
-}
-
-var image = document.getElementsByClassName('thumbnail');
-new simpleParallax(image, {
-    scale:1.5,
-    overflow: true
-});
+// function selectUber() {
+//     selectedCompany = 'Uber';
+//     selectedLat = 37.7562;
+//     selectedLong = -122.443;
+//     myMapVis.wrangleData();
+// }
+//
+// function selectAirbnb() {
+//     selectedCompany = 'Airbnb';
+//     selectedLat = 37.7562;
+//     selectedLong = -122.443;
+//     myMapVis.wrangleData();
+// }
+//
+// function selectLyft() {
+//     selectedCompany = 'Lyft';
+//     selectedLat = 37.7562;
+//     selectedLong = -122.443;
+//     myMapVis.wrangleData();
+// }
 

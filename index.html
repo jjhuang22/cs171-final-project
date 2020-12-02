@@ -11,8 +11,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@600&family=IBM+Plex+Mono:wght@300&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/styles.css">
+
 	<!--	multiselect option-->
-	<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+	<link rel="stylesheet" href="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569006288/BBBootstrap/choices.min.css?version=7.0.0">
 
 </head>
 <body>
@@ -53,9 +54,9 @@
 				that emerged from the devastation of the 2008 global recession to become household names today.
 				Choose a company to follow its journey.</p>
 
-			<button type="button" class="test-button test-button-1" onclick="selectUber()">Uber</button>
-			<button type="button" class="test-button test-button-1" onclick="selectAirbnb()">AirBnB</button>
-			<button type="button" class="test-button test-button-1" onclick="selectLyft()">Lyft</button>
+<!--			<button type="button" class="test-button test-button-1" onclick="selectUber()">Uber</button>-->
+<!--			<button type="button" class="test-button test-button-1" onclick="selectAirbnb()">AirBnB</button>-->
+<!--			<button type="button" class="test-button test-button-1" onclick="selectLyft()">Lyft</button>-->
 		</div>
 	</div>
 
@@ -214,29 +215,37 @@
 		</div>
 	</div>
 
+	<br>
+
 	<!--innovative visualization-->
 	<div data-aos="fade-in" data-aos-delay="50" data-aos-duration="800" class="row" id="innovativeDivWaypoint">
-		<div class="col-md-10 offset-1" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid salmon">
 
-			<!-- header -->
-			<div class="row justify-content-center" style="height: 15vh">
-				<div class="align-self-center">
-					<h3>Do startups progress through funding stages at different rates?</h3>
+		<div class="col-md-10 offset-1">
+			<!--header -->
+			<div class="row justify-content-center">
+				<h3>Do startups progress through funding stages at different rates?</h3>
+			</div>
 
-					<select id="example-getting-started" multiple="multiple" style="background-color: white" onchange="regionChange()">
-						<option value="SF Bay Area" selected>San Fransisco</option>
-						<option value="Boston" selected>Boston</option>
-						<option value="Raleigh" selected>Los Angeles</option>
-						<option value="Atlanta">Atlanta</option>
-						<option value="Seattle" selected>Seattle</option>
-						<option value="International">International</option>
+			<br>
+
+			<div class="row justify-content-center">
+				<div class="col-md-3 align-self-center">
+					<select id='compare-by' class="custom-select" style="width: 100%">
+						<option disabled selected value> -- Compare by -- </option>
+						<option value="market" selected>Market</option>
+						<option value="company_region">Region</option>
 					</select>
-
+				</div>
+				<div class="col-md-4 align-self-center">
+					<select id="select-region" placeholder="Select 4 regions or markets to compare" multiple></select>
+				</div>
+				<div class="col-md-3">
+					<button class="test-button test-button-1" onclick="applyRegion()">Compare</button>
 				</div>
 			</div>
-			<br>
+
 			<!-- graph -->
-			<div class="row justify-content-center" style="height: 70vh">
+			<div class="row justify-content-center" style="height: 60vh">
 				<div class="align-self-center" id="innovativeDiv" style="height: 100%; width: 100%"></div>
 			</div>
 		</div>
@@ -301,13 +310,19 @@
 
 	<!--last visualization-->
 	<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" class="row">
-		<div class="col-md-8 offset-2" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid orange; height: 90vh;">
+		<div class="col-md-8 offset-2" style="margin-top: 5vh; margin-bottom: 5vh; height: 90vh;">
 
 			<!-- header -->
 			<div class="row justify-content-center">
 				<div class="align-self-center">
 					<h3>Do startups that raise more exit for more?</h3>
 				</div>
+
+				<div class="col-md-6 text-center">
+					<button type="button" class="test-button test-button-1" id='animateScatter' onclick="animateScatter()">Explore</button>
+					<p id="scatterYear">Current year: </p>
+				</div>
+
 			</div>
 			<br>
 			<!-- graph -->
@@ -339,7 +354,17 @@
 
 			<!-- graph -->
 			<div class="row justify-content-center" style="height: 80vh">
-				<div class="align-self-center" id="otherDiv2" style="height: 100%; width: 75%"></div>
+				<div class="align-self-center" id="chartPackingDiv" style="height: 100%; width: 75%"></div>
+			</div>
+
+<!--			info box-->
+			<div class="row justify-content-center" style="height: 20vh; background: white">
+				<div class="align-self-center" id="chartPackingInfo" style="height: 100%; width: 75%">
+					<p id="layer1" style="color: blue;">Currently looking at different industries that are acquiring companies.</p>
+					<p id="layer2"></p>
+					<p id="layer3"></p>
+					<p id="layer4"></p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -416,7 +441,6 @@
 
 	<!--startup simulator-->
 	<div class="row" id="chooseDivWaypoint">
-
 		<div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000" class="col-md-6 offset-1"
 			 style="background-color: #080314; z-index: 2">
 
@@ -435,7 +459,9 @@
 		</div>
 
 		<div data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000"
-			 class="col-md-3 offset-1">
+			 class="col-md-3 offset-1"
+			 style="background-color: #080314">
+
 			<div class="container d-flex h-100">
 				<div class="row justify-content-center align-self-center"">
 					<div class="row">
@@ -454,6 +480,25 @@
 		</div>
 	</div>
 
+<!--	bibliography -->
+	<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" class="row">
+		<div class="col-md-8 offset-2" style="margin-top: 5vh; margin-bottom: 5vh; border: thick solid orange; height: 90vh;">
+
+			<!-- header -->
+			<div class="row justify-content-center">
+				<div class="align-self-center">
+					<h3>Data Sources</h3>
+					<p>Our data, data cleaning scripts, and source code can be found in our
+						<a href="https://github.com/jjhuang22/cs171-final-project" target="_blank">Github repository</a>.
+					</p>
+					<p>
+						Random stuff about data sources, us, screencast?
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="section-divider"></div>
 </div>
 
@@ -466,6 +511,9 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+<!--multiselect-->
+<script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569006273/BBBootstrap/choices.min.js?version=7.0.0"></script>
+
 <!-- d3 -->
 <script src="https://d3js.org/d3.v6.min.js"></script>
 
@@ -474,7 +522,6 @@
 <script src="https://d3js.org/d3-geo.v1.min.js"></script>
 
 <script src="js/noframework.waypoints.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 
 <!-- OWN JS -->
 <script src="js/mapVis.js"></script>
@@ -488,12 +535,6 @@
 <script src="js/main.js"></script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#example-getting-started').multiselect();
-	});
-</script>
 
 <!-- AOS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
