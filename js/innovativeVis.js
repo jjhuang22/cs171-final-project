@@ -15,49 +15,62 @@ class InnovativeVis {
         // console.log(compareCategory);
         // this.groupedData = d3.groups(this.companies, d => d[compareCategory], d => d.company_name);
 
-        // this.initVis()
+        this.initVis()
     }
 
     groupData() {
         let vis = this;
         vis.groupedData = d3.groups(vis.companies, d => d[compareCategory], d => d.company_name);
         console.log(vis.groupedData);
-        // vis.createButton();
-        vis.initVis();
+
+        // get names of regions/markets
+        vis.regions = [];
+        vis.groupedData.forEach(d => {
+            vis.regions.push(d[0]);
+        })
+        vis.selectMenu = d3.select("#select-region");
+
+        // if button does not exist yet, create it
+        if (!vis.selectMenu.node().hasChildNodes()){
+            console.log(!vis.selectMenu.node().hasChildNodes());
+            vis.createButton();
+            console.log("create button");
+        } else { // else, clear the options and re-add them
+            console.log("update button")
+
+            console.log(!vis.selectMenu.node().hasChildNodes());
+
+            // remove existing options
+            d3.select("#select-region").selectAll("option")
+                .remove();
+
+            console.log(!vis.selectMenu.node().hasChildNodes());
+
+            // add regions to selection menu
+            vis.regions.forEach(d => {
+                vis.selectMenu.append("option")
+                    .text(d);
+            });
+        }
     }
 
-    // createButton() {
-    //
-    //     let vis = this;
-    //
-    //     // get names of regions
-    //     let regions = [];
-    //     vis.groupedData.forEach(d => {
-    //         regions.push(d[0]);
-    //     })
-    //
-    //     // add regions to selection menu
-    //     let selectMenu = d3.select("#select-region");
-    //     regions.forEach(d => {
-    //         selectMenu.append("option")
-    //             .text(d);
-    //     });
-    //     //
-    //     // // set default values of button
-    //     // function selectElement(id, valueToSelect) {
-    //     //     let element = document.getElementById(id);
-    //     //     element.value = valueToSelect;
-    //     // }
-    //     // selectElement('select-region', ['Boston', 'SF Bay Area', 'New York City', "Atlanta"])
-    //
-    //     // instantiate button
-    //     var multipleCancelButton = new Choices('#select-region', {
-    //         removeItemButton: true,
-    //         maxItemCount:4
-    //     });
-    //
-    //     vis.initVis();
-    // }
+    createButton() {
+
+        let vis = this;
+
+        // add regions to selection menu
+        vis.regions.forEach(d => {
+            vis.selectMenu.append("option")
+                .text(d);
+        });
+
+        // instantiate button SOMEHOW THIS BREAKS .hasChildNodes()!!!!!!!!!!!
+        // var multipleCancelButton = new Choices('#select-region', {
+        //     removeItemButton: true,
+        //     maxItemCount:4
+        // });
+    }
+
 
     initVis() {
         let vis = this;
@@ -83,24 +96,20 @@ class InnovativeVis {
             .style("font-size", "16px")
             .style("fill", "white");
 
-        // get names of regions
-        let regions = [];
-        vis.groupedData.forEach(d => {
-            regions.push(d[0]);
-        })
+        // console.log(d3.select("#select-region").node().hasChildNodes());
 
-        // add regions to selection menu
-        let selectMenu = d3.select("#select-region");
-        regions.forEach(d => {
-            selectMenu.append("option")
-                .text(d);
-        });
-
-        // instantiate button
-        var multipleCancelButton = new Choices('#select-region', {
-            removeItemButton: true,
-            maxItemCount:4
-        });
+        // // add regions to selection menu
+        // let selectMenu = d3.select("#select-region");
+        // regions.forEach(d => {
+        //     selectMenu.append("option")
+        //         .text(d);
+        // });
+        //
+        // // instantiate button
+        // var multipleCancelButton = new Choices('#select-region', {
+        //     removeItemButton: true,
+        //     maxItemCount:4
+        // });
     }
 
     wrangleData() {
