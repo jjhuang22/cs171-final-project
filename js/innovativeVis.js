@@ -20,8 +20,29 @@ class InnovativeVis {
 
     groupData() {
         let vis = this;
-        vis.groupedData = d3.groups(vis.companies, d => d[compareCategory], d => d.company_name);
+        vis.groupedData0 = d3.groups(vis.companies, d => d[compareCategory], d => d.company_name);
         console.log(vis.groupedData);
+        let desiredCities = ["SF Bay Area", "Boston", "New York City", "San Diego", "Raleigh", "Chicago",
+            "Los Angeles", "Atlanta", "Columbus", "Portland", "Seattle", "Charlotte", "Dallas', Washington, D.C.",
+            "Denver", "Orange County", "Pittsburgh", "Kansas City",
+            "Austin", "Baltimore", "Salt Lake City",
+            "Orlando", "Sacramento"];
+
+        if (compareCategory == 'company_region'){
+            vis.groupedData = [];
+            vis.groupedData0.forEach(d => {
+                if (desiredCities.includes(d[0])) {
+                    if (d[0] == 'SF Bay Area') {
+                        vis.groupedData.push(['San Francisco Bay Area', d[1]]);
+                    }
+                    else {
+                        vis.groupedData.push(d);
+                    }
+                }
+            });
+        } else {
+            vis.groupedData = vis.groupedData0;
+        }
 
         // get names of regions/markets
         vis.regions = [];
@@ -29,6 +50,9 @@ class InnovativeVis {
             vis.regions.push(d[0]);
         })
         vis.selectMenu = d3.select("#select-region");
+
+        // group companies by region
+        // this.groupedData0 = d3.groups(this.companies, d => d.company_region, d => d.company_name);
 
         // if button does not exist yet, create it
         if (!vis.selectMenu.node().hasChildNodes()){
