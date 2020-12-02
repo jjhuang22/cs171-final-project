@@ -22,14 +22,17 @@ class InnovativeVis {
         let vis = this;
         vis.groupedData0 = d3.groups(vis.companies, d => d[compareCategory], d => d.company_name);
         console.log(vis.groupedData);
-        let desiredCities = ["SF Bay Area", "Boston", "New York City", "San Diego", "Raleigh", "Chicago",
-            "Los Angeles", "Atlanta", "Columbus", "Portland", "Seattle", "Charlotte", "Dallas', Washington, D.C.",
-            "Denver", "Orange County", "Pittsburgh", "Kansas City",
-            "Austin", "Baltimore", "Salt Lake City",
-            "Orlando", "Sacramento"];
+        let desiredCities = ["Boston", "New York City", "Seattle", "Chicago", "Washington, D.C.",
+            "SF Bay Area", "Los Angeles", "Dallas", "San Diego", "Sacramento", "Orange County",
+            "Atlanta", "Denver", "Columbus", "Portland",  "Raleigh", "Charlotte",
+            "Pittsburgh", "Kansas City", "Austin", "Baltimore", "Salt Lake City", "Orlando"];
+        let desiredMarkets = ["Software", "Enterprise Software", "E-Commerce", "Advertising", "Finance",
+            "Clean Technology", "Solar", "Health Care", "Hardware + Software", "Security",
+            "Curated Web", "Social Media", "Entertainment", "Games", "Travel", "Education",
+            "Mobile", "SaaS", "Analytics", "Cloud Data Services", "Big Data"]
 
+        vis.groupedData = [];
         if (compareCategory == 'company_region'){
-            vis.groupedData = [];
             vis.groupedData0.forEach(d => {
                 if (desiredCities.includes(d[0])) {
                     if (d[0] == 'SF Bay Area') {
@@ -40,8 +43,12 @@ class InnovativeVis {
                     }
                 }
             });
-        } else {
-            vis.groupedData = vis.groupedData0;
+        } else if (compareCategory == 'company_market'){
+            vis.groupedData0.forEach(d => {
+                if (desiredMarkets.includes(d[0])) {
+                    vis.groupedData.push(d);
+                }
+            });
         }
 
         // get names of regions/markets
@@ -114,10 +121,17 @@ class InnovativeVis {
         // TIME COUNTER
         vis.timer = vis.svg.append("text")
             .attr("transform",
-                `translate(${vis.width/2},60)`)
+                `translate(${vis.width/2},55)`)
             .style("text-anchor", "middle")
             .style("font-family", '"IBM Plex Mono", monospace')
-            .style("font-size", "20px")
+            .style("font-size", "36px")
+            .style("fill", "#ffd74c");
+        vis.timerCaption = vis.svg.append("text")
+            .attr("transform",
+                `translate(${vis.width/2},80)`)
+            .style("text-anchor", "middle")
+            .style("font-family", '"IBM Plex Mono", monospace')
+            .style("font-size", "16px")
             .style("fill", "#ffd74c");
 
         // console.log(d3.select("#select-region").node().hasChildNodes());
@@ -517,7 +531,8 @@ class InnovativeVis {
             // add an opaque circle first time that current > the milestone
             vis.drawOpaque();
 
-            vis.timer.text(vis.current + ' months since founding');
+            vis.timer.text(vis.current);
+            vis.timerCaption.text("months since founding")
             if (vis.current == range) {
                 clearInterval(counter);
             }

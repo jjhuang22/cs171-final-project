@@ -200,7 +200,7 @@ class MapVis {
                 return vis.colorScale(d.numCompanies);
             })
             .attr("stroke", "white")
-            .attr("stroke-width", 2);
+            .attr("stroke-width", 1);
 
         // mouseover
         vis.svg.selectAll("circle").on("mouseover", function(event, d){
