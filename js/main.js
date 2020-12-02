@@ -5,7 +5,6 @@
 let selectedTimeRange = [];
 let selectedCategory = $('#categorySelector').val();
 let sortByCategory = 'numCompanies';
-let selectedRegions = $('#example-getting-started').val();
 let selectedCompany = '';
 let alreadyExploredScatter = 0;
 // let selectedLat = Number.NaN;
@@ -138,11 +137,6 @@ function applyRegion() {
     myInnovativeVis.wrangleData();
 }
 
-function regionChange() {
-    selectedRegions = $('#example-getting-started').val();
-    myInnovativeVis.initVis();
-}
-
 // function selectUber() {
 //     selectedCompany = 'Uber';
 //     selectedLat = 37.7562;
@@ -163,10 +157,4 @@ function regionChange() {
 //     selectedLong = -122.443;
 //     myMapVis.wrangleData();
 // }
-
-var image = document.getElementsByClassName('thumbnail');
-new simpleParallax(image, {
-    scale:1.5,
-    overflow: true
-});
 

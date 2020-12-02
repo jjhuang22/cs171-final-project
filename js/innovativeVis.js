@@ -44,11 +44,28 @@ class InnovativeVis {
             selectMenu.append("option")
                 .text(d);
         });
+        //
+        // // set default values of button
+        // function selectElement(id, valueToSelect) {
+        //     let element = document.getElementById(id);
+        //     element.value = valueToSelect;
+        // }
+        // selectElement('select-region', ['Boston', 'SF Bay Area', 'New York City', "Atlanta"])
 
+        // instantiate button
         var multipleCancelButton = new Choices('#select-region', {
             removeItemButton: true,
             maxItemCount:4
         });
+
+        // TIME COUNTER
+        vis.timer = vis.svg.append("text")
+            .attr("transform",
+                `translate(${vis.width/2},50)`)
+            .style("text-anchor", "middle")
+            .style("font-family", '"IBM Plex Mono", monospace')
+            .style("font-size", "16px")
+            .style("fill", "white");
     }
 
     wrangleData() {
@@ -57,15 +74,12 @@ class InnovativeVis {
 
         // subset to selected regions
         let regionSub = vis.groupedData.filter(d => selectedRegions.includes(d[0]));
-        console.log(regionSub);
-        console.log("innovis: " + selectedRegions);
 
         // create array of labels based on selected regions
         vis.labels = [];
         for (let i = 0; i<4; i++) {
             vis.labels.push(regionSub[i][0])
         }
-        console.log(vis.labels);
 
         // create empty array to store durations (1 row per region, 1 column per milestone + 1 column for tracking denominator)
         vis.durations = [...Array(4)].map(x => Array(5).fill(0));
@@ -86,6 +100,7 @@ class InnovativeVis {
             }
         }
 
+        // TODO Fix if a region misses out on milestones (average it out over the last two--Alexandria, Houston)
         // for each region and round, get average duration
         for (var region of vis.durations) {
             for (let i = 3; i >= 0; i--) {
@@ -96,7 +111,7 @@ class InnovativeVis {
                 }
             }
         }
-        // console.log(vis.durations);
+        console.log(vis.durations);
 
         vis.updateVis();
     }
@@ -162,7 +177,7 @@ class InnovativeVis {
             .attr("fill", (d,i) => colors[i%4])
             // .merge(circleEnter)
             .transition()
-            .delay(2000)
+            // .delay(2000)
             .duration(d => d[0] * 150)
             .style('opacity', 1)
             .attr("cx", vis.offset/2 + vis.offset*2 + vis.margin.left)
@@ -182,6 +197,33 @@ class InnovativeVis {
         // also if you click choose in the middle it resets to seed A instead of removing the circles
 
         circleEnter.exit().remove();
+
+        // TIMER TODO make the timer ending line up exactly with last dot
+        let totalTime = [];
+        vis.durations.forEach(d => {
+            totalTime.push(d3.sum(d));
+        })
+        // vis.durations[i]
+        let endMonths = d3.max(totalTime);
+        console.log(endMonths);
+        //
+        // vis.timer
+        //     .text()
+
+        // if (start === end) return;
+        var range = Math.ceil(endMonths);
+        var current = 0;
+        var increment = 1;
+        var duration = endMonths * 150 + 100;
+        var stepTime = Math.abs(Math.floor(duration / range));
+        // var obj = document.getElementById(id);
+        var counter = setInterval(function() {
+            current += increment;
+            vis.timer.text(current + ' months since founding');
+            if (current == range) {
+                clearInterval(counter);
+            }
+        }, stepTime);
 
     }
 }
