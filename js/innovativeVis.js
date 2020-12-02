@@ -100,6 +100,29 @@ class InnovativeVis {
             }
         }
 
+        // make a copy of vis.durations and get averages
+        vis.timeFromFounding = [...Array(4)].map(x => Array(5).fill(0));
+        for (let i = 0; i < 4; i++) {
+            vis.timeFromFounding[i][4] = [0,0,0,0];
+        }
+        // iterate over each region
+        for (const [v, company] of regionSub.entries()) {
+            // iterate over each company
+            for (var rounds of company[1]) {
+                // iterate over each round
+                for (let i = 0; i < rounds[1].length; i++) {
+                    let stage = rounds[1][i]['funding_round_code'];
+                    vis.timeFromFounding[v][stage] += d3.timeMonth.count(rounds[1][i].founded_at, rounds[1][i].funded_at);
+                    vis.timeFromFounding[v][4][stage] += 1; // record number of companies that have been tallied so far
+                }
+            }
+        }
+        for (var region of vis.timeFromFounding) {
+            for (let i = 0; i < 4; i++) {
+                region[i] /= region[4][i];
+            }
+        }
+
         // TODO Fix if a region misses out on milestones (average it out over the last two--Alexandria, Houston)
         // for each region and round, get average duration
         for (var region of vis.durations) {
@@ -112,9 +135,122 @@ class InnovativeVis {
             }
         }
         console.log(vis.durations);
+        console.log(vis.timeFromFounding);
 
+        vis.drawOpaque();
         vis.updateVis();
     }
+
+    drawOpaque() {
+        let vis = this;
+
+        vis.foundCircles = vis.svg.selectAll('.foundCircle')
+            .data(vis.timeFromFounding);
+        vis.foundCircles
+            .enter()
+            .append('circle')
+            .attr("class", "foundCircle")
+            .merge(vis.foundCircles)
+            .attr("cx", vis.offset/2 + vis.offset*1 + vis.margin.left)
+            .attr("cy", (d, i) => 220 + i*70)
+            .attr("r", 12)
+            .attr("opacity", 0.1)
+            .attr("fill", "white")
+
+        vis.seedCircles = vis.svg.selectAll('.seedCircle')
+            .data(vis.timeFromFounding);
+        vis.seedCircles
+            .enter()
+            .append('circle')
+            .attr("class", "seedCircle")
+            .merge(vis.seedCircles)
+            .attr("cx", vis.offset/2 + vis.offset*2 + vis.margin.left)
+            .attr("cy", (d, i) => 220 + i*70)
+            .attr("r", 12)
+            .attr("opacity", (d) => {
+                if (vis.current >= d[0]){
+                    return 1;
+                } else{
+                    return 0.2;
+                }
+            })
+            .attr("fill", "red")
+
+        vis.aCircles = vis.svg.selectAll('.aCircle')
+            .data(vis.timeFromFounding);
+        vis.aCircles
+            .enter()
+            .append('circle')
+            .attr("class", "aCircle")
+            .merge(vis.aCircles)
+            .attr("cx", vis.offset/2 + vis.offset*3 + vis.margin.left)
+            .attr("cy", (d, i) => 220 + i*70)
+            .attr("r", 12)
+            .attr("opacity", (d) => {
+                if (vis.current >= d[1]){
+                    return 1;
+                } else{
+                    return 0.2;
+                }
+            })
+            .attr("fill", "orange")
+
+        vis.bCircles = vis.svg.selectAll('.bCircle')
+            .data(vis.timeFromFounding);
+        vis.bCircles
+            .enter()
+            .append('circle')
+            .attr("class", "bCircle")
+            .merge(vis.bCircles)
+            .attr("cx", vis.offset/2 + vis.offset*4 + vis.margin.left)
+            .attr("cy", (d, i) => 220 + i*70)
+            .attr("r", 12)
+            .attr("opacity", (d) => {
+                if (vis.current >= d[2]){
+                    return 1;
+                } else{
+                    return 0.2;
+                }
+            })
+            .attr("fill", "yellow")
+
+        vis.cCircles = vis.svg.selectAll('.cCircle')
+            .data(vis.timeFromFounding);
+        vis.cCircles
+            .enter()
+            .append('circle')
+            .attr("class", "cCircle")
+            .merge(vis.cCircles)
+            .attr("cx", vis.offset/2 + vis.offset*5 + vis.margin.left)
+            .attr("cy", (d, i) => 220 + i*70)
+            .attr("r", 12)
+            .attr("opacity", (d) => {
+                if (vis.current >= d[3]){
+                    return 1;
+                } else{
+                    return 0.2;
+                }
+            })
+            .attr("fill", "green")
+    }
+
+    // updateOpaque() {
+    //     let vis = this;
+    //
+    //     console.log("update opaque has been called");
+    //     vis.seedCircles
+    //         .enter()
+    //         .merge(vis.seedCircles)
+    //         .style("opacity", function(d){
+    //             console.log(d, vis.current);
+    //             if (Math.ceil(d[0]) <= vis.current){
+    //                 return 1;
+    //             }
+    //             else {
+    //                 return 0.05;
+    //             }
+    //         })
+    // }
 
     updateVis() {
 
@@ -163,12 +299,13 @@ class InnovativeVis {
         // CIRCLES
         let colors = ['dodgerblue', 'salmon', 'lightgreen', 'lemonchiffon'];
 
-        let circleEnter = vis.svg.selectAll('circle')
+        let circleEnter = vis.svg.selectAll('.moveCircle')
             .data(vis.durations);
 
         circleEnter
             .enter()
             .append('circle')
+            .attr("class", "moveCircle")
             .merge(circleEnter)
             .attr("cx", vis.offset/2 + vis.offset + vis.margin.left)
             .attr("cy", (d,i) => 220 + i*70)
@@ -199,28 +336,29 @@ class InnovativeVis {
         circleEnter.exit().remove();
 
         // TIMER TODO make the timer ending line up exactly with last dot
+        // source: https://stackoverflow.com/questions/16994662/count-animation-from-number-a-to-b
         let totalTime = [];
         vis.durations.forEach(d => {
             totalTime.push(d3.sum(d));
         })
-        // vis.durations[i]
         let endMonths = d3.max(totalTime);
         console.log(endMonths);
-        //
-        // vis.timer
-        //     .text()
 
         // if (start === end) return;
         var range = Math.ceil(endMonths);
-        var current = 0;
+        vis.current = 0;
         var increment = 1;
-        var duration = endMonths * 150 + 100;
+        var duration = endMonths * 150 + 90;
         var stepTime = Math.abs(Math.floor(duration / range));
         // var obj = document.getElementById(id);
         var counter = setInterval(function() {
-            current += increment;
-            vis.timer.text(current + ' months since founding');
-            if (current == range) {
+            vis.current += increment;
+
+            // add an opaque circle first time that current > the milestone
+            vis.drawOpaque();
+
+            vis.timer.text(vis.current + ' months since founding');
+            if (vis.current == range) {
                 clearInterval(counter);
             }
         }, stepTime);
