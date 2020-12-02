@@ -154,8 +154,8 @@ class InnovativeVis {
             .attr("cx", vis.offset/2 + vis.offset*1 + vis.margin.left)
             .attr("cy", (d, i) => 220 + i*70)
             .attr("r", 12)
-            .attr("opacity", 0.1)
-            .attr("fill", "white")
+            .attr("opacity", 0.5)
+            .attr("fill", "white");
 
         vis.seedCircles = vis.svg.selectAll('.seedCircle')
             .data(vis.timeFromFounding);
@@ -175,6 +175,20 @@ class InnovativeVis {
                 }
             })
             .attr("fill", "red")
+
+        vis.seedMonths = vis.svg.selectAll('.seedMonths')
+            .data(vis.timeFromFounding);
+        vis.seedMonths
+            .enter()
+            .append('text')
+            .attr("class", "seedMonths")
+            .attr("transform", (d, i) => {
+                let x = vis.offset/2 + vis.offset*2 + vis.margin.left;
+                let y = 220 + i*70;
+                return "translate(" + x + "," + y + ")";
+            })
+            .style("text-anchor", "middle")
+            .text("blahdlfjladsj");
 
         vis.aCircles = vis.svg.selectAll('.aCircle')
             .data(vis.timeFromFounding);
@@ -233,24 +247,6 @@ class InnovativeVis {
             })
             .attr("fill", "green")
     }
-
-    // updateOpaque() {
-    //     let vis = this;
-    //
-    //     console.log("update opaque has been called");
-    //     vis.seedCircles
-    //         .enter()
-    //         .merge(vis.seedCircles)
-    //         .style("opacity", function(d){
-    //             console.log(d, vis.current);
-    //             if (Math.ceil(d[0]) <= vis.current){
-    //                 return 1;
-    //             }
-    //             else {
-    //                 return 0.05;
-    //             }
-    //         })
-    // }
 
     updateVis() {
 
