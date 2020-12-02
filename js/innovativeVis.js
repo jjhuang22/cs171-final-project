@@ -452,10 +452,9 @@ class InnovativeVis {
 
         // CAPTION
         d3.select("#funding-caption")
-            .text("After crowdfunding and borrowing from family and friends, seed funding and/or angel investing are usually\n" +
-            "\t\t\t\t\t\tthe earliest stages of startup funding. With Series A funding, the company begins to scale its operations, and\n" +
-            "\t\t\t\t\t\tby the time it reaches Series B, it is usually well-established. Companies that reach Series C and beyond\n" +
-            "\t\t\t\t\t\tare already quite successful.")
+            .text("Seed funding and/or angel investing: still developing the idea and prototype, but shows potential. " +
+                "Series A: scaling operations and building machinery. Series B: well-established and expanding. " +
+                "Series C and beyond: solid record of success and (soon-to-be) profitable.")
 
         // CIRCLES
         let colors = ['#ffd74c', '#ffd74c', '#ffd74c', '#ffd74c'];
