@@ -114,11 +114,11 @@ class InnovativeVis {
         // TIME COUNTER
         vis.timer = vis.svg.append("text")
             .attr("transform",
-                `translate(${vis.width/2},50)`)
+                `translate(${vis.width/2},60)`)
             .style("text-anchor", "middle")
             .style("font-family", '"IBM Plex Mono", monospace')
-            .style("font-size", "16px")
-            .style("fill", "white");
+            .style("font-size", "20px")
+            .style("fill", "#ffd74c");
 
         // console.log(d3.select("#select-region").node().hasChildNodes());
 
@@ -221,8 +221,8 @@ class InnovativeVis {
             .attr("cx", vis.offset/2 + vis.offset*1 + vis.margin.left)
             .attr("cy", (d, i) => 220 + i*70)
             .attr("r", 12)
-            .attr("opacity", 0.5)
-            .attr("fill", "white");
+            .attr("fill", "#ffd74c")
+            .attr("opacity", 1);
 
         vis.seedCircles = vis.svg.selectAll('.seedCircle')
             .data(vis.timeFromFounding);
@@ -241,7 +241,7 @@ class InnovativeVis {
                     return 0.2;
                 }
             })
-            .attr("fill", "red");
+            .attr("fill", "#dbd6ff");
 
         vis.seedMonths = vis.svg.selectAll('.seedMonths')
             .data(vis.timeFromFounding);
@@ -286,7 +286,7 @@ class InnovativeVis {
                     return 0.2;
                 }
             })
-            .attr("fill", "orange");
+            .attr("fill", "#9f92fc");
 
         vis.aMonths = vis.svg.selectAll('.aMonths')
             .data(vis.timeFromFounding);
@@ -331,7 +331,7 @@ class InnovativeVis {
                     return 0.2;
                 }
             })
-            .attr("fill", "yellow");
+            .attr("fill", "#6955f8");
 
 
         vis.bMonths = vis.svg.selectAll('.bMonths')
@@ -377,7 +377,7 @@ class InnovativeVis {
                     return 0.2;
                 }
             })
-            .attr("fill", "green");
+            .attr("fill", "#3318ff");
 
         vis.cMonths = vis.svg.selectAll('.cMonths')
             .data(vis.timeFromFounding);
@@ -421,7 +421,7 @@ class InnovativeVis {
             .attr('x', (d,i) => vis.offset/2 + vis.offset*(i+1) + vis.margin.left)
             .attr('y', 150)
             .attr('text-anchor', 'middle')
-            .style('fill', 'white')
+            .style('fill', '#dbd6ff')
             .style("font-family", '"IBM Plex Mono", monospace')
             .text(d => d)
             .style('opacity', 0)
@@ -439,7 +439,7 @@ class InnovativeVis {
             .attr('x', vis.offset/2 + vis.margin.left)
             .attr('y', (d,i) => 220 + i*70)
             .attr('text-anchor', 'middle')
-            .style('fill', 'white')
+            .style('fill', '#dbd6ff')
             .style("font-family", '"IBM Plex Mono", monospace')
             .merge(labelEnter)
             .text(d => d)
@@ -450,8 +450,15 @@ class InnovativeVis {
 
         labelEnter.exit().remove();
 
+        // CAPTION
+        d3.select("#funding-caption")
+            .text("After crowdfunding and borrowing from family and friends, seed funding and/or angel investing are usually\n" +
+            "\t\t\t\t\t\tthe earliest stages of startup funding. With Series A funding, the company begins to scale its operations, and\n" +
+            "\t\t\t\t\t\tby the time it reaches Series B, it is usually well-established. Companies that reach Series C and beyond\n" +
+            "\t\t\t\t\t\tare already quite successful.")
+
         // CIRCLES
-        let colors = ['dodgerblue', 'salmon', 'lightgreen', 'lemonchiffon'];
+        let colors = ['#ffd74c', '#ffd74c', '#ffd74c', '#ffd74c'];
 
         let circleEnter = vis.svg.selectAll('.moveCircle')
             .data(vis.durations);

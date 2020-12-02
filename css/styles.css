@@ -94,12 +94,9 @@ body {
     margin-top: 24px;
 }
 
-.vis-border {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    border: thick solid dodgerblue;
-    /*border-radius: 30px;*/
-    /*background: white*/
+.caption {
+    font-size: 16px;
+    color: #d0d0d0;
 }
 
 p {
