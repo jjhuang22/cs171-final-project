@@ -5,12 +5,11 @@
 let selectedTimeRange = [];
 let selectedCategory = $('#categorySelector').val();
 let sortByCategory = 'numCompanies';
+let compareCategory = $('#compare-by').val();
 let selectedCompany = '';
 let alreadyExploredScatter = 0;
 // let selectedLat = Number.NaN;
 // let selectedLong = Number.NaN;
-
-let compareCategory = $('#compare-by').val();
 
 let parseDate = d3.timeParse("%Y-%m-%d");
 let formatDate = d3.timeFormat("%Y-%m-%d");
@@ -136,6 +135,11 @@ function applyRegion() {
     selectedRegions = $('#select-region').val();
     console.log("main: " + selectedRegions);
     myInnovativeVis.wrangleData();
+}
+
+function chooseCategory() {
+    compareCategory = $('#compare-by').val();
+    myInnovativeVis.groupData();
 }
 
 // function selectUber() {

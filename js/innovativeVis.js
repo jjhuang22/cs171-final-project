@@ -12,10 +12,52 @@ class InnovativeVis {
         this.companies = companies;
 
         // group companies by region
-        this.groupedData = d3.groups(this.companies, d => d.company_region, d => d.company_name);
+        // console.log(compareCategory);
+        // this.groupedData = d3.groups(this.companies, d => d[compareCategory], d => d.company_name);
 
-        this.initVis()
+        // this.initVis()
     }
+
+    groupData() {
+        let vis = this;
+        vis.groupedData = d3.groups(vis.companies, d => d[compareCategory], d => d.company_name);
+        console.log(vis.groupedData);
+        // vis.createButton();
+        vis.initVis();
+    }
+
+    // createButton() {
+    //
+    //     let vis = this;
+    //
+    //     // get names of regions
+    //     let regions = [];
+    //     vis.groupedData.forEach(d => {
+    //         regions.push(d[0]);
+    //     })
+    //
+    //     // add regions to selection menu
+    //     let selectMenu = d3.select("#select-region");
+    //     regions.forEach(d => {
+    //         selectMenu.append("option")
+    //             .text(d);
+    //     });
+    //     //
+    //     // // set default values of button
+    //     // function selectElement(id, valueToSelect) {
+    //     //     let element = document.getElementById(id);
+    //     //     element.value = valueToSelect;
+    //     // }
+    //     // selectElement('select-region', ['Boston', 'SF Bay Area', 'New York City', "Atlanta"])
+    //
+    //     // instantiate button
+    //     var multipleCancelButton = new Choices('#select-region', {
+    //         removeItemButton: true,
+    //         maxItemCount:4
+    //     });
+    //
+    //     vis.initVis();
+    // }
 
     initVis() {
         let vis = this;
@@ -32,6 +74,15 @@ class InnovativeVis {
             // .style("background-color", "red")
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
+        // TIME COUNTER
+        vis.timer = vis.svg.append("text")
+            .attr("transform",
+                `translate(${vis.width/2},50)`)
+            .style("text-anchor", "middle")
+            .style("font-family", '"IBM Plex Mono", monospace')
+            .style("font-size", "16px")
+            .style("fill", "white");
+
         // get names of regions
         let regions = [];
         vis.groupedData.forEach(d => {
@@ -44,28 +95,12 @@ class InnovativeVis {
             selectMenu.append("option")
                 .text(d);
         });
-        //
-        // // set default values of button
-        // function selectElement(id, valueToSelect) {
-        //     let element = document.getElementById(id);
-        //     element.value = valueToSelect;
-        // }
-        // selectElement('select-region', ['Boston', 'SF Bay Area', 'New York City', "Atlanta"])
 
         // instantiate button
         var multipleCancelButton = new Choices('#select-region', {
             removeItemButton: true,
             maxItemCount:4
         });
-
-        // TIME COUNTER
-        vis.timer = vis.svg.append("text")
-            .attr("transform",
-                `translate(${vis.width/2},50)`)
-            .style("text-anchor", "middle")
-            .style("font-family", '"IBM Plex Mono", monospace')
-            .style("font-size", "16px")
-            .style("fill", "white");
     }
 
     wrangleData() {
@@ -123,7 +158,6 @@ class InnovativeVis {
             }
         }
 
-        // TODO Fix if a region misses out on milestones (average it out over the last two--Alexandria, Houston)
         // for each region and round, get average duration
         for (var region of vis.durations) {
             for (let i = 3; i >= 0; i--) {
@@ -174,7 +208,7 @@ class InnovativeVis {
                     return 0.2;
                 }
             })
-            .attr("fill", "red")
+            .attr("fill", "red");
 
         vis.seedMonths = vis.svg.selectAll('.seedMonths')
             .data(vis.timeFromFounding);
@@ -182,13 +216,25 @@ class InnovativeVis {
             .enter()
             .append('text')
             .attr("class", "seedMonths")
+            .style("opacity", 0)
+            .merge(vis.seedMonths)
             .attr("transform", (d, i) => {
                 let x = vis.offset/2 + vis.offset*2 + vis.margin.left;
-                let y = 220 + i*70;
+                let y = 220 + i*70 - 19;
                 return "translate(" + x + "," + y + ")";
             })
             .style("text-anchor", "middle")
-            .text("blahdlfjladsj");
+            .transition()
+            .delay(500)
+            .style("opacity", (d) => {
+                if (vis.current >= d[0]){
+                    return 1;
+                } else{
+                    return 0;
+                }
+            })
+            .text(d => Math.ceil(d[0]) + " mo.")
+            .attr("fill", "white")
 
         vis.aCircles = vis.svg.selectAll('.aCircle')
             .data(vis.timeFromFounding);
@@ -207,7 +253,33 @@ class InnovativeVis {
                     return 0.2;
                 }
             })
-            .attr("fill", "orange")
+            .attr("fill", "orange");
+
+        vis.aMonths = vis.svg.selectAll('.aMonths')
+            .data(vis.timeFromFounding);
+        vis.aMonths
+            .enter()
+            .append('text')
+            .attr("class", "aMonths")
+            .style("opacity", 0)
+            .merge(vis.aMonths)
+            .attr("transform", (d, i) => {
+                let x = vis.offset/2 + vis.offset*3 + vis.margin.left;
+                let y = 220 + i*70 - 19;
+                return "translate(" + x + "," + y + ")";
+            })
+            .style("text-anchor", "middle")
+            .text(d => Math.ceil(d[1]) + " mo.")
+            .attr("fill", "white")
+            .transition()
+            .delay(500)
+            .style("opacity", (d) => {
+                if (vis.current >= d[1]){
+                    return 1;
+                } else{
+                    return 0;
+                }
+            });
 
         vis.bCircles = vis.svg.selectAll('.bCircle')
             .data(vis.timeFromFounding);
@@ -226,7 +298,34 @@ class InnovativeVis {
                     return 0.2;
                 }
             })
-            .attr("fill", "yellow")
+            .attr("fill", "yellow");
+
+
+        vis.bMonths = vis.svg.selectAll('.bMonths')
+            .data(vis.timeFromFounding);
+        vis.bMonths
+            .enter()
+            .append('text')
+            .attr("class", "bMonths")
+            .style("opacity", 0)
+            .merge(vis.bMonths)
+            .attr("transform", (d, i) => {
+                let x = vis.offset/2 + vis.offset*4 + vis.margin.left;
+                let y = 220 + i*70 - 19;
+                return "translate(" + x + "," + y + ")";
+            })
+            .style("text-anchor", "middle")
+            .text(d => Math.ceil(d[2]) + " mo.")
+            .attr("fill", "white")
+            .transition()
+            .delay(500)
+            .style("opacity", (d) => {
+                if (vis.current >= d[2]){
+                    return 1;
+                } else{
+                    return 0;
+                }
+            });
 
         vis.cCircles = vis.svg.selectAll('.cCircle')
             .data(vis.timeFromFounding);
@@ -245,7 +344,33 @@ class InnovativeVis {
                     return 0.2;
                 }
             })
-            .attr("fill", "green")
+            .attr("fill", "green");
+
+        vis.cMonths = vis.svg.selectAll('.cMonths')
+            .data(vis.timeFromFounding);
+        vis.cMonths
+            .enter()
+            .append('text')
+            .attr("class", "cMonths")
+            .style("opacity", 0)
+            .merge(vis.cMonths)
+            .attr("transform", (d, i) => {
+                let x = vis.offset/2 + vis.offset*5 + vis.margin.left;
+                let y = 220 + i*70 - 19;
+                return "translate(" + x + "," + y + ")";
+            })
+            .style("text-anchor", "middle")
+            .text(d => Math.ceil(d[3]) + " mo.")
+            .attr("fill", "white")
+            .transition()
+            .delay(500)
+            .style("opacity", (d) => {
+                if (vis.current >= d[3]){
+                    return 1;
+                } else{
+                    return 0;
+                }
+            });
     }
 
     updateVis() {
@@ -253,7 +378,7 @@ class InnovativeVis {
         let vis = this;
 
         // LEGEND (milestone markers)
-        let legend = ['Founded', 'Seed/Angel', 'A', 'B', 'C+'];
+        let legend = ['Founded', 'Seed/Angel', 'Round A', 'Round B', 'Round C+'];
         let legendEnter = vis.svg.selectAll('.legend')
             .data(legend);
         legendEnter

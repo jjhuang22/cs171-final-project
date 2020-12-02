@@ -183,11 +183,13 @@ class BarVis {
         // update list of popular companies
         if (selectedCategory == 'All'){
             d3.select("#most-popular-startups p").text("Famous startups include " +
-                this.popularCompanies[selectedCategory]);
+                this.popularCompanies[selectedCategory])
+                .style("font-size", "16px");
         }
         else {
             d3.select("#most-popular-startups p").text("Famous startups in " + selectedCategory.toLowerCase()
-                + " include " + this.popularCompanies[selectedCategory]);
+                + " include " + this.popularCompanies[selectedCategory])
+                .style("font-size", "16px");
         }
 
         // create color scale
