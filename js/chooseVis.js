@@ -350,6 +350,7 @@ class ChooseVis {
                 .duration(2000)
                 .attr("cx", d => d[0][2])
                 .attr("cy", d => d[1][0])
+                .attr("opacity", d => d[3])
                 .attr("fill", d => colors[d[5]%4])
                 .transition()
                 .duration(2000)

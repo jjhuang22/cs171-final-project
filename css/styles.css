@@ -11,6 +11,23 @@ body {
     background-color: #080314;
 }
 
+
+.line {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 1px;
+    background: #8293b6;
+}
+
+.biblio {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+
+
+
 .section-divider {
     height: 4px;
     margin-right: 45%;
