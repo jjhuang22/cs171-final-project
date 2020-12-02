@@ -59,7 +59,9 @@ body {
 }
 
 .main-title {
-    font: 280px/240px 'Big Shoulders Inline Text', cursive;
+    font: 280px 'Big Shoulders Inline Text', cursive;
+    /*font-size: ;*/
+    font-display: block;
     background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
