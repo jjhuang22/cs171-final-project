@@ -1,19 +1,13 @@
 /* * * * * * * * * * * * * *
-*          innovativeVis          *
+*          innovativeVis   *
 * * * * * * * * * * * * * */
-
-// TODO check Alexandra, for example; weird behavior
 
 class InnovativeVis {
 
-    // constructor method to initialize MapVis object
+    // constructor method to initialize InnovativeVis object
     constructor(parentElement, companies) {
         this.parentElement = parentElement;
         this.companies = companies;
-
-        // group companies by region
-        // console.log(compareCategory);
-        // this.groupedData = d3.groups(this.companies, d => d[compareCategory], d => d.company_name);
 
         this.initVis()
     }
@@ -21,7 +15,6 @@ class InnovativeVis {
     groupData() {
         let vis = this;
         vis.groupedData0 = d3.groups(vis.companies, d => d[compareCategory], d => d.company_name);
-        console.log(vis.groupedData);
         let desiredCities = ["Boston", "New York City", "Seattle", "Chicago", "Washington, D.C.",
             "SF Bay Area", "Los Angeles", "Dallas", "San Diego", "Sacramento", "Orange County",
             "Atlanta", "Denver", "Columbus", "Portland",  "Raleigh", "Charlotte",
@@ -51,6 +44,17 @@ class InnovativeVis {
             });
         }
 
+        vis.groupedData.sort((a, b) => {
+            if (compareCategory == 'company_region') {
+                if (a[0] < b[0]) return -1;
+                else return 1;
+            }
+            else if (compareCategory == 'company_market') {
+                if (a < b) return -1;
+                else return 1;
+            }
+        })
+
         // get names of regions/markets
         vis.regions = [];
         vis.groupedData.forEach(d => {
@@ -63,19 +67,19 @@ class InnovativeVis {
 
         // if button does not exist yet, create it
         if (!vis.selectMenu.node().hasChildNodes()){
-            console.log(!vis.selectMenu.node().hasChildNodes());
+            // console.log(!vis.selectMenu.node().hasChildNodes());
             vis.createButton();
-            console.log("create button");
+            // console.log("create button");
         } else { // else, clear the options and re-add them
-            console.log("update button")
+            // console.log("update button")
 
-            console.log(!vis.selectMenu.node().hasChildNodes());
+            // console.log(!vis.selectMenu.node().hasChildNodes());
 
             // remove existing options
             d3.select("#select-region").selectAll("option")
                 .remove();
 
-            console.log(!vis.selectMenu.node().hasChildNodes());
+            // console.log(!vis.selectMenu.node().hasChildNodes());
 
             // add regions to selection menu
             vis.regions.forEach(d => {
@@ -134,6 +138,11 @@ class InnovativeVis {
             .style("font-size", "16px")
             .style("fill", "#ffd74c");
 
+        // tooltip for invalid selection
+        vis.tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .attr("id", "innovativeTooltip");
+
         // console.log(d3.select("#select-region").node().hasChildNodes());
 
         // // add regions to selection menu
@@ -151,7 +160,6 @@ class InnovativeVis {
     }
 
     wrangleData() {
-
         let vis = this;
 
         // subset to selected regions
@@ -215,8 +223,15 @@ class InnovativeVis {
                 }
             }
         }
-        console.log(vis.durations);
-        console.log(vis.timeFromFounding);
+
+        // clear previous stuff
+        vis.svg.selectAll("circle").remove();
+        vis.svg.selectAll(".seedMonths").remove();
+        vis.svg.selectAll(".aMonths").remove();
+        vis.svg.selectAll(".bMonths").remove();
+        vis.svg.selectAll(".cMonths").remove();
+        vis.current = 0;
+        vis.timer.text(vis.current);
 
         vis.drawOpaque();
         vis.updateVis();
@@ -516,7 +531,6 @@ class InnovativeVis {
             totalTime.push(d3.sum(d));
         })
         let endMonths = d3.max(totalTime);
-        console.log(endMonths);
 
         // if (start === end) return;
         var range = Math.ceil(endMonths);
@@ -535,6 +549,7 @@ class InnovativeVis {
             vis.timerCaption.text("months since founding")
             if (vis.current == range) {
                 clearInterval(counter);
+                innovativeInProgress = 0;
             }
         }, stepTime);
 

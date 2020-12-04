@@ -232,16 +232,18 @@
 			<div class="row justify-content-center">
 				<div class="col-md-3 align-self-center">
 					<select id='compare-by' class="custom-select" style="width: 100%" onchange="chooseCategory()">
-						<option disabled selected value> -- Compare by -- </option>
+						<option disabled selected hidden> -- Compare by -- </option>
 						<option value="company_market">Market</option>
 						<option value="company_region">Region</option>
 					</select>
 				</div>
 				<div class="col-md-4 align-self-center">
-					<select id="select-region" placeholder="Select 4 regions or markets to compare" multiple></select>
+					<select id="select-market" placeholder="Select 4 regions or markets to compare" multiple style="display: none;"></select>
+					<select id="select-region" placeholder="Select 4 regions or markets to compare" multiple style="display: none;"></select>
+
 				</div>
 				<div class="col-md-3">
-					<button class="test-button test-button-1" onclick="applyRegion()">Compare</button>
+					<button class="test-button test-button-1" id="compare-by-button" style="display: none;" onclick="applyRegion()">Compare</button>
 				</div>
 			</div>
 
