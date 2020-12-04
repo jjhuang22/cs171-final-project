@@ -130,7 +130,11 @@ function animateScatter() {
 }
 
 function applyRegion() {
-    selectedRegions = $('#select-region').val();
+    if (compareCategory == 'company_region'){
+        selectedRegions = $('#select-region').val();
+    } else if (compareCategory == 'company_market'){
+        selectedRegions = $('#select-market').val();
+    }
 
     if (selectedRegions.length != 4){
         let rect = d3.select("#compare-by-button").node().getBoundingClientRect();

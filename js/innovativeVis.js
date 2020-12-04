@@ -18,7 +18,7 @@ class InnovativeVis {
         let desiredCities = ["Boston", "New York City", "Seattle", "Chicago", "Washington, D.C.",
             "SF Bay Area", "Los Angeles", "Dallas", "San Diego", "Sacramento", "Orange County",
             "Atlanta", "Denver", "Columbus", "Portland",  "Raleigh", "Charlotte",
-            "Pittsburgh", "Kansas City", "Austin", "Baltimore", "Salt Lake City", "Orlando"];
+            "Pittsburgh", "Kansas City", "Austin", "Salt Lake City", "Orlando"];
         let desiredMarkets = ["Software", "Enterprise Software", "E-Commerce", "Advertising", "Finance",
             "Clean Technology", "Solar", "Health Care", "Hardware + Software", "Security",
             "Curated Web", "Social Media", "Entertainment", "Games", "Travel", "Education",
@@ -60,7 +60,12 @@ class InnovativeVis {
         vis.groupedData.forEach(d => {
             vis.regions.push(d[0]);
         })
-        vis.selectMenu = d3.select("#select-region");
+        if (compareCategory == 'company_region'){
+            vis.selectMenu = d3.select("#select-region");
+        } else if (compareCategory == 'company_market'){
+            vis.selectMenu = d3.select("#select-market");
+        }
+
 
         // group companies by region
         // this.groupedData0 = d3.groups(this.companies, d => d.company_region, d => d.company_name);
@@ -76,7 +81,7 @@ class InnovativeVis {
             // console.log(!vis.selectMenu.node().hasChildNodes());
 
             // remove existing options
-            d3.select("#select-region").selectAll("option")
+            vis.selectMenu.selectAll("option")
                 .remove();
 
             // console.log(!vis.selectMenu.node().hasChildNodes());
@@ -99,11 +104,18 @@ class InnovativeVis {
                 .text(d);
         });
 
-        // instantiate button SOMEHOW THIS BREAKS .hasChildNodes()!!!!!!!!!!!
-        // var multipleCancelButton = new Choices('#select-region', {
-        //     removeItemButton: true,
-        //     maxItemCount:4
-        // });
+        // // instantiate button SOMEHOW THIS BREAKS .hasChildNodes()!!!!!!!!!!!
+        // if (compareCategory == 'company_region'){
+        //     var multipleCancelButton = new Choices('#select-region', {
+        //         removeItemButton: true,
+        //         maxItemCount:4
+        //     });
+        // } else if (compareCategory == 'compare_market') {
+        //     var multipleCancelButton = new Choices('#select-market', {
+        //         removeItemButton: true,
+        //         maxItemCount: 4
+        //     });
+        // }
     }
 
 
