@@ -88,11 +88,13 @@ class ScatterVis {
 
         vis.timer = 2006;
 
-        setInterval(function() {
-            if (vis.timer < 2014){
-                vis.timer++;
-                d3.select("#scatterYear").text("Current year: " + vis.timer);
-                vis.drawPoints();
+        var counter = setInterval(function() {
+            vis.timer++;
+            d3.select("#scatterYear").text("Current year: " + vis.timer);
+            vis.drawPoints();
+
+            if (vis.timer == 2014) {
+                clearInterval(counter);
             }
         }, 2000);
 

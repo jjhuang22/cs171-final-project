@@ -8,8 +8,7 @@ let sortByCategory = 'numCompanies';
 let compareCategory = $('#compare-by').val();
 let selectedCompany = '';
 let alreadyExploredScatter = 0;
-// let selectedLat = Number.NaN;
-// let selectedLong = Number.NaN;
+let innovativeInProgress = 0;
 
 let parseDate = d3.timeParse("%Y-%m-%d");
 let formatDate = d3.timeFormat("%Y-%m-%d");
@@ -84,7 +83,6 @@ let myMapVis,
 
 // initMainPage
 function initMainPage(dataArray) {
-    // init map
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
     myBarVis = new BarVis('barDiv', dataArray[1]);
@@ -132,34 +130,52 @@ function animateScatter() {
 }
 
 function applyRegion() {
-    selectedRegions = $('#select-region').val();
-    console.log("main: " + selectedRegions);
-    myInnovativeVis.wrangleData();
+    if (compareCategory == 'company_region'){
+        selectedRegions = $('#select-region').val();
+    } else if (compareCategory == 'company_market'){
+        selectedRegions = $('#select-market').val();
+    }
+
+    if (selectedRegions.length != 4){
+        let rect = d3.select("#compare-by-button").node().getBoundingClientRect();
+        let x = rect.width + rect.x;
+        let y = rect.y;
+        d3.select("#innovativeTooltip")
+            .style("opacity", 1)
+            .style("left", Math.round(x) + "px")
+            .style("top", event.pageY + "px")
+            .html(`
+                 <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+                     <h6> Make sure to select exactly 4 options!</h6>
+                 </div>`);
+
+        setTimeout(function() {
+            d3.select("#innovativeTooltip")
+                .style("opacity", 0)
+                .style("left", 0)
+                .style("top", 0)
+                .html(``);
+        }, 2000);
+    }
+    else if (selectedRegions.length == 4 && innovativeInProgress == 0){
+
+        myInnovativeVis.wrangleData();
+        innovativeInProgress = 1;
+    }
 }
 
 function chooseCategory() {
     compareCategory = $('#compare-by').val();
+    d3.select("#compare-by-button").style("display", "block");
+    if (compareCategory == "company_market") {
+        d3.select("#select-market").style("display", "block");
+        d3.select("#select-region").style("display", "none");
+    }
+    else if (compareCategory == "company_region") {
+        d3.select("#select-region").style("display", "block");
+        d3.select("#select-market").style("display", "none");
+    }
+
     myInnovativeVis.groupData();
 }
-
-// function selectUber() {
-//     selectedCompany = 'Uber';
-//     selectedLat = 37.7562;
-//     selectedLong = -122.443;
-//     myMapVis.wrangleData();
-// }
-//
-// function selectAirbnb() {
-//     selectedCompany = 'Airbnb';
-//     selectedLat = 37.7562;
-//     selectedLong = -122.443;
-//     myMapVis.wrangleData();
-// }
-//
-// function selectLyft() {
-//     selectedCompany = 'Lyft';
-//     selectedLat = 37.7562;
-//     selectedLong = -122.443;
-//     myMapVis.wrangleData();
-// }
 
