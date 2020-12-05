@@ -104,12 +104,12 @@ class ScatterVis {
         let vis = this;
 
         // version if want to transition circles with set delay
-        let circle = vis.svg.selectAll("circle")
+        vis.circle = vis.svg.selectAll("circle")
             .data(vis.companies);
 
-        circle.enter().append("circle")
-            .merge(circle)
-            .attr("class", "scatterCircle")
+        vis.circle.enter().append("circle")
+            .merge(vis.circle)
+            .attr("class", d => "scatterCircle " + d.company_market.replace(/\s/g, ""))
             .transition()
             .duration(1000)
 
@@ -161,6 +161,8 @@ class ScatterVis {
             }, 2000)
         }
 
+        vis.circle.exit().remove();
+
         vis.svg.selectAll("circle").on("mouseover", function(event, d) {
             d3.select(this)
                 .style("fill", "#ffd74c")
@@ -188,8 +190,6 @@ class ScatterVis {
                     .style("top", 0)
                     .html(``);
             })
-
-        circle.exit().remove();
 
     }
     // http://duspviz.mit.edu/d3-workshop/transitions-animation/
@@ -223,6 +223,43 @@ class ScatterVis {
             .on("end", function(event) {
                 d3.select("#animateScatter").text("Restart");
             });
+
+        vis.svg.selectAll("circle").on("mouseover", function(event, d) {
+            d3.select(this)
+                .style("fill", "#ffd74c")
+                .style("opacity", 1);
+
+            d3.selectAll("." + d.company_market.replace(/\s/g, ""))
+                .style("fill", "#ffd74c")
+                .style("opacity", 1);
+
+            vis.tooltip
+                .style("opacity", 1)
+                .style("left", event.pageX + 20 + "px")
+                .style("top", event.pageY + "px")
+                .html(`
+                     <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+                         <h3>${d.company_name}<h3>
+                         <h6> Industry: ${d.company_market}</h6>
+                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>
+                         <h6> Acquisition Amount: ${displayFunding(d.price_amount)}</h6>
+                     </div>`);
+        })
+            .on("mouseout", function(event, d) {
+                d3.select(this)
+                    .style("fill", "#f029ff")
+                    .style("opacity", 1);
+
+                d3.selectAll("." + d.company_market.replace(/\s/g, ""))
+                    .style("fill", "#f029ff")
+                    .style("opacity", 1);
+
+                vis.tooltip
+                    .style("opacity", 0)
+                    .style("left", 0)
+                    .style("top", 0)
+                    .html(``);
+            })
     }
 }
 

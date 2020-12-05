@@ -224,10 +224,10 @@ class MapVis {
                              <h6> Rank: ${d.rank}</h6>
                              <h6> Most popular industry: ${d.marketMode}</h6>
                              <h6> Number of companies: ${Number(d.numCompanies).toLocaleString()}</h6>
-                             <h6> Total funding: $${d.totalFunding}</h6>
+                             <h6> Total funding: ${d.totalFunding}</h6>
                          </div>`);
         })
-            .on('mouseout', function(event,   d){
+            .on('mouseout', function(event, d){
                 d3.select(this)
                     .style("fill", function(d) {
                         return vis.colorScale(d.numCompanies);
@@ -254,12 +254,12 @@ class MapVis {
 
 function displayFunding(funding){
     if (funding >= 1000000000) {
-        return (funding / 1000000000).toFixed(2) + " billion";
+        return "$" + (funding / 1000000000).toFixed(2) + " billion";
     }
     else if (funding >= 1000000) {
-        return (funding / 1000000).toFixed(2) + " million";
+        return "$" + (funding / 1000000).toFixed(2) + " million";
     }
     else {
-        return funding.toLocaleString('en');
+        return "$" + funding.toLocaleString('en');
     }
 }
