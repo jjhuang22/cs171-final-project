@@ -2,9 +2,6 @@
 *      class BarVis        *
 * * * * * * * * * * * * * */
 
-// TODO
-// divide by population for barchart?
-
 class BarVis {
 
     constructor(parentElement, companies) {
@@ -264,7 +261,7 @@ class BarVis {
                              <h6> Rank: ${d.rank}</h6>
                              <h6> Most popular industry: ${d.marketMode}</h6>
                              <h6> Number of companies: ${Number(d.numCompanies).toLocaleString()}</h6>
-                             <h6> Total funding: $${d.totalFunding}</h6>
+                             <h6> Total funding: ${d.totalFunding}</h6>
                          </div>`);
             })
             .on("mouseout", function(event, d){
