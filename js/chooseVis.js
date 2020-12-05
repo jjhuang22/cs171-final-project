@@ -32,7 +32,7 @@ class ChooseVis {
         let randomOpacity = d3.randomUniform(.4, .9);
         let randomTime= d3.randomUniform(0, 2000);
         let randomBinary = d3.randomInt(2);
-        let randomTrinary = d3.randomNormal(3, .6);
+        let randomTrinary = d3.randomNormal(3, 0);
         let failure1 = d3.randomInt(5);
         let failure7 = d3.randomInt(3);
 
