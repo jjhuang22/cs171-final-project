@@ -238,9 +238,53 @@
 					</select>
 				</div>
 				<div class="col-md-4 align-self-center">
-					<select id="select-market" placeholder="Select 4 regions or markets to compare" multiple style="display: none;"></select>
-					<select id="select-region" placeholder="Select 4 regions or markets to compare" multiple style="display: none;"></select>
-
+					<div id="select-market-div" style="display: none;">
+						<select id="select-market" placeholder="Select 4 regions or markets to compare" multiple>
+							<option>Advertising</option>
+							<option>Analytics</option>
+							<option>Big Data</option>
+							<option>Clean Technology</option>
+							<option>Cloud Data Services</option>
+							<option>Curated Web</option>
+							<option>E-Commerce</option>
+							<option>Education</option>
+							<option>Enterprise Software</option>
+							<option>Finance</option>
+							<option>Games</option>
+							<option>Hardware + Software</option>
+							<option>Health Care</option>
+							<option>Mobile</option>
+							<option>SaaS</option>
+							<option>Security</option>
+							<option>Social Media</option>
+							<option>Software</option>
+							<option>Solar</option>
+							<option>Travel</option>
+						</select>
+					</div>
+					<div id="select-region-div" style="display:none;">
+						<select id="select-region" placeholder="Select 4 regions or markets to compare" multiple style="display: none;">
+							<option>Atlanta</option>
+							<option>Austin</option>
+							<option>Boston</option>
+							<option>Charlotte</option>
+							<option>Chicago</option>
+							<option>Dallas</option>
+							<option>Denver</option>
+							<option>Kansas City</option>
+							<option>Los Angeles</option>
+							<option>New York City</option>
+							<option>Orlando</option>
+							<option>Pittsburgh</option>
+							<option>Raleigh</option>
+							<option>Sacramento</option>
+							<option>Salt Lake City</option>
+							<option>San Diego</option>
+							<option>San Francisco Bay Area</option>
+							<option>Seattle</option>
+							<option>Washington, D.C.</option>
+						</select>
+					</div>
 				</div>
 				<div class="col-md-3">
 					<button class="test-button test-button-1" id="compare-by-button" style="display: none;" onclick="applyRegion()">Compare</button>
@@ -536,6 +580,17 @@
 
 <!--multiselect-->
 <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569006273/BBBootstrap/choices.min.js?version=7.0.0"></script>
+<script text="javascript">
+	// instantiate buttons
+	var multiselectRegionButton = new Choices('#select-region', {
+		removeItemButton: true,
+		maxItemCount:4
+	})
+	var multiselectMarketButton = new Choices('#select-market', {
+		removeItemButton: true,
+		maxItemCount: 4
+	})
+</script>
 
 <!-- d3 -->
 <script src="https://d3js.org/d3.v6.min.js"></script>

@@ -56,7 +56,7 @@ class ScatterVis {
 
         vis.yAxisGroup = vis.svg.append("g")
             .attr("class", "y-axis axis")
-            .attr("transform", "translate(90, 0)")
+            .attr("transform", "translate(80, 0)")
             .call(vis.yAxis)
             .style("stroke", "white")
             .attr("stroke-width", 0.5)
@@ -115,10 +115,10 @@ class ScatterVis {
 
             .attr("cx", d => vis.x(d.raised_amount_usd))
             .attr("cy", d => vis.y(d.price_amount))
-            .style("fill", "#f029ff")
+            .style("fill", "#94bbe9")
             .attr("r", function(d){
                 if (d.acquired_year == vis.timer){
-                    return 7;
+                    return 8;
                 }
                 else if (d.acquired_year < vis.timer){
                     return 5;
@@ -129,15 +129,27 @@ class ScatterVis {
             })
             .style("opacity", function(d){
                 if (d.acquired_year == vis.timer){
-                    return 1;
+                    return 0.8;
                 }
                 else if (d.acquired_year < vis.timer){
-                    return 0.7;
+                    return 0.2;
                 }
                 else {
                     return 0;
                 }
             })
+            .attr("stroke-width", function(d){
+                if (d.acquired_year == vis.timer){
+                    return 1;
+                }
+                else if (d.acquired_year < vis.timer){
+                    return 1;
+                }
+                else {
+                    return 0;
+                }
+            })
+            .attr("stroke", "white")
 
         if (vis.timer == 2014){
             setTimeout(function() {
@@ -167,7 +179,7 @@ class ScatterVis {
         })
             .on("mouseout", function(d) {
                 d3.select(this)
-                    .style("fill", "#f029ff")
+                    .style("fill", "#94bbe9")
                     .style("opacity", 1);
 
                 vis.tooltip
@@ -196,8 +208,8 @@ class ScatterVis {
         vis.path = vis.svg.append('path')
             .attr("class", "regression")
             .attr('d', vis.line(lg))
-            .attr("stroke", "white")
-            .attr("stroke-width", 3);
+            .attr("stroke", "#f029ff")
+            .attr("stroke-width", 2.5);
 
         let totalLength = vis.path.node().getTotalLength();
 

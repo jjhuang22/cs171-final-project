@@ -8,116 +8,23 @@ class InnovativeVis {
     constructor(parentElement, companies) {
         this.parentElement = parentElement;
         this.companies = companies;
+        this.groupedByMarket = d3.groups(this.companies, d => d.company_market, d => d.company_name);
+        this.groupedByRegion = d3.groups(this.companies, d => d.company_region, d => d.company_name);
+        console.log(this.groupedByRegion);
 
         this.initVis()
     }
 
-    groupData() {
-        let vis = this;
-        vis.groupedData0 = d3.groups(vis.companies, d => d[compareCategory], d => d.company_name);
-        let desiredCities = ["Boston", "New York City", "Seattle", "Chicago", "Washington, D.C.",
-            "SF Bay Area", "Los Angeles", "Dallas", "San Diego", "Sacramento", "Orange County",
-            "Atlanta", "Denver", "Columbus", "Portland",  "Raleigh", "Charlotte",
-            "Pittsburgh", "Kansas City", "Austin", "Salt Lake City", "Orlando"];
-        let desiredMarkets = ["Software", "Enterprise Software", "E-Commerce", "Advertising", "Finance",
-            "Clean Technology", "Solar", "Health Care", "Hardware + Software", "Security",
-            "Curated Web", "Social Media", "Entertainment", "Games", "Travel", "Education",
-            "Mobile", "SaaS", "Analytics", "Cloud Data Services", "Big Data"]
-
-        vis.groupedData = [];
-        if (compareCategory == 'company_region'){
-            vis.groupedData0.forEach(d => {
-                if (desiredCities.includes(d[0])) {
-                    if (d[0] == 'SF Bay Area') {
-                        vis.groupedData.push(['San Francisco Bay Area', d[1]]);
-                    }
-                    else {
-                        vis.groupedData.push(d);
-                    }
-                }
-            });
-        } else if (compareCategory == 'company_market'){
-            vis.groupedData0.forEach(d => {
-                if (desiredMarkets.includes(d[0])) {
-                    vis.groupedData.push(d);
-                }
-            });
-        }
-
-        vis.groupedData.sort((a, b) => {
-            if (compareCategory == 'company_region') {
-                if (a[0] < b[0]) return -1;
-                else return 1;
-            }
-            else if (compareCategory == 'company_market') {
-                if (a < b) return -1;
-                else return 1;
-            }
-        })
-
-        // get names of regions/markets
-        vis.regions = [];
-        vis.groupedData.forEach(d => {
-            vis.regions.push(d[0]);
-        })
-        if (compareCategory == 'company_region'){
-            vis.selectMenu = d3.select("#select-region");
-        } else if (compareCategory == 'company_market'){
-            vis.selectMenu = d3.select("#select-market");
-        }
-
-
-        // group companies by region
-        // this.groupedData0 = d3.groups(this.companies, d => d.company_region, d => d.company_name);
-
-        // if button does not exist yet, create it
-        if (!vis.selectMenu.node().hasChildNodes()){
-            // console.log(!vis.selectMenu.node().hasChildNodes());
-            vis.createButton();
-            // console.log("create button");
-        } else { // else, clear the options and re-add them
-            // console.log("update button")
-
-            // console.log(!vis.selectMenu.node().hasChildNodes());
-
-            // remove existing options
-            vis.selectMenu.selectAll("option")
-                .remove();
-
-            // console.log(!vis.selectMenu.node().hasChildNodes());
-
-            // add regions to selection menu
-            vis.regions.forEach(d => {
-                vis.selectMenu.append("option")
-                    .text(d);
-            });
-        }
-    }
-
-    createButton() {
-
+    setCategory() {
         let vis = this;
 
-        // add regions to selection menu
-        vis.regions.forEach(d => {
-            vis.selectMenu.append("option")
-                .text(d);
-        });
-
-        // // instantiate button SOMEHOW THIS BREAKS .hasChildNodes()!!!!!!!!!!!
-        // if (compareCategory == 'company_region'){
-        //     var multipleCancelButton = new Choices('#select-region', {
-        //         removeItemButton: true,
-        //         maxItemCount:4
-        //     });
-        // } else if (compareCategory == 'compare_market') {
-        //     var multipleCancelButton = new Choices('#select-market', {
-        //         removeItemButton: true,
-        //         maxItemCount: 4
-        //     });
-        // }
+        // set vis.groupedData based on compareCategory
+        if (compareCategory == 'company_market'){
+            vis.groupedData = vis.groupedByMarket;
+        } else if (compareCategory == 'company_region'){
+            vis.groupedData = vis.groupedByRegion;
+        }
     }
-
 
     initVis() {
         let vis = this;
@@ -131,7 +38,6 @@ class InnovativeVis {
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width)
             .attr("height", vis.height)
-            // .style("background-color", "red")
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
         // TIME COUNTER
@@ -154,21 +60,6 @@ class InnovativeVis {
         vis.tooltip = d3.select("body").append("div")
             .attr("class", "tooltip")
             .attr("id", "innovativeTooltip");
-
-        // console.log(d3.select("#select-region").node().hasChildNodes());
-
-        // // add regions to selection menu
-        // let selectMenu = d3.select("#select-region");
-        // regions.forEach(d => {
-        //     selectMenu.append("option")
-        //         .text(d);
-        // });
-        //
-        // // instantiate button
-        // var multipleCancelButton = new Choices('#select-region', {
-        //     removeItemButton: true,
-        //     maxItemCount:4
-        // });
     }
 
     wrangleData() {
@@ -176,6 +67,7 @@ class InnovativeVis {
 
         // subset to selected regions
         let regionSub = vis.groupedData.filter(d => selectedRegions.includes(d[0]));
+        console.log(regionSub);
 
         // create array of labels based on selected regions
         vis.labels = [];
