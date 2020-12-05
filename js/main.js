@@ -28,7 +28,7 @@ let promises = [
     d3.csv("data/clean/acquisitions_final.csv"),
     d3.csv("data/clean/rounds_final.csv"),
     d3.json("data/clean/chartPacking.json"),
-    d3.csv("data/clean/scatterplot.csv")
+    d3.csv("data/clean/scatterplot_cleanMarket.csv")
 ];
 
 Promise.all(promises)
@@ -135,6 +135,7 @@ function applyRegion() {
     } else if (compareCategory == 'company_market'){
         selectedRegions = $('#select-market').val();
     }
+    console.log(selectedRegions);
 
     if (selectedRegions.length != 4){
         let rect = d3.select("#compare-by-button").node().getBoundingClientRect();
@@ -168,14 +169,14 @@ function chooseCategory() {
     compareCategory = $('#compare-by').val();
     d3.select("#compare-by-button").style("display", "block");
     if (compareCategory == "company_market") {
-        d3.select("#select-market").style("display", "block");
-        d3.select("#select-region").style("display", "none");
+        d3.select("#select-market-div").style("display", "block");
+        d3.select("#select-region-div").style("display", "none");
     }
     else if (compareCategory == "company_region") {
-        d3.select("#select-region").style("display", "block");
-        d3.select("#select-market").style("display", "none");
+        d3.select("#select-region-div").style("display", "block");
+        d3.select("#select-market-div").style("display", "none");
     }
 
-    myInnovativeVis.groupData();
+    myInnovativeVis.setCategory();
 }
 
