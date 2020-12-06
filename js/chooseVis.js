@@ -276,8 +276,8 @@ class ChooseVis {
                             .style("opacity", 1);
                         vis.tooltip
                             .html(`
-                             <h3>${d[9].name}</h3>
-                             <h6>Location: ${d[9].cityMap} <br>
+                             <h6><strong><em>${d[9].name}</em></strong><br>
+                             Location: ${d[9].cityMap} <br>
                              Market: ${d[9].market} <br>
                              Year Founded: ${formatTime(d[9].founded_at)}</h6>`);
                     }
