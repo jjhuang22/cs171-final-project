@@ -3,7 +3,7 @@ class Legend {
     // constructor method to initialize MapVis object
     constructor(parentElement) {
         this.parentElement = parentElement;
-        this.data = ['Enterprise Software', 'Hardware', 'Software', 'Service Provider', 'Social Media'];
+        this.data = ['Service Provider', 'Enterprise Software', 'Software', 'Hardware', 'Social Media'];
 
         console.log('legend is running')
         this.initVis();
@@ -19,7 +19,7 @@ class Legend {
             .attr("width", vis.width)
             .attr("height", vis.height);
 
-        vis.colors = ["#120078", "#9D0191", "#FD3A69", "#fea71a", "#00BCD1"];
+        vis.colors = ["#4a2ded", "#9D0191", "#FD3A69", "#fea71a", "#00BCD1"];
 
         let legendEnter = vis.svg.selectAll('.legend')
             .data(vis.data);
