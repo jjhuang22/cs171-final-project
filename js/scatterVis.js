@@ -71,9 +71,9 @@ class ScatterVis {
             .style("fill", "white");
 
         // tooltip
-        vis.tooltip = d3.select("body").append("div")
-            .attr("class", "tooltip")
-            .attr("id", "scatterTooltip");
+        // vis.tooltip = d3.select("body").append("div")
+        //     .attr("class", "tooltip")
+        //     .attr("id", "scatterTooltip");
 
         vis.companies.sort((a, b) => {
             return a.acquired_at - b.acquired_at;
@@ -169,16 +169,16 @@ class ScatterVis {
                 .style("fill", "#ffd74c")
                 .style("opacity", 1);
 
-            vis.tooltip
+            d3.select("#scatter-tooltip")
                 .style("opacity", 1)
-                .style("left", event.pageX + 20 + "px")
-                .style("top", event.pageY + "px")
                 .html(`
                      <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
-                         <h3>${d.company_name}<h3>
+                         <h6>${d.company_name}<h6>
+                         <h6> Industry: ${d.company_market}</h6>
                          <h6> Acquisition Amount: ${displayFunding(d.price_amount)}</h6>
                          <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>
                      </div>`);
+
         })
             .on("mouseout", function(d) {
                 d3.select(this)
@@ -195,7 +195,7 @@ class ScatterVis {
                         }
                     });
 
-                vis.tooltip
+                d3.select("#scatter-tooltip")
                     .style("opacity", 0)
                     .style("left", 0)
                     .style("top", 0)
@@ -244,13 +244,22 @@ class ScatterVis {
                 .style("fill", "#ffd74c")
                 .style("opacity", 1);
 
-            vis.tooltip
+            // vis.tooltip
+            //     .style("opacity", 1)
+            //     .style("left", event.pageX + 20 + "px")
+            //     .style("top", event.pageY + "px")
+            //     .html(`
+            //          <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+            //              <h6>${d.company_name}<h6>
+            //              <h6> Industry: ${d.company_market}</h6>
+            //              <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>
+            //              <h6> Acquisition Amount: ${displayFunding(d.price_amount)}</h6>
+            //          </div>`);
+            d3.select("#scatter-tooltip")
                 .style("opacity", 1)
-                .style("left", event.pageX + 20 + "px")
-                .style("top", event.pageY + "px")
                 .html(`
                      <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
-                         <h3>${d.company_name}<h3>
+                         <h6>${d.company_name}<h6>
                          <h6> Industry: ${d.company_market}</h6>
                          <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>
                          <h6> Acquisition Amount: ${displayFunding(d.price_amount)}</h6>
@@ -265,7 +274,7 @@ class ScatterVis {
                     .style("fill", "#94bbe9")
                     .style("opacity", 1);
 
-                vis.tooltip
+                d3.select("#scatter-tooltip")
                     .style("opacity", 0)
                     .style("left", 0)
                     .style("top", 0)
