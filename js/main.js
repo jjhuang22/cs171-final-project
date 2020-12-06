@@ -137,7 +137,7 @@ function applyRegion() {
     }
     console.log(selectedRegions);
 
-    if (selectedRegions.length != 4){
+    if ((selectedRegions.length != 4) || selectedRegions == null){
         let rect = d3.select("#compare-by-button").node().getBoundingClientRect();
         let x = rect.width + rect.x;
         let y = rect.y;

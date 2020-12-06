@@ -102,7 +102,10 @@ class ChartPackingVis {
             .size([vis.width, vis.height])
             .padding(3)
             (d3.hierarchy(vis.acquisitions)
-                .sum(d => d.size)
+                .sum(d => {
+                    console.log(d);
+                    return d.size;
+                })
                 .sort((a, b) => b.value - a.value))
 
         const root = pack(vis.acquisitions);
@@ -125,6 +128,8 @@ class ChartPackingVis {
 
         function setCircleColor(obj) {
             let depth = obj.depth;
+            // if (obj.depth == 1)
+            //     return "black";
             while (obj.depth > 1) {
                 obj = obj.parent;
             }
@@ -167,44 +172,44 @@ class ChartPackingVis {
 
             focus = d;
 
-            if (d.depth == 0) {
-                d3.select("#layer1").text("Currently looking at different industries that are acquiring companies.");
-                d3.select("#layer2").text("");
-                d3.select("#layer3").text("");
-                d3.select("#layer4").text("");
-            }
-
-            else if (d.depth == 1) {
-                d3.select("#layer3").text("");
-                d3.select("#layer4").text("");
-                let industry = d.data.name;
-                let companies = d.data.children;
-                d3.select("#layer1")
-                    .text(formatLayer1(industry))
-                    .style("color", "blue");
-
-                d3.select("#layer2")
-                    .text(formatLayer2(industry, companies))
-                    .style("color", "blue");
-            }
-
-            else if (d.depth == 2) {
-                d3.select("#layer4").text("");
-                let acquirer = d.data.name;
-                let industries = d.data.children;
-                d3.select("#layer3")
-                    .text(formatLayer3(acquirer, industries))
-                    .style("color", "blue");
-            }
-
-            else if (d.depth == 3) {
-                let parentCompany = d.parent.data.name;
-                let industry = d.data.name;
-                let companies = d.data.children;
-                d3.select("#layer4")
-                    .text(formatLayer4(parentCompany, industry, companies))
-                    .style("color", "blue");
-            }
+            // if (d.depth == 0) {
+            //     d3.select("#layer1").text("Currently looking at different industries that are acquiring companies.");
+            //     d3.select("#layer2").text("");
+            //     d3.select("#layer3").text("");
+            //     d3.select("#layer4").text("");
+            // }
+            //
+            // else if (d.depth == 1) {
+            //     d3.select("#layer3").text("");
+            //     d3.select("#layer4").text("");
+            //     let industry = d.data.name;
+            //     let companies = d.data.children;
+            //     d3.select("#layer1")
+            //         .text(formatLayer1(industry))
+            //         .style("color", "blue");
+            //
+            //     d3.select("#layer2")
+            //         .text(formatLayer2(industry, companies))
+            //         .style("color", "blue");
+            // }
+            //
+            // else if (d.depth == 2) {
+            //     d3.select("#layer4").text("");
+            //     let acquirer = d.data.name;
+            //     let industries = d.data.children;
+            //     d3.select("#layer3")
+            //         .text(formatLayer3(acquirer, industries))
+            //         .style("color", "blue");
+            // }
+            //
+            // else if (d.depth == 3) {
+            //     let parentCompany = d.parent.data.name;
+            //     let industry = d.data.name;
+            //     let companies = d.data.children;
+            //     d3.select("#layer4")
+            //         .text(formatLayer4(parentCompany, industry, companies))
+            //         .style("color", "blue");
+            // }
 
 
             const transition = vis.svg.transition()
@@ -264,15 +269,16 @@ class ChartPackingVis {
             .attr("class", "text-label")
             .style("fill-opacity", d => d.parent === root ? 1 : 0)
             .style("display", d => d.parent === root ? "inline" : "none")
-            .style("font", d => (fontsize(d.depth)) + "px sans-serif")
+            // .style("font", d => (fontsize(d.depth)) + "px sans-serif")
             .style("font-weight", function() {
                 return bold ? "bold" : "normal";
             })
-            .text(d => d.data.name + "` " + formatFunding(d.data));
-            // .text(d => d.data.name)
+            // .text(d => d.data.name + "` " + formatFunding(d.data));
+            .text(d => d.data.name)
+            .attr("font-size", "30px")
 
-        vis.svg.selectAll(".text-label")
-            .call(wrap);
+        // vis.svg.selectAll(".text-label")
+        //     .call(wrap);
 
         zoomTo([root.x, root.y, root.r * 2]);
 
@@ -308,82 +314,82 @@ function formatFunding(company){
         company.value = company.size;
     }
     if (company.value >= 1000000000) {
-        return (company.value / 1000000000).toFixed(2) + " billion";
+        return "$" + (company.value / 1000000000).toFixed(2) + " billion";
     }
     else if (company.value >= 1000000) {
-        return (company.value / 1000000).toFixed(2) + " million";
+        return "$" + (company.value / 1000000).toFixed(2) + " million";
     }
 }
 
-function formatLayer1(industry){
-    return "Currently looking at companies in the " + industry + " industry.";
-}
-
-function formatLayer2(industry, companies){
-    if (companies.length == 1){
-        return "The major acquirer in the " + industry + " industry is " + companies[0].name + ".";
-
-    }
-    else if (companies.length == 2){
-        return "The major acquirers in the " + industry + " industry are " + companies[0].name + " and " + companies[1].name + ".";
-    }
-    else {
-        let ans = "The major acquirers in the " + industry + " industry are ";
-        for (let i = 0; i < companies.length - 1; i++) {
-            ans += companies[i].name + ", ";
-        }
-        ans += "and " + companies[companies.length - 1].name + ".";
-        return ans;
-    }
-}
-
-function formatLayer3(acquirer, companies){
-    companies.sort((a, b) => {
-        return b.value - a.value;
-    })
-
-    ans = "Currently focusing on " + acquirer + ".";
-
-    if (companies.length == 1){
-        ans += "The major industry that " + acquirer + " acquires is " + companies[0].data.name + ".";
-
-    }
-    else if (companies.length == 2){
-        ans += "The major industries that " + acquirer + " acquires are " + companies[0].data.name + " and " + companies[1].data.name + ".";
-    }
-    else {
-        ans += "The major industries that " + acquirer + " acquires are ";
-        for (let i = 0; i < 2; i++) {
-            ans += companies[i].name + ", ";
-        }
-        ans += "and " + companies[companies.length - 1].name + ".";
-    }
-    return ans;
-}
-
-function formatLayer4(parentCompany, industry, companies){
-    companies.sort((a, b) => {
-        return b.value - a.value;
-    })
-
-    ans = parentCompany + " acquired several companies in the " + industry + " industry.";
-
-    if (companies.length == 1){
-        ans += "One such company is " + companies[0].name + ".";
-
-    }
-    else if (companies.length == 2){
-        ans += "Two such companies are " + companies[0].name + " and " + companies[1].name + ".";
-    }
-    else {
-        ans += "Three such companies are ";
-        for (let i = 0; i < 2; i++) {
-            ans += companies[i].name + ", ";
-        }
-        ans += "and " + companies[companies.length - 1].name + ".";
-    }
-    return ans;
-}
+// function formatLayer1(industry){
+//     return "Currently looking at companies in the " + industry + " industry.";
+// }
+//
+// function formatLayer2(industry, companies){
+//     if (companies.length == 1){
+//         return "The major acquirer in the " + industry + " industry is " + companies[0].name + ".";
+//
+//     }
+//     else if (companies.length == 2){
+//         return "The major acquirers in the " + industry + " industry are " + companies[0].name + " and " + companies[1].name + ".";
+//     }
+//     else {
+//         let ans = "The major acquirers in the " + industry + " industry are ";
+//         for (let i = 0; i < companies.length - 1; i++) {
+//             ans += companies[i].name + ", ";
+//         }
+//         ans += "and " + companies[companies.length - 1].name + ".";
+//         return ans;
+//     }
+// }
+//
+// function formatLayer3(acquirer, companies){
+//     companies.sort((a, b) => {
+//         return b.value - a.value;
+//     })
+//
+//     ans = "Currently focusing on " + acquirer + ".";
+//
+//     if (companies.length == 1){
+//         ans += "The major industry that " + acquirer + " acquires is " + companies[0].data.name + ".";
+//
+//     }
+//     else if (companies.length == 2){
+//         ans += "The major industries that " + acquirer + " acquires are " + companies[0].data.name + " and " + companies[1].data.name + ".";
+//     }
+//     else {
+//         ans += "The major industries that " + acquirer + " acquires are ";
+//         for (let i = 0; i < 2; i++) {
+//             ans += companies[i].name + ", ";
+//         }
+//         ans += "and " + companies[companies.length - 1].name + ".";
+//     }
+//     return ans;
+// }
+//
+// function formatLayer4(parentCompany, industry, companies){
+//     companies.sort((a, b) => {
+//         return b.value - a.value;
+//     })
+//
+//     ans = parentCompany + " acquired several companies in the " + industry + " industry.";
+//
+//     if (companies.length == 1){
+//         ans += "One such company is " + companies[0].name + ".";
+//
+//     }
+//     else if (companies.length == 2){
+//         ans += "Two such companies are " + companies[0].name + " and " + companies[1].name + ".";
+//     }
+//     else {
+//         ans += "Three such companies are ";
+//         for (let i = 0; i < 2; i++) {
+//             ans += companies[i].name + ", ";
+//         }
+//         ans += "and " + companies[companies.length - 1].name + ".";
+//     }
+//     return ans;
+// }
 
 // test = "Test` 45 Billion";
 // console.log(test.split(/([`].+)/).reverse().slice(1, 3))
