@@ -9,6 +9,7 @@ let compareCategory = $('#compare-by').val();
 let selectedCompany = '';
 let alreadyExploredScatter = 0;
 let innovativeInProgress = 0;
+let stepCounter = 0;
 
 let parseDate = d3.timeParse("%Y-%m-%d");
 let formatDate = d3.timeFormat("%Y-%m-%d");
@@ -86,11 +87,14 @@ function initMainPage(dataArray) {
     myMapVis = new MapVis('mapDiv', dataArray[0], dataArray[1]);
     myBubbleVis = new BubbleVis('bubbleDiv', dataArray[1], dataArray[2]);
     myBarVis = new BarVis('barDiv', dataArray[1]);
-    myChartPackingVis = new ChartPackingVis('chartPackingDiv', dataArray[4]);
+    myChartPackingVis = new ChartPackingVis('chartPackingDiv', dataArray[4], 0);
     myScatterVis = new ScatterVis('scatterDiv', dataArray[5]);
     myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3]);
     myChartPackingLegend = new Legend('chartPackingLegend');
     myBubbleLegend = new Legend('bubbleLegend');
+    myChartPackingVis1 = new ChartPackingVis('chartPacking1', dataArray[4], 1);
+    myChartPackingVis2 = new ChartPackingVis('chartPacking2', dataArray[4], 2);
+    myChartPackingVis3 = new ChartPackingVis('chartPacking3', dataArray[4], 3);
 
     var choose_waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),
@@ -180,5 +184,33 @@ function chooseCategory() {
     }
 
     myInnovativeVis.setCategory();
+}
+
+function animateChartPacking() {
+    // add 1 to step counter mod 4
+    stepCounter = (stepCounter + 1)%4;
+    console.log(stepCounter);
+
+    if (stepCounter == 0){
+        d3.select("#chartPackingDiv").style("display", "block");
+        d3.select("#chartPacking1").style("display", "none");
+        d3.select("#chartPacking2").style("display", "none");
+        d3.select("#chartPacking3").style("display", "none");
+    } else if (stepCounter == 1){
+        d3.select("#chartPackingDiv").style("display", "none");
+        d3.select("#chartPacking1").style("display", "block");
+        d3.select("#chartPacking2").style("display", "none");
+        d3.select("#chartPacking3").style("display", "none");
+    } else if (stepCounter == 2){
+        d3.select("#chartPackingDiv").style("display", "none");
+        d3.select("#chartPacking1").style("display", "none");
+        d3.select("#chartPacking2").style("display", "block");
+        d3.select("#chartPacking3").style("display", "none");
+    } else if (stepCounter == 3){
+        d3.select("#chartPackingDiv").style("display", "none");
+        d3.select("#chartPacking1").style("display", "none");
+        d3.select("#chartPacking2").style("display", "none");
+        d3.select("#chartPacking3").style("display", "block");
+    }
 }
 

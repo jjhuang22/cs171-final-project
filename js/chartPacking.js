@@ -5,15 +5,20 @@
 class ChartPackingVis {
 
     // constructor method to initialize chartPacking object
-    constructor(parentElement, nestedAcquisitions) {
+    constructor(parentElement, nestedAcquisitions, stage) {
         this.parentElement = parentElement;
-        this.acquisitions = nestedAcquisitions;
+        this.data = nestedAcquisitions;
+        this.stage = stage;
+
+        // console.log(this.data);
 
         this.initVis();
     }
 
     initVis(){
         let vis = this;
+
+        vis.acquisitions = vis.data;
 
         vis.margin = {top: 10, right: 10, bottom: 100, left: 10};
         vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right;
@@ -44,6 +49,40 @@ class ChartPackingVis {
         };
 
         // wrangleData
+        vis.chooseStage();
+        // vis.updateVis();
+    }
+
+    chooseStage() {
+        // if step counter == 0, then don't filter anything out
+        // if step counter == 1, then only HP, Oracle, and Salesforce
+        // if step counter == 2, then only Apple and Facebook
+        // if step counter == 3, then everything else
+
+        let vis = this;
+
+        console.log(vis.stage)
+
+        if (vis.stage == 0){
+            vis.acquisitions = vis.data;
+        } else if (vis.stage == 1){
+            // vis.acquisitions = vis.data.filter()
+            vis.acquisitions = {
+                "children": [vis.data.children[5], vis.data.children[6], vis.data.children[9]],
+                "name": "acquisitions"
+            }
+        } else if (vis.stage == 2){
+            vis.acquisitions = {
+                "children": [vis.data.children[7], vis.data.children[8]],
+                "name": "acquisitions"
+            }
+        } else if (vis.stage == 3){
+            vis.acquisitions = {
+                "children": [vis.data.children[0], vis.data.children[1], vis.data.children[2], vis.data.children[3], vis.data.children[4]],
+                "name": "acquisitions"
+            }
+        }
+
         vis.updateVis();
     }
 
