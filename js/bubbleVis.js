@@ -153,14 +153,14 @@ class BubbleVis {
             .attr("fill", "white");
 
         vis.node.append("text")
-            .attr("dy", "2.5em")
+            .attr("dy", "2.2em")
             .style("text-anchor", "middle")
             .text(function(d) {
                 return d.data.city;
             })
             .attr("font-family", '"IBM Plex Mono", monospace')
             .attr("font-size", function(d){
-                return d.r/8;
+                return d.r/6.5;
             })
             .attr("fill", "white");
 
