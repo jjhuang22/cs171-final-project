@@ -231,6 +231,7 @@ function wrap(text) {
             dy = 0
             tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em").attr("font-size", "30px");
 
+        console.log(this);
         words[0] = words[0].replace("`", "").trim();
 
         while (word = words.pop()) {
@@ -247,10 +248,10 @@ function formatFunding(company){
         company.value = company.size;
     }
     if (company.value >= 1000000000) {
-        return "$" + (company.value / 1000000000).toFixed(2) + " billion";
+        return "$" + (company.value / 1000000000).toFixed(2) + " B";
     }
     else if (company.value >= 1000000) {
-        return "$" + (company.value / 1000000).toFixed(2) + " million";
+        return "$" + (company.value / 1000000).toFixed(2) + " M";
     }
 }
 
