@@ -1,10 +1,10 @@
 /* * * * * * * * * * * * * *
-*          BubbleChartVis          *
+*    BubbleChartVis        *
 * * * * * * * * * * * * * */
 
 class BubbleVis {
 
-    // constructor method to initialize MapVis object
+    // constructor method to initialize BubbleChart object
     constructor(parentElement, companies, acquisitions) {
         this.parentElement = parentElement;
         this.companies = companies;
@@ -22,9 +22,13 @@ class BubbleVis {
 
         // init drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
-            .attr("width", vis.width)
-            .attr("height", vis.height)
-            .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
+            .attr("width", "100%")
+            .attr("height", "100%")
+            .attr("viewBox", `-${vis.width*6/12} -${vis.height*6/12} ${vis.width*1.3} ${vis.height*1.3}`)
+            .style("display", "block")
+            // .attr("width", vis.width)
+            // .attr("height", vis.height)
+            // .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
         // tooltip
         vis.tooltip = d3.select("body").append("div")
@@ -85,9 +89,9 @@ class BubbleVis {
     updateVis(){
         let vis = this;
 
-        // console.log(vis.companies.get("Oracle Corporation"))
-
-        vis.color = d3.scaleOrdinal(d3.schemeCategory10);
+        // vis.color = d3.scaleOrdinal(d3.schemeCategory10);
+        vis.color = ["#4a2ded", "#4a2ded", "#9D0191", "#4a2ded", "#FD3A69",
+            "#fea71a", "#9D0191", "#fea71a", "#00BCD1", "#9D0191"];
 
         vis.bubble = d3.pack(vis.displayData)
             .size([600, 600])
@@ -113,7 +117,7 @@ class BubbleVis {
                 return d.r;
             })
             .style("fill", function(d,i) {
-                return vis.color(i);
+                return vis.color[i];
             });
 
         vis.node.append("title")

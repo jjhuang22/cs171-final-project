@@ -30,6 +30,19 @@ class ChartPackingVis {
             .attr("class", "tooltip")
             .attr("id", "bubbleTooltip");
 
+        vis.tooltiptext = {
+            "Google": "Google",
+            "Yahoo": "Yahoo",
+            "Cisco": "Cisco",
+            "AOL": "AOL",
+            "Oracle Corporation": "Oracle",
+            "Microsoft": "Microsoft",
+            "Salesforce": "Salesforce",
+            "Facebook": "Facebook",
+            "Hewlett-Packard": "Hewlett-Packard",
+            "Apple": "Apple"
+        };
+
         // wrangleData
         vis.updateVis();
     }
@@ -63,7 +76,8 @@ class ChartPackingVis {
         function setColorScheme(multi){
             if (multi) {
                 let color = d3.scaleOrdinal()
-                    .range(d3.schemeCategory10)
+                    .range(["#4a2ded", "#4a2ded", "#9D0191", "#4a2ded", "#FD3A69",
+                        "#fea71a", "#9D0191", "#fea71a", "#00BCD1", "#9D0191"]);
                 return color;
             }
         }
@@ -103,6 +117,18 @@ class ChartPackingVis {
             const focus0 = focus;
 
             focus = d;
+
+            if (d.depth == 0){
+                d3.select("#layer1").text("Click on a circle to learn more, or on the background to zoom out!").style("color", "white");
+            }
+
+            else if (d.depth >= 1){
+                let obj = d;
+                while (obj.depth != 1) {
+                    obj = obj.parent;
+                }
+                d3.select("#layer1").text("Hehehehehe you clicked on " + vis.tooltiptext[obj.data.name] + "!");
+            }
 
             // if (d.depth == 0) {
             //     d3.select("#layer1").text("Currently looking at different industries that are acquiring companies.");
@@ -177,6 +203,7 @@ class ChartPackingVis {
             .selectAll("circle")
             .data(root.descendants().slice(1))
             .enter().append("circle")
+            .attr("class", d => d.data.name.replace(/\s/g, ""))
             .attr("fill", setCircleColor)
             .attr("stroke", setStrokeColor)
             .attr("pointer-events", d => !d.children ? "none" : null)
@@ -231,7 +258,6 @@ function wrap(text) {
             dy = 0
             tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em").attr("font-size", "30px");
 
-        console.log(this);
         words[0] = words[0].replace("`", "").trim();
 
         while (word = words.pop()) {

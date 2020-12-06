@@ -27,7 +27,7 @@ class ScatterVis {
 
         vis.x = d3.scaleLinear()
             .domain([0, d3.max(vis.companies, d => d.raised_amount_usd)])
-            .range([90, vis.width*0.9]);
+            .range([vis.width * 0.13, vis.width*0.9]);
 
         vis.y = d3.scaleLinear()
             .domain([0, d3.max(vis.companies, d => d.price_amount)*1.1])
@@ -56,7 +56,8 @@ class ScatterVis {
 
         vis.yAxisGroup = vis.svg.append("g")
             .attr("class", "y-axis axis")
-            .attr("transform", "translate(80, 0)")
+            // .attr("transform", "translate(80, 0)")
+            .attr("transform", "translate(" + vis.width * 0.13 + ", 0)")
             .call(vis.yAxis)
             .style("stroke", "white")
             .attr("stroke-width", 0.5)
@@ -175,8 +176,8 @@ class ScatterVis {
                 .html(`
                      <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
                          <h3>${d.company_name}<h3>
-                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>
                          <h6> Acquisition Amount: ${displayFunding(d.price_amount)}</h6>
+                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>
                      </div>`);
         })
             .on("mouseout", function(d) {

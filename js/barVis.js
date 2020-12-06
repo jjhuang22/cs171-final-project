@@ -72,9 +72,6 @@ class BarVis {
             .style("font-size", "16px")
             .style("fill", "white");
 
-        vis.colorScale = d3.scaleLinear()
-            .range(["white", "darkcyan"]);
-
         vis.wrangleData();
     }
 
