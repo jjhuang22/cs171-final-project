@@ -158,11 +158,11 @@ class ChartPackingVis {
 
             focus = d;
 
-            if (d.depth == 0){
-                d3.select("#layer1").text("Click on a circle to learn more, or on the background to zoom out!").style("color", "white");
+            if (d.depth == 0 & vis.stage == 0){
+                d3.select("#layer1").text("Click on a circle to learn more, or on the background to zoom out! When you're ready, click next to explore some patterns.").style("color", "white");
             }
 
-            else if (d.depth >= 1){
+            else if (d.depth >= 1 & vis.stage == 0){
                 let obj = d;
                 while (obj.depth != 1) {
                     obj = obj.parent;
