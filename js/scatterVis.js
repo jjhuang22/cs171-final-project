@@ -134,7 +134,7 @@ class ScatterVis {
                     return 0.8;
                 }
                 else if (d.acquired_year < vis.timer){
-                    return 0.2;
+                    return 0.4;
                 }
                 else {
                     return 0;
@@ -157,7 +157,7 @@ class ScatterVis {
             setTimeout(function() {
                 vis.svg.selectAll("circle")
                     .attr("r", 5)
-                    .style("opacity", 1);
+                    .style("opacity", 0.8);
 
                 vis.drawLine();
             }, 2000)
@@ -189,7 +189,7 @@ class ScatterVis {
                             return 0.8;
                         }
                         else if (d.acquired_year < vis.timer){
-                            return 0.2;
+                            return 0.4;
                         }
                         else {
                             return 0;
@@ -269,11 +269,11 @@ class ScatterVis {
             .on("mouseout", function(event, d) {
                 d3.select(this)
                     .style("fill", "#94bbe9")
-                    .style("opacity", 1);
+                    .style("opacity", 0.8);
 
                 vis.svg.selectAll("." + d.company_market.replace(/\s/g, ""))
                     .style("fill", "#94bbe9")
-                    .style("opacity", 1);
+                    .style("opacity", 0.8);
 
                 d3.select("#scatter-tooltip")
                     .style("opacity", 0)
