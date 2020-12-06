@@ -10,7 +10,7 @@ class InnovativeVis {
         this.companies = companies;
         this.groupedByMarket = d3.groups(this.companies, d => d.company_market, d => d.company_name);
         this.groupedByRegion = d3.groups(this.companies, d => d.company_region, d => d.company_name);
-        console.log(this.groupedByRegion);
+        // console.log(this.groupedByRegion);
 
         this.initVis()
     }

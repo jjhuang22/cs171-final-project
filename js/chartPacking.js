@@ -4,7 +4,7 @@
 
 class ChartPackingVis {
 
-    // constructor method to initialize MapVis object
+    // constructor method to initialize chartPacking object
     constructor(parentElement, nestedAcquisitions) {
         this.parentElement = parentElement;
         this.acquisitions = nestedAcquisitions;
@@ -20,10 +20,10 @@ class ChartPackingVis {
         vis.height = $("#" + vis.parentElement).height() - vis.margin.top - vis.margin.bottom;
 
         // init drawing area
-        vis.svg = d3.select("#" + vis.parentElement).append("svg")
-            .attr("width", vis.width)
-            .attr("height", vis.height)
-            .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
+        // vis.svg = d3.select("#" + vis.parentElement).append("svg")
+        //     .attr("width", vis.width)
+        //     .attr("height", vis.height)
+        //     .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
         // tooltip
         vis.tooltip = d3.select("body").append("div")
@@ -33,59 +33,6 @@ class ChartPackingVis {
         // wrangleData
         vis.updateVis();
     }
-
-    // // wrangle Data for acquirers
-    // wrangleData(){
-    //     let vis = this;
-    //
-    //     // markets: service provider, social media, enterprise software, software, hardware + software
-    //     vis.displayData = {
-    //         "name": "test",
-    //         "children": []
-    //     }
-    //
-    //     vis.companies = d3.group(vis.companies, d => d.name), ([key, value]) => ({key, value});
-    //
-    //     // group companies by acquirer
-    //     let acquirers = Array.from(d3.group(vis.acquisitions, d => d.acquirer_name), ([key, value]) => ({key, value}));
-    //
-    //     vis.acquirerInfo = [];
-    //
-    //     acquirers.forEach( company => {
-    //         let companyName = company.key;
-    //
-    //         // init counters
-    //         let numCompanies = 0;
-    //         let totalPrice = 0;
-    //         let acquiredCompanies = [];
-    //
-    //         company.value.forEach(entry => {
-    //             numCompanies += 1;
-    //             totalPrice += entry['price_amount'];
-    //             acquiredCompanies.push(entry['company_name']);
-    //         })
-    //
-    //         vis.acquirerInfo.push(
-    //             {
-    //                 name: companyName,
-    //                 city: company.value[0].acquirer_city,
-    //                 stateCode: company.value[0].acquirer_state_code,
-    //                 market: company.value[0].acquirer_market,
-    //                 numCompanies: numCompanies,
-    //                 totalPrice: (totalPrice / 1000000).toFixed(2) + " mil", // in millions
-    //                 acquiredCompanies: acquiredCompanies
-    //             }
-    //         )
-    //     })
-    //
-    //     vis.acquirerInfo.sort((a, b) => {
-    //         return b.numCompanies - a.numCompanies;
-    //     })
-    //
-    //     // vis.displayData = { "children": vis.acquirerInfo.slice(0, 10) };
-    //
-    //     vis.updateVis();
-    // }
 
     updateVis() {
         let vis = this;
@@ -102,10 +49,7 @@ class ChartPackingVis {
             .size([vis.width, vis.height])
             .padding(3)
             (d3.hierarchy(vis.acquisitions)
-                .sum(d => {
-                    console.log(d);
-                    return d.size;
-                })
+                .sum(d => d.size)
                 .sort((a, b) => b.value - a.value))
 
         const root = pack(vis.acquisitions);
@@ -128,8 +72,6 @@ class ChartPackingVis {
 
         function setCircleColor(obj) {
             let depth = obj.depth;
-            // if (obj.depth == 1)
-            //     return "black";
             while (obj.depth > 1) {
                 obj = obj.parent;
             }
@@ -146,16 +88,6 @@ class ChartPackingVis {
             let strokecolor = multicolor ? d3.hsl(color(obj.data.name)) : d3.hsl(hexcolor);
             return strokecolor;
         }
-
-        // const svg = d3.select(DOM.svg(vis.width, vis.height))
-        //     .attr("viewBox", `-${vis.width / 2} -${vis.height / 2} ${vis.width} ${vis.height}`)
-        //     .style("display", "block")
-        //     .style("margin", "0 -14px")
-        //     .style("width", "calc(100% + 28px)")
-        //     .style("height", "auto")
-        //     .style("background", "white")
-        //     .style("cursor", "pointer")
-        //     .on("click", () => zoom(root));
 
         function zoomTo(v) {
             const k = vis.width / v[2];
@@ -228,13 +160,14 @@ class ChartPackingVis {
                 .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
         }
 
-        vis.svg
-            .attr("viewBox", `-${vis.width} -${vis.height} ${vis.width*2} ${vis.height*2}`)
+        vis.svg = d3.select("#" + vis.parentElement).append("svg")
+            .attr("width", "100%")
+            .attr("viewBox", `-${vis.width/2} -${vis.height/2} ${vis.width} ${vis.height}`)
             .style("display", "block")
-            .style("margin", "0 -14px")
-            .style("width", "calc(100% + 28px)")
-            .style("height", "auto")
-            .style("background", "#080314")
+            // .style("margin", "0 -14px")
+            // .style("width", "calc(100% + 28px)")
+            // .style("height", "auto")
+            // .style("background", "white")
             .style("cursor", "pointer")
             .on("click", () => zoom(root));
 
@@ -269,16 +202,15 @@ class ChartPackingVis {
             .attr("class", "text-label")
             .style("fill-opacity", d => d.parent === root ? 1 : 0)
             .style("display", d => d.parent === root ? "inline" : "none")
-            // .style("font", d => (fontsize(d.depth)) + "px sans-serif")
+            .style("font", d => (fontsize(d.depth)) + "px sans-serif")
             .style("font-weight", function() {
                 return bold ? "bold" : "normal";
             })
-            // .text(d => d.data.name + "` " + formatFunding(d.data));
-            .text(d => d.data.name)
-            .attr("font-size", "30px")
+            .text(d => d.data.name + "` " + formatFunding(d.data));
+            // .text(d => d.data.name)
 
-        // vis.svg.selectAll(".text-label")
-        //     .call(wrap);
+        vis.svg.selectAll(".text-label")
+            .call(wrap);
 
         zoomTo([root.x, root.y, root.r * 2]);
 
