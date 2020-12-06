@@ -139,28 +139,28 @@ function applyRegion() {
     }
     console.log(selectedRegions);
 
-    if ((selectedRegions.length != 4) || selectedRegions == null){
-        let rect = d3.select("#compare-by-button").node().getBoundingClientRect();
-        let x = rect.width + rect.x;
-        let y = rect.y;
-        d3.select("#innovativeTooltip")
-            .style("opacity", 1)
-            .style("left", Math.round(x) + "px")
-            .style("top", event.pageY + "px")
-            .html(`
-                 <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
-                     <h6> Make sure to select exactly 4 options!</h6>
-                 </div>`);
-
-        setTimeout(function() {
-            d3.select("#innovativeTooltip")
-                .style("opacity", 0)
-                .style("left", 0)
-                .style("top", 0)
-                .html(``);
-        }, 2000);
-    }
-    else if (selectedRegions.length == 4 && innovativeInProgress == 0){
+    // if ((selectedRegions.length != 4) || selectedRegions == null){
+    //     let rect = d3.select("#compare-by-button").node().getBoundingClientRect();
+    //     let x = rect.width + rect.x;
+    //     let y = rect.y;
+    //     d3.select("#innovativeTooltip")
+    //         .style("opacity", 1)
+    //         .style("left", Math.round(x) + "px")
+    //         .style("top", event.pageY + "px")
+    //         .html(`
+    //              <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+    //                  <h6> Make sure to select exactly 4 options!</h6>
+    //              </div>`);
+    //
+    //     setTimeout(function() {
+    //         d3.select("#innovativeTooltip")
+    //             .style("opacity", 0)
+    //             .style("left", 0)
+    //             .style("top", 0)
+    //             .html(``);
+    //     }, 2000);
+    // }
+    if (selectedRegions.length == 4 && innovativeInProgress == 0){
 
         myInnovativeVis.wrangleData();
         innovativeInProgress = 1;

@@ -90,7 +90,7 @@ class BubbleVis {
             "#fea71a", "#9D0191", "#fea71a", "#00BCD1", "#9D0191"];
 
         vis.bubble = d3.pack(vis.displayData)
-            .size([600, 600])
+            .size([vis.width, vis.height])
             .padding(1.5);
 
         vis.nodes = d3.hierarchy(vis.displayData)
