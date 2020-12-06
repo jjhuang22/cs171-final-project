@@ -32,42 +32,39 @@ class ChooseVis {
         let randomOpacity = d3.randomUniform(.4, .9);
         let randomTime= d3.randomUniform(0, 2000);
         let randomBinary = d3.randomInt(2);
-        let randomTrinary = d3.randomNormal(3, 0);
+        let randomTrinary = d3.randomNormal(3, 0.5);
         let failure1 = d3.randomInt(5);
         let failure7 = d3.randomInt(3);
+
+
+        let xyS3 = [];
+        let colS3 = (vis.width - vis.margin.left * 3) / 6;
+        let rowS3 = (vis.height - vis.margin.left * 3) / 5;
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 6; j++) {
+                xyS3.push([colS3 * (j+ 1/2), rowS3 * (i + 1/2)])
+
+            }
+        }
+
+        function fixedS3(x){
+            if (x < 30){
+                // console.log(xyS3[x]);
+                return xyS3[x];
+            }
+            else{
+                return [0,0];
+            }
+        }
 
         let circles = [];
         for (let i = 0; i < 70; i++) {
             circles.push([[randomX(), randomX(), randomX()], [randomY(), randomY(), randomY()],
             Math.abs(randomSize()),randomOpacity(), randomBinary(), Math.round(randomTrinary()),
-            [failure1(), randomBinary(), failure7()], randomTime()]);
+            [failure1(), randomBinary(), failure7()], randomTime(), fixedS3(i)]);
         }
 
         let colors = ['dodgerblue', 'salmon', 'lightgreen', '#F0F5BB'];
-
-        // let blues = ['lightskyblue', 'paleturquoise', 'dodgerblue'];
-        // let reds = ['salmon', 'pink', 'indianred'];
-        // let greens = ['palegreen', 'lightgreen', 'darkseagreen'];
-        //
-        // let blue1 = ['#0390B8', '#62D4F4', '#04C8FF'];
-        // let red1 = ['#FB5F9E', '#FF0067', '#E4005C'];
-        // let yellow1 = ['#FFEA61', '#FFDD00', '#FFDD00'];
-        //
-        // colors = [blue1, red1, yellow1];
-
-
-
-        // let instructions = vis.svg.append('text')
-        //     .attr("text-anchor", "middle")
-        //     .attr('x', vis.width / 2)
-        //     .attr('y', vis.margin.top * 2)
-        //     .attr('fill', 'black')
-        //     .text('Click on a company!')
-        //     .style("font-family", '"IBM Plex Mono", monospace')
-        //     .transition()
-        //     .delay(7000)
-        //     .duration(1000)
-        //     .attr('fill', 'white');
 
 
 
@@ -106,7 +103,6 @@ class ChooseVis {
         function onclickS3(){
             if (slide == 3) {
                 d3.select("#" + vis.secondElement)
-
                     .transition()
                     .duration(500)
                     .style('color', '#080314')
@@ -128,7 +124,7 @@ class ChooseVis {
                             return (vis.height + vis.margin.bottom * 16);
                         }
                         else {
-                            return (d[1][0]);
+                            return (d[8][1]);
                         }
                     });
             }}
@@ -447,22 +443,31 @@ class ChooseVis {
                 .enter()
                 .append('circle')
                 .attr("class", "circle")
-                .attr("cx", d => d[0][0])
-                .attr("cy", d => d[1][0])
+                .attr("cx", d => d[8][0])
+                .attr("cy", d => d[8][1])
                 .attr("r", d => d[2])
                 .attr("opacity", 0)
-                .attr("fill", d => colors[d[5]%4])
+                .attr("fill", "white")
                 .on("click", function(event, d){
+                    console.log(event);
                     onclickS3();
                 })
                 .merge(circleEnter)
                 .transition()
                 .duration(2000)
-                .attr("cx", d => d[0][2])
-                .attr("cy", d => d[1][1])
-                .attr("fill", d => colors[(d[5]+1)%4])
-                .attr("opacity", d => d[3]);
+                .attr("cx", d => d[8][0])
+                .attr("cy", d => d[8][1])
+                .attr("fill", "white")
+                .attr("opacity", function(d){
+                    console.log(d);
+                    if (d[8][0] != 0){
+                        return 1;
+                    }
+                    else {
+                        return 0;
+                    }});
         }
+
 
 
         function doh(code) {
@@ -471,6 +476,7 @@ class ChooseVis {
                 case 1: STAGE1(); break;
                 case 2: STAGE2(); break;
                 case 3: STAGE3(); break;
+                // case 4: STAGE4(); break;
                 default : slide=0; STAGE0(); break;
             }
         }
