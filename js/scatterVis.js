@@ -265,7 +265,7 @@ class ScatterVis {
             d3.select("#scatter-tooltip")
                 .style("opacity", 1)
                 .html(`
-                     <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+                     <div style="margin-top: 10vh">
                          <h6>${d.company_name}<h6>
                          <h6> Industry: ${d.company_market}</h6>
                          <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>
