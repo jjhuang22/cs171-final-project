@@ -28,6 +28,7 @@ class ScatterVis {
         vis.x = d3.scaleLinear()
             .domain([0, d3.max(vis.companies, d => d.raised_amount_usd)])
             .range([vis.width * 0.13, vis.width*0.9]);
+            // .range([vis.width * 0.17, vis.width * 0.9]);
 
         vis.y = d3.scaleLinear()
             .domain([0, d3.max(vis.companies, d => d.price_amount)*1.1])
@@ -41,7 +42,7 @@ class ScatterVis {
 
         vis.xAxisGroup = vis.svg.append("g")
             .attr("class", "x-axis axis")
-            .attr("transform", "translate(0, " + vis.height*0.9 + ")")
+            .attr("transform", "translate(" + 0 + ", " + vis.height*0.9 + ")")
             .call(vis.xAxis)
             .style("stroke", "white")
             .attr("stroke-width", 0.5)
@@ -49,8 +50,8 @@ class ScatterVis {
             .append("text")
             .attr("class", "scatterLabel")
             .attr("x", vis.width/2)
-            .attr("y", vis.height*0.07)
-            .style("text-anchor", "end")
+            .attr("y", vis.height*0.09)
+            .style("text-anchor", "middle")
             .text("Funding Amount")
             .style("fill", "white");
 
@@ -66,7 +67,7 @@ class ScatterVis {
             .attr("class", "scatterLabel")
             .attr("transform", "translate(-90,"+vis.height/2 + ")rotate(-90)")
             .attr("dy", ".71em")
-            .style("text-anchor", "end")
+            .style("text-anchor", "middle")
             .text("Exit Amount")
             .style("fill", "white");
 
