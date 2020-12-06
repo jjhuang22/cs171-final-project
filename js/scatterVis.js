@@ -27,7 +27,7 @@ class ScatterVis {
 
         vis.x = d3.scaleLinear()
             .domain([0, d3.max(vis.companies, d => d.raised_amount_usd)])
-            .range([vis.width * 0.13, vis.width*0.9]);
+            .range([vis.width * 0.18, vis.width*0.9]);
             // .range([vis.width * 0.17, vis.width * 0.9]);
 
         vis.y = d3.scaleLinear()
@@ -47,29 +47,35 @@ class ScatterVis {
             .style("stroke", "white")
             .attr("stroke-width", 0.5)
             .attr("color", "white")
+            .style("font-size", "12px")
             .append("text")
             .attr("class", "scatterLabel")
             .attr("x", vis.width/2)
             .attr("y", vis.height*0.09)
             .style("text-anchor", "middle")
             .text("Funding Amount")
-            .style("fill", "white");
+            .style("fill", "white")
+            .style("font-family", '"IBM Plex Mono", monospace')
+            .style("font-size", "18px")
 
         vis.yAxisGroup = vis.svg.append("g")
             .attr("class", "y-axis axis")
             // .attr("transform", "translate(80, 0)")
-            .attr("transform", "translate(" + vis.width * 0.13 + ", 0)")
+            .attr("transform", "translate(" + vis.width * 0.18 + ", 0)")
             .call(vis.yAxis)
             .style("stroke", "white")
             .attr("stroke-width", 0.5)
             .attr("color", "white")
+            .style("font-size", "12px")
             .append("text")
             .attr("class", "scatterLabel")
-            .attr("transform", "translate(-90,"+vis.height/2 + ")rotate(-90)")
+            .attr("transform", "translate(-110,"+vis.height/2 + ")rotate(-90)")
             .attr("dy", ".71em")
             .style("text-anchor", "middle")
-            .text("Exit Amount")
-            .style("fill", "white");
+            .text("Acquisition Amount")
+            .style("fill", "white")
+            .style("font-family", '"IBM Plex Mono", monospace')
+            .style("font-size", "18px")
 
         // tooltip
         // vis.tooltip = d3.select("body").append("div")
@@ -92,7 +98,7 @@ class ScatterVis {
 
         var counter = setInterval(function() {
             vis.timer++;
-            d3.select("#scatterYear").text("Current year: " + vis.timer);
+            d3.select("#scatterYear").text("Current year: " + vis.timer).style("font-size", "18px");
             vis.drawPoints();
 
             if (vis.timer == 2014) {
@@ -259,7 +265,7 @@ class ScatterVis {
             d3.select("#scatter-tooltip")
                 .style("opacity", 1)
                 .html(`
-                     <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+                     <div style="margin-top: 10vh">
                          <h6>${d.company_name}<h6>
                          <h6> Industry: ${d.company_market}</h6>
                          <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>

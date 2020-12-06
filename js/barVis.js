@@ -67,7 +67,7 @@ class BarVis {
             .attr("transform",
                 `translate(${vis.width/2 + 30},0)`)
             .style("text-anchor", "middle")
-            .text("Number of Startups Founded (2007-2014)")
+            .text("Number of Startups Founded")
             .style("font-family", '"IBM Plex Mono", monospace')
             .style("font-size", "16px")
             .style("fill", "white");
