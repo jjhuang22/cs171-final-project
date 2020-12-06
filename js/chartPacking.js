@@ -31,16 +31,16 @@ class ChartPackingVis {
             .attr("id", "bubbleTooltip");
 
         vis.tooltiptext = {
-            "Google": "Google",
-            "Yahoo": "Yahoo",
-            "Cisco": "Cisco",
-            "AOL": "AOL",
-            "Oracle Corporation": "Oracle",
-            "Microsoft": "Microsoft",
-            "Salesforce": "Salesforce",
-            "Facebook": "Facebook",
-            "Hewlett-Packard": "Hewlett-Packard",
-            "Apple": "Apple"
+            "Google": "Google is a service provider founded in 1998 by Larry Page and Sergey Brin. Google.com is currently the world’s visited website. In addition to its search engine, Google is also well known for its Android and Chrome OS operating systems, the Google Chrome browser, Google Maps, and its work and productivity services (Gmail, Google Drive, Google Calendar).",
+            "Yahoo": "Yahoo! is a service provider founded in 1994 by Jerry Yang and David Filo. that is famous for its email and search services. During its peak, it was one of the most visited sites worldwide with over 7 billion views per month. Microsoft unsuccessfully tried to acquire Yahoo! in 2008.",
+            "Cisco": "Cisco is an enterprise software company founded in 1984 by husband-and-wife team Leonard Bosack and Sandy Lerner, who were both in charge of computer facilities at Stanford at the time. Through its many acquisitions, it has come to dominate tech markets like the Internet of Things and energy management.",
+            "AOL": "AOL is a service provider founded in 1983. Although it was still a power player in terms of acquisitions from 2007 to 2014, it itself was acquired by Verizon for $4.4 billion in 2015, shortly after out data set ends. AOL is commonly thought to have declined after the early 2000s due to the replacement of dial-up with broadband.",
+            "Oracle Corporation": "Oracle is an enterprise software company founded in 1977 known primarily for its database management products. Oracle's price per share increased steadily from 2007 to 2014 and beyond; in fact, in 2019, Oracle was the second-largest software company by revenue and market cap.",
+            "Microsoft": "Microsoft is a software company founded in 1975 by Bill Gates and Paul Allen. It is one of three U.S. public companies with a valuation over $1 trillion, the other two being Apple and Amazon. It has acquired companies including LinkedIn, Skype Technologies, and GitHub.",
+            "Salesforce": "Salesforce is an enterprise software company founded in 1999 by former Oracle executive Marc Benioff, Parker Harris, Dave Moellenhoff, and Frank Dominguez that currently employs 20,000+ employees and recently announced plans to acquire Slack.",
+            "Facebook": "Facebook is a social media company founded in 2007 by Mark Zuckerberg with his classmates at Harvard. It is one of the world’s most valuable companies, and has acquired Instagram, WhatsApp, and Oculus VR.",
+            "Hewlett-Packard": "Hewlett-Packard is a hardware company founded in 1939 by Bill Hewlett and David Packard that specializes in laptops, desktops, printers, and accessories. The HP Garage, a museum where the company was founded, is considered the “Birthplace of Silicon Valley” and is designated an official California Historical Landmark.",
+            "Apple": "Apple is a hardware and software company founded in 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne. Apple acquired Beats Electronics in 2014. It is one of three U.S. public companies with a valuation over $1 trillion, the other two being Microsoft and Amazon."
         };
 
         // wrangleData
@@ -128,7 +128,7 @@ class ChartPackingVis {
                 while (obj.depth != 1) {
                     obj = obj.parent;
                 }
-                d3.select("#layer1").text("Hehehehehe you clicked on " + vis.tooltiptext[obj.data.name] + "!");
+                d3.select("#layer1").text(vis.tooltiptext[obj.data.name]);
             }
 
             // if (d.depth == 0) {

@@ -24,8 +24,8 @@ class BubbleVis {
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width)
             .attr("height", vis.height)
-            .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")")
-            .style("background", "white");
+            .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
+            // .style("background", "white");
 
         // tooltip
         vis.tooltip = d3.select("body").append("div")
@@ -124,59 +124,75 @@ class BubbleVis {
             });
 
         vis.node.append("text")
-            .attr("dy", ".2em")
+            .attr("dy", "-0.5em")
             .style("text-anchor", "middle")
             .text(function(d) {
-                return d.data.name;
 
+                if (d.data.name == 'Oracle Corporation'){
+                    return 'Oracle Corp.'
+                } else {
+                    return d.data.name;
+                }
             })
-            .attr("font-family", "sans-serif")
+            .attr("font-family", '"IBM Plex Mono", monospace')
             .attr("font-size", function(d){
                 return d.r/5;
             })
             .attr("fill", "white");
 
         vis.node.append("text")
-            .attr("dy", "1.3em")
+            .attr("dy", "0.6em")
             .style("text-anchor", "middle")
             .text(function(d) {
-                return d.data.numCompanies;
+                return d.data.numCompanies + ' acquired';
             })
-            .attr("font-family",  "Gill Sans", "Gill Sans MT")
+            .attr("font-family", '"IBM Plex Mono", monospace')
             .attr("font-size", function(d){
                 return d.r/5;
+            })
+            .attr("fill", "white");
+
+        vis.node.append("text")
+            .attr("dy", "2.5em")
+            .style("text-anchor", "middle")
+            .text(function(d) {
+                return d.data.city;
+            })
+            .attr("font-family", '"IBM Plex Mono", monospace')
+            .attr("font-size", function(d){
+                return d.r/8;
             })
             .attr("fill", "white");
 
         d3.select(self.frameElement)
             .style("height", 600 + "px");
 
-        vis.svg.selectAll("circle").on("mouseover", function(event, d){
-            d3.select(this)
-                .attr('stroke-width', '3px')
-                .attr('stroke', 'white');
-
-            vis.tooltip
-                .style("opacity", 1)
-                .style("left", event.pageX + 20 + "px")
-                .style("top", event.pageY + "px")
-                .html(`
-                         <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
-                             <h3> ${d.data.name}<h3>
-                             <h6> ${d.data.city}, ${d.data.stateCode}</h6>
-                             <h6> ${d.data.market}</h6>
-                         </div>`);
-        })
-            .on('mouseout', function(event,   d){
-                d3.select(this)
-                    .attr('stroke-width', '0px')
-                    .attr('stroke', 'black');
-
-                vis.tooltip
-                    .style("opacity", 0)
-                    .style("left", 0)
-                    .style("top", 0)
-                    .html(``);
-            });
+        // vis.svg.selectAll("circle").on("mouseover", function(event, d){
+        //     d3.select(this)
+        //         .attr('stroke-width', '3px')
+        //         .attr('stroke', 'white');
+        //
+        //     vis.tooltip
+        //         .style("opacity", 1)
+        //         .style("left", event.pageX + 20 + "px")
+        //         .style("top", event.pageY + "px")
+        //         .html(`
+        //                  <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
+        //                      <h3> ${d.data.name}<h3>
+        //                      <h6> ${d.data.city}, ${d.data.stateCode}</h6>
+        //                      <h6> ${d.data.market}</h6>
+        //                  </div>`);
+        // })
+        //     .on('mouseout', function(event,   d){
+        //         d3.select(this)
+        //             .attr('stroke-width', '0px')
+        //             .attr('stroke', 'black');
+        //
+        //         vis.tooltip
+        //             .style("opacity", 0)
+        //             .style("left", 0)
+        //             .style("top", 0)
+        //             .html(``);
+        //     });
     }
 }
