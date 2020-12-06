@@ -391,6 +391,12 @@
 		<div class="col-md-6 offset-1 align-self-center">
 			<!--heading-->
 			<p class="vis-explainer">This bubble chart shows the 10 companies that acquired the most startups between 2007 and 2013.</p>
+
+			<!--legend-->
+			<div class="row justify-content-center" style="height: 15vh">
+				<div class="align-self-center" id="bubbleLegend" style="height: 100%; width: 100%"></div>
+			</div>
+
 			<!-- graph -->
 			<div class="row justify-content-center" style="height: 80vh">
 				<div class="align-self-center" id="bubbleDiv" style="height: 100%; width: 80%"></div>
@@ -436,14 +442,15 @@
 
 			<!-- graph -->
 			<div class="row justify-content-center" style="height: 80vh">
-
+				<br>
 				<div class="col-8">
+					<div class="align-self-center" id="chartPackingLegend" style="height: 15%; width: 100%"></div>
 					<div class="align-self-center" id="chartPackingDiv" style="height: 100%; width: 100%"></div>
 
 				</div>
 				<div class="col-4">
 					<div class="align-self-center" id="chartPackingInfo" style="height: 100%; width: 100%">
-						<p id="layer1" style="color: blue;">Currently looking at different industries that are acquiring companies.</p>
+						<p id="layer1" style="color: white;">Click on a circle to learn more, or on the background to zoom out!</p>
 						<!--					<p id="layer2"></p>-->
 						<!--					<p id="layer3"></p>-->
 						<!--					<p id="layer4"></p>-->
@@ -624,6 +631,7 @@
 <script src="js/innovativeVis.js"></script>
 <script src="js/chartPacking.js"></script>
 <script src="js/scatterVis.js"></script>
+<script src="js/legend.js"></script>
 
 <script src="js/main.js"></script>
 

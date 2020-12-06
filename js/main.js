@@ -89,6 +89,8 @@ function initMainPage(dataArray) {
     myChartPackingVis = new ChartPackingVis('chartPackingDiv', dataArray[4]);
     myScatterVis = new ScatterVis('scatterDiv', dataArray[5]);
     myInnovativeVis = new InnovativeVis('innovativeDiv', dataArray[3]);
+    myChartPackingLegend = new Legend('chartPackingLegend');
+    myBubbleLegend = new Legend('bubbleLegend');
 
     var choose_waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),
