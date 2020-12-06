@@ -183,7 +183,17 @@ class ScatterVis {
             .on("mouseout", function(d) {
                 d3.select(this)
                     .style("fill", "#94bbe9")
-                    .style("opacity", 1);
+                    .style("opacity", d => {
+                        if (d.acquired_year == vis.timer){
+                            return 0.8;
+                        }
+                        else if (d.acquired_year < vis.timer){
+                            return 0.2;
+                        }
+                        else {
+                            return 0;
+                        }
+                    });
 
                 vis.tooltip
                     .style("opacity", 0)
@@ -248,11 +258,11 @@ class ScatterVis {
         })
             .on("mouseout", function(event, d) {
                 d3.select(this)
-                    .style("fill", "#f029ff")
+                    .style("fill", "#94bbe9")
                     .style("opacity", 1);
 
                 d3.selectAll("." + d.company_market.replace(/\s/g, ""))
-                    .style("fill", "#f029ff")
+                    .style("fill", "#94bbe9")
                     .style("opacity", 1);
 
                 vis.tooltip

@@ -26,7 +26,7 @@ class ChooseVis {
             .attr("height", vis.height)
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
-        var formatTime = d3.timeFormat("%B %d, %Y");
+        var formatTime = d3.timeFormat("%Y");
 
         let randomX = d3.randomUniform(vis.margin.left * 8, vis.width - vis.margin.right * 8);
         let randomY = d3.randomUniform(vis.margin.top * 12, vis.height - vis.margin.bottom * 10);
@@ -113,8 +113,7 @@ class ChooseVis {
                     .duration(500)
                     .style('color', '#080314')
                     .transition()
-                    .text("But remember, patience is a virtue: a company’s age seems to have no relationship to " +
-                        "whether it will eventually be acquired or taken public, or the amount that it exits at.")
+                    .text("Only 6 of the 30 companies we showed you remained operating or had been acquired by 2014. Did yours make it?")
                     .transition()
                     .duration(1000)
                     .style('color', 'white')
@@ -279,7 +278,8 @@ class ChooseVis {
                              <h6><strong><em>${d[9].name}</em></strong><br>
                              Location: ${d[9].cityMap} <br>
                              Market: ${d[9].market} <br>
-                             Year Founded: ${formatTime(d[9].founded_at)}</h6>`);
+                             Year Founded: ${d[9].founded_year}</h6>`);
+                             // Year Founded: ${formatTime(d[9].founded_year)}</h6>`);
                     }
                 })
                 .on("mouseout", function(event, d){
@@ -426,7 +426,8 @@ class ChooseVis {
                              <h3>${d[9].name}</h3>
                              <h6>Location: ${d[9].cityMap} <br>
                              Market: ${d[9].market} <br>
-                             Year Founded: ${formatTime(d[9].founded_at)}</h6>`);
+                             Year Founded: ${d[9].founded_year}</h6>`);
+                             // Year Founded: ${formatTime(d[9].founded_year)}</h6>`)
                     }
                 })
                 .on("mouseout", function(event, d){
@@ -556,7 +557,8 @@ class ChooseVis {
                              <h3>${d[9].name}</h3>
                              <h6>Location: ${d[9].cityMap} <br>
                              Market: ${d[9].market} <br>
-                             Year Founded: ${formatTime(d[9].founded_at)}</h6>`);
+                             Year Founded: ${d[9].founded_year}</h6>`);
+                             // Year Founded: ${formatTime(d[9].founded_year)}</h6>`)
                     }
                 })
                 .on("mouseout", function(event, d){
