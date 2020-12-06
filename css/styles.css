@@ -43,8 +43,8 @@ body {
 }
 
 .mega-section-break {
-    margin-top: 25vh;
-    margin-bottom: 25vh;
+    margin-top: 12vh;
+    margin-bottom: 12vh;
 }
 
 .vis-explainer {
@@ -55,7 +55,7 @@ body {
 .emphasize {
     color: #ffd74c;
     font-weight: bold;
-    font-size: 30px;
+    font: 26px 'IBM Plex Mono', monospace;
 }
 
 .speaker {
@@ -65,19 +65,20 @@ body {
 .chapter-title {
     color: #b8b0ff;
     font-weight: bold;
+    font: 60px 'Big Shoulders Inline Text', cursive;
 }
 
 .sub-question {
     color: #F1D1F2;
 }
 
-#title-slide {
-    margin-top: 84px;
-    margin-bottom: 72px;
-}
+/*#title-slide {*/
+/*    margin-top: 84px;*/
+/*    margin-bottom: 72px;*/
+/*}*/
 
 .main-title {
-    font: 280px 'Big Shoulders Inline Text', cursive;
+    font: 140px 'Big Shoulders Inline Text', cursive;
     /*font-size: ;*/
     font-display: block;
     background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca);
@@ -87,7 +88,7 @@ body {
 }
 
 .subtitle {
-    font: 48px 'IBM Plex Mono', monospace;
+    font: 32px 'Noto Sans JP', sans-serif;
     color: #ffd74c;
     color: white;
     text-align: right;
@@ -101,7 +102,7 @@ body {
 
 p {
     color: white;
-    font: 20px 'IBM Plex Mono', monospace;
+    font: 16px 'Noto Sans JP', sans-serif;
 }
 
 /*hr {*/

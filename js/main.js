@@ -196,11 +196,13 @@ function animateChartPacking() {
         d3.select("#chartPacking3").style("display", "none");
         d3.select("#layer1").style("display", "block");
         d3.select("#stage3").style("display", "none");
+        d3.select("#instructions").style("display", "block")
     } else if (stepCounter == 1){
         d3.select("#chartPackingDiv").style("display", "none");
         d3.select("#chartPacking1").style("display", "block");
         d3.select("#layer1").style("display", "none");
         d3.select("#stage1").style("display", "block");
+        d3.select("#instructions").style("display", "none")
     } else if (stepCounter == 2){
         d3.select("#chartPacking1").style("display", "none");
         d3.select("#chartPacking2").style("display", "block");

@@ -381,7 +381,7 @@ class ChooseVis {
                 .transition().duration(500).attr("opacity", 1);
 
             instructions.transition().duration(500).style('color', '#080314')
-                .transition().text('Research tells us that 21.5% of startups fail in the first year; 50% by the fifth; and 70% by the tenth. Sometimes you run out of time and money. Maybe you’re in the wrong market, or your product isn’t as game-changing as you thought it would be, or there is simply too much competition.')
+                .transition().text('Research tells us that 21.5% of startups fail in the first year; 50% by the fifth; and 70% by the tenth. Sometimes you run out of time and money. Maybe you’re in the wrong market, or your product isn’t as game-changing as you thought it would be, or there is simply too much competition. But the ones that remain get the chance to grow bigger.')
                 .transition().duration(500).style('color', 'white');
 
             textS2.transition().duration(500).attr("opacity", 0)
