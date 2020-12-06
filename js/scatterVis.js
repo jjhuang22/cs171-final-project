@@ -240,7 +240,7 @@ class ScatterVis {
                 .style("fill", "#ffd74c")
                 .style("opacity", 1);
 
-            d3.selectAll("." + d.company_market.replace(/\s/g, ""))
+            vis.svg.selectAll("." + d.company_market.replace(/\s/g, ""))
                 .style("fill", "#ffd74c")
                 .style("opacity", 1);
 
@@ -261,7 +261,7 @@ class ScatterVis {
                     .style("fill", "#94bbe9")
                     .style("opacity", 1);
 
-                d3.selectAll("." + d.company_market.replace(/\s/g, ""))
+                vis.svg.selectAll("." + d.company_market.replace(/\s/g, ""))
                     .style("fill", "#94bbe9")
                     .style("opacity", 1);
 
