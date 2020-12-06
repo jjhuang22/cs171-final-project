@@ -162,7 +162,8 @@ class ChartPackingVis {
 
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", "100%")
-            .attr("viewBox", `-${vis.width/2} -${vis.height/2} ${vis.width} ${vis.height}`)
+            .attr("height", "100%")
+            .attr("viewBox", `-${vis.width*8/12} -${vis.height*8/12} ${vis.width*1.3} ${vis.height*1.3}`)
             .style("display", "block")
             // .style("margin", "0 -14px")
             // .style("width", "calc(100% + 28px)")
