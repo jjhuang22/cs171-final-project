@@ -26,46 +26,52 @@ class ChooseVis {
             .attr("height", vis.height)
             .attr("transform", "translate(" + vis.margin.left + ", " + vis.margin.top + ")");
 
-        let randomX = d3.randomUniform(vis.margin.left * 5, vis.width - vis.margin.right * 5);
-        let randomY = d3.randomUniform(vis.margin.top * 8, vis.height - vis.margin.bottom * 5);
-        let randomSize = d3.randomNormal(4, 17);
+        var formatTime = d3.timeFormat("%B %d, %Y");
+
+        let randomX = d3.randomUniform(vis.margin.left * 8, vis.width - vis.margin.right * 8);
+        let randomY = d3.randomUniform(vis.margin.top * 12, vis.height - vis.margin.bottom * 10);
+        let randomSize = d3.randomNormal(11, 30);
         let randomOpacity = d3.randomUniform(.4, .9);
         let randomTime= d3.randomUniform(0, 2000);
         let randomBinary = d3.randomInt(2);
-        let randomTrinary = d3.randomNormal(3, 0.5);
+        let randomTrinary = d3.randomInt(4);
         let failure1 = d3.randomInt(5);
         let failure7 = d3.randomInt(3);
 
 
+        const seed = 0.000171; // any number in [0, 1)
+        let randomUnif = d3.randomUniform.source(d3.randomLcg(seed))(0, 1);
+        let randomClosed = d3.randomInt.source(d3.randomLcg(seed))(0, 500);
+        let randomOpen = d3.randomInt.source(d3.randomLcg(seed))(0, 7000);
+
+        vis.groupedByMarket = d3.groups(vis.companies, d => d.country_code, d => d.status);
+
+
         let xyS3 = [];
+        let companiesS3 = [];
         let colS3 = (vis.width - vis.margin.left * 3) / 6;
         let rowS3 = (vis.height - vis.margin.left * 3) / 5;
         for (let i = 0; i < 5; i++) {
             for (let j = 0; j < 6; j++) {
-                xyS3.push([colS3 * (j+ 1/2), rowS3 * (i + 1/2)])
-
+                xyS3.push([colS3 * (j+ 1/2), rowS3 * (i + 1/2) + 20])
+                if (randomUnif() > .8) {
+                    companiesS3.push(vis.groupedByMarket[0][1][0][1][randomOpen()])
+                }
+                else {
+                    companiesS3.push(vis.groupedByMarket[0][1][1][1][randomClosed()])
+                }
             }
         }
 
-        function fixedS3(x){
-            if (x < 30){
-                // console.log(xyS3[x]);
-                return xyS3[x];
-            }
-            else{
-                return [0,0];
-            }
-        }
 
         let circles = [];
-        for (let i = 0; i < 70; i++) {
+        for (let i = 0; i < 30; i++) {
             circles.push([[randomX(), randomX(), randomX()], [randomY(), randomY(), randomY()],
             Math.abs(randomSize()),randomOpacity(), randomBinary(), Math.round(randomTrinary()),
-            [failure1(), randomBinary(), failure7()], randomTime(), fixedS3(i)]);
+            [failure1(), randomBinary(), failure7()], randomTime(), xyS3[i], companiesS3[i]]);
         }
 
         let colors = ['dodgerblue', 'salmon', 'lightgreen', '#F0F5BB'];
-
 
 
 
@@ -120,7 +126,7 @@ class ChooseVis {
                     .transition()
                     .duration(2000)
                     .attr("cy", function(d) {
-                        if (d[4] == 0) {
+                        if (d[9].status == "closed") {
                             return (vis.height + vis.margin.bottom * 16);
                         }
                         else {
@@ -128,6 +134,10 @@ class ChooseVis {
                         }
                     });
             }}
+
+
+
+        vis.tooltip = d3.select("#chooseTooltip");
 
 
         let title = vis.svg.append('text')
@@ -153,7 +163,7 @@ class ChooseVis {
                 .transition().duration(500).attr("opacity", 1);
 
             instructions.transition().duration(500).style('color', '#080314')
-                .transition().text('WOKSANDOKAND SAOKDN OINEIOFGENDFONASDIONAS DION FIONAIOFNIOASDNIOS ANDO ISANDOI')
+                .transition().text('We’ve followed the startup’s journey from conception to growth to maturation. But what about the ones that don’t make it? In this visualization, we take a step back and look at the big picture of what influences a startup’s eventual success or failure.')
                 .transition().duration(500).style('color', 'white');
 
             // CIRCLES
@@ -225,15 +235,21 @@ class ChooseVis {
 
         }
 
+        let uniquemarkets = ['Digital Media', 'Finance', 'Apps', 'Software','Wine And Spirits','Health','Clean Technology','Location Based Services','Diagnostics','Social Media','Search','E-Commerce','Biotechnology','Curated Web','Security','Sports','Internet']
+
+        var color = d3.scaleOrdinal().domain(uniquemarkets)
+            .range(d3.schemeSet3);
+
+        console.log(color('Apps'));
 
 
         function STAGE1(){
             title.transition().duration(500).attr("opacity", 0)
-                .transition().text('STAGE1: Ever-Changing Markets')
+                .transition().text("Disruptive Innovation")
                 .transition().duration(500).attr("opacity", 1);
 
             instructions.transition().duration(500).style('color', '#080314')
-                .transition().text('The startup scene is always changing --- one moment software companies might be the hottest thing, and then in a flash it\'s all about wearable tech;')
+                .transition().text("You’ve probably heard of a “disruptor”--a company that shakes up the status quo. Think Netflix versus Blockbuster, or Uber versus taxis. When companies innovate, whole markets can become obsolete, with new ones taking their place.")
                 .transition().duration(500).style('color', 'white');
 
             d3.selectAll(".tutorial").transition().duration(1000).attr("opacity", 0).remove();
@@ -253,6 +269,32 @@ class ChooseVis {
                 .on("click", function(event, d){
                     onclickS3();
                 })
+                .on("mouseover", function(event, d){
+                    if (slide == 3){
+                        d3.select(this)
+                            .style("fill", "#ffd74c")
+                            .style("opacity", 1);
+                        vis.tooltip
+                            .html(`
+                             <h3>${d[9].name}</h3>
+                             <h6>Location: ${d[9].cityMap} <br>
+                             Market: ${d[9].market} <br>
+                             Year Founded: ${formatTime(d[9].founded_at)}</h6>`);
+                    }
+                })
+                .on("mouseout", function(event, d){
+                    if (slide == 3){
+                        d3.select(this)
+                            .style("fill", d => color(d[9].market))
+                            .style("opacity", 1);
+                        vis.tooltip
+                            .html(`<h3></h3><br/>
+                                <h6></h6><br/>
+                                <h6></h6><br/>
+                                <h6></h6><br/>
+                                <h6></h6>`);
+                    }
+                })
                 .merge(circleEnter)
                 .transition()
                 .delay(d => d[7])
@@ -262,32 +304,65 @@ class ChooseVis {
                 .attr("opacity", d => d[3])
                 .attr("fill", d => colors[d[5]%4])
                 .transition()
+                .delay(400)
                 .duration(2000)
                 .attr("cx", d => d[0][2])
                 .attr("cy", d => d[1][2])
-                .attr("fill", d => colors[(d[5]+1)%4])
+                .attr("fill", "salmon")
+                .transition()
+                .duration(2000)
+                .attr("cx", d => d[0][1])
+                .attr("cy", d => d[1][0])
+                .attr("fill", "salmon")
                 .transition()
                 .duration(2000)
                 .attr("cx", d => d[0][0])
                 .attr("cy", d => d[1][0])
-                .attr("fill", d => colors[(d[5]+2)%4])
-                .transition()
-                .duration(1000)
-                .attr("cx", d => d[0][0])
-                .attr("cy", d => d[1][0])
-                .attr("fill", d => colors[(d[5]+2)%4])
+                .attr("fill", "dodgerblue")
+                // .transition()
+                // .duration(1000)
+                // .attr("cx", d => d[0][0])
+                // .attr("cy", d => d[1][0])
+                // .attr("fill", d => colors[(d[5]+2)%4]);
 
-                // BREAK
+            let red = vis.svg.append('circle')
+                .attr("cx", -100)
+                .attr("cy", -100)
+                .attr("r", 12)
+                .attr("opacity", 1)
+                .attr("fill", "salmon");
 
+            red
                 .transition()
-                .delay(d => 2000 - d[7])
-                .duration(700)
-                .attr("cx", d => d[0][0])
-                .attr("cy", d => d[1][0])
-                .attr("opacity", 0)
-                .on("end", function(d){
-                    vis.svg.selectAll('.circle').remove()
-                });
+                .delay(2500)
+                .duration(2000)
+                .attr("cx", 80)
+                .attr("cy", 80)
+                .attr("opacity", 1)
+                .attr("fill", "salmon")
+                .transition()
+                .delay(3300)
+                .duration(2000)
+                .attr("fill", "dodgerblue");
+
+
+            let green = vis.svg.append('circle')
+                .attr("cx", 10000)
+                .attr("cy", 10000)
+                .attr("r", 21)
+                .attr("opacity", 1)
+                .attr("fill", "dodgerblue");
+
+            green
+                .transition()
+                .delay(6000)
+                .duration(2700)
+                .attr("cx", 700)
+                .attr("cy", 400)
+                .attr("opacity", 1)
+                .attr("fill", "dodgerblue");
+
+
         }
 
 
@@ -302,11 +377,11 @@ class ChooseVis {
                 .text('');
 
             title.transition().duration(500).attr("opacity", 0)
-                .transition().text('STAGE2: Survival of the Fittest')
+                .transition().text('Survival of the Fittest')
                 .transition().duration(500).attr("opacity", 1);
 
             instructions.transition().duration(500).style('color', '#080314')
-                .transition().text('Research tells us that 21.5% of startups fail in the first year; 50% by the fifth; and 70% by the tenth.')
+                .transition().text('Research tells us that 21.5% of startups fail in the first year; 50% by the fifth; and 70% by the tenth. Sometimes you run out of time and money. Maybe you’re in the wrong market, or your product isn’t as game-changing as you thought it would be, or there is simply too much competition.')
                 .transition().duration(500).style('color', 'white');
 
             textS2.transition().duration(500).attr("opacity", 0)
@@ -340,6 +415,32 @@ class ChooseVis {
                 .attr("fill", d => colors[d[5]%4])
                 .on("click", function(event, d){
                     onclickS3();
+                })
+                .on("mouseover", function(event, d){
+                    if (slide == 3){
+                        d3.select(this)
+                            .style("fill", "#ffd74c")
+                            .style("opacity", 1);
+                        vis.tooltip
+                            .html(`
+                             <h3>${d[9].name}</h3>
+                             <h6>Location: ${d[9].cityMap} <br>
+                             Market: ${d[9].market} <br>
+                             Year Founded: ${formatTime(d[9].founded_at)}</h6>`);
+                    }
+                })
+                .on("mouseout", function(event, d){
+                    if (slide == 3){
+                        d3.select(this)
+                            .style("fill", d => color(d[9].market))
+                            .style("opacity", 1);
+                        vis.tooltip
+                            .html(`<h3></h3><br/>
+                                <h6></h6><br/>
+                                <h6></h6><br/>
+                                <h6></h6><br/>
+                                <h6></h6>`);
+                    }
                 })
                 .merge(circleEnter)
                 .transition()
@@ -412,28 +513,22 @@ class ChooseVis {
                         return 0;
                     }
                 })
-
-                // BREAK
-
-                .transition()
-                .delay(4000)
-                .duration(1500)
-                .attr("cx", d => d[0][0])
-                .attr("cy", d => d[1][0])
-                .attr("opacity", 0)
-                .on("end", function(d){
-                    vis.svg.selectAll('.circle').remove()
-                });
         }
+
+
+        var bubbleScaleS3 = d3.scaleLinear()
+            .range([8, 40])
+            .domain([d3.least(companiesS3, d => d.funding_total_usd).funding_total_usd, d3.greatest(companiesS3, d => d.funding_total_usd).funding_total_usd]);
+
+        // console.log(bubbleScaleS3(circles[0][9]));
 
         function STAGE3(){
             title.transition().duration(500).attr("opacity", 0)
-                .transition().text('STAGE3: Choose Vis')
+                .transition().text('Skill or Luck?')
                 .transition().duration(500).attr("opacity", 1);
 
             instructions.transition().duration(500).style('color', '#080314')
-                .transition().text('Sometimes you run out of time and money. Maybe you\'re in the wrong market, or your product isn\'t" +\n' +
-                '        " as game-changing as you thought it would be, or there is simply too much competition. \n Choose a company you think will succeed!')
+                .transition().text('Here are 30 companies founded between 2000 and 2014. Hover to find out more about the company’s idea, and then click on one that you believe made it to 2014.')
                 .transition().duration(500).style('color', 'white');
 
             let circleEnter = vis.svg.selectAll('.circle')
@@ -445,21 +540,46 @@ class ChooseVis {
                 .attr("class", "circle")
                 .attr("cx", d => d[8][0])
                 .attr("cy", d => d[8][1])
-                .attr("r", d => d[2])
+                .attr("r", 23)
                 .attr("opacity", 0)
-                .attr("fill", "white")
+                .attr("fill", d => color(d[9].market))
                 .on("click", function(event, d){
-                    console.log(event);
                     onclickS3();
+                })
+                .on("mouseover", function(event, d){
+                    if (slide == 3){
+                        d3.select(this)
+                            .style("fill", "#ffd74c")
+                            .style("opacity", 1);
+                        vis.tooltip
+                            .html(`
+                             <h3>${d[9].name}</h3>
+                             <h6>Location: ${d[9].cityMap} <br>
+                             Market: ${d[9].market} <br>
+                             Year Founded: ${formatTime(d[9].founded_at)}</h6>`);
+                    }
+                })
+                .on("mouseout", function(event, d){
+                    if (slide == 3){
+                        d3.select(this)
+                            .style("fill", d => color(d[9].market))
+                            .style("opacity", 1);
+                        vis.tooltip
+                            .html(`<h3></h3><br/>
+                                <h6></h6><br/>
+                                <h6></h6><br/>
+                                <h6></h6><br/>
+                                <h6></h6>`);
+                    }
                 })
                 .merge(circleEnter)
                 .transition()
                 .duration(2000)
                 .attr("cx", d => d[8][0])
                 .attr("cy", d => d[8][1])
-                .attr("fill", "white")
+                .attr("fill", d => color(d[9].market))
+                .attr("r", 23)
                 .attr("opacity", function(d){
-                    console.log(d);
                     if (d[8][0] != 0){
                         return 1;
                     }

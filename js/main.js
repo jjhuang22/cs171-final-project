@@ -93,7 +93,7 @@ function initMainPage(dataArray) {
     var choose_waypoint = new Waypoint({
         element: document.getElementById('chooseDivWaypoint'),
         handler: function() {
-            myChooseVis = new ChooseVis('chooseDiv', dataArray[1].slice(0,70), 'chooseDivText');
+            myChooseVis = new ChooseVis('chooseDiv', dataArray[1], 'chooseDivText');
 
             this.destroy();
         },

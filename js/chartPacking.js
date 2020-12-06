@@ -63,7 +63,7 @@ class ChartPackingVis {
         function setColorScheme(multi){
             if (multi) {
                 let color = d3.scaleOrdinal()
-                    .range(d3.schemeCategory10)
+                    .range(d3.schemeDark2)
                 return color;
             }
         }
