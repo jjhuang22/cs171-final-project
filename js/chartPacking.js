@@ -9,6 +9,9 @@ class ChartPackingVis {
         this.parentElement = parentElement;
         this.data = nestedAcquisitions;
         this.stage = stage;
+        this.colorPal = ["#fea71a", "#9D0191", "#4a2ded", "#00BCD1",
+            "#9D0191", "#4a2ded", "#FD3A69", "#4a2ded",
+            "#fea71a", "#9D0191"];
 
         // console.log(this.data);
 
@@ -65,22 +68,26 @@ class ChartPackingVis {
 
         if (vis.stage == 0){
             vis.acquisitions = vis.data;
+            vis.colorPalUse = vis.colorPal;
         } else if (vis.stage == 1){
             // vis.acquisitions = vis.data.filter()
             vis.acquisitions = {
                 "children": [vis.data.children[5], vis.data.children[6], vis.data.children[9]],
                 "name": "acquisitions"
-            }
+            };
+            vis.colorPalUse = ["#fea71a", "#9D0191", "#9D0191"];
         } else if (vis.stage == 2){
             vis.acquisitions = {
                 "children": [vis.data.children[7], vis.data.children[8]],
                 "name": "acquisitions"
-            }
+            };
+            vis.colorPalUse = ["#00BCD1", "#fea71a"]
         } else if (vis.stage == 3){
             vis.acquisitions = {
                 "children": [vis.data.children[0], vis.data.children[1], vis.data.children[2], vis.data.children[3], vis.data.children[4]],
                 "name": "acquisitions"
-            }
+            };
+            vis.colorPalUse = ["#4a2ded", "#9D0191", "#4a2ded", "#FD3A69", "#4a2ded"]
         }
 
         vis.updateVis();
@@ -115,9 +122,7 @@ class ChartPackingVis {
         function setColorScheme(multi){
             if (multi) {
                 let color = d3.scaleOrdinal()
-                    .range(["#fea71a", "#9D0191", "#4a2ded", "#00BCD1",
-                        "#9D0191", "#4a2ded", "#FD3A69", "#4a2ded",
-                        "#fea71a", "#9D0191"]);
+                    .range(vis.colorPalUse);
                 return color;
             }
         }
@@ -159,6 +164,7 @@ class ChartPackingVis {
             focus = d;
 
             if (d.depth == 0 & vis.stage == 0){
+                d3.select("#instructions").style("display", "block");
                 d3.select("#layer1").text("Click on a circle to learn more, or on the background to zoom out! When you're ready, click next to explore some patterns.").style("color", "white");
             }
 
@@ -168,6 +174,8 @@ class ChartPackingVis {
                     obj = obj.parent;
                 }
                 d3.select("#layer1").text(vis.tooltiptext[obj.data.name]);
+                d3.select("#instructions").style("display", "none");
+
             }
 
             // if (d.depth == 0) {

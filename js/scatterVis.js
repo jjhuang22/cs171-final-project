@@ -180,7 +180,7 @@ class ScatterVis {
                 .style("opacity", 1)
                 .html(`
                      <div style="margin-top: 10vh">
-                         <h6>${d.company_name}<h6>
+                         <h3>${d.company_name}<h3>
                          <h6> Industry: ${d.company_market}</h6>
                          <h6> Acquisition Amount: ${displayFunding(d.price_amount)} M</h6>
                          <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)} M</h6>
