@@ -78,7 +78,7 @@ body {
 /*}*/
 
 .main-title {
-    font: 140px 'Big Shoulders Inline Text', cursive;
+    font: 180px 'Big Shoulders Inline Text', cursive;
     /*font-size: ;*/
     font-display: block;
     background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca);
@@ -165,7 +165,7 @@ p {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background-position: right center;
     text-decoration: none;
-    background: #86b3ba;
+    background: #95c8d0;
 }
 
 h1 {
