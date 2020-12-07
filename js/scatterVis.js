@@ -53,7 +53,7 @@ class ScatterVis {
             .attr("x", vis.width/2)
             .attr("y", vis.height*0.09)
             .style("text-anchor", "middle")
-            .text("Funding Amount")
+            .text("Funding Amount (millions)")
             .style("fill", "white")
             .style("font-family", '"IBM Plex Mono", monospace')
             .style("font-size", "18px")
@@ -72,7 +72,7 @@ class ScatterVis {
             .attr("transform", "translate(-110,"+vis.height/2 + ")rotate(-90)")
             .attr("dy", ".71em")
             .style("text-anchor", "middle")
-            .text("Acquisition Amount")
+            .text("Acquisition Amount (millions)")
             .style("fill", "white")
             .style("font-family", '"IBM Plex Mono", monospace')
             .style("font-size", "18px")
@@ -123,7 +123,7 @@ class ScatterVis {
 
             .attr("cx", d => vis.x(d.raised_amount_usd))
             .attr("cy", d => vis.y(d.price_amount))
-            .style("fill", "#94bbe9")
+            .style("fill", "#6572ff")
             .attr("r", function(d){
                 if (d.acquired_year == vis.timer){
                     return 8;
@@ -140,7 +140,7 @@ class ScatterVis {
                     return 0.8;
                 }
                 else if (d.acquired_year < vis.timer){
-                    return 0.2;
+                    return 0.4;
                 }
                 else {
                     return 0;
@@ -163,7 +163,7 @@ class ScatterVis {
             setTimeout(function() {
                 vis.svg.selectAll("circle")
                     .attr("r", 5)
-                    .style("opacity", 1);
+                    .style("opacity", 0.8);
 
                 vis.drawLine();
             }, 2000)
@@ -189,13 +189,13 @@ class ScatterVis {
         })
             .on("mouseout", function(d) {
                 d3.select(this)
-                    .style("fill", "#94bbe9")
+                    .style("fill", "#6572ff")
                     .style("opacity", d => {
                         if (d.acquired_year == vis.timer){
                             return 0.8;
                         }
                         else if (d.acquired_year < vis.timer){
-                            return 0.2;
+                            return 0.4;
                         }
                         else {
                             return 0;
@@ -226,7 +226,7 @@ class ScatterVis {
         vis.path = vis.svg.append('path')
             .attr("class", "regression")
             .attr('d', vis.line(lg))
-            .attr("stroke", "#f029ff")
+            .attr("stroke", "white")
             .attr("stroke-width", 2.5);
 
         let totalLength = vis.path.node().getTotalLength();
@@ -251,17 +251,6 @@ class ScatterVis {
                 .style("fill", "#ffd74c")
                 .style("opacity", 1);
 
-            // vis.tooltip
-            //     .style("opacity", 1)
-            //     .style("left", event.pageX + 20 + "px")
-            //     .style("top", event.pageY + "px")
-            //     .html(`
-            //          <div style="border: thin solid white; border-radius: 0px; background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca); padding: 20px">
-            //              <h6>${d.company_name}<h6>
-            //              <h6> Industry: ${d.company_market}</h6>
-            //              <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>
-            //              <h6> Acquisition Amount: ${displayFunding(d.price_amount)}</h6>
-            //          </div>`);
             d3.select("#scatter-tooltip")
                 .style("opacity", 1)
                 .html(`
@@ -274,12 +263,12 @@ class ScatterVis {
         })
             .on("mouseout", function(event, d) {
                 d3.select(this)
-                    .style("fill", "#94bbe9")
-                    .style("opacity", 1);
+                    .style("fill", "#6572ff")
+                    .style("opacity", 0.8);
 
                 vis.svg.selectAll("." + d.company_market.replace(/\s/g, ""))
-                    .style("fill", "#94bbe9")
-                    .style("opacity", 1);
+                    .style("fill", "#6572ff")
+                    .style("opacity", 0.8);
 
                 d3.select("#scatter-tooltip")
                     .style("opacity", 0)
