@@ -2,7 +2,7 @@
 
 **Website**: https://jjhuang22.github.io/cs171-final-project/
 
-**Video**: TBD
+**Video**: https://drive.google.com/file/d/1QdfuHYz6dYDj9ZaRLbllE2oYjv2vXGvD/view?usp=sharing 
 
 By Jonathan Huang, Joyce Lu, Chris Sun 
 
