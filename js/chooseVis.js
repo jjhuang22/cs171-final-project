@@ -150,7 +150,8 @@ class ChooseVis {
 
         let instructions = d3.select("#" + vis.secondElement)
             .text('')
-            .style('color', '#080314');
+            .style('color', '#080314')
+            .style('font-family', '"Noto Sans JP", sans-serif');
 
         let wordsS1 = vis.svg.append("div").append("h2").text("IOOGABOOGa").attr("z-index", -1);
 
@@ -308,7 +309,7 @@ class ChooseVis {
                 .transition().duration(500).attr("opacity", 1);
 
             instructions.transition().duration(500).style('color', '#080314')
-                .transition().text("You’ve probably heard of a “disruptor”--a company that shakes up the status quo. Think Netflix versus Blockbuster, or Uber versus taxis. When companies innovate, whole markets can become obsolete, with new ones taking their place.")
+                .transition().text("You’ve probably heard of a “disruptor”: a company that shakes up the status quo. Think Netflix versus Blockbuster, or Uber versus taxis. When companies innovate, whole markets can become obsolete, with new ones taking their place.")
                 .transition().duration(500).style('color', 'white');
 
             d3.selectAll(".tutorial").transition().duration(1000).attr("opacity", 0).remove();

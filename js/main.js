@@ -96,15 +96,9 @@ function initMainPage(dataArray) {
     myChartPackingVis2 = new ChartPackingVis('chartPacking2', dataArray[4], 2);
     myChartPackingVis3 = new ChartPackingVis('chartPacking3', dataArray[4], 3);
 
-    var choose_waypoint = new Waypoint({
-        element: document.getElementById('chooseDivWaypoint'),
-        handler: function() {
-            myChooseVis = new ChooseVis('chooseDiv', dataArray[1], 'chooseDivText');
 
-            this.destroy();
-        },
-        offset: 40
-    })
+    myChooseVis = new ChooseVis('chooseDiv', dataArray[1], 'chooseDivText');
+
 
     // var inno_waypoint = new Waypoint({
     //     element: document.getElementById('innovativeDivWaypoint'),
