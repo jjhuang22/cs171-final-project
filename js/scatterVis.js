@@ -27,12 +27,12 @@ class ScatterVis {
 
         vis.x = d3.scaleLinear()
             .domain([0, d3.max(vis.companies, d => d.raised_amount_usd)])
-            .range([vis.width * 0.18, vis.width*0.9]);
+            .range([vis.width * 0.10, vis.width*0.9]);
             // .range([vis.width * 0.17, vis.width * 0.9]);
 
         vis.y = d3.scaleLinear()
             .domain([0, d3.max(vis.companies, d => d.price_amount)*1.1])
-            .range([vis.height*0.9, vis.height*0.1])
+            .range([vis.height*0.9, vis.height*0.05])
 
         vis.xAxis = d3.axisBottom()
             .scale(vis.x);
@@ -61,7 +61,7 @@ class ScatterVis {
         vis.yAxisGroup = vis.svg.append("g")
             .attr("class", "y-axis axis")
             // .attr("transform", "translate(80, 0)")
-            .attr("transform", "translate(" + vis.width * 0.18 + ", 0)")
+            .attr("transform", "translate(" + vis.width * 0.10 + ", 0)")
             .call(vis.yAxis)
             .style("stroke", "white")
             .attr("stroke-width", 0.5)
@@ -69,7 +69,7 @@ class ScatterVis {
             .style("font-size", "12px")
             .append("text")
             .attr("class", "scatterLabel")
-            .attr("transform", "translate(-110,"+vis.height/2 + ")rotate(-90)")
+            .attr("transform", "translate(-80,"+vis.height/2 + ")rotate(-90)")
             .attr("dy", ".71em")
             .style("text-anchor", "middle")
             .text("Acquisition Amount (millions USD)")
@@ -257,8 +257,8 @@ class ScatterVis {
                      <div style="margin-top: 10vh">
                          <h6>${d.company_name}<h6>
                          <h6> Industry: ${d.company_market}</h6>
-                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)} million</h6>
-                         <h6> Acquisition Amount: ${displayFunding(d.price_amount)} million</h6>
+                         <h6> Acquisition Amount: ${displayFunding(d.price_amount)} M</h6>
+                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)} M</h6>                        
                      </div>`);
         })
             .on("mouseout", function(event, d) {
