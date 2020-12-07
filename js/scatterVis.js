@@ -182,8 +182,8 @@ class ScatterVis {
                      <div style="margin-top: 10vh">
                          <h6>${d.company_name}<h6>
                          <h6> Industry: ${d.company_market}</h6>
-                         <h6> Acquisition Amount: ${displayFunding(d.price_amount)} million</h6>
-                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)} million</h6>
+                         <h6> Acquisition Amount: ${displayFunding(d.price_amount)} M</h6>
+                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)} M</h6>
                      </div>`);
 
         })
