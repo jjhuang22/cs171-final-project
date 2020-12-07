@@ -52,6 +52,12 @@ body {
     font-size: 16px;
 }
 
+emph {
+    color: #ffd74c;
+    font-weight: bold;
+    /*font: 26px 'IBM Plex Mono', monospace;*/
+}
+
 .emphasize {
     color: #ffd74c;
     font-weight: bold;
@@ -78,7 +84,7 @@ body {
 /*}*/
 
 .main-title {
-    font: 140px 'Big Shoulders Inline Text', cursive;
+    font: 240px 'Big Shoulders Inline Text', cursive;
     /*font-size: ;*/
     font-display: block;
     background: -webkit-linear-gradient(90deg, #94bbe9, #eeaeca);
@@ -102,7 +108,7 @@ body {
 
 p {
     color: white;
-    font: 16px 'Noto Sans JP', sans-serif;
+    font: 18px 'Noto Sans JP', sans-serif;
 }
 
 /*hr {*/
@@ -165,7 +171,7 @@ p {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background-position: right center;
     text-decoration: none;
-    background: #86b3ba;
+    background: #95c8d0;
 }
 
 h1 {
@@ -182,9 +188,14 @@ h2 {
     color: white;
 }
 
-h3, h4, h5, h6 {
+h4, h5, h6 {
     color: white;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+h3 {
+    font-family: 'IBM Plex Mono', cursive;
+    color: white;
 }
 
 h6 {

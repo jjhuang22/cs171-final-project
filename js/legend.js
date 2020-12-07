@@ -45,7 +45,7 @@ class Legend {
             .attr('x', (d,i) => vis.width/3*(i%3) + vis.width/6)
             .attr('y', (d,i) => vis.height/3*(i%2) + vis.height/4 + 14)
             .text(d => d)
-            .style("font-family", '"IBM Plex Mono", monospace')
+            .style("font-family", '"Noto Sans JP", sans-serif')
             .style("font-size", '12px')
             .style("fill", "white");
     }

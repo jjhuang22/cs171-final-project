@@ -124,7 +124,7 @@ class BubbleVis {
             });
 
         vis.node.append("text")
-            .attr("dy", "-0.5em")
+            .attr("dy", "-0.6em")
             .style("text-anchor", "middle")
             .text(function(d) {
 
@@ -134,7 +134,7 @@ class BubbleVis {
                     return d.data.name;
                 }
             })
-            .attr("font-family", '"IBM Plex Mono", monospace')
+            .attr("font-family", '"Noto Sans JP", sans-serif')
             .attr("font-size", function(d){
                 return d.r/5;
             })
@@ -146,7 +146,7 @@ class BubbleVis {
             .text(function(d) {
                 return d.data.numCompanies + ' acquired';
             })
-            .attr("font-family", '"IBM Plex Mono", monospace')
+            .attr("font-family", '"Noto Sans JP", sans-serif')
             .attr("font-size", function(d){
                 return d.r/5;
             })
@@ -158,7 +158,7 @@ class BubbleVis {
             .text(function(d) {
                 return d.data.city;
             })
-            .attr("font-family", '"IBM Plex Mono", monospace')
+            .attr("font-family", '"Noto Sans JP", sans-serif')
             .attr("font-size", function(d){
                 return d.r/6.5;
             })
