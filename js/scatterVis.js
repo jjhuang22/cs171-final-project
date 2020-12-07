@@ -53,7 +53,7 @@ class ScatterVis {
             .attr("x", vis.width/2)
             .attr("y", vis.height*0.09)
             .style("text-anchor", "middle")
-            .text("Funding Amount (millions)")
+            .text("Funding Amount (millions USD)")
             .style("fill", "white")
             .style("font-family", '"IBM Plex Mono", monospace')
             .style("font-size", "18px")
@@ -72,7 +72,7 @@ class ScatterVis {
             .attr("transform", "translate(-110,"+vis.height/2 + ")rotate(-90)")
             .attr("dy", ".71em")
             .style("text-anchor", "middle")
-            .text("Acquisition Amount (millions)")
+            .text("Acquisition Amount (millions USD)")
             .style("fill", "white")
             .style("font-family", '"IBM Plex Mono", monospace')
             .style("font-size", "18px")
@@ -182,8 +182,8 @@ class ScatterVis {
                      <div style="margin-top: 10vh">
                          <h6>${d.company_name}<h6>
                          <h6> Industry: ${d.company_market}</h6>
-                         <h6> Acquisition Amount: ${displayFunding(d.price_amount)}</h6>
-                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>
+                         <h6> Acquisition Amount: ${displayFunding(d.price_amount)} million</h6>
+                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)} million</h6>
                      </div>`);
 
         })
@@ -257,8 +257,8 @@ class ScatterVis {
                      <div style="margin-top: 10vh">
                          <h6>${d.company_name}<h6>
                          <h6> Industry: ${d.company_market}</h6>
-                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)}</h6>
-                         <h6> Acquisition Amount: ${displayFunding(d.price_amount)}</h6>
+                         <h6> Funding Amount: ${displayFunding(d.raised_amount_usd)} million</h6>
+                         <h6> Acquisition Amount: ${displayFunding(d.price_amount)} million</h6>
                      </div>`);
         })
             .on("mouseout", function(event, d) {
