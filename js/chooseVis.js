@@ -83,27 +83,26 @@ class ChooseVis {
 
         d3.select("#chooseStart").on("click", function(){
             slide += 1;
-            vis.svg.selectAll('circle').transition().duration(1000).attr("opacity", 0).remove();
-            vis.svg.selectAll('text').transition().duration(1000).attr("opacity", 0).remove();
+
             doh(slide);
         });
-        d3.select("#chooseBack").on("click", function(){
-            slide -= 1;
-            vis.svg.selectAll('circle').transition().duration(1000).attr("opacity", 0).remove();
-            vis.svg.selectAll('text').transition().duration(1000).attr("opacity", 0).remove();
-            doh(slide);
-        });
-        d3.select("#chooseReplay").on("click", function(){
-            vis.svg.selectAll('circle').transition().duration(1000).attr("opacity", 0).remove();
-            vis.svg.selectAll('text').transition().duration(1000).attr("opacity", 0).remove();
-            doh(slide);
-        });
-        d3.select("#chooseReset").on("click", function(){
-            slide = 0;
-            vis.svg.selectAll('circle').transition().duration(1000).attr("opacity", 0).remove();
-            vis.svg.selectAll('text').transition().duration(1000).attr("opacity", 0).remove();
-            doh(slide);
-        });
+        // d3.select("#chooseBack").on("click", function(){
+        //     slide -= 1;
+        //     vis.svg.selectAll('circle').transition().duration(1000).attr("opacity", 0).remove();
+        //     vis.svg.selectAll('text').transition().duration(1000).attr("opacity", 0).remove();
+        //     doh(slide);
+        // });
+        // d3.select("#chooseReplay").on("click", function(){
+        //     vis.svg.selectAll('circle').transition().duration(1000).attr("opacity", 0).remove();
+        //     vis.svg.selectAll('text').transition().duration(1000).attr("opacity", 0).remove();
+        //     doh(slide);
+        // });
+        // d3.select("#chooseReset").on("click", function(){
+        //     slide = 0;
+        //     vis.svg.selectAll('circle').transition().duration(1000).attr("opacity", 0).remove();
+        //     vis.svg.selectAll('text').transition().duration(1000).attr("opacity", 0).remove();
+        //     doh(slide);
+        // });
 
         // ADD ONCLICK FUNCTIONALITY TO CIRCLES
         function onclickS3(){
@@ -123,6 +122,7 @@ class ChooseVis {
                     .enter()
                     .merge(ok)
                     .transition()
+                    .delay(2000)
                     .duration(2000)
                     .attr("cy", function(d) {
                         if (d[9].status == "closed") {
@@ -150,87 +150,147 @@ class ChooseVis {
 
         let instructions = d3.select("#" + vis.secondElement)
             .text('')
-            .style("font-family", '"IBM Plex Mono", monospace')
             .style('color', '#080314');
+
+        let wordsS1 = vis.svg.append("div").append("h2").text("IOOGABOOGa").attr("z-index", -1);
 
         STAGE0();
 
 
         function STAGE0(){
+            vis.svg.selectAll('circle').transition().duration(1000).attr("opacity", 0).remove();
+            vis.svg.selectAll('text').transition().duration(1000).attr("opacity", 0).remove();
+
             title.transition().duration(500).attr("opacity", 0)
-                .transition().text('STAGE0: Key')
+                .text("")
                 .transition().duration(500).attr("opacity", 1);
 
             instructions.transition().duration(500).style('color', '#080314')
-                .transition().text('We’ve followed the startup’s journey from conception to growth to maturation. But what about the ones that don’t make it? In this visualization, we take a step back and look at the big picture of what influences a startup’s eventual success or failure.')
+                .transition().text('We’ve followed the startup’s journey from conception to growth to maturation. But what about the ones that don’t make it? In this visualization, we take a step back and look at the big picture of what influences a startup’s eventual success or failure. Click the next button to continue!')
+                // .transition().text("In this visualization, you'll first see how , then watch a visaulization on what the true rates of failure are for startups. Finally, you'll get a chance to test out everything you've learned and see if you can identify succesfull startups based on their charactersitcs! Click next to continue.")
                 .transition().duration(500).style('color', 'white');
 
-            // CIRCLES
-            vis.svg.append("circle")
-                .attr("class", "tutorial")
-                .attr("cx", vis.width / 2)
-                .attr("cy", vis.height / 2)
-                .attr("r", 90)
-                .attr("opacity", 0)
-                .attr("fill", "white")
-                .transition().duration(1000).attr("opacity", 1)
+            // // CIRCLES
+            // vis.svg.append("circle")
+            //     .attr("class", "tutorial")
+            //     .attr("cx", vis.width / 2)
+            //     .attr("cy", vis.height / 2)
+            //     .attr("r", 90)
+            //     .attr("opacity", 0)
+            //     .attr("fill", "white")
+            //     .transition().duration(1000).attr("opacity", 1)
+            //
+            // vis.svg.append("text")
+            //     .attr("class", "tutorial")
+            //     .attr("text-anchor", "middle")
+            //     .attr("x", vis.width / 4)
+            //     .attr("y", vis.height / 4)
+            //     .text("Circles represent COMPANIES")
+            //     .attr("opacity", 0)
+            //     .attr("fill", "white")
+            //     .transition().duration(1000).attr("opacity", 1)
+            //
+            // // COLORS
+            // vis.svg.append("text")
+            //     .attr("class", "tutorial")
+            //     .attr("text-anchor", "middle")
+            //     .attr("x", 140)
+            //     .attr("y", vis.height / 5 * 4 + 40)
+            //     .text("Colors represent MARKETS")
+            //     .attr("opacity", 0)
+            //     .attr("fill", "white")
+            //     .transition().duration(1000).attr("opacity", 1)
+            //
+            // vis.svg.selectAll(".colors")
+            //     .data(colors)
+            //     .enter()
+            //     .append("circle")
+            //     .attr("class", "colors tutorial")
+            //     .attr("cy", vis.height / 5 * 4)
+            //     .attr("cx", (d,i) => 80 + 40*i)
+            //     .attr("fill", d => d)
+            //     .attr("opacity", 0)
+            //     .attr("r", 15)
+            //     .transition().duration(1000).attr("opacity", 1);
+            //
+            //
+            // // SIZES
+            // vis.svg.append("text")
+            //     .attr("class", "tutorial")
+            //     .attr("text-anchor", "middle")
+            //     .attr("x", vis.width / 4 * 3)
+            //     .attr("y", vis.height / 4 * 3)
+            //     .text("Sizes represent VALUATION")
+            //     .attr("opacity", 0)
+            //     .attr("fill", "white")
+            //     .transition().duration(1000).attr("opacity", 1)
+            //
+            // vis.svg.selectAll(".sizes")
+            //     .data([[vis.width/2 + 120, vis.height/2 - 120, 50],[vis.width/2 + 180, vis.height/2, 70]])
+            //     .enter()
+            //     .append("circle")
+            //     .attr("class", "sizes tutorial")
+            //     .attr("cy", d => d[1])
+            //     .attr("cx", d => d[0])
+            //     .attr("fill", "white")
+            //     .attr("opacity", 0)
+            //     .attr("r", d => d[2])
+            //     .transition().duration(1000).attr("opacity", 1);
 
-            vis.svg.append("text")
-                .attr("class", "tutorial")
-                .attr("text-anchor", "middle")
-                .attr("x", vis.width / 4)
-                .attr("y", vis.height / 4)
-                .text("Circles represent COMPANIES")
-                .attr("opacity", 0)
-                .attr("fill", "white")
-                .transition().duration(1000).attr("opacity", 1)
+            let repeat = vis.svg.selectAll('.repeat')
+                .data(circles);
 
-            // COLORS
-            vis.svg.append("text")
-                .attr("class", "tutorial")
-                .attr("text-anchor", "middle")
-                .attr("x", 140)
-                .attr("y", vis.height / 5 * 4 + 40)
-                .text("Colors represent MARKETS")
-                .attr("opacity", 0)
-                .attr("fill", "white")
-                .transition().duration(1000).attr("opacity", 1)
-
-            vis.svg.selectAll(".colors")
-                .data(colors)
+            repeat
                 .enter()
-                .append("circle")
-                .attr("class", "colors tutorial")
-                .attr("cy", vis.height / 5 * 4)
-                .attr("cx", (d,i) => 80 + 40*i)
-                .attr("fill", d => d)
-                .attr("opacity", 0)
-                .attr("r", 15)
-                .transition().duration(1000).attr("opacity", 1);
-
-
-            // SIZES
-            vis.svg.append("text")
-                .attr("class", "tutorial")
-                .attr("text-anchor", "middle")
-                .attr("x", vis.width / 4 * 3)
-                .attr("y", vis.height / 4 * 3)
-                .text("Sizes represent VALUATION")
-                .attr("opacity", 0)
-                .attr("fill", "white")
-                .transition().duration(1000).attr("opacity", 1)
-
-            vis.svg.selectAll(".sizes")
-                .data([[vis.width/2 + 120, vis.height/2 - 120, 50],[vis.width/2 + 180, vis.height/2, 70]])
-                .enter()
-                .append("circle")
-                .attr("class", "sizes tutorial")
-                .attr("cy", d => d[1])
-                .attr("cx", d => d[0])
-                .attr("fill", "white")
-                .attr("opacity", 0)
+                .append('circle')
+                .attr("class", "repeat")
+                .attr("cx", d => d[0][0])
+                .attr("cy", d => d[1][0])
                 .attr("r", d => d[2])
-                .transition().duration(1000).attr("opacity", 1);
+                .attr("opacity", 0)
+                .attr("fill", d => colors[d[5]%4])
+                .transition()
+                .delay(d => d[7])
+                .duration(4000)
+                .attr("opacity", d => d[3])
+                .attr("cx", d => d[0][2])
+                .attr("cy", d => d[1][1])
+                .transition()
+                .duration(4000)
+                .attr("cx", d => d[0][0])
+                .attr("cy", d => d[1][2])
+                .transition()
+                .duration(4000)
+                .attr("cx", d => d[0][1])
+                .attr("cy", d => d[1][1])
+                .transition()
+                .duration(4000)
+                .attr("cx", d => d[0][0])
+                .attr("cy", d => d[1][2])
+
+
+            // function repeater(){
+            //     let repeat = vis.svg.selectAll('.repeat')
+            //         .data(circles);
+            //
+            //     if (opkie == 0){
+            //         opkie = 1;
+            //         repeat.enter().merge(repeat)
+            //             .transition()
+            //             .duration(800)
+            //             .attr("cx", d => d[0][0])
+            //             .attr("cy", d => d[1][0])
+            //     }
+            //     else {
+            //         opkie = 0;
+            //         repeat.enter().merge(repeat)
+            //             .transition()
+            //             .duration(800)
+            //             .attr("cx", d => d[0][1])
+            //             .attr("cy", d => d[1][1])
+            //     }
+            //     // repeater();
+            // }
 
         }
 
@@ -252,6 +312,7 @@ class ChooseVis {
                 .transition().duration(500).style('color', 'white');
 
             d3.selectAll(".tutorial").transition().duration(1000).attr("opacity", 0).remove();
+            d3.selectAll(".repeat").transition().duration(1000).attr("opacity", 0).remove();
 
             let circleEnter = vis.svg.selectAll('.circle')
                 .data(circles);
@@ -266,7 +327,13 @@ class ChooseVis {
                 .attr("opacity", 0)
                 .attr("fill", d => colors[d[5]%4])
                 .on("click", function(event, d){
-                    onclickS3();
+                    if (slide == 3) {
+                        d3.select(this)
+                            .style("stroke", "#ffd74c")
+                            .style("stroke-width", 7)
+                            .style("opacity", 1);
+                        onclickS3();
+                    }
                 })
                 .on("mouseover", function(event, d){
                     if (slide == 3){
@@ -326,6 +393,7 @@ class ChooseVis {
                 // .attr("fill", d => colors[(d[5]+2)%4]);
 
             let red = vis.svg.append('circle')
+                .attr("id", "red")
                 .attr("cx", -100)
                 .attr("cy", -100)
                 .attr("r", 12)
@@ -336,8 +404,8 @@ class ChooseVis {
                 .transition()
                 .delay(2500)
                 .duration(2000)
-                .attr("cx", 80)
-                .attr("cy", 80)
+                .attr("cx", vis.width/7*2)
+                .attr("cy", vis.height/7*2)
                 .attr("opacity", 1)
                 .attr("fill", "salmon")
                 .transition()
@@ -347,6 +415,7 @@ class ChooseVis {
 
 
             let green = vis.svg.append('circle')
+                .attr("id", "green")
                 .attr("cx", 10000)
                 .attr("cy", 10000)
                 .attr("r", 21)
@@ -357,8 +426,8 @@ class ChooseVis {
                 .transition()
                 .delay(6000)
                 .duration(2700)
-                .attr("cx", 700)
-                .attr("cy", 400)
+                .attr("cx", vis.width/7*5)
+                .attr("cy", vis.height/7*5)
                 .attr("opacity", 1)
                 .attr("fill", "dodgerblue");
 
@@ -369,12 +438,16 @@ class ChooseVis {
 
         function STAGE2(){
             let textS2 = vis.svg.append("text")
+                .attr("id", "textS2")
                 .attr("text-anchor", "middle")
                 .attr("x", vis.width/2)
                 .attr("y", vis.height/12 * 11)
                 .attr("fill", "white")
                 .attr("opacity", 1)
                 .text('');
+
+            d3.select('#red').transition().duration(1000).attr("opacity", 0).remove();
+            d3.select('#green').transition().duration(1000).attr("opacity", 0).remove();
 
             title.transition().duration(500).attr("opacity", 0)
                 .transition().text('Survival of the Fittest')
@@ -406,43 +479,6 @@ class ChooseVis {
 
             circleEnter
                 .enter()
-                .append('circle')
-                .attr("class", "circle")
-                .attr("cx", d => d[0][0])
-                .attr("cy", d => d[1][0])
-                .attr("r", d => d[2])
-                .attr("opacity", 0)
-                .attr("fill", d => colors[d[5]%4])
-                .on("click", function(event, d){
-                    onclickS3();
-                })
-                .on("mouseover", function(event, d){
-                    if (slide == 3){
-                        d3.select(this)
-                            .style("fill", "#ffd74c")
-                            .style("opacity", 1);
-                        vis.tooltip
-                            .html(`
-                             <h3>${d[9].name}</h3>
-                             <h6>Location: ${d[9].cityMap} <br>
-                             Market: ${d[9].market} <br>
-                             Year Founded: ${d[9].founded_year}</h6>`);
-                             // Year Founded: ${formatTime(d[9].founded_year)}</h6>`)
-                    }
-                })
-                .on("mouseout", function(event, d){
-                    if (slide == 3){
-                        d3.select(this)
-                            .style("fill", d => color(d[9].market))
-                            .style("opacity", 1);
-                        vis.tooltip
-                            .html(`<h3></h3><br/>
-                                <h6></h6><br/>
-                                <h6></h6><br/>
-                                <h6></h6><br/>
-                                <h6></h6>`);
-                    }
-                })
                 .merge(circleEnter)
                 .transition()
                 .duration(2000)
@@ -461,12 +497,7 @@ class ChooseVis {
                     }
                 })
                 .attr("opacity", function(d){
-                    if (d[6][0] != 0) {
-                        return d[3];
-                    }
-                    else {
-                        return 0;
-                    }
+                        return ((d[6][0] != 0) ? d[3] : 0);
                 })
 
                 .transition()
@@ -517,19 +548,22 @@ class ChooseVis {
         }
 
 
-        var bubbleScaleS3 = d3.scaleLinear()
-            .range([8, 40])
-            .domain([d3.least(companiesS3, d => d.funding_total_usd).funding_total_usd, d3.greatest(companiesS3, d => d.funding_total_usd).funding_total_usd]);
+        // var bubbleScaleS3 = d3.scaleLinear()
+        //     .range([8, 40])
+        //     .domain([d3.least(companiesS3, d => d.funding_total_usd).funding_total_usd, d3.greatest(companiesS3, d => d.funding_total_usd).funding_total_usd]);
 
-        // console.log(bubbleScaleS3(circles[0][9]));
+
 
         function STAGE3(){
+
+            d3.select('#textS2').transition().duration(1000).attr("opacity", 0).remove();
+
             title.transition().duration(500).attr("opacity", 0)
                 .transition().text('Skill or Luck?')
                 .transition().duration(500).attr("opacity", 1);
 
             instructions.transition().duration(500).style('color', '#080314')
-                .transition().text('Here are 30 companies founded between 2000 and 2014. Hover to find out more about the company’s idea, and then click on one that you believe made it to 2014.')
+                .transition().text('Here are 30 companies founded between 2000 and 2014. Hover to find out more about the company, and then click on one that you believe made it to 2014.')
                 .transition().duration(500).style('color', 'white');
 
             let circleEnter = vis.svg.selectAll('.circle')
