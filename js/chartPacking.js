@@ -115,9 +115,9 @@ class ChartPackingVis {
         function setColorScheme(multi){
             if (multi) {
                 let color = d3.scaleOrdinal()
-                    .range(["#4a2ded", "#4a2ded", "#9D0191", "#4a2ded", "#FD3A69",
-                        "#fea71a", "#9D0191", "#fea71a", "#00BCD1", "#9D0191"]);
-
+                    .range(["#fea71a", "#9D0191", "#4a2ded", "#00BCD1",
+                        "#9D0191", "#4a2ded", "#FD3A69", "#4a2ded",
+                        "#fea71a", "#9D0191"]);
                 return color;
             }
         }
